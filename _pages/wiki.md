@@ -2,4 +2,4 @@
 title: Wiki
 ---
 
-This is a wiki page
+Wiki coming soon...
