@@ -1,0 +1,11 @@
+┌ &boxdr;
+─ &boxh;
+┬ &boxhd;
+┐ &boxdl;
+│ &boxv;
+├ &boxvr;
+┼ &boxvh;
+┤ &boxvl;
+└ &boxur;
+┴ &boxhu;
+┘ &boxul;
