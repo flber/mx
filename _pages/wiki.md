@@ -1,5 +1,5 @@
----
-title: Wiki
----
+### Wiki
 
 Wiki coming soon...
+
+*Last updated: {{date}}*

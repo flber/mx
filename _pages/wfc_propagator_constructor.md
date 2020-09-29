@@ -1,10 +1,4 @@
----
-layout: post
-title: WFC Propagator Constructor
-description: "Post 4 on the WFC algorithm."
-keywords: "proc gen, quantum mechanics, game dev"
-comments: true
----
+### The WFC Propagator Constructor
 
 The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.
 
@@ -34,18 +28,18 @@ Now I promised some actual code, so here you go!
 
 ```
 for i = 1, #wfc.tiles do    -- go through all tiles
-  local currentTile = wfc.tiles[i]    -- get current tile
-  local tileAdjacency = {}    -- make a new adjacency table
+	local currentTile = wfc.tiles[i]    -- get current tile
+	local tileAdjacency = {}    -- make a new adjacency table
 
-  tileAdjacency.top = {}    -- list of possible tiles above
-  for j = 1, #wfc.tiles do    -- check other tiles
-    local checkTile = wfc.tiles[j]
-    if checkTile.color.bottom == currentTile.color.top then
-      tileAdjacency.top[j] = true
-    else tileAdjacency.top[j] = false end
-  end
-  ... -- bottom, left, and right adjacencies go here, but it's a bit redundant
-  table.insert(wfc.adjacencyIndex, tileAdjacency)
+	tileAdjacency.top = {}    -- list of possible tiles above
+	for j = 1, #wfc.tiles do    -- check other tiles
+		local checkTile = wfc.tiles[j]
+		if checkTile.color.bottom == currentTile.color.top then
+			tileAdjacency.top[j] = true
+		else tileAdjacency.top[j] = false end
+	end
+	... -- bottom, left, and right adjacencies go here, but it's a bit redundant
+	table.insert(wfc.adjacencyIndex, tileAdjacency)
 end
 ```
 
@@ -97,3 +91,5 @@ table.insert(wfc.adjacencyIndex, tileAdjacency)
 ```
 
 And with that we're done! Hopefully this helped to explain how the propagator constructor works, as well as what the structure of the adjacencyIndex looks like.
+
+*Last updated: {{date}}*

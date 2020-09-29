@@ -1,10 +1,4 @@
----
-layout: post
-title: WFC Tile Generator
-description: "Post 3 on the WFC algorithm."
-keywords: "proc gen, quantum mechanics, game dev"
-comments: true
----
+### The WFC Tile Generator
 
 The tile generator of wfc is one of the first systems which runs, and its purpose is to break up an input image into usable tiles with additional data about their edges.
 
@@ -28,3 +22,5 @@ This allows us to compare simple integers when we want to check if two tiles can
 And that's pretty much it for the tile generator! While this is one of the more straight-forward systems, I found that it took a while to figure out what form to put the data in for later use, as most articles sort of breeze over this part. The end goal is to have a weighted list of unique tiles with single-integer color data for all four sides, though if you find some other structure more efficient or understandable by all means use that.
 
 (Also, wow its been a long time! It's good to be back, and I think I'll use drawings in future posts; I liked how they turned out)
+
+*Last updated: {{date}}*

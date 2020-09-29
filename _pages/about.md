@@ -1,7 +1,3 @@
----
-title: About
----
-
 ### Hi
 My name is Ben, and I'm an occasional game dev and enjoyer of roguelikes. Check out the [{now}](now.html) page to see what I'm currently working on. Some of my favorite games (in no particular order) are:
 
@@ -19,3 +15,5 @@ My name is Ben, and I'm an occasional game dev and enjoyer of roguelikes. Check 
 ### Contact me
 
 Feel free to say hi on [[mastodon]](https://mastodon.online/@flbr) or my [[email]](mailto:benrhammond@gmail.com)
+
+*Last updated: {{date}}*

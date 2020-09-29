@@ -1,10 +1,4 @@
----
-layout: post
-title: An Introduction to the Wave Function Collapse Algorithm
-description: "Post 1 on the WFC algorithm."
-keywords: "proc gen, quantum mechanics, game dev"
-comments: true
----
+### An Introduction to the Wave Function Collapse Algorithm
 
 You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.
 
@@ -31,3 +25,5 @@ Here are some good videos, articles, and papers which I've used in my own resear
 - [Oskar Stålberg's](https://twitter.com/OskSta) [talk](https://www.youtube.com/watch?v=0bcZb-SsnrA) at EPC2018 on how wfc works
 - [Brian Bucklew's](https://twitter.com/unormal) [very interesting talk](https://www.youtube.com/watch?v=fnFj3dOKcIQ&t=1s) on using wfc in dungeon generation in [Caves of Qud](http://www.cavesofqud.com/) during the 2019 Roguelike Celebration, which I actually got to see in person!
 - [Robert Heaton's](https://twitter.com/RobJHeaton) great article called ["The Wavefunction Collapse Algorithm explained very clearly"](https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/)
+
+*Last updated: {{date}}*
