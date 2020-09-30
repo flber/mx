@@ -6,7 +6,7 @@ Here is what I'm working on [{now}](now.html).
 
 And here are things I've written previously
 
-- 290920 [{My Experience with Plan9}](plan9.html)
+- 290920 [{My First Look at Plan9}](plan9.html)
 - 280820 [{WFC Propagator Constructor}](wfc_propagator_constructor.html)
 - 270820 [{WFC Tile Generator}](wfc_tile_generator.html)
 - 020820 [{Overview to WFC}](overview_to_wfc.html)
