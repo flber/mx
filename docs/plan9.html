@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Mineral Existence</title>
+	<style> 
+		body{font-family: Courier, monospace; margin: 0 auto; width: 38em; font-size: 1.5em; background: #f5f4f1; color: #0f4e66;}
+		a{color: #0f4e66; text-decoration: none;}
+		a:hover{color: #f5f4f1; background-color: #0f4e66;}
+		img{width: 100%}
+		hr{border: 1px solid}
+	</style>
+</head>
+<body>
+<p>
+┌──────┐<br>
+│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
+└──────┘<br>
+<hr>
+</p>	
+<h3>My Experience with Plan9</h3>
+<p>I first encountered Plan9 on Devine Lu Linvega's site and was immediately interested in its minimalist design and &quot;more unix than unix&quot; philosophy. If you've never heard of it before, Plan9 is a research operating system developed by Bell Labs in 1992, and takes the unix principle of everything as a file to the extreme. It has a lot of other interesting features and quirks, and if you're interested in learning more about them I would highly recommend the the Plan9 <a href="https://9p.io/plan9/about.html">[about page]</a> or the <a href="https://9p.io/sys/doc/">[several papers]</a> written about the operating system.</p>
+<p>However, for all of the documentation I had a hard time actually getting Plan9 (or, more accurately, 9front, a more maintained fork of Plan9) to run on my pi 4. Though a few of the issues were certainly due to my own inexperience, I think there were a few which others might also face while trying to get it working on their own pi 4.</p>
+<p>To start, the image file for the pi 4 can be found <a href="http://9front.org/releases/">[here]</a> (the pi3.img.gz file).</p>
+<p>Confusingly though (because the 9front website says otherwise), the image file cannot simply be moved to a FAT32 formated micro sd card, it has to be flashed to the drive, using something like <a href="https://www.balena.io/etcher">[balenaetcher]</a>.</p>
+<p>Additionally, by default the pi does not boot in something called &quot;hdmi safe mode&quot;, which allows for maximum compatibility with hdmi output. This means that though the pi may be booting properly (as indicated by the green status led quickly blinking once it is first turned on and then more or less turning off), the screen will not display any output. To fix this I needed to set a parameter called <code>hdmi_safe</code> in the <code>config.txt</code> file to <code>1</code>. That puts the pi into safe mode, which fixed the issue for me.</p>
+<p>(Also, something stupid I accidentally did which caught me up for a minute was trying to get hdmi output from the second micro hdmi port on the pi, which by default is disabled)</p>
+<p>And with that done, your pi 4 should be good to go! For me that was it, but if you have any issues by all means feel free to contact me (though be aware that I'm not at all experienced with this, I just managed to get it working on my system).</p>
+<p><em>Last updated: 290920</em></p>
+<hr>
+</body>
+</html>
