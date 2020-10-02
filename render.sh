@@ -4,6 +4,7 @@ file=$1
 extension="${file##*.}"
 
 when=$(date -r $file "+%d%m%C")
+sed -i "s/{{current_date}}/$when/g" $file
 touch mod.$extension
 sed "s/{{date}}/$when/g" $file > mod.$extension
 
