@@ -1,0 +1,21 @@
+#!/bin/bash
+
+file=$1
+title=$2
+
+touch tmp
+
+echo "{{feed}}" >> tmp
+echo "" >> tmp
+echo "#### {{current_date}} $title" >> tmp
+
+input="$(</dev/stdin)"
+
+echo "$input" >> tmp
+
+sed -i 's/.*/& \/' tmp
+
+echo tmp
+#text=$(cat tmp)
+#sed "/({{feed}})/ i this is a test" $file
+#rm tmp
