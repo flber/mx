@@ -6,6 +6,7 @@ This is going to be a loose collection of notes, links, resources, and miscellan
 - [[Akin's laws of spacecraft design]](https://spacecraft.ssl.umd.edu/akins_laws.html)
 
 #### Programming
+- [[Bash]](https://devhints.io/bash)
 
 #### Drawing
 - [[Noodle site]](https://hundredrabbits.github.io/Noodle)
