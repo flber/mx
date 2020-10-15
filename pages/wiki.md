@@ -1,6 +1,6 @@
 ### Wiki
 
-This is a loose collection of notes, links, resources, and miscellaneous writings.
+This is a loose collection of notes, links, and other resources.
 
 #### Design
 - [[Akin's laws of spacecraft design]](https://spacecraft.ssl.umd.edu/akins_laws.html)
