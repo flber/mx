@@ -1,9 +1,9 @@
-INPUT = $(wildcard _pages/*.md)
-OUTPUT := $(patsubst _pages/%.md,docs/%.html, $(INPUT))
+INPUT = $(wildcard pages/*.md)
+OUTPUT := $(patsubst pages/%.md,docs/%.html, $(INPUT))
 
 all: $(OUTPUT)
 
-docs/%.html: _pages/%.md templates/header.html templates/footer.html
+docs/%.html: pages/%.md templates/header.html templates/footer.html
 	touch $@
 	@cat templates/header.html > $@
 	@./render.sh $< >> $@
