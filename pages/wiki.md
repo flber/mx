@@ -14,6 +14,6 @@ This is going to be a loose collection of notes, links, resources, and miscellan
 - [[Orca-c repo]](https://github.com/hundredrabbits/Orca-c)
 
 #### Language
-
+- [[Toki Pona website]](https://tokipona.org/)
 
 *Last updated: {{date}}*
