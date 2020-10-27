@@ -1,6 +1,6 @@
 ### Now
 
-- Cultivating this site
+- Cultivating [{this site}](site.html)
 - Working on a [{wave function collapse algorithm}](intro_to_wfc.html)
 - Exploring the [{Plan9 OS}](plan9.html)
 - Practicing piano
