@@ -10,7 +10,7 @@ echo "#### {{current_date}} - $title" >> tmp.txt
 
 input="$(</dev/stdin)"
 
-echo "$input" >> tmp.txt
+echo $input >> tmp.txt
 
 sed -i '/{{feed}}/r tmp.txt' $file
 rm tmp.txt

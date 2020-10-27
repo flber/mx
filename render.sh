@@ -6,8 +6,8 @@ extension="${file##*.}"
 when=$(date -r $file "+%d%m%C")
 
 # edit actual file here
-if grep -q '{{current_date}}' "$file"; then
-	sed -i "s/{{current_date}}/$when/g" "$file"
+if grep -q '{{current_date}}' $file; then
+	sed -i "s/{{current_date}}/$when/g" $file
 fi
 
 touch mod.$extension
