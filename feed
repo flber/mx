@@ -6,7 +6,7 @@ title=$2
 touch tmp.txt
 
 echo "" >> tmp.txt
-echo "#### {{current_date}} $title" >> tmp.txt
+echo "#### {{current_date}} - $title" >> tmp.txt
 
 input="$(</dev/stdin)"
 

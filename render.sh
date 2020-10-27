@@ -15,6 +15,7 @@ touch mod.$extension
 # edit md for output here
 sed "s/{{date}}/$when/g" $file > mod.$extension
 sed -i "s/{{feed}}//g" mod.$extension
+sed -i "s/({{variables[\s\S]+}})//g" mod.$extension
 
 cmark -t html mod.$extension
 rm mod.$extension
