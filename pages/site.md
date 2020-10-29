@@ -4,6 +4,9 @@ It remains to be seen how this actually turns out, but my idea is that this will
 
 {{feed}}
 
+#### 281020 - SVG Troubles
+I've been messing around with getting contact links in the footer for a little while now, and I can't quite figure it out (my sr.ht svg is invisible). This isn't much of an update, as I'm still not sure how to fix it, but more of a heads up as to why the footer might be a little funky.
+
 #### 261020 - Variables, Metadata, and Restructuring
 While I currently have a pretty solid (if simple) site generator, it's missing a few tools and some extra customizability which I'd prefer it have. The main thing is that I currently have no way to store extra data about a file, like what sort of page it is, when it was last edited, what the title is, and so on. This is the most obvious problem, but is unfortunately not the most difficult. The main issue which I'm trying to solve right now is more of a design problem if anything, which is how I want to structure the building and rendering process of my site. Right now I just have a makefile which runs a rendering bash script which outputs html from markdown, plus a few extra substitutions of my own making (I'll probably write a full post on this process once I get the issue I'm talking about now nailed down). It works, but leaves little room for extra steps. While I could keep adding functionality to the render script (which I will do in a smaller capacity), larger substitutions such as a list of posts feel out of place in such a small script and would require a rewrite of how it works. This is due to my decision to leave the render script pretty dumb; it is given a single markdown file and outputs some edited html to be used by the makefile, and has no extra knowledge of the site as a whole. 
 
