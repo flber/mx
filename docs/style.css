@@ -50,3 +50,8 @@ hr {
 svg {
 	fill: #0f4e66;
 }
+
+svg:hover {
+	color: #f5f4f1; 
+	background-color: #0f4e66;
+}

@@ -6,6 +6,7 @@ Here is what I'm working on [{now}](now.html).
 
 And here are things some blog posts (a lot of the images won't load because I'm currently drawing smaller versions of them)
 
+- 301020 [{Learning Rust}](learning_rust.html)
 - 261020 [{Site Updates}](site.html)
 - 051020 [{Drawings}](drawings.html)
 - 011020 [{Devtober!}](devtober.html)
