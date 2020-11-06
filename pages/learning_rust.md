@@ -16,8 +16,11 @@ Things to remember:
 - if it looks like a function but has a `!` at the end, it's a macro (?? what's a macro ??)
 - `&` means a reference to an object?
 - `.expect()` is used to handle possible errors
+- `::` refers to an associated function of a "type" (static method)
+- references are immutable by default
 
 Things I'm not sure about
 - macros
 - passing objects by reference
 - `#[]` <- these things
+- what is a type?
