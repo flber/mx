@@ -20,20 +20,37 @@
 <ul>
 <li><a href="https://www.vandenoever.info/blog/2017/02/17/a-simple-rust-gui-with-qml.html">[Simple Rust GUI with QML]</a></li>
 <li><a href="https://www.youtube.com/playlist?list=PLVvjrrRCBy2JSHf9tGxGKJ-bYAN_uDCUL">[Rust Programming Tutorial]</a></li>
+<li><a href="https://doc.rust-lang.org/book">[The Rust Programming Language]</a></li>
 </ul>
 <p>Things to remember:</p>
+<ul>
+<li>variable(y) things
 <ul>
 <li>variables need the <code>mut</code> tag to be changeable</li>
 <li>it's statically typed!</li>
 <li>tuples can hold different types, arrays cannot</li>
+<li><code>&amp;</code> means a reference to an object?</li>
+<li>references are immutable by default</li>
+<li>enums have a fixed set of variables, called the variants</li>
+</ul>
+</li>
+<li>style things
+<ul>
 <li>most names should be in <code>snake_case</code></li>
 <li>types, enums, and traits should be in <code>CamelCase</code></li>
 <li>anything static should be in <code>SCREAMING_SNAKE_CASE</code></li>
+</ul>
+</li>
+<li>miscellaneous things
+<ul>
 <li>if it looks like a function but has a <code>!</code> at the end, it's a macro (?? what's a macro ??)</li>
-<li><code>&amp;</code> means a reference to an object?</li>
 <li><code>.expect()</code> is used to handle possible errors</li>
 <li><code>::</code> refers to an associated function of a &quot;type&quot; (static method)</li>
-<li>references are immutable by default</li>
+<li>the <code>Result</code> enum has two variants, <code>Ok</code> and <code>Err</code></li>
+<li><code>gen_range()</code> is inclusive on the lower bound and exclusive on the upper</li>
+<li>can use <code>cargo doc --open</code> to view the documentation of the packages in your project</li>
+</ul>
+</li>
 </ul>
 <p>Things I'm not sure about</p>
 <ul>
@@ -41,6 +58,7 @@
 <li>passing objects by reference</li>
 <li><code>#[]</code> &lt;- these things</li>
 <li>what is a type?</li>
+<li>traits</li>
 </ul>
 		</main>
 		<footer>
