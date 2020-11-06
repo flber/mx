@@ -1,6 +1,6 @@
 ### Learning Rust
 
-First of all, this is going to primarily a place to store notes for myself as I learn Rust, so take everything I say with a grain of salt! (though feedback is always appreciated, so feel free to say hi)
+First of all, this is going to primarily be a place to store notes for myself as I learn Rust, so take everything I say with a grain of salt! (and feedback is always appreciated, so feel free to say hi)
 
 Good resources:
 - [[Simple Rust GUI with QML]](https://www.vandenoever.info/blog/2017/02/17/a-simple-rust-gui-with-qml.html)
