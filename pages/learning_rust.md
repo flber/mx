@@ -10,18 +10,28 @@ Good resources:
 Things to remember:
 - variable(y) things
 	- variables need the `mut` tag to be changeable
-	- it's statically typed!
+	- it's statically typed! (but has inference)
 	- tuples can hold different types, arrays cannot
 	- `&` means a reference to an object?
 	- references are immutable by default
 	- enums have a fixed set of variables, called the variants
+	- can reassign variables, overwriting previous type and value (good for converting between types), called shadowing
+	- always have to annotate type for constants
 - style things
 	- most names should be in `snake_case`
 	- types, enums, and traits should be in `CamelCase`
-	- anything static should be in `SCREAMING_SNAKE_CASE`
+	- anything static/constant should be in `SCREAMING_SNAKE_CASE`
+	- use underscores in big numbers to break them up (`10_000_000`)
+- various functions/expression things
+	- `.expect()` is used to handle possible errors
+	- the `match` expression
+		- is made of arms
+		- each arm has a pattern and some code to run
+		- connect the code to the pattern with `=>`
+		- separate the arms with commas, not semicolons
+		- can also use `match` instead of a `.expect()` to handle errors (match output to `Ok` and `Err`)
 - miscellaneous things
 	- if it looks like a function but has a `!` at the end, it's a macro (?? what's a macro ??)
-	- `.expect()` is used to handle possible errors
 	- `::` refers to an associated function of a "type" (static method)
 	- the `Result` enum has two variants, `Ok` and `Err`
 	- `gen_range()` is inclusive on the lower bound and exclusive on the upper
