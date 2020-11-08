@@ -12,6 +12,9 @@ Things to remember:
 	- variables need the `mut` tag to be changeable
 	- it's statically typed! (but has inference)
 	- tuples can hold different types, arrays cannot
+		- values in tuples can be accessed through `tuple.index`
+	- vectors are like arrays, but they can change size
+	- arrays can be defined as `let arr = [3; 4];`, which would expand to `[3, 3, 3, 3]`
 	- `&` means a reference to an object?
 	- references are immutable by default
 	- enums have a fixed set of variables, called the variants

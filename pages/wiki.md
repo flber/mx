@@ -15,5 +15,8 @@ This is a loose collection of notes, links, and other resources.
 	- [[Orca-c repo]](https://github.com/hundredrabbits/Orca-c)
 - Language
 	- [[Toki Pona website]](https://tokipona.org/)
+- Food
+	- [[Grimgrains]](https://grimgrains.com/site/home.html)
+	- [[Ritual Dust]](https://ritualdust.com/food/)
 
 *Last updated: {{date}}*

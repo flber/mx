@@ -28,7 +28,13 @@
 <ul>
 <li>variables need the <code>mut</code> tag to be changeable</li>
 <li>it's statically typed! (but has inference)</li>
-<li>tuples can hold different types, arrays cannot</li>
+<li>tuples can hold different types, arrays cannot
+<ul>
+<li>values in tuples can be accessed through <code>tuple.index</code></li>
+</ul>
+</li>
+<li>vectors are like arrays, but they can change size</li>
+<li>arrays can be defined as <code>let arr = [3; 4];</code>, which would expand to <code>[3, 3, 3, 3]</code></li>
 <li><code>&amp;</code> means a reference to an object?</li>
 <li>references are immutable by default</li>
 <li>enums have a fixed set of variables, called the variants</li>
