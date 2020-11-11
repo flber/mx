@@ -7,7 +7,7 @@ body {
 	color: #0f4e66;
 }
 
-pre, code {
+pre, code, blockquote {
 	font-size: 1em; 
 	background: #f0e4c9;
 }
