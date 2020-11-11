@@ -28,7 +28,11 @@
 <blockquote>
 <p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
 </blockquote>
-<p><em>Last updated: 101120</em></p>
+<p>To sanitize a file name:</p>
+<blockquote>
+<p>name=$(echo &quot;$name&quot; | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed &quot;s/-+/-/g;s/(^-|-$)//g&quot;)</p>
+</blockquote>
+<p><em>Last updated: 111120</em></p>
 		</main>
 		<footer>
 			<hr>
