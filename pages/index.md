@@ -6,6 +6,7 @@ Here is what I'm working on [{now}](now.html).
 
 And here are things some blog posts (a lot of the images won't load because I'm currently drawing smaller versions of them)
 
+- 081120 [{Recipes}](recipes.html)
 - 301020 [{Learning Rust}](learning_rust.html)
 - 261020 [{Site Updates}](site.html)
 - 051020 [{Drawings}](drawings.html)
@@ -16,5 +17,7 @@ And here are things some blog posts (a lot of the images won't load because I'm 
 - 020820 [{Overview to WFC}](overview_to_wfc.html)
 - 250720 [{Wave Function Collapse Intro}](intro_to_wfc.html)
 - 301215 [{Markdown Cheatsheet}](mdcheatsheet.html)
+
+
 
 *Last updated: {{date}}*

@@ -10,5 +10,7 @@
 - Listening to [[GALNERYUS]](https://open.spotify.com/artist/3BNDjSD67jJE4fhxX1b2OV?si=Au_bteD8QgmMRzTEsARdWg)
 - [{Drawing}](drawings.html)
 - [{Learning Rust}](learning_rust.html)
+- [{Cooking}](recipes.html)
+- Creating my [{grimoire}](grimoire.html)
 
 *Last updated: {{date}}*

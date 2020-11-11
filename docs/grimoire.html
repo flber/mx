@@ -14,21 +14,20 @@
 			<hr>
 		</nav>
 		<main>
-<h3>Now</h3>
-<ul>
-<li>Cultivating <a href="site.html">{this site}</a></li>
-<li>Working on a <a href="intro_to_wfc.html">{wave function collapse algorithm}</a></li>
-<li>Exploring the <a href="plan9.html">{Plan9 OS}</a></li>
-<li>Practicing piano</li>
-<li>Learning Norwegian</li>
-<li>Reading the Dune series</li>
-<li>Playing Dwarf Fortress</li>
-<li>Listening to <a href="https://open.spotify.com/artist/3BNDjSD67jJE4fhxX1b2OV?si=Au_bteD8QgmMRzTEsARdWg">[GALNERYUS]</a></li>
-<li><a href="drawings.html">{Drawing}</a></li>
-<li><a href="learning_rust.html">{Learning Rust}</a></li>
-<li><a href="recipes.html">{Cooking}</a></li>
-<li>Creating my <a href="grimoire.html">{grimoire}</a></li>
-</ul>
+<h3>Grimoire</h3>
+<p>Inspired by the <a href="https://fdisk.space/grimoire/">[grimoire of Fred Bednarski]</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
+<p>To change the extensions of audio files in a directory:</p>
+<blockquote>
+<p>for file in *.opus; do ffmpeg -i ${file%.opus}.opus -c copy ${file%.opus}.ogg &amp;&amp; rm ${file%.opus}.opus; done</p>
+</blockquote>
+<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
+<blockquote>
+<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio &quot;video_link&quot;</p>
+</blockquote>
+<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely)</p>
+<blockquote>
+<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
+</blockquote>
 <p><em>Last updated: 101120</em></p>
 		</main>
 		<footer>
