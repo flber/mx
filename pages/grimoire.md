@@ -17,4 +17,7 @@ To forward your port 8388 to a server's port 8384 (can be used to get the web in
 To sanitize a file name (the .opus can be any extension):
 > mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"
 
+To push file changes over ssh:
+> rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder
+
 *Last updated: {{date}}*

@@ -24,15 +24,23 @@
 <blockquote>
 <p>youtube-dl --add-metadata -i -x -f mp3/bestaudio &quot;video_link&quot;</p>
 </blockquote>
+<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
+<blockquote>
+<p>youtube-dlc -x -f mp3/bestaudio</p>
+</blockquote>
 <p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
 <blockquote>
 <p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
 </blockquote>
-<p>To sanitize a file name:</p>
+<p>To sanitize a file name (the .opus can be any extension):</p>
 <blockquote>
-<p>name=$(echo &quot;$name&quot; | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed &quot;s/-+/-/g;s/(^-|-$)//g&quot;)</p>
+<p>mv &quot;$file&quot; &quot;$(echo &quot;${file%.opus}&quot; | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed &quot;s/-+/-/g;s/(^-|-$)//g&quot;).opus&quot;</p>
 </blockquote>
-<p><em>Last updated: 111120</em></p>
+<p>To push file changes over ssh:</p>
+<blockquote>
+<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
+</blockquote>
+<p><em>Last updated: 121120</em></p>
 		</main>
 		<footer>
 			<hr>
