@@ -40,7 +40,11 @@
 <blockquote>
 <p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
 </blockquote>
-<p><em>Last updated: 121120</em></p>
+<p>To dither and shrink an image (courtesy of <a href="https://merveilles.town/web/accounts/33648">[Thomasorus]</a>):</p>
+<blockquote>
+<p>mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -type Grayscale -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1/*</p>
+</blockquote>
+<p><em>Last updated: 201120</em></p>
 		</main>
 		<footer>
 			<hr>
