@@ -3,13 +3,13 @@ body {
 	margin: 0 auto; 
 	width: 38em; 
 	font-size: 1.2em; 
-	background: #f5f4f1; 
-	color: #0f4e66;
+	background: #000; 
+	color: #fff;
 }
 
 pre, code, blockquote {
 	font-size: 1em; 
-	background: #f0e4c9;
+	background: #aaa;
 }
 
 pre {
@@ -17,13 +17,13 @@ pre {
 }
 
 a {
-	color: #0f4e66; 
+	color: #000; 
 	text-decoration: none;
 }
 
 a:hover {
-	color: #f5f4f1; 
-	background-color: #0f4e66;
+	color: #fff; 
+	background-color: #000;
 }
 
 img {
@@ -31,7 +31,7 @@ img {
 }
 
 hr {
-	border: 1px solid #0f4e66;
+	border: 1px solid #000;
 }
 
 .footer-nav {
@@ -48,10 +48,10 @@ hr {
 }
 
 svg {
-	fill: #0f4e66;
+	fill: #000;
 }
 
 svg:hover {
-	color: #f5f4f1; 
-	background-color: #0f4e66;
+	color: #fff; 
+	background-color: #000;
 }
