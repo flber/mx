@@ -7,11 +7,10 @@ Everyday items:
 
 Computers:
 - Thinkpad T420s running [[Manjaro i3]](https://manjaro.org/downloads/community/i3/)
-- Dell XPS 13 running [[Elementary OS]](https://elementary.io/)
-- [[Raspberry pi 4]](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) running [[Plan9]](http://9front.org/)
+- [[Raspberry pi 4]](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) running [[Pi OS Lite]](https://www.raspberrypi.org/software/operating-systems/)
 
 Software:
-- web browser: [[Firefox]](https://www.mozilla.org/) / [[surf]](https://surf.suckless.org/)
+- web browser: [[Min]](https://minbrowser.org/)
 - text editor: [[micro]](https://micro-editor.github.io/)
 - file explorer: [[ranger]](https://ranger.github.io/)
 - music player: [[cmus]](https://cmus.github.io/) / [[Spotify-qt]](https://github.com/kraxarn/spotify-qt)

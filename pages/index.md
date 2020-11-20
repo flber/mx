@@ -4,8 +4,9 @@ Thank you for visiting my humble virtual abode. This site is the third, and hope
 
 Here is what I'm working on [{now}](now.html).
 
-And here are things some blog posts (a lot of the images won't load because I'm currently drawing smaller versions of them)
+And here are some blog(like) posts
 
+- 121120 [{Grimoire}](grimoire.html)
 - 081120 [{Recipes}](recipes.html)
 - 301020 [{Learning Rust}](learning_rust.html)
 - 261020 [{Site Updates}](site.html)
