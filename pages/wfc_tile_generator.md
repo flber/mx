@@ -7,15 +7,15 @@ It first breaks up the image into NxN tiles, where N is just a variable passed t
 Now that we have tiles, we need to process them to get data which will be used later. To start, we check if there are redundant images, and if there are we remove the redundancies but keep track of how many duplicates there were. This will serve as a weight for the observer system later (the concept of a weight will be explained in that article). Additionally, now is when we check the edges of each tile to process the color information. For each tile, we check the color of the top, bottom, left, and right sides, and for each side we make a list of colors. After ensuring that the list is unique, we can then assign each side of each tile a single number which corresponds to the index of its colors in the list of colors.
 For example, if we have a simple black and white tile:
 
-![Tile](/assets/images/post-3/notes-1.png)
+![Tile](/images/post-3/notes-1.png)
 
 we will iterate over the edges to produce a list of unique color combinations
 
-![Colors list](/assets/images/post-3/notes-2.png)
+![Colors list](/images/post-3/notes-2.png)
 
 the indices of which will then be used to label the edges of the tile
 
-![Tile with indices](/assets/images/post-3/notes-3.png)
+![Tile with indices](/images/post-3/notes-3.png)
 
 This allows us to compare simple integers when we want to check if two tiles can be adjacent, instead of going through potentially large lists of rgba values.
 
