@@ -20,7 +20,19 @@ main {border:2px dotted var(--color);margin:0px auto;background-color:var(--bg-c
 
 pre, code, blockquote {background: var(--bg-color);}
 pre {overflow-x: scroll;}
-
+blockquote {position:relative;}
+blockquote:before, blockquote:after, blockquote>:first-child:before, blockquote>:first-child:after {
+    position:absolute;
+    padding: 8px;
+    border-color:var(--color);
+    border-style:solid;
+    content: '';
+}
+blockquote:before {top:0;left:0;border-width: 1px 0 0 1px}
+blockquote:after {top:0;right:0;border-width: 1px 1px 0 0}
+blockquote>:first-child:before {bottom:0;right:0;border-width: 0 1px 1px 0}
+blockquote>:first-child:after {bottom:0;left:0;border-width: 0 0 1px 1px}
+blockquote > p {padding: 16px;}
 
 a {color: var(--color);text-decoration: none;}
 a:hover {color: var(--bg-color);background-color: var(--color);}
