@@ -1,4 +1,4 @@
-:root {
+:root{
 	--bg-color: black;
 	--color: white;
 	--max: 800px;
@@ -6,63 +6,63 @@
 }
 
 body{font-size:16px;font-family: var(--fonts);max-width: var(--max);padding: 0 15px;margin: 0px auto;line-height: 1.6;color:var(--color);background-color:var(--bg-color);}
-h1,h2,h3 {letter-spacing: -0.02em;line-height: 1.2; } 
-h1 {font-size: clamp(1.5em, 5vw, 2em);}
-h2 {font-size: clamp(1.25em, 4vw, 1.75em);}
-h3 {font-size: clamp(1em, 3vw, 1.5em);}
+h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2; } 
+h1{font-size: clamp(1.5em, 5vw, 2em);}
+h2{font-size: clamp(1.25em, 4vw, 1.75em);}
+h3{font-size: clamp(1em, 3vw, 1.5em);}
 
 
-main {border:2px dotted var(--color);margin:0px auto;background-color:var(--bg-color);}
+main{border:2px dotted var(--color);margin:0px auto;background-color:var(--bg-color);}
 
 
-.inner {padding:1em 7%;}
+.inner{padding:1em 7%;}
 
 
-pre, code, blockquote {background: var(--bg-color);}
-pre {overflow-x: scroll;}
-blockquote {position:relative;}
-blockquote:before, blockquote:after, blockquote>:first-child:before, blockquote>:first-child:after {
+pre, code, blockquote{background: var(--bg-color);}
+pre{overflow-x: scroll;}
+blockquote{position:relative;}
+blockquote:before, blockquote:after, blockquote>:first-child:before, blockquote>:first-child:after{
     position:absolute;
     padding: 8px;
     border-color:var(--color);
     border-style:solid;
     content: '';
 }
-blockquote:before {top:0;left:0;border-width: 1px 0 0 1px}
-blockquote:after {top:0;right:0;border-width: 1px 1px 0 0}
-blockquote>:first-child:before {bottom:0;right:0;border-width: 0 1px 1px 0}
-blockquote>:first-child:after {bottom:0;left:0;border-width: 0 0 1px 1px}
-blockquote > p {padding: 16px;}
+blockquote:before{top:0;left:0;border-width: 1px 0 0 1px}
+blockquote:after{top:0;right:0;border-width: 1px 1px 0 0}
+blockquote > :first-child:before{bottom:0;right:0;border-width: 0 1px 1px 0}
+blockquote > :first-child:after{bottom:0;left:0;border-width: 0 0 1px 1px}
+blockquote > p{padding: 16px;}
 
-a {color: var(--color);text-decoration: none;}
-a:hover {color: var(--bg-color);background-color: var(--color);}
-
-
-img {width: 100%;}
+a{color: var(--color);text-decoration: none;}
+a:hover{color: var(--bg-color);background-color: var(--color);}
 
 
-hr {border: 1px solid var(--color);}
+img{width: 100%;}
 
 
-footer {margin:16px;}
-.footer-nav {margin: 0;padding: 0;display: flex;list-style-type: none;}
-.footer-nav li {height: 20px;width: 20px;margin: 5px;}
+hr{border: 1px solid var(--color);}
 
 
-.right {float: right;}
-.left {float: left;}
+footer{margin:16px;}
+.footer-nav{margin: 0;padding: 0;display: flex;list-style-type: none;}
+.footer-nav li{height: 20px;width: 20px;margin: 5px;}
 
 
-svg {fill: var(--color);}
-svg:hover {color: var(--bg-color);background-color: var(--color);}
+.right{float: right;}
+.left{float: left;}
 
 
-div.right-border {padding-left: 10px;padding-right: 10px;}
-div.right-border a::after {content: "│"}
+svg{fill: var(--color);}
+svg:hover{color: var(--bg-color);background-color: var(--color);}
 
 
-body:target {--bg-color: white;--color: black;}
-body > nav > div > div > span.light { display: inline; }
-body > nav > div > div > span.dark { display: none; }
-body:target > nav > div > div > span.light { display: none; }
-body:target > nav > div > div > span.dark { display: inline; }
+div.right-border{padding-left: 10px;padding-right: 10px;}
+div.right-border a::after{content: "│"}
+
+
+body:target{--bg-color: white;--color: black;}
+body > nav > div > div > span.light{display: inline;}
+body > nav > div > div > span.dark{display: none;}
+body:target > nav > div > div > span.light{display: none;}
+body:target > nav > div > div > span.dark{display: inline;}
