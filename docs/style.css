@@ -1,13 +1,11 @@
 :root {
 	--bg-color: white;
 	--color: black;
-	--min: 10px;
-	--max: 100px;
-	--width: 50%;
+	--max: 800px;
 	--fonts: Courier, monospace;
 }
 
-body{font-size:16px;font-family: var(--fonts);max-width: 808px;padding: 0 15px;margin: 8px auto;line-height: 1.6;color:var(--color);background-color:var(--bg-color);}
+body{font-size:16px;font-family: var(--fonts);max-width: var(--max);padding: 0 15px;margin: 8px auto;line-height: 1.6;color:var(--color);background-color:var(--bg-color);}
 
 
 main {border:2px dotted var(--color);margin:16px auto;background-color:var(--bg-color);}
