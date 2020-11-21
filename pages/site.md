@@ -4,6 +4,9 @@ It remains to be seen how this actually turns out, but my idea is that this will
 
 {{feed}}
 
+### 211120 - Lot's of css stuff
+Lot's of changes have been made recently, mostly to how the site looks. I added a dark/light mode button (with the eldritch help of css target selectors), fancy blockquote boxes, and lots of other little changes. I got tons of help and inspiration from [[Fred Bednarski]](https://merveilles.town/@FredBednarski) and [[thomasorus']](https://merveilles.town/@thomasorus) sites, and overall I like the new look.
+
 ### 281020 - SVG Troubles
 I've been messing around with getting contact links in the footer for a little while now, and I can't quite figure it out (my sr.ht svg is invisible). This isn't much of an update, as I'm still not sure how to fix it, but more of a heads up as to why the footer might be a little funky.
 
