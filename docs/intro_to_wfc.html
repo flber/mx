@@ -6,14 +6,30 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>An Introduction to the Wave Function Collapse Algorithm</h3>
 <p>You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.</p>
 <p>First developed in October 2016 by <a href="https://twitter.com/ExUtumno/">Maxim Gumin</a>, the <a href="https://github.com/mxgmn/WaveFunctionCollapse">wfc algorithm</a> is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:</p>
@@ -36,9 +52,9 @@
 <li><a href="https://twitter.com/RobJHeaton">Robert Heaton's</a> great article called <a href="https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/">&quot;The Wavefunction Collapse Algorithm explained very clearly&quot;</a></li>
 </ul>
 <p><em>Last updated: 201120</em></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">

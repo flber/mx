@@ -1,57 +1,53 @@
-body {
-	font-family: Courier, monospace; 
-	margin: 0 auto; 
-	width: 38em; 
-	font-size: 1.2em; 
-	background: #fff; 
-	color: #000;
+:root {
+	--bg-color: white;
+	--color: black;
+	--min: 10px;
+	--max: 100px;
+	--width: 50%;
+	--fonts: Courier, monospace;
 }
 
-pre, code, blockquote {
-	font-size: 1em; 
-	background: #ddd;
-}
+body{font-size:16px;font-family: var(--fonts);max-width: 808px;padding: 0 15px;margin: 8px auto;line-height: 1.6;color:var(--color);background-color:var(--bg-color);}
 
-pre {
-	overflow-x: scroll;
-}
 
-a {
-	color: #000; 
-	text-decoration: none;
-}
+main {border:2px dotted var(--color);margin:16px auto;background-color:var(--bg-color);}
 
-a:hover {
-	color: #fff; 
-	background-color: #000;
-}
 
-img {
-	width: 100%;
-}
+.inner {padding:1em 7%;}
 
-hr {
-	border: 1px solid #000;
-}
 
-.footer-nav {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	list-style-type: none;
-}
+pre, code, blockquote {background: var(--bg-color);}
+pre {overflow-x: scroll;}
 
-.footer-nav li {
-	height: 20px;
-	width: 20px;
-	margin: 5px;
-}
 
-svg {
-	fill: #000;
-}
+a {color: var(--color);text-decoration: none;}
+a:hover {color: var(--bg-color);background-color: var(--color);}
 
-svg:hover {
-	color: #fff; 
-	background-color: #000;
-}
+
+img {width: 100%;}
+
+
+hr {border: 1px solid var(--color);}
+
+
+.footer-nav {margin: 0;padding: 0;display: flex;list-style-type: none;}
+.footer-nav li {height: 20px;width: 20px;margin: 5px;}
+
+
+.right {float: right;}
+.left {float: left;}
+
+
+svg {fill: var(--color);}
+svg:hover {color: var(--bg-color);background-color: var(--color);}
+
+
+div.right-border {border-right: 2px solid var(--color);padding-left: 10px;padding-right: 10px;}
+div.left-padding {padding-left: 10px;padding-right: 10px;}
+
+
+body:target {--bg-color: black;--color: white;}
+body > nav > div > div > span.light { display: none; }
+body > nav > div > div > span.dark { display: inline; }
+body:target > nav > div > div > span.light { display: inline; }
+body:target > nav > div > div > span.dark { display: none; }

@@ -6,14 +6,30 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>by <a href="https://github.com/heiswayi">[Heiswayi]</a></h3>
 <h2>Typography Elements in One</h2>
 <p>Let's start with a informative paragraph. <strong>This text is bolded.</strong> But not this one! <em>How about italic text?</em> Cool right? Ok, let's <strong><em>combine</em></strong> them together. Yeah, that's right! I have code to highlight, so <code>ThisIsMyCode()</code>. What a nice! Good people will hyperlink away, so <a href="#">here we go</a> or <a href="http://www.example.com">http://www.example.com</a>.</p>
@@ -110,9 +126,9 @@ But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
 <p>Footnote:</p>
 <p>[^1]: 1: Footnote number one yeah baby!</p>
 <p>[^2]: 2: A footnote you can link to - <a href="#">click here!</a></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">

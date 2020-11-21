@@ -6,14 +6,30 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>Grimoire</h3>
 <p>Inspired by the <a href="https://fdisk.space/grimoire/">[grimoire of Fred Bednarski]</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
 <p>To change the extensions of audio files in a directory:</p>
@@ -45,9 +61,9 @@
 <p>mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -type Grayscale -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1/*</p>
 </blockquote>
 <p><em>Last updated: 201120</em></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">

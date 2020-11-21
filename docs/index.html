@@ -6,14 +6,30 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>Hello there</h3>
 <p>Thank you for visiting my humble virtual abode. This site is the third, and hopefully final, iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the <a href="wiki.html">{wiki}</a> page. It is inspired by <a href="https://merveilles.town/@neauoire">[Devine Lu Linvega's]</a> <a href="https://wiki.xxiivv.com/site/home.html">[XXIIVV]</a>, <a href="https://merveilles.town/@slisne">[Liam's]</a> <a href="https://bismuth.garden/">[digital garden]</a>, and  others, many from the <a href="https://merveilles.town/about">[Town of Merveilles]</a> and the <a href="https://webring.xxiivv.com/">[Webring]</a>.</p>
 <p>Here is what I'm working on <a href="now.html">{now}</a>.</p>
@@ -33,9 +49,9 @@
 <li>301215 <a href="mdcheatsheet.html">{Markdown Cheatsheet}</a></li>
 </ul>
 <p><em>Last updated: 201120</em></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">

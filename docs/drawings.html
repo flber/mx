@@ -6,23 +6,39 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>Drawings</h3>
 <p>Here are some drawings I've done, mostly made with <a href="https://hundredrabbits.github.io/Noodle/">[Noodle]</a>. A bit random and all over the place, but eh</p>
 <p><img src="images/noodle/tower1.jpg" alt="A short little tower" /></p>
 <p><img src="images/noodle/tower2.jpg" alt="A slightly bigger tower" /></p>
 <p><img src="images/noodle/mountains.jpg" alt="Mountains" /></p>
 <p><em>Last updated: 081020</em></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">

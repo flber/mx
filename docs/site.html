@@ -6,14 +6,30 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>My Plans for This Site</h3>
 <p>It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I'll be using my feed script to add to it, and I suppose we'll just see how it goes!</p>
 <h4>281020 - SVG Troubles</h4>
@@ -24,9 +40,9 @@
 <p>Additionally, I think I might break from my bash-only system to include a bit of Rust, as I've been wanting to learn it for a while and I figure this won't be too challenging of an introduction to the language.
 Anyway, let me know what you think, and maybe look out for another one of these updates soonish?</p>
 <p><em>Last updated: 281020</em></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">

@@ -6,14 +6,30 @@
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="style.css" />
 	</head>
-	<body>
-		<nav>
-			┌──────┐<br>
-			│ <a href="index.html">Home</a> │ <a href="now.html">now</a> │ <a href="wiki.html">wiki</a> │ <a href="about.html">about</a><br>
-			└──────┘<br>
-			<hr>
+	<body id="dark">
+		<nav style="padding-top: 15px;">
+			<div style="display:flex;"> 
+				<div class="right-border">
+					<b><a href="index.html">Home </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="now.html"> now </a></b>
+				</div>
+				<div class="right-border">
+					<b><a href="wiki.html"> wiki </a></b>
+				</div>
+				<div class="left-padding">
+					<b><a href="about.html"> about</a></b>
+				</div>
+				<div style="margin-left: auto;">
+					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
+					<span class="light"><b><a href="#">{light}</a></b></span>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
 		</nav>
 		<main>
+			<article class="inner">
 <h3>The WFC Tile Generator</h3>
 <p>The tile generator of wfc is one of the first systems which runs, and its purpose is to break up an input image into usable tiles with additional data about their edges.</p>
 <p>It first breaks up the image into NxN tiles, where N is just a variable passed to wfc to tell it how big the tiles should be (3 is a good default), and saves each tile as an image. I'm using Lua, which allows me to store each tile as a table with values for the image, edge data, and other important information, but there are analogues to the structure I have in almost any language. Something important to note here is that we are generating <em>overlapping</em> tiles. This means that the pixels on the edge of each tile are the same as the tile next to it. This is important because when we stitch the tiles together at the end of the algorithm, we want to make sure that the resulting image looks seamless.</p>
@@ -28,9 +44,9 @@ For example, if we have a simple black and white tile:</p>
 <p>And that's pretty much it for the tile generator! While this is one of the more straight-forward systems, I found that it took a while to figure out what form to put the data in for later use, as most articles sort of breeze over this part. The end goal is to have a weighted list of unique tiles with single-integer color data for all four sides, though if you find some other structure more efficient or understandable by all means use that.</p>
 <p>(Also, wow its been a long time! It's good to be back, and I think I'll use drawings in future posts; I liked how they turned out)</p>
 <p><em>Last updated: 201120</em></p>
+			</article>
 		</main>
 		<footer>
-			<hr>
 			<nav aria-label="Contact links">
 				<ul class="footer-nav">
 			        <li><a href="mailto:benrhammond@gmail.com" aria-label="Email adress" title="Email adress">
