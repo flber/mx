@@ -7,8 +7,8 @@
 
 body{font-size:16px;font-family: var(--fonts);max-width: var(--max);padding: 0 15px;margin: 0px auto;line-height: 1.6;color:var(--color);background-color:var(--bg-color);}
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2; } 
-h1{font-size: clamp(1.5em, 7vw, 2.5em);}
-h2{font-size: clamp(1.25em, 5vw, 1.75em);}
+h1{font-size: clamp(1.5em, 5vw, 2.5em);}
+h2{font-size: clamp(1.25em, 4vw, 1.75em);}
 h3{font-size: clamp(1em, 3vw, 1.5em);}
 
 
