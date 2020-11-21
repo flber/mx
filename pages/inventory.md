@@ -1,4 +1,4 @@
-### Inventory
+## Inventory
 
 Everyday items:
 - [[Field Notes]](https://fieldnotesbrand.com/) winter 2018 edition (x3)

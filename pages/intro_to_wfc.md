@@ -1,4 +1,4 @@
-### An Introduction to the Wave Function Collapse Algorithm
+## An Introduction to the Wave Function Collapse Algorithm
 
 You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.
 

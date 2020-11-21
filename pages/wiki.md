@@ -1,4 +1,4 @@
-### Wiki
+## Wiki
 
 This is a loose collection of notes, links, and other resources.
 

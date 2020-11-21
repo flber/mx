@@ -1,4 +1,4 @@
-### Now
+## Now
 
 - Cultivating [{this site}](site.html)
 - Working on a [{wave function collapse algorithm}](intro_to_wfc.html)

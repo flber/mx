@@ -1,4 +1,4 @@
-### Learning Rust
+## Learning Rust
 
 First of all, this is going to primarily be a place to store notes for myself as I learn Rust, so take everything I say with a grain of salt! (and feedback is always appreciated, so feel free to say hi)
 

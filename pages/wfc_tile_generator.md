@@ -1,4 +1,4 @@
-### The WFC Tile Generator
+## The WFC Tile Generator
 
 The tile generator of wfc is one of the first systems which runs, and its purpose is to break up an input image into usable tiles with additional data about their edges.
 

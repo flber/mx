@@ -1,4 +1,4 @@
-### Grimoire
+## Grimoire
 
 Inspired by the [[grimoire of Fred Bednarski]](https://fdisk.space/grimoire/), this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.
 

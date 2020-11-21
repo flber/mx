@@ -10,16 +10,16 @@
 		<nav>
 			<div style="display:flex; align-items: center;"> 
 				<div class="right-border">
-					<h2><b><a href="index.html">Home</a></b></h2>
+					<h1><b><a href="index.html">Home</a></b></h1>
 				</div>
 				<div class="right-border">
-					<h2><b><a href="now.html">now</a></b></h2>
+					<h1><b><a href="now.html">now</a></b></h1>
 				</div>
 				<div class="right-border">
-					<h2><b><a href="wiki.html">wiki</a></b></h2>
+					<h1><b><a href="wiki.html">wiki</a></b></h1>
 				</div>
 				<div class="right-border">
-					<h2><b><a href="about.html">about</a></b></h2>
+					<h1><b><a href="about.html">about</a></b></h1>
 				</div>
 				<div style="margin-left: auto;">
 					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
@@ -30,7 +30,7 @@
 		</nav>
 		<main>
 			<article class="inner">
-<h3>The WFC Propagator Constructor</h3>
+<h2>The WFC Propagator Constructor</h2>
 <p>The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p>
 <p>Lets just focus on a simple example. Here are our tiles</p>
 <p><img src="images/post-4/notes-1.png" alt="Tiles" /></p>
@@ -85,7 +85,7 @@ if checkTile.color.bottom == currentTile.color.top then
 <pre><code>table.insert(wfc.adjacencyIndex, tileAdjacency)
 </code></pre>
 <p>And with that we're done! Hopefully this helped to explain how the propagator constructor works, as well as what the structure of the adjacencyIndex looks like.</p>
-<p><em>Last updated: 081020</em></p>
+<p><em>Last updated: 201120</em></p>
 			</article>
 		</main>
 		<footer>
