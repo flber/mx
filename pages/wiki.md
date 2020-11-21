@@ -4,6 +4,8 @@ This is a loose collection of notes, links, and other resources.
 
 - Design
 	- [[Akin's laws of spacecraft design]](https://spacecraft.ssl.umd.edu/akins_laws.html)
+	- [[Thomasorus' html-tips]](https://thomasorus.com/html-tips.html)
+	- [[Fred Bednarski's css tips page]](https://fdisk.space/css/)
 - Programming
 	- [[Bash]](https://devhints.io/bash)
 	- [[Change git urls]](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/)
