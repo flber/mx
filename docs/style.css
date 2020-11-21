@@ -8,7 +8,7 @@
 body{font-size:16px;font-family: var(--fonts);max-width: var(--max);padding: 0 15px;margin: 8px auto;line-height: 1.6;color:var(--color);background-color:var(--bg-color);}
 
 
-main {border:2px dotted var(--color);margin:16px auto;background-color:var(--bg-color);}
+main {border:2px dotted var(--color);margin:0px auto;background-color:var(--bg-color);}
 
 
 .inner {padding:1em 7%;}
@@ -40,8 +40,8 @@ svg {fill: var(--color);}
 svg:hover {color: var(--bg-color);background-color: var(--color);}
 
 
-div.right-border {border-right: 2px solid var(--color);padding-left: 10px;padding-right: 10px;}
-div.left-padding {padding-left: 10px;padding-right: 10px;}
+div.right-border {padding-left: 10px;padding-right: 10px;}
+div.right-border a::after {content: "│"}
 
 
 body:target {--bg-color: black;--color: white;}

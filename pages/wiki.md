@@ -21,4 +21,5 @@ This is a loose collection of notes, links, and other resources.
 	- [[Grimgrains]](https://grimgrains.com/site/home.html)
 	- [[Ritual Dust]](https://ritualdust.com/food/)
 
+
 *Last updated: {{date}}*
