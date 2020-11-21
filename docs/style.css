@@ -44,7 +44,7 @@ img {width: 100%;}
 hr {border: 1px solid var(--color);}
 
 
-footer {margin-top:16px;}
+footer {margin:16px;}
 .footer-nav {margin: 0;padding: 0;display: flex;list-style-type: none;}
 .footer-nav li {height: 20px;width: 20px;margin: 5px;}
 
