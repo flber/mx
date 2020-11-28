@@ -19,6 +19,4 @@ And here are some blog(like) posts
 - 250720 [{Wave Function Collapse Intro}](intro_to_wfc.html)
 - 301215 [{Markdown Cheatsheet}](mdcheatsheet.html)
 
-
-
 *Last updated: {{date}}*

@@ -7,7 +7,7 @@ First developed in October 2016 by [Maxim Gumin](https://twitter.com/ExUtumno/),
 
 That essentially just means that the output looks like the input, but because it's procedurally generated it can be arbitrarily large and even generated on the fly. Here's an example of it in action from Maxim's repository:
 
-![wfc gif](/images/wfc.gif)
+![wfc gif](/images/wfc_dth.gif)
 
 Pretty cool, right?
 
