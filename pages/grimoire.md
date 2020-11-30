@@ -23,4 +23,7 @@ To push file changes over ssh:
 To dither and shrink an image (courtesy of [[Thomasorus]](https://merveilles.town/web/accounts/33648)):
 > mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -type Grayscale -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1/*
 
+To simply dither of an image:
+> convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png
+
 *Last updated: {{date}}*
