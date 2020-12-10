@@ -57,15 +57,31 @@
 <blockquote>
 <p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
 </blockquote>
-<p>To dither and shrink an image (courtesy of <a href="https://merveilles.town/web/accounts/33648">[Thomasorus]</a>):</p>
+<p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">[courtesy]</a> of <a href="https://merveilles.town/web/accounts/33648">[Thomasorus]</a> with some modification for personal preference):</p>
 <blockquote>
-<p>mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -type Grayscale -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1/*</p>
+<p>mogrify <br />
+-format gif <br />
+-filter Triangle <br />
+-define filter:support=2 \</p>
+<h1>a number</h1>
+<p>-thumbnail $size <br />
+-monochrome <br />
+-unsharp 0.25x0.08+8.3+0.045 <br />
+-dither FloydSteinberg <br />
+-colors 2 <br />
+-posterize 136 <br />
+-quality 82 <br />
+-define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all <br />
+-interlace none <br />
+-colorspace gray <br />
+-normalize <br />
+$from</p>
 </blockquote>
 <p>To simply dither of an image:</p>
 <blockquote>
 <p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
 </blockquote>
-<p><em>Last updated: 301120</em></p>
+<p><em>Last updated: 091220</em></p>
 			</article>
 		</main>
 		<footer>
