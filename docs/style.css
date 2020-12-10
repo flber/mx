@@ -45,6 +45,7 @@ a:hover{color: var(--bg-color);background-color: var(--color);}
 
 
 img{width: 100%;}
+img.webring{transform:scale(1.4);}
 
 
 hr{border: 1px solid var(--color);}
@@ -68,7 +69,8 @@ div.right-border a::after{content: "│"}
 
 
 body:target{--bg-color: black;--color: white;}
-body > nav > div > div > span.light{display: none;}
-body > nav > div > div > span.dark{display: inline;}
-body:target > nav > div > div > span.light{display: inline;}
-body:target > nav > div > div > span.dark{display: none;}
+/* > nav > div > div > */
+body span.light{display: none;}
+body span.dark{display: inline;}
+body:target span.light{display: inline;}
+body:target span.dark{display: none;}
