@@ -1,6 +1,6 @@
 ## Wiki
 
-This is a loose collection of notes, links, and other resources.
+This is a loose collection of notes, links, and other resources. See my [{grimoire}](grimoire.html) for snippets which I find useful but perhaps a bit haunted.
 
 - Design
 	- [[Akin's laws of spacecraft design]](https://spacecraft.ssl.umd.edu/akins_laws.html)

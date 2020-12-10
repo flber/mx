@@ -4,7 +4,7 @@ Thank you for visiting my humble virtual abode. This site is the third, and hope
 
 Here is what I'm working on [{now}](now.html).
 
-And here are some blog(like) posts
+And here are some recent-ish pages (These are things which I either can't really categorize into the wiki, or are things I want to be easily seen)
 
 - 121120 [{Grimoire}](grimoire.html)
 - 081120 [{Recipes}](recipes.html)
@@ -18,5 +18,6 @@ And here are some blog(like) posts
 - 020820 [{Overview to WFC}](overview_to_wfc.html)
 - 250720 [{Wave Function Collapse Intro}](intro_to_wfc.html)
 - 301215 [{Markdown Cheatsheet}](mdcheatsheet.html)
+
 
 *Last updated: {{date}}*
