@@ -25,7 +25,6 @@ To dither and shrink an image ([[courtesy]](https://gist.github.com/Thomasorus/b
 > -format gif \
 > -filter Triangle \
 > -define filter:support=2 \
-> # a number
 > -thumbnail $size \
 > -monochrome \
 > -unsharp 0.25x0.08+8.3+0.045 \
