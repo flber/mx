@@ -20,7 +20,7 @@ To sanitize a file name (the .opus can be any extension):
 To push file changes over ssh:
 > rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder
 
-To dither and shrink an image (courtesy of [[Thomasorus]](https://merveilles.town/web/accounts/33648)):
+To dither and shrink an image ([[courtesy]](https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63) of [[Thomasorus]](https://merveilles.town/web/accounts/33648)):
 > mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -type Grayscale -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1/*
 
 To simply dither of an image:
