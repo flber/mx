@@ -23,6 +23,10 @@ img.bg {
 	left: 0;
 }
 
+figcaption {
+	font-size: 0.5em;
+}
+
 @media screen and (max-width: 1024px) {
 	img.bg {
 		left: 50%;
