@@ -59,22 +59,7 @@
 </blockquote>
 <p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">[courtesy]</a> of <a href="https://merveilles.town/web/accounts/33648">[Thomasorus]</a> with some modification for personal preference):</p>
 <blockquote>
-<p>mogrify \
--format gif \
--filter Triangle \
--define filter:support=2 \
--thumbnail $size \
--monochrome \
--unsharp 0.25x0.08+8.3+0.045 \
--dither FloydSteinberg \
--colors 2 \
--posterize 136 \
--quality 82 \
--define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all \
--interlace none \
--colorspace gray \
--normalize \
-$from</p>
+<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
 </blockquote>
 <p>To simply dither of an image:</p>
 <blockquote>
