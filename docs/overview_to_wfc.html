@@ -33,8 +33,8 @@
 			<article class="inner">
 <h2>A High-Level Overview of WFC</h2>
 
-<p>My wfc implementation is made of four main systems. Mine are called the tile generator, the propagator constructor, the observer, and the propagator, and though other people may call them different things they make up the basis of how wfc works. They all act on or help to create the main data structure of wfc, the wave. The wave keeps track of which tiles can go in which spaces, and to begin with it starts as a totally "un-collapsed" wave, which means that every tile is allowed everywhere. Over the course of the algorithm's running, the four main systems will "collapse" the wave into a definite image.</p>
-<p>Note: the word "collapsed" is taken from quantum physics, which this algorithm is loosely based on, and corresponds to the chance that any one tile will be in a space. For example, a fully collapsed space is one where there is only one possible tile. An un-collapsed space is one where every tile is possible. This also connects to the idea of "entropy", which you can think of as how many possible options there are in a space. In the case of this algorithm there are also a few other things which affect the entropy value of a space, but I'll explain that more in another article.</p>
+<p>My wfc implementation is made of four main systems. Mine are called the tile generator, the propagator constructor, the observer, and the propagator, and though other people may call them different things they make up the basis of how wfc works. They all act on or help to create the main data structure of wfc, the wave. The wave keeps track of which tiles can go in which spaces, and to begin with it starts as a totally "un collapsed" wave, which means that every tile is allowed everywhere. Over the course of the algorithm's running, the four main systems will "collapse" the wave into a definite image.</p>
+<p>Note: the word "collapsed" is taken from quantum physics, which this algorithm is loosely based on, and corresponds to the chance that any one tile will be in a space. For example, a fully collapsed space is one where there is only one possible tile. An un collapsed space is one where every tile is possible. This also connects to the idea of "entropy", which you can think of as how many possible options there are in a space. In the case of this algorithm there are also a few other things which affect the entropy value of a space, but I'll explain that more in another article.</p>
 
 <ul>
 <li>The tile generator does exactly what it sounds like: it generates tiles.</li>
@@ -45,7 +45,7 @@
 
 <p>I'll be writing an article on each of these in the future, with maybe a few extras to go over vocabulary, problems I've faced, and then however many more articles it takes before I've finished my own implementation.</p>
 
-
+<p><em>Last updated: 171220</em></p>
 
 			</article>
 		</main>

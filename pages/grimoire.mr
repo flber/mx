@@ -26,4 +26,4 @@ To dither and shrink an image ([[courtesy]](https://gist.github.com/Thomasorus/b
 To simply dither of an image:
 > convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png
 
-
+*Last updated: {{date}}*

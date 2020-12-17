@@ -18,4 +18,4 @@ My thinking as of right now is to have the makefile first run a script which gen
 Additionally, I think I might break from my bash-only system to include a bit of Rust, as I've been wanting to learn it for a while and I figure this won't be too challenging of an introduction to the language.
 Anyway, let me know what you think, and maybe look out for another one of these updates soonish?
 
-
+*Last updated: {{date}}*

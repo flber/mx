@@ -92,4 +92,4 @@ table.insert(wfc.adjacencyIndex, tileAdjacency)
 
 And with that we're done! Hopefully this helped to explain how the propagator constructor works, as well as what the structure of the adjacencyIndex looks like.
 
-
+*Last updated: {{date}}*
