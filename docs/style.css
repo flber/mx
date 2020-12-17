@@ -51,17 +51,12 @@ img.webring{transform:scale(1.4);}
 hr{border: 1px solid var(--color);}
 
 
-footer{margin:16px;}
-.footer-nav{margin: 0;padding: 0;display: flex;list-style-type: none;}
-.footer-nav li{height: 20px;width: 20px;margin: 5px;}
-
-
-.right{float: right;}
-.left{float: left;}
+footer{margin:24px;padding-bottom: 16px;}
+footer section svg, img{height: 20px;width: 20px;margin: 2px;}
 
 
 svg{fill: var(--color);}
-svg:hover{color: var(--bg-color);background-color: var(--color);}
+svg:hover{color: var(--bg-color);}
 
 
 div.right-border{padding-left: 10px;padding-right: 10px;}
