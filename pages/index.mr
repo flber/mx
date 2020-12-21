@@ -4,22 +4,9 @@ Thank you for visiting my humble virtual abode. This site is the third, and hope
 
 Here is what I'm working on [{now}](now.html).
 
-And here are some recent-ish pages (These are things which I either can't really categorize into the wiki, or are things I want to be easily seen)
+And here are the 15 most recently updated pages. Pardon the names, I'm just pulling from the filenames (for now; that should change soon). The dates are a bit messed up, because I think I did a lot of automated changes on  171220, but for more recent things it's fine.
 
-- 201220 [{Music}](music.html)
-- 181220 [{Norwegian}](norwegian.html)
-- 121120 [{Grimoire}](grimoire.html)
-- 081120 [{Recipes}](recipes.html)
-- 301020 [{Learning Rust}](learning_rust.html)
-- 261020 [{Site Updates}](site.html)
-- 051020 [{Drawings}](drawings.html)
-- 011020 [{Devtober!}](devtober.html)
-- 290920 [{My First Look at Plan9}](plan9.html)
-- 280820 [{WFC Propagator Constructor}](wfc_propagator_constructor.html)
-- 270820 [{WFC Tile Generator}](wfc_tile_generator.html)
-- 020820 [{Overview to WFC}](overview_to_wfc.html)
-- 250720 [{Wave Function Collapse Intro}](intro_to_wfc.html)
-- 301215 [{Markdown Cheatsheet}](mdcheatsheet.html)
+{{latest}}
 
 
 
