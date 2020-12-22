@@ -1,3 +1,7 @@
+!meta!
+title: Plan9
+!meta!
+
 ## My First Look at Plan9
 
 I first encountered Plan9 on Devine Lu Linvega's site and was immediately interested in its minimalist design and "more unix than unix" philosophy. If you've never heard of it before, Plan9 is a research operating system developed by Bell Labs in 1992, and takes the unix principle of everything as a file to the extreme. It has a lot of other interesting features and quirks, and if you're interested in learning more about them I would highly recommend the the Plan9 [[about page]](https://9p.io/plan9/about.html) or the [[several papers]](https://9p.io/sys/doc/) written about the operating system.

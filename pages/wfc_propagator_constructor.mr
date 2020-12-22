@@ -1,3 +1,7 @@
+!meta!
+title: WFC Propagator Constructor
+!meta!
+
 ## The WFC Propagator Constructor
 
 The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.

@@ -1,10 +1,14 @@
+!meta!
+title: Home
+!meta!
+
 ## Hello there
 
 Thank you for visiting my humble virtual abode. This site is the third, and hopefully final, iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the [{wiki}](wiki.html) page. It is inspired by many sites from the [[Town of Merveilles]](https://merveilles.town/about) and the [[Webring]](https://webring.xxiivv.com/).
 
 Here is what I'm working on [{now}](now.html).
 
-And here are the 15 most recently updated pages. Pardon the names, I'm just pulling from the filenames (for now; that should change soon). The dates are a bit messed up, I think I did a lot of automated changes on  171220, but for more recent things it's fine.
+And here are the 15 most recently updated pages. The dates are super messed up right now because I added a header to all of the files, so the dates aren't very useful.
 
 {{latest}}
 
