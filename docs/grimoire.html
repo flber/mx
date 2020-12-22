@@ -31,56 +31,40 @@
 		</nav>
 		<main>
 			<article class="inner">
-
-
-
-
-<h2>Grimoire</h2>
-
-<p>Inspired by the <a href="https://fdisk.space/grimoire/">[grimoire of Fred Bednarski]</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
-
-<p>To change the extensions of audio files in a directory:</p>
-<blockquote>
-<p>for file in *.opus; do ffmpeg -i ${file%.opus}.opus -c copy ${file%.opus}.ogg && rm ${file%.opus}.opus; done</p>
-</blockquote>
-
-<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
-<blockquote>
-<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
-</blockquote>
-
-<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
-<blockquote>
-<p>youtube-dlc -x -f mp3/bestaudio</p>
-</blockquote>
-
-<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
-<blockquote>
-<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
-</blockquote>
-
-<p>To sanitize a file name (the .opus can be any extension):</p>
-<blockquote>
-<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
-</blockquote>
-
-<p>To push file changes over ssh:</p>
-<blockquote>
-<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
-</blockquote>
-
-<p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">[courtesy]</a> of <a href="https://merveilles.town/web/accounts/33648">[Thomasorus]</a> with some modification for personal preference):</p>
-<blockquote>
-<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
-</blockquote>
-
-<p>To simply dither of an image:</p>
-<blockquote>
-<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
-</blockquote>
-
-
-
+				<h2>Grimoire</h2>
+				<p>Inspired by the <a href="https://fdisk.space/grimoire/">[grimoire of Fred Bednarski]</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
+				<p>To change the extensions of audio files in a directory:</p>
+				<blockquote>
+				<p>for file in *.opus; do ffmpeg -i ${file%.opus}.opus -c copy ${file%.opus}.ogg && rm ${file%.opus}.opus; done</p>
+				</blockquote>
+				<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
+				<blockquote>
+				<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
+				</blockquote>
+				<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
+				<blockquote>
+				<p>youtube-dlc -x -f mp3/bestaudio</p>
+				</blockquote>
+				<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
+				<blockquote>
+				<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
+				</blockquote>
+				<p>To sanitize a file name (the .opus can be any extension):</p>
+				<blockquote>
+				<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
+				</blockquote>
+				<p>To push file changes over ssh:</p>
+				<blockquote>
+				<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
+				</blockquote>
+				<p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">[courtesy]</a> of <a href="https://merveilles.town/web/accounts/33648">[Thomasorus]</a> with some modification for personal preference):</p>
+				<blockquote>
+				<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
+				</blockquote>
+				<p>To simply dither of an image:</p>
+				<blockquote>
+				<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
+				</blockquote>
 			</article>
 		</main>
 		<footer>
