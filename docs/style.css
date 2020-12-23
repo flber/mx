@@ -1,11 +1,13 @@
 :root{
-	--bg: white;
-	--text: black;
+	--bg: #FFF;
+	--text: #000;
 	--highlight: #00BB8D;
 	--max: 800px;
 	--fonts:tzimmes, serif;
 }
 
+::selection{background: var(--text);color: var(--bg);} 
+::-moz-selection{background: var(--text);color: var(--bg);} 
 
 body{font-size:18px;font-family: var(--fonts);font-style: normal;max-width: var(--max);padding: 0 15px;margin: 0px auto;line-height: 1.6;color:var(--text);background-color:var(--bg);}
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2;} 
