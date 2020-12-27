@@ -31,19 +31,30 @@
 		</nav>
 		<main>
 			<article class="inner">
+				
 				<h2>An Introduction to the Wave Function Collapse Algorithm</h2>
+				
 				<p>You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.</p>
+				
 				<p>First developed in October 2016 by <a href="https://twitter.com/ExUtumno/">Maxim Gumin</a>, the <a href="https://github.com/mxgmn/WaveFunctionCollapse">wfc algorithm</a> is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:</p>
 				<blockquote>
 				<p>Each NxN pattern of pixels in the output should occur at least once in the input. Distribution of NxN patterns in the input should be similar to the distribution of NxN patterns over a sufficiently large number of outputs. In other words, probability to meet a particular pattern in the output should be close to the density of such patterns in the input.</p>
 				</blockquote>
+				
 				<p>That essentially just means that the output looks like the input, but because it's procedurally generated it can be arbitrarily large and even generated on the fly. Here's an example of it in action from Maxim's repository:</p>
+				
 				<p><img src="/images/wfc.gif" alt="wfc gif"/></p>
+				
 				<p>Pretty cool, right?</p>
+				
 				<h3>My Project</h3>
+				
 				<p>If you're like me when you saw that gif, your first instinct would be to poke around and see if you could figure out how it works to make your own. In my experience however, while there are lots of great resources to learn generally how wfc works, there are far fewer in-depth analyses of the algorithm, its quirks, and the difficulties you might face trying to build your own version. The best resource, in my opinion, is <a href="https://twitter.com/isaackarth">Isaac Karth</a> and <a href="https://twitter.com/rndmcnlly">Adam M. Smith's</a> paper, <a href="https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf">WaveFunctionCollapse is Constraint Solving in the Wild</a>, which provides a pretty detailed description of some of the main systems in the algorithm.</p>
+				
 				<p>My goal (over an embarrassingly long span of time) has been to write my own implementation of the algorithm in the Lua language, with LOVE2D to make the graphics easier to handle. While I'm still not quite finished with the algorithm, in these posts I'll be explaining what I've done so far, the problems I've faced and the ways I solved them, and what I'm currently working on as I catch up to myself. All of that will include some actual code I've written (I apologize in advance for my atrocious formatting), and perhaps some diagrams and such depending on how artistic I'm feeling.</p>
+				
 				<h3>Other Resources</h3>
+				
 				<p>Here are some good videos, articles, and papers which I've used in my own research:</p>
 				<ul>
 				<li>The <a href="https://adamsmith.as/papers/wfc_is_constraint_solving_in_the_wild.pdf">aforementioned paper</a> by <a href="https://twitter.com/isaackarth">Isaac Karth</a> and <a href="https://twitter.com/rndmcnlly">Adam M. Smith</a></li>
@@ -52,6 +63,8 @@
 				<li><a href="https://twitter.com/unormal">Brian Bucklew's</a> <a href="https://www.youtube.com/watch?v=fnFj3dOKcIQ&t=1s">very interesting talk</a> on using wfc in dungeon generation in <a href="http://www.cavesofqud.com/">Caves of Qud</a> during the 2019 Roguelike Celebration, which I actually got to see in person!</li>
 				<li><a href="https://twitter.com/RobJHeaton">Robert Heaton's</a> great article called <a href="https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/">"The Wavefunction Collapse Algorithm explained very clearly"</a></li>
 				</ul>
+				
+				
 			</article>
 		</main>
 		<footer>
