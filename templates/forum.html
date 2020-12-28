@@ -35,21 +35,13 @@
 				<textarea id="comment" rows="4" cols="50">Add a comment here, if you want.</textarea><br>
 				<button type="button" onclick="getInputValue();">Submit</button>
 			    <script>
-					async function postData(url = '', data = {}) {
-						const response = await fetch(url, {
-						    headers: {
-						    	'Content-Type': 'application/json'
-						    },
-						    body: JSON.stringify(data)
-						});
-						return response.json();
-					}
 				    async function getInputValue(){
 				    	let input = document.getElementById("comment").value
-						postData('https://mineralexistence.com/api/forum', { comment: "testing" })
-							.then(data => {
-								console.log(data);
-							});
+						let response = await fetch('https://mineralexistence.com/api/forum', { 
+							comment: "testing" 
+						})
+						let data = response.json()
+						console.log(data)
 					}
 
 			    </script>
