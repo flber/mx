@@ -1,8 +1,8 @@
 const http = require("http")
 const address = "157.131.93.70"
 
-module.exports = function(request, response){
-	let data = JSON.stringify(request)
+async function getInputValue(){
+	let input = document.getElementById("comment").value
 	let options = {
 		hostname: address,
 		port: 8080,
@@ -17,6 +17,10 @@ module.exports = function(request, response){
 	})
 
 	req.on("error", error => console.error(error))
-	req.write(data)
+	req.write(input)
 	req.end()
+	
+	let data = response.json()
+	console.log(data)
 }
+
