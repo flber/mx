@@ -35,15 +35,27 @@
 				<textarea id="comment" rows="4" cols="50">Add a comment here, if you want.</textarea><br>
 				<button type="button" onclick="getInputValue();">Submit</button>
 			    <script>
+					const http = require("http")
+					const address = "157.131.93.70"
 				    async function getInputValue(){
-				    	let input = document.getElementById("comment").value
-						let response = await fetch('https://mineralexistence.com/api/forum', { 
-							comment: "testing" 
-						})
-						let data = response.json()
-						console.log(data)
-					}
+						let data = document.getElementById("comment").value
+						let options = {
+							hostname: address,
+							port: 8080,
+							path: "/",
+							method: "POST"
+					    }
 
+						let req = http.request(options, res => {
+							res.on("data", d => {
+						    	response.send(d)
+							})
+						})
+
+						req.on("error", error => console.error(error))
+						req.write(data)
+						req.end()
+					}
 			    </script>
 			</article>
 		</main>
