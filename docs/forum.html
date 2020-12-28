@@ -38,7 +38,6 @@
 			    <script>
 					async function postData(url = '', data = {}) {
 						const response = await fetch(url, {
-						    method: 'POST',
 						    headers: {
 						    	'Content-Type': 'application/json'
 						    },
@@ -50,7 +49,7 @@
 				    	let input = document.getElementById("comment").value
 						postData('https://mineralexistence.com/api/forum', { comment: "testing" })
 							.then(data => {
-								console.log(data); // JSON data parsed by `data.json()` call
+								console.log(data);
 							});
 					}
 
