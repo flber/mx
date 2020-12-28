@@ -38,7 +38,7 @@
 			    <script>
 				    async function getInputValue(){
 				    	let input = document.getElementById("comment").value
-						let response = await fetch("https://mineralexistence.com/api/forum?content=testing")
+						let response = await fetch("https://mineralexistence.com/api/forum.js?content=testing")
 						let data = await response.json()
 						document.getElementById('comment').innerHTML = data
 					}
