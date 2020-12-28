@@ -31,17 +31,17 @@
 		</nav>
 		<main>
 			<article class="inner">
+				{{content}}
 				<textarea id="comment" rows="4" cols="50">Add a comment here, if you want.</textarea><br>
 				<button type="button" onclick="getInputValue();">Submit</button>
 			    <script>
 				    async function getInputValue(){
 				    	let input = document.getElementById("comment").value
-						let response = await fetch("https://mineralexistence.com/api/forum?content=testing")
+						let response = await fetch("https://mineralexistence.com/api/forum.js?content=testing")
 						let data = await response.json()
 						document.getElementById('comment').innerHTML = data
 					}
 			    </script>
-				{{content}}
 			</article>
 		</main>
 		<footer>
