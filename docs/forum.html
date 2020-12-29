@@ -38,13 +38,8 @@
 				<button type="button" onclick="getInputValue();">Submit</button>
 				<script>
 					async function getInputValue() {
-						console.log("you pressed the comment button")
 						let input = document.getElementById("comment").value
-						console.log("the content is ", input)
-						var values = {
-							content: input
-						}
-						console.log("the json content is ", values.content)
+						var values = { content: input }
 						postData(JSON.stringify(values))
 							.then(data => {
 								console.log(data)
