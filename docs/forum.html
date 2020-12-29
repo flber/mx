@@ -36,6 +36,15 @@
 				<p>Testing</p>
 				<textarea id="comment" rows="4" cols="50">Add a comment here, if you want.</textarea><br>
 				<button type="button" onclick="getInputValue();">Submit</button>
+				<script>
+					async function getInputValue() {
+						let input = document.getElementById("comment").value
+						postData({ content: "${input}" })
+							.then(data => {
+								console.log(data)
+							})
+					}
+				</script>
 			</article>
 		</main>
 		<footer>

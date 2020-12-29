@@ -1,26 +1,12 @@
-const http = require("http")
-const address = "157.131.93.70"
-
-async function getInputValue(){
-	let input = document.getElementById("comment").value
-	let options = {
-		hostname: address,
-		port: 8080,
-		path: "/",
-		method: "POST"
-    }
-
-	let req = http.request(options, res => {
-		res.on("data", data => {
-	    	response.send(data)
-		})
-	})
-
-	req.on("error", error => console.error(error))
-	req.write(input)
-	req.end()
-	
-	let data = response.json()
-	console.log(data)
+async function postData(data = {}){
+	const response = await fetch("http://157.131.93.70:8080", {
+	    method: 'POST',
+	    headers: {
+	      'Content-Type': 'application/json'
+	    },
+	    redirect: 'follow',
+	    body: JSON.stringify(data)
+  	});
+	return response.json(); // parses JSON response into native JavaScript objects
 }
 
