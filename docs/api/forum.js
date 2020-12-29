@@ -8,6 +8,6 @@ async function postData(data = {}){
 	    redirect: 'follow',
 	    body: JSON.stringify(data)
   	});
-	return response.json(); // parses JSON response into native JavaScript objects
+	return response.json();
 }
 

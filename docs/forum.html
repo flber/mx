@@ -39,7 +39,9 @@
 				<script>
 					async function getInputValue() {
 						let input = document.getElementById("comment").value
-						var values = { content: input }
+						var values = { 
+							content: input
+						}
 						postData(JSON.stringify(values))
 							.then(data => {
 								console.log(data)
