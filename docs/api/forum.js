@@ -1,5 +1,5 @@
 async function postData(data = {}){
-	const response = await fetch("http://157.131.93.70:8080", {
+	const response = await fetch("https://157.131.93.70:8080", {
 	    method: 'POST',
 	    headers: {
 	      'Content-Type': 'application/json'
