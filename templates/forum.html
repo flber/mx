@@ -37,6 +37,7 @@
 				<button type="button" onclick="getInputValue();">Submit</button>
 				<script>
 					async function getInputValue() {
+						console.log("you pressed the comment button")
 						let input = document.getElementById("comment").value
 						postData({ content: "${input}" })
 							.then(data => {
