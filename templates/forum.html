@@ -39,6 +39,7 @@
 					async function getInputValue() {
 						console.log("you pressed the comment button")
 						let input = document.getElementById("comment").value
+						console.log("the content is ", input)
 						postData({ content: "${input}" })
 							.then(data => {
 								console.log(data)
