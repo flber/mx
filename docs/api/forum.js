@@ -1,4 +1,5 @@
 async function postData(data = {}){
+	console.log("data received by postData is ", JSON.stringify(data))
 	const response = await fetch("https://157.131.93.70:8080", {
 	    method: 'POST',
 	    headers: {
