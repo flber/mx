@@ -41,7 +41,11 @@
 						console.log("you pressed the comment button")
 						let input = document.getElementById("comment").value
 						console.log("the content is ", input)
-						postData({ content: "${input}" })
+						var values = {
+							content: input
+						}
+						console.log("the json content is ", values.content)
+						postData(JSON.stringify(values))
 							.then(data => {
 								console.log(data)
 							})
