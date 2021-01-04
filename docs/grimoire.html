@@ -42,7 +42,7 @@
 				
 				<p>To change the extensions of audio files in a directory:</p>
 				<blockquote>
-				<p>for file in *.opus; do ffmpeg -i ${file%.opus}.opus -c copy ${file%.opus}.ogg && rm ${file%.opus}.opus; done</p>
+				<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
 				</blockquote>
 				
 				<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
