@@ -1,13 +1,15 @@
 :root{
-	--bg: #FFF;
-	--text: #000;
+	--text: black;
+	--bg: white;
 	--highlight: #00BB8D;
 	--max: 800px;
 	--fonts:tzimmes, serif;
 }
 
+
 ::selection{background: var(--text);color: var(--bg);}
 ::-moz-selection{background: var(--text);color: var(--bg);}
+
 
 body{font-size:18px;font-family: var(--fonts);font-style: normal;max-width: var(--max);padding: 0 15px;margin: 0px auto;line-height: 1.6;color:var(--text);background-color:var(--bg);}
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2;} 
@@ -15,7 +17,7 @@ h1{font-size: clamp(1.5em, 5vw, 2.5em);}
 h2{font-size: clamp(1.25em, 5vw, 2.25em);}
 h3{font-size: clamp(1em, 3vw, 1.5em);}
 
-/* Scrollbar */
+
 body::-webkit-scrollbar{width: 0.75rem;}
 body::-webkit-scrollbar-track{background-color: var(--bg);border: 1px solid var(--text);}
 body::-webkit-scrollbar-thumb{background-color: var(--text);}
@@ -45,6 +47,10 @@ blockquote > p{padding: 16px;}
 
 a{color: var(--text);text-decoration: none;}
 a:hover{color: var(--bg);background-color: var(--text);}
+article a:not([href*='//'])::before{content:"{"}
+article a:not([href*='//'])::after{content:"}"}
+article a[href*='//']::before{content:"["}
+article a[href*='//']::after{content:"]"}
 
 
 img{width: 100%;} 
