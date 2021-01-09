@@ -7,9 +7,9 @@ title: Learning Rust
 First of all, this is going to primarily be a place to store notes for myself as I learn Rust, so take everything I say with a grain of salt! (and feedback is always appreciated, so feel free to say hi)
 
 Good resources:
+- [The Rust Programming Language](https://doc.rust-lang.org/book)
 - [Simple Rust GUI with QML](https://www.vandenoever.info/blog/2017/02/17/a-simple-rust-gui-with-qml.html)
 - [Rust Programming Tutorial](https://www.youtube.com/playlist?list=PLVvjrrRCBy2JSHf9tGxGKJ-bYAN_uDCUL)
-- [The Rust Programming Language](https://doc.rust-lang.org/book)
 
 Things to remember:
 - variable(y) things
@@ -19,8 +19,7 @@ Things to remember:
 		- values in tuples can be accessed through `tuple.index`
 	- vectors are like arrays, but they can change size
 	- arrays can be defined as `let arr = [3; 4];`, which would expand to `[3, 3, 3, 3]`
-	- `&` means a reference to an object?
-	- references are immutable by default
+	- `&` means a reference to an object
 	- enums have a fixed set of variables, called the variants
 	- can reassign variables, overwriting previous type and value (good for converting between types), called shadowing
 	- always have to annotate type for constants
@@ -30,7 +29,7 @@ Things to remember:
 	- anything static/constant should be in `SCREAMING_SNAKE_CASE`
 	- use underscores in big numbers to break them up (`10_000_000`)
 - various functions/expression things
-	- `.expect()` is used to handle possible errors
+	- `.expect()` is used to handle possible errors, but panics if there is an error
 	- the `match` expression
 		- is made of arms
 		- each arm has a pattern and some code to run
@@ -46,7 +45,4 @@ Things to remember:
 
 Things I'm not sure about
 - macros
-- passing objects by reference
-- `#[]` <- these things
-- what is a type?
 - traits
