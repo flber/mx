@@ -1,6 +1,6 @@
 :root{
-	--text: black;
-	--bg: white;
+	--text: #3A3738;
+	--bg: #FBFBF3;
 	--highlight: #00BB8D;
 	--max: 800px;
 	--fonts:tzimmes, serif;
