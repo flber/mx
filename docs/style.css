@@ -49,8 +49,8 @@ a{color: var(--text);text-decoration: none;}
 a:hover{color: var(--bg);background-color: var(--text);}
 article a:not([href*='//'])::before{content:"{"}
 article a:not([href*='//'])::after{content:"}"}
-article a:is([href*='//'], [href*='mailto'])::before{content:"["}
-article a:is([href*='//'], [href*='mailto'])::after{content:"]"}
+article a:is([href*=':'], [href*='mailto'])::before{content:"["}
+article a:is([href*=':'], [href*='mailto'])::after{content:"]"}
 
 
 img{width: 100%;} 
