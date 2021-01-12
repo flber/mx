@@ -30,4 +30,5 @@ To dither and shrink an image ([courtesy](https://gist.github.com/Thomasorus/bc9
 To simply dither of an image:
 > convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png
 
-
+Super simple, but to make a div element take up the whole height of a veiwport
+> height: 100vh;
