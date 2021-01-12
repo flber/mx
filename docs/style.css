@@ -47,10 +47,10 @@ blockquote > p{padding: 16px;}
 
 a{color: var(--text);text-decoration: none;}
 a:hover{color: var(--bg);background-color: var(--text);}
-body a:not([href*='//'])::before{content:"{"}
-body a:not([href*='//'])::after{content:"}"}
-body a:is([href*=':'], [href*='mailto'])::before{content:"["}
-body a:is([href*=':'], [href*='mailto'])::after{content:"]"}
+main a:not([href*='//'])::before{content:"{"}
+main a:not([href*='//'])::after{content:"}"}
+main a:is([href*=':'], [href*='mailto'])::before{content:"["}
+main a:is([href*=':'], [href*='mailto'])::after{content:"]"}
 
 
 img{width: 100%;} 
