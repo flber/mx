@@ -23,7 +23,7 @@ body::-webkit-scrollbar-track{background-color: var(--bg);border: 1px solid var(
 body::-webkit-scrollbar-thumb{background-color: var(--text);}
 
 
-main{border:2px dotted var(--text);margin:0px auto;background-color:var(--bg);}
+article{border:2px dotted var(--text);margin:0px auto;background-color:var(--bg);}
 
 
 .inner{padding:1em 7%;}
