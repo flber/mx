@@ -32,3 +32,6 @@ To simply dither of an image:
 
 Super simple, but to make a div element take up the whole height of a veiwport
 > height: 100vh;
+
+This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:
+> alsactl restore
