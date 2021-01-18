@@ -28,7 +28,7 @@ article{border:2px dotted var(--text);margin:0px auto;background-color:var(--bg)
 
 
 pre, code, blockquote{background: var(--bg);}
-pre{overflow-x: scroll;}
+pre{overflow-x: scroll;white-space: pre;}
 blockquote{position:relative;}
 blockquote:before, blockquote:after, blockquote>:first-child:before, blockquote>:first-child:after{
     position:absolute;
