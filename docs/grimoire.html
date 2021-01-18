@@ -51,7 +51,7 @@
 			
 			<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
 			<blockquote>
-			<p>youtube-dlc -x -f mp3/bestaudio</p>
+			<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]</p>
 			</blockquote>
 			
 			<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
