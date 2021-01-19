@@ -63,69 +63,69 @@
 			
 			<p>Now I promised some actual code, so here you go!</p>
 			
-			<pre><code>
-			for i = 1, #wfc.tiles do    -- go through all tiles
-				local currentTile = wfc.tiles[i]    -- get current tile
-				local tileAdjacency = {}    -- make a new adjacency table
+			<pre>
+for i = 1, #wfc.tiles do    -- go through all tiles
+	local currentTile = wfc.tiles[i]    -- get current tile
+	local tileAdjacency = {}    -- make a new adjacency table
 			
-				tileAdjacency.top = {}    -- list of possible tiles above
-				for j = 1, #wfc.tiles do    -- check other tiles
-					local checkTile = wfc.tiles[j]
-					if checkTile.color.bottom == currentTile.color.top then
-						tileAdjacency.top[j] = true
-					else tileAdjacency.top[j] = false end
+	tileAdjacency.top = {}    -- list of possible tiles above
+	for j = 1, #wfc.tiles do    -- check other tiles
+		local checkTile = wfc.tiles[j]
+		if checkTile.color.bottom == currentTile.color.top then
+			tileAdjacency.top[j] = true
+		else tileAdjacency.top[j] = false end
 				end
-				... -- bottom, left, and right adjacencies go here, but it's a bit redundant
-				table.insert(wfc.adjacencyIndex, tileAdjacency)
+	... -- bottom, left, and right adjacencies go here, but it's a bit redundant
+	table.insert(wfc.adjacencyIndex, tileAdjacency)
 			end
-			</code></pre>
+			</pre>
 			
 			<p>Let's break that up, shall we?</p>
 			
 			<p>First of all, we're going through the list of tiles we made in the tile generation phase (see <a href="https://flber.github.io/2020/WFC-Tile-Generator/">this</a> article for a description of how that works):</p>
 			
-			<pre><code>
-			for i = 1, #wfc.tiles do
-			</code></pre>
+			<pre>
+for i = 1, #wfc.tiles do
+			</pre>
 			
 			<p>Then, we set a local variable to the tile we're checking, and make a new "tileAdjacency" table which will store the top, bottom, left, and right adjacency information:</p>
 			
-			<pre><code>
-			local currentTile = wfc.tiles[i]
-			local tileAdjacency = {}
-			</code></pre>
+			<pre>
+local currentTile = wfc.tiles[i]
+local tileAdjacency = {}
+			</pre>
 			
 			<p>We add a table called "top" to the "tileAdjacency" table, which will store the top adjacency data, and then start to loop through the list of tiles again:</p>
 			
-			<pre><code>
-			tileAdjacency.top = {}
-			for j = 1, #wfc.tiles do
-			</code></pre>
+			<pre>
+tileAdjacency.top = {}
+for j = 1, #wfc.tiles do
+			</pre>
 			
 			<p>Now we create a local "checkTile" variable to store the tile we're looking at, and check if the color data of the bottom of that tile is the same as the color data of the top of our current tile</p>
 			
-			<pre><code>
-			local checkTile = wfc.tiles[j]
-			if checkTile.color.bottom == currentTile.color.top then
-			</code></pre>
+			<pre>
+local checkTile = wfc.tiles[j]
+if checkTile.color.bottom == currentTile.color.top then
+			</pre>
 			
 			<p>If it is, then we know that it can go above the current tile. To save that, we set the "top" tile adjacency at the index of that tile to true</p>
 			
-			<pre><code>
-			tileAdjacency.top[j] = true
-			</code></pre>
+			<pre>
+tileAdjacency.top[j] = true
+			</pre>
 			
 			<p>But if the colors aren't the same, then we set the "top" tile adjacency to false</p>
 			
-			<pre><code>
-			else tileAdjacency.top[j] = false end
-			</code></pre>
+			<pre>
+else tileAdjacency.top[j] = false end
+			</pre>
 			
 			<p>With the "top" tile adjacency constructed we move onto the bottom, left, and right adjacencies (which I'll skip over because they're the same as the top one), and then we can finally add all of those in the form of the tileAdjacency variable to the overall adjacencyIndex table.</p>
 			
-			<pre><code>
-			table.insert(wfc.adjacencyIndex, tileAdjacency)
-			</code></pre>
+			<pre>
+table.insert(wfc.adjacencyIndex, tileAdjacency)
+			</pre>
 			
 			<p>And with that we're done! Hopefully this helped to explain how the propagator constructor works, as well as what the structure of the adjacencyIndex looks like.</p>
 			
