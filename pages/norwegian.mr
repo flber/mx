@@ -36,6 +36,10 @@ Fancy letters: æ, ø, å
 - "-r" is characteristic of present tense
 - There is no conjugation for the present continuation like there is in English, simply use the present tense instead
 - In Norwegian, words describing nationality are not capitalized
+- "Studerte" implies higher level education, such as college or university
+- "-te" is an ending which implies past tense
+- Like in the present, questions in the paste tense are formed by switching the verb and subject; there is no "did"
+- "Den" goes with a noun in its definite form, so "den skolen" literally means "that the school"
 
 ### Phrases
 
@@ -58,9 +62,10 @@ a[m]: en (ehn)
 a[f]: ei (aiy)
 a[n]: et (eht)
 
-^Prepositions_
+^Prepositions^
 for: for (fohr)
 in: i (ee)
+at: ved (veeyeh)
 
 ^Interjections^
 hi: hei (hy)
@@ -79,7 +84,7 @@ he: han (hahnn)
 she: hun (huhnn)
 they: de (dee)
 my: min (meen)
-that: det (dayah)
+that: det (dayah) / den (dehnn)
 our: vår (vohr)
 her: henne (HEHNNeh)
 me: meg (mayeh)
@@ -87,7 +92,7 @@ me: meg (mayeh)
 ^Prepositions_
 to: å (oh)
 with: hos (hoos)
-of: av (aahv)
+of: av (aahv) / om (ohmm)
 from: fra (fraah)
 on: på (poh)
 
@@ -167,6 +172,8 @@ speak: snakker (SNAHKKehr)
 am learning: lærer (LAArehr)
 speak: snakker (SNAHKKehr)
 understand: forstår (FOHSHtohr)
+studied: studerte (STEWdeeyehrteh)
+heard: hørt (huhrt)
 
 ^Nouns^
 weather: været (vaahreh?)
@@ -221,3 +228,5 @@ Finland: Finland (FINNlahnn)
 Russia: russland (REWSSlahn)
 state: stat (staaht)
 city: by (bee)
+history: historie (HIStoorhiyeh)
+the school: skolen (SKOOHlehn)

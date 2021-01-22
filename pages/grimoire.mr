@@ -35,3 +35,6 @@ Super simple, but to make a div element take up the whole height of a veiwport
 
 This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:
 > alsactl restore
+
+To play a streaming file
+> mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u
