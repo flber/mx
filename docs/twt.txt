@@ -4,3 +4,4 @@
 2021-02-16T13:59:07-08:00	testing new setup
 2021-02-16T14:02:38-08:00	(cd): changed twtxt file
 2021-02-16T14:04:24-08:00	(cd): testing twtxt updates
+2021-02-16T14:04:49-08:00	/home/benh/Documents/Mineral-Existence: testing twtxt updates: pt 3
