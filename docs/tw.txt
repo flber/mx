@@ -8,3 +8,7 @@
 2021-02-16T14:11:31-08:00	: testing twtxt updates: pt 4
 2021-02-16T14:12:22-08:00	Mineral-Existence ><> : testing twtxt updates: pt 5
 2021-02-16T14:13:03-08:00	Mineral-Existence: testing twtxt updates: pt 6
+2021-02-16T14:21:03-08:00	Mineral-Existence: twtxt + git integration is good to go!
+2021-02-17T11:10:07-08:00	[Pillar] massive refactor, much more idiomatic
+2021-02-17T11:11:36-08:00	[Pillar] removed temporary files
+2021-02-17T11:14:39-08:00	[Pillar] updated readme, built release
