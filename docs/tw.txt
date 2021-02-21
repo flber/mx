@@ -21,3 +21,5 @@
 2021-02-17T12:09:48-08:00	[Mineral-Existence] actually removing typo
 2021-02-17T12:13:25-08:00	[Pillar] fixed date substitution
 2021-02-17T12:13:41-08:00	[Mineral-Existence] fixed dates
+2021-02-20T17:09:14-08:00	[Mineral-Existence] moved to rpi4!
+2021-02-20T17:10:28-08:00	[Mineral-Existence] changed some aliases so twtxt will match with current progress
