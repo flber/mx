@@ -35,35 +35,20 @@
 		</nav>
 		<article class="inner">
 
-<h2>Hello there</h2>
+<h2>Marin Headlands 200221</h2>
 
-<p>Thank you for visiting my humble virtual abode. This site is the third, and hopefully final, iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/">Webring</a>.</p>
+<p>I went on a short hike in the Marin Headlands today.</p>
+<p>Here are some pictures:</p>
 
-<p>Here is what I'm working on <a href="now.html">now</a>.</p>
+<p><img src="images/marin_headlands/rocks.gif" alt="some brown and green rocks"/></p>
 
-<p>And here are the 15 most recently updated pages. The dates are super messed up right now because I added a header to all of the files, so the dates aren't very useful.</p>
+<p><img src="images/marin_headlands/face.gif" alt="a face draw in graffiti"/></p>
 
-<ul>
-<li>210221 <a href="marin_headlands_200221.html">Marin Headlands Hike</a></li>
-<li>210221 <a href="hiking.html">Hiking</a></li>
-<li>210221 <a href="site.html">Updates</a></li>
-<li>040221 <a href="recipes.html">Recipes</a></li>
-<li>030221 <a href="grimoire.html">Grimoire</a></li>
-<li>020221 <a href="side_quests.html">Side Quests</a></li>
-<li>250121 <a href="norwegian.html">Norsk</a></li>
-<li>120121 <a href="wiki.html">Wiki</a></li>
-<li>120121 <a href="inventory.html">Inventory</a></li>
-<li>080121 <a href="learning_rust.html">Learning Rust</a></li>
-<li>040121 <a href="wfc_propagator_constructor.html">WFC Propagator Constructor</a></li>
-<li>040121 <a href="plan9.html">Plan9</a></li>
-<li>040121 <a href="now.html">Now</a></li>
-<li>040121 <a href="intro_to_wfc.html">Intro to WFC</a></li>
-<li>040121 <a href="index.html">Home</a></li>
-</ul>
+<p><img src="images/marin_headlands/ladder.gif" alt="a ladder going up to a blue sky from inside a bunker"/></p>
 
+<p><img src="images/marin_headlands/rocks.gif" alt="a mural of someone holding a spear with the caption SURVIVING COVID '19"/></p>
 
-
-
+<p><img src="images/marin_headlands/pond.gif" alt="a pond inside of a large gun emplacement"/></p>
 		</article>
 		<footer>
 			<nav aria-label="Contact links">
@@ -75,7 +60,7 @@
 		        	<span class="light"><a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.white.svg' alt="a white on black symbol of the webring"/></a></span> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 040121</em>
+					<em>Last updated: 210221</em>
 				</div>
 			</nav>
 		</footer>
