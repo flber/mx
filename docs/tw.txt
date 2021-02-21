@@ -25,3 +25,4 @@
 2021-02-20T17:10:28-08:00	[Mineral-Existence] changed some aliases so twtxt will match with current progress
 2021-02-20T17:39:42-08:00	[Mineral-Existence] added hike page
 2021-02-20T17:50:07-08:00	[Mineral-Existence] fixed new file names
+2021-02-20T18:02:53-08:00	[Mineral-Existence] fixed image file name in post
