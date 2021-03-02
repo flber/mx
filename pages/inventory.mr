@@ -13,6 +13,7 @@ Everyday items:
 Computers:
 - Sinclair: Thinkpad T420s running [Manjaro i3](https://manjaro.org/downloads/community/i3/)
 - Demian: [Raspberry pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) running [Pi OS Lite](https://www.raspberrypi.org/software/operating-systems/)
+- [Bucephalus](bucephalus.html): [Raspberry pi 4](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) running [9front](plan9.html)
 
 Software:
 - web browser: [Min](https://minbrowser.org/)
@@ -21,6 +22,6 @@ Software:
 - music player: [cmus](https://cmus.github.io/)
 - habit tracker: [dijo](https://github.com/NerdyPepper/dijo)
 - mastodon client: [toot](https://github.com/ihabunek/toot)
-- irc client: [tiny](https://github.com/osa1/tiny)
+- IRC client: [tiny](https://github.com/osa1/tiny)
 
 

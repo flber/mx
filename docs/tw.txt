@@ -30,3 +30,4 @@
 2021-02-23T14:57:04-08:00	[todo_list_rust] changed readme to reflect current ui
 2021-02-24T22:17:19-08:00	[todo_list_rust] changed version number
 2021-03-01T16:31:57-08:00	[Mineral-Existence] added habit tracker to inventory
+2021-03-01T17:36:34-08:00	[Mineral-Existence] added Bucephalus page
