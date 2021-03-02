@@ -26,3 +26,7 @@
 2021-02-20T17:39:42-08:00	[Mineral-Existence] added hike page
 2021-02-20T17:50:07-08:00	[Mineral-Existence] fixed new file names
 2021-02-20T18:02:53-08:00	[Mineral-Existence] fixed image file name in post
+2021-02-23T10:30:27-08:00	[todo_list_rust] small aesthetic changes
+2021-02-23T14:57:04-08:00	[todo_list_rust] changed readme to reflect current ui
+2021-02-24T22:17:19-08:00	[todo_list_rust] changed version number
+2021-03-01T16:31:57-08:00	[Mineral-Existence] added habit tracker to inventory
