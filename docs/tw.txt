@@ -32,3 +32,4 @@
 2021-03-01T16:31:57-08:00	[Mineral-Existence] added habit tracker to inventory
 2021-03-01T17:36:34-08:00	[Mineral-Existence] added Bucephalus page
 2021-03-04T12:07:16-08:00	[Mineral-Existence] cleaning up
+2021-03-04T12:35:54-08:00	[Mineral-Existence] updated readme
