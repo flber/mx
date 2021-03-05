@@ -34,3 +34,4 @@
 2021-03-04T12:07:16-08:00	[Mineral-Existence] cleaning up
 2021-03-04T12:35:54-08:00	[Mineral-Existence] updated readme
 2021-03-04T12:36:10-08:00	[Mineral-Existence] built site
+2021-03-04T17:11:15-08:00	[Mineral-Existence] rebuilt site, testing sync
