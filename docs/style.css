@@ -71,7 +71,6 @@ div.right-border a::after{content: "│"}
 
 
 body:target{--bg: #3A3738;--text: #FBFBF3;}
-/* > nav > div > div > */
 body span.light{display: none;}
 body span.dark{display: inline;}
 body:target span.light{display: inline;}
