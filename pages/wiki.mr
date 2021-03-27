@@ -8,10 +8,16 @@ This is a loose collection of notes, links, and other resources. See my [grimoir
 
 - Design
 	- [Akin's laws of spacecraft design](https://spacecraft.ssl.umd.edu/akins_laws.html)
+<<<<<<< HEAD
 	- Web
 		- [Thomasorus' html-tips](https://thomasorus.com/html-tips.html)
 		- [Fred Bednarski's css tips page](https://fdisk.space/css/)
 		- [1-Line Layouts](https://1linelayouts.glitch.me/)
+=======
+	- [Thomasorus' html-tips](https://thomasorus.com/html-tips.html)
+	- [Fred Bednarski's css tips page](https://fdisk.space/css/)
+	- [1-Line Layouts](https://1linelayouts.glitch.me/)
+>>>>>>> 1ee2614db643810e74ac9552509c7231a44a04ff
 - Programming
 	- [Bash](https://devhints.io/bash)
 	- [Change git urls](https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/)
@@ -21,8 +27,11 @@ This is a loose collection of notes, links, and other resources. See my [grimoir
 - Drawing
 	- [Noodle site](https://hundredrabbits.github.io/Noodle)
 	- [Nasu](https://git.sr.ht/~rabbits/nasu)
+<<<<<<< HEAD
 	- ASCII
 		- [Extended ASCII table](https://theasciicode.com.ar/)
+=======
+>>>>>>> 1ee2614db643810e74ac9552509c7231a44a04ff
 - Music
 	- [Orca-c repo](https://github.com/hundredrabbits/Orca-c)
 - Language
@@ -30,9 +39,14 @@ This is a loose collection of notes, links, and other resources. See my [grimoir
 	- [My Norwegian page](norwegian.html)
 	- [Norwegian Inspiration](https://cass.si/posts/snakker-pa-norsk)
 - Food
+<<<<<<< HEAD
 	- Vegan / Vegetarian
 		- [Grimgrains](https://grimgrains.com/site/home.html)
 		- [Ritual Dust](https://ritualdust.com/food/)
+=======
+	- [Grimgrains](https://grimgrains.com/site/home.html)
+	- [Ritual Dust](https://ritualdust.com/food/)
+>>>>>>> 1ee2614db643810e74ac9552509c7231a44a04ff
 	- [My Recipes](recipes.html)
 
 
