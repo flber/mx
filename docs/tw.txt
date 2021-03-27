@@ -48,3 +48,4 @@
 >>>>>>> 1ee2614db643810e74ac9552509c7231a44a04ff
 2021-03-26T18:51:38-07:00	[Mineral-Existence] fixing merging mistakes
 2021-03-26T19:04:11-07:00	[Mineral-Existence] all done with merge conflicts now?
+2021-03-26T19:16:12-07:00	[Mineral-Existence] removing jpgs
