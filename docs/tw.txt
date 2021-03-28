@@ -37,15 +37,14 @@
 2021-03-04T17:11:15-08:00	[Mineral-Existence] rebuilt site, testing sync
 2021-03-07T13:37:52-08:00	[forth] some basic files
 2021-03-07T22:30:45-08:00	[Mineral-Existence] misc changes
-<<<<<<< HEAD
 2021-03-09T13:47:21-08:00	[nasu] minor changes
 2021-03-09T14:00:32-08:00	[nasu] added to readme
 2021-03-09T14:08:00-08:00	[nasu] added to readme
 2021-03-09T14:10:22-08:00	[nasu] attempting to use git send-email to try an suggest an update?
 2021-03-09T16:52:37-08:00	[webring] added icon to Mineral Existence
 2021-03-23T13:17:02-07:00	[example] updating dev to current state
-=======
->>>>>>> 1ee2614db643810e74ac9552509c7231a44a04ff
 2021-03-26T18:51:38-07:00	[Mineral-Existence] fixing merging mistakes
 2021-03-26T19:04:11-07:00	[Mineral-Existence] all done with merge conflicts now?
 2021-03-26T19:16:12-07:00	[Mineral-Existence] removing jpgs
+2021-03-27T17:41:19-07:00	[text] new tests
+2021-03-27T19:09:00-07:00	[Mineral-Existence] fixed tw.txt
