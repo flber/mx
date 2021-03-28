@@ -48,3 +48,6 @@
 2021-03-26T19:16:12-07:00	[Mineral-Existence] removing jpgs
 2021-03-27T17:41:19-07:00	[text] new tests
 2021-03-27T19:09:00-07:00	[Mineral-Existence] fixed tw.txt
+2021-03-27T22:02:28-07:00	[example] still working, commiting to save
+2021-03-27T22:04:34-07:00	[example] lazy loading
+2021-03-27T22:10:56-07:00	[Mineral-Existence] lazy image loading!
