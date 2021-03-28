@@ -54,3 +54,4 @@
 2021-03-27T22:46:16-07:00	[Mineral-Existence] edit of about page
 2021-03-27T22:50:03-07:00	[webring] fixed broken twtxt link for Mineral Existence
 2021-03-27T23:43:17-07:00	[Mineral-Existence] new icon
+2021-03-27T23:59:21-07:00	[Mineral-Existence] even newer icon
