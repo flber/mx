@@ -59,3 +59,4 @@
 2021-03-28T00:16:10-07:00	[Mineral-Existence] newest icon?
 2021-03-28T16:19:52-07:00	[text] got recursive method working (partially)
 2021-03-28T19:19:47-07:00	[Mineral-Existence] fixed wiki page
+2021-03-28T19:20:30-07:00	[Mineral-Existence] built fixed pages
