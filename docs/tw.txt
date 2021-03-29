@@ -57,3 +57,5 @@
 2021-03-27T23:59:21-07:00	[Mineral-Existence] even newer icon
 2021-03-28T00:06:26-07:00	[Mineral-Existence] update .ico
 2021-03-28T00:16:10-07:00	[Mineral-Existence] newest icon?
+2021-03-28T16:19:52-07:00	[text] got recursive method working (partially)
+2021-03-28T19:19:47-07:00	[Mineral-Existence] fixed wiki page
