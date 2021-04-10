@@ -54,6 +54,9 @@ img{width: 100%;}
 img.webring{transform:scale(1.4);} 
 
 
+audio{border-radius:0px;}
+
+
 hr{border: 1px solid var(--text);}
 
 
