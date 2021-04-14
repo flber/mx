@@ -63,3 +63,8 @@
 2021-04-09T22:09:54-07:00	[Mineral-Existence] updated music
 2021-04-10T15:02:53-07:00	[Mineral-Existence] new hike
 2021-04-10T16:53:51-07:00	[Mineral-Existence] fixed image link
+2021-04-13T21:39:18-07:00	[RustPractice]
+2021-04-13T21:39:33-07:00	[RustPractice] new tests and gitignore
+2021-04-14T11:36:31-07:00	[example] added progress bars
+2021-04-14T12:03:34-07:00	[example] progress bars in main!
+2021-04-14T12:10:40-07:00	[Mineral-Existence] new pillar version
