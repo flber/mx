@@ -68,3 +68,5 @@
 2021-04-14T11:36:31-07:00	[example] added progress bars
 2021-04-14T12:03:34-07:00	[example] progress bars in main!
 2021-04-14T12:10:40-07:00	[Mineral-Existence] new pillar version
+2021-04-14T12:11:29-07:00	[Pillar] minor changes
+2021-04-16T16:45:51-07:00	[Mineral-Existence] hecking r

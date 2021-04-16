@@ -11,7 +11,21 @@
 ::-moz-selection{background: var(--text);color: var(--bg);}
 
 
-body{font-size:18px;font-family: var(--fonts);font-style: normal;max-width: var(--max);padding: 0 15px;margin: 0px auto;line-height: 1.6;color:var(--text);background-color:var(--bg);}
+body{
+	font-size:18px;
+	font-family: var(--fonts);
+	font-style: normal;
+	max-width: var(--max);
+	padding: 0 15px;
+	margin: 0px auto;
+	line-height: 1.6;
+	color:var(--text);
+	background-color:var(--bg);
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+}
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2;} 
 h1{font-size: clamp(1.5em, 5vw, 2.5em);}
 h2{font-size: clamp(1.25em, 5vw, 2.25em);}
