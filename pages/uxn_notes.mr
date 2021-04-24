@@ -1,0 +1,59 @@
+!meta!
+title: Uxn Notes
+!meta!
+
+## Uxn Notes
+
+[Uxn](https://wiki.xxiivv.com/site/uxn.html) is an 8-bit virtual stack machine, created by [Devine](https://wiki.xxiivv.com/site/devine_lu_linvega.html), and programmed in [uxnambly](https://wiki.xxiivv.com/site/uxambly.html), a unique flavor of assembly. These are my notes for it.
+
+### Breakdown of an example
+!code!
+( dev/console )
+
+%RTN { JMP2r }
+
+( devices )
+
+|10 @Console    [ &pad $8 &char $1 ]
+
+( init )
+
+|0100 ( -> )
+	
+	;hello-world ;print JSR2
+	
+BRK
+
+@print ( addr -- )
+	
+	&loop
+		( send ) DUP2 GET .Console/char DEO
+		( incr ) #0001 ADD2
+		( loop ) DUP2 GET #00 NEQ ,&loop JNZ
+	POP2
+
+RTN
+
+@hello-world [ "Hello 20 "World! ]
+!code!
+
+In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it. 
+
+The main part of the program starts with the line `|0100`, which, as I understand it, moves us into the "system" device (you can see a list of the devices, and their addresses, [here](https://wiki.xxiivv.com/site/uxnemu.html)).
+!code!
+;hello-world ;print JSR2
+└──────────┘ └────┘ └──┘
+      A        B     C
+!code!
+Part A gets the address of the `hello-world` label and adds to the top of the queue. Part B then gets the address of the `print` label and pushes that to the queue, moving the first label down (really down four bytes, because each label is two bytes). The `JSR` opcode jumps the program to an address popped from the top of the queue, and the `2` modifier tells it to use two byte addresses. Because the top address is to `print`, we now move there.
+
+The main part of the `print` section is in the `( send )` line, where the program outputs to the terminal. The following two lines are just to loop.
+!code!
+( send ) DUP2 GET .Console/char DEO
+└──────┘ └──┘ └─┘ └───────────┘ └─┘
+   A      B    C        D        E
+!code!
+Part A is just a comment.
+Part B duplicates the top two bytes of the queue, which here is the address to the `print` section. 
+Part C consumes and returns the top item, which is that address to `print`
+I'm not quite sure how the rest works, but eventually a character is passed to the console?

@@ -18,6 +18,11 @@ This is a loose collection of notes, links, and other resources. See my [grimoir
 	- [Bash aliases](https://linuxize.com/post/how-to-create-bash-aliases/)
 	- [Rust](learning_rust.html)
 	- Rsync
+	- [uxn](https://git.sr.ht/~rabbits/uxn)
+		- [uxnemu](https://wiki.xxiivv.com/site/uxnemu.html)
+		- [uxambly](https://wiki.xxiivv.com/site/uxambly.html)
+		- [ascii](https://wiki.xxiivv.com/site/ascii.html)
+		- [my notes](uxn_notes.html)
 - Drawing
 	- [Noodle site](https://hundredrabbits.github.io/Noodle)
 	- [Nasu](https://git.sr.ht/~rabbits/nasu)

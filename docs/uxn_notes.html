@@ -35,32 +35,61 @@
 		</nav>
 		<article class="inner">
 
-<h2>Hello there</h2>
+<h2>Uxn Notes</h2>
 
-<p>Thank you for visiting my humble virtual abode. This site is the third, and hopefully final, iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/">Webring</a>.</p>
+<p><a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> is an 8-bit virtual stack machine, created by <a href="https://wiki.xxiivv.com/site/devine_lu_linvega.html">Devine</a>, and programmed in <a href="https://wiki.xxiivv.com/site/uxambly.html">uxnambly</a>, a unique flavor of assembly. These are my notes for it.</p>
 
-<p>Here is what I'm working on <a href="now.html">now</a>.</p>
+<h3>Breakdown of an example</h3>
+<pre>
+( dev/console )
 
-<p>And here are the 15 most recently updated pages. The dates are semi messed up right now because I added a header to all of the files a little while ago so, the older dates are likely not relevant.</p>
+%RTN { JMP2r }
 
-<ul>
-<li>240421 <a href="uxn_notes.html">Uxn Notes</a></li>
-<li>240421 <a href="wiki.html">Wiki</a></li>
-<li>120421 <a href="index.html">Home</a></li>
-<li>100421 <a href="strawberry_canyon_080421.html">Strawberry Canyon Hike</a></li>
-<li>100421 <a href="hiking.html">Hiking</a></li>
-<li>280321 <a href="about.html">Now</a></li>
-<li>270321 <a href="grimoire.html">Grimoire</a></li>
-<li>270321 <a href="inventory.html">Inventory</a></li>
-<li>270321 <a href="backyard_hike_260321.html">Backyard Hike</a></li>
-<li>050321 <a href="bucephalus.html">Bucephalus</a></li>
-<li>020321 <a href="now.html">Now</a></li>
-<li>020321 <a href="plan9.html">Plan 9</a></li>
-<li>210221 <a href="marin_headlands_200221.html">Marin Headlands Hike</a></li>
-<li>210221 <a href="norwegian.html">Norsk</a></li>
-<li>210221 <a href="site.html">Updates</a></li>
-</ul>
+( devices )
 
+|10 @Console    [ &pad $8 &char $1 ]
+
+( init )
+
+|0100 ( -> )
+	
+	;hello-world ;print JSR2
+	
+BRK
+
+@print ( addr -- )
+	
+<p>	&loop</p>
+		( send ) DUP2 GET .Console/char DEO
+		( incr ) #0001 ADD2
+		( loop ) DUP2 GET #00 NEQ ,&loop JNZ
+<p>	POP2</p>
+
+RTN
+
+@hello-world [ "Hello 20 "World! ]
+</pre>
+
+<p>In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it. </p>
+
+<p>The main part of the program starts with the line `|0100`, which, as I understand it, moves us into the "system" device (you can see a list of the devices, and their addresses, <a href="https://wiki.xxiivv.com/site/uxnemu.html">here</a>).</p>
+<pre>
+;hello-world ;print JSR2
+└──────────┘ └────┘ └──┘
+      A        B     C
+</pre>
+<p>Part A gets the address of the `hello-world` label and adds to the top of the queue. Part B then gets the address of the `print` label and pushes that to the queue, moving the first label down (really down four bytes, because each label is two bytes). The `JSR` opcode jumps the program to an address popped from the top of the queue, and the `2` modifier tells it to use two byte addresses. Because the top address is to `print`, we now move there.</p>
+
+<p>The main part of the `print` section is in the `( send )` line, where the program outputs to the terminal. The following two lines are just to loop.</p>
+<pre>
+( send ) DUP2 GET .Console/char DEO
+└──────┘ └──┘ └─┘ └───────────┘ └─┘
+   A      B    C        D        E
+</pre>
+<p>Part A is just a comment.</p>
+<p>Part B duplicates the top two bytes of the queue, which here is the address to the `print` section. </p>
+<p>Part C consumes and returns the top item, which is that address to `print`</p>
+<p>I'm not quite sure how the rest works, but eventually a character is passed to the console?</p>
 		</article>
 		<footer>
 			<nav aria-label="Contact links">
@@ -72,7 +101,7 @@
 		        	<span class="light"><a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.white.svg' alt="a white on black symbol of the webring"/></a></span> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 120421</em>
+					<em>Last updated: 240421</em>
 				</div>
 			</nav>
 		</footer>
