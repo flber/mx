@@ -37,9 +37,9 @@ RTN
 @hello-world [ "Hello 20 "World! ]
 !code!
 
-In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it.
+In uxn, everything is a stack of data. This often means that commands seem backward, as data is added to that stack before operations can use it.
 
-The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the queue.
+The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the stack.
 
 The next actual line is very interesting, and definitely confused me for a while!
 !code!
@@ -48,7 +48,7 @@ The next actual line is very interesting, and definitely confused me for a while
       A              B       C
 !code!
 Part A starts the line by making sense. It defines a label: "Console", which is an address to the console device (at 0110). 
-Part B is where things start to get a bit confusing, and where Devine's [devices](https://wiki.xxiivv.com/site/uxnemu.html) table is very helpful. The first part, `&pad`, defines a sub-label (of `Console`), which is assigned to an address one byte further than the `Console` address by the `$8` part. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sub-label is never actually called.
+Part B is where things start to get a bit confusing, and where Devine's [devices](https://wiki.xxiivv.com/site/uxnemu.html) table is very helpful. The first part, `&pad`, defines a sub-label (of `Console`), which is assigned by the `$8` part to an address one byte further than the `Console` address. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sub-label is never actually called.
 Part C then uses the same method as part B to assign the sub-label `char` to one bit past the `pad` label, which is the start of the "char" section of the console device!
 
 The main part of the program starts with the line `|0100 ( -> )`, which moves us into the "system" device's memory space.
@@ -57,25 +57,25 @@ The main part of the program starts with the line `|0100 ( -> )`, which moves us
 └──────────┘ └────┘ └──┘
       A        B     C
 !code!
-Part A gets the address of the `hello-world` label and adds to the top of the queue. Part B then gets the address of the `print` label and pushes that to the queue, moving the first label down (really down four bytes, because each label is two bytes). The `JSR` opcode jumps the program to an address popped from the top of the queue, and the `2` modifier tells it to use two byte addresses. Because the top address is to `print`, we now move there.
+Part A gets the address of the `hello-world` label and adds to the top of the stack. Part B then gets the address of the `print` label and pushes that to the stack, moving the first label down (really down four bytes, because each label is two bytes). The `JSR` opcode jumps the program to an address popped from the top of the stack, and the `2` modifier tells it to use two byte addresses. Because the top address is to `print`, we now move there.
 
-The main part of the `print` section is in the `( send )` line, where the program outputs to the terminal. The following two lines are just to loop.
+The main part of the `print` section is in the `( send )` line, where the program outputs to the terminal.
 !code!
 ( send ) DUP2 GET .Console/char DEO
 └──────┘ └──┘ └─┘ └───────────┘ └─┘
    A      B    C        D        E
 !code!
 Part A is just a comment.
-Part B duplicates the top two bytes of the queue, which here is the address to the `print` section. 
-Part C consumes and adds the top item to the queue, which is that address to `print`
-Part D adds the device address for the console's char byte to the queue.
+Part B duplicates the top two bytes of the stack, which here is the address to the `print` section. 
+Part C consumes and adds the top item to the stack, which is that address to `print`
+Part D adds the device address for the console's char byte to the stack.
 Part E consumes both the device address and the address of the `print` label, which is essentially the first byte of the `"hello 20 "world` string. 
 
 The next two lines make a bit more sense, but can be a bit unintuitive if you aren't used to working with memory address (like I am).
 !code!
 ( incr ) #0001 ADD2
 !code!
-This is relatively straight-forward, it adds one byte to the item at the top of the queue, which is... the `print` address! Thus, the program now has an address on the top of the queue which points to the second byte in the `"hello 20 "world` string.
+This is relatively straight-forward, it adds one byte to the item at the top of the stack, which is... the `print` address! Thus, the program now has an address on the top of the stack which points to the second byte in the `"hello 20 "world` string.
 
 While a bit scary, I promise this next line isn't too complicated!
 !code!
@@ -83,8 +83,8 @@ While a bit scary, I promise this next line isn't too complicated!
          └──────┘ └─────┘ └────────┘
             A        B         C
 !code!
-At part A we duplicate and GET the two bytes at the top of the queue (remember, that's now the address to the next byte of our string), and the value at that address is compared to `#00`, the ascii null char; part B. The `NEQ` opcode, as the name suggests, checks if it's inputs are not equal. If they aren't equal, it returns a 1 (?), and if they are equal it returns a 0 (note to self: double check this!).
-Part C starts by adding the literal relative address of the `&loop` sub-label to the queue, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.
+At part A we duplicate and `GET` the two bytes at the top of the stack (remember, that's now the address to the next byte of our string), and the value at that address is compared to `#00`, the ascii null char, at part B. The `NEQ` opcode, as the name suggests, checks if its inputs are not equal. If they aren't equal, it returns a 1 (?), and if they are equal it returns a 0 (note to self: double check this!).
+Part C starts by adding the literal relative address of the `&loop` sub-label to the stack, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.
 In this way, the loop repeats, printing each byte, until it hits a null byte, at which point it stops and returns.
 
 And there we have it; Hello world!

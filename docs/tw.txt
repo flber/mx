@@ -75,3 +75,4 @@
 2021-04-24T17:30:03-07:00	[Mineral-Existence] more work on uxn notes
 2021-04-24T17:55:55-07:00	[Mineral-Existence] finished(?) example in uxn notes
 2021-04-24T17:58:15-07:00	[Mineral-Existence] small addition
+2021-04-24T19:37:59-07:00	[Mineral-Existence] stack, not queue
