@@ -70,9 +70,21 @@ RTN
 @hello-world [ "Hello 20 "World! ]
 </pre>
 
-<p>In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it. </p>
+<p>In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it.</p>
 
-<p>The main part of the program starts with the line `|0100`, which, as I understand it, moves us into the "system" device (you can see a list of the devices, and their addresses, <a href="https://wiki.xxiivv.com/site/uxnemu.html">here</a>).</p>
+<p>The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the queue.</p>
+
+<p>The next actual line is very interesting, and definitely confused me for a while!</p>
+<pre>
+|10 @Console    [ &pad $8 &char $1 ]
+└──────────┘      └─────┘ └──────┘
+      A              B       C
+</pre>
+<p>Part A starts the line by making sense. It defines a label: "Console", which is an address to the console device (at 0110). </p>
+<p>Part B is where things start to get a bit confusing, and where Devine's <a href="https://wiki.xxiivv.com/site/uxnemu.html">devices</a> table is very helpful. The first part, `&pad`, defines a sub-label (of `Console`), which is assigned to an address one byte further than the `Console` address by the `$8` part. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sub-label is never actually called.</p>
+<p>Part C then uses the same method as part B to assign the sub-label `char` to one bit past the `pad` label, which is the start of the "char" section of the console device!</p>
+
+<p>The main part of the program starts with the line `|0100 ( -> )`, which moves us into the "system" device's memory space.</p>
 <pre>
 ;hello-world ;print JSR2
 └──────────┘ └────┘ └──┘
@@ -101,7 +113,7 @@ RTN
 		        	<span class="light"><a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.white.svg' alt="a white on black symbol of the webring"/></a></span> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 240421</em>
+					<em>Last updated: 250421</em>
 				</div>
 			</nav>
 		</footer>

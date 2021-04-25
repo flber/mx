@@ -37,9 +37,21 @@ RTN
 @hello-world [ "Hello 20 "World! ]
 !code!
 
-In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it. 
+In uxn, everything is a queue of data. This often means that commands seem backward, as data is added to that queue before operations can use it.
 
-The main part of the program starts with the line `|0100`, which, as I understand it, moves us into the "system" device (you can see a list of the devices, and their addresses, [here](https://wiki.xxiivv.com/site/uxnemu.html)).
+The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the queue.
+
+The next actual line is very interesting, and definitely confused me for a while!
+!code!
+|10 @Console    [ &pad $8 &char $1 ]
+└──────────┘      └─────┘ └──────┘
+      A              B       C
+!code!
+Part A starts the line by making sense. It defines a label: "Console", which is an address to the console device (at 0110). 
+Part B is where things start to get a bit confusing, and where Devine's [devices](https://wiki.xxiivv.com/site/uxnemu.html) table is very helpful. The first part, `&pad`, defines a sub-label (of `Console`), which is assigned to an address one byte further than the `Console` address by the `$8` part. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sub-label is never actually called.
+Part C then uses the same method as part B to assign the sub-label `char` to one bit past the `pad` label, which is the start of the "char" section of the console device!
+
+The main part of the program starts with the line `|0100 ( -> )`, which moves us into the "system" device's memory space.
 !code!
 ;hello-world ;print JSR2
 └──────────┘ └────┘ └──┘
