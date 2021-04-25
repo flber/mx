@@ -86,3 +86,5 @@ While a bit scary, I promise this next line isn't too complicated!
 At part A we duplicate and GET the two bytes at the top of the queue (remember, that's now the address to the next byte of our string), and the value at that address is compared to `#00`, the ascii null char; part B. The `NEQ` opcode, as the name suggests, checks if it's inputs are not equal. If they aren't equal, it returns a 1 (?), and if they are equal it returns a 0 (note to self: double check this!).
 Part C starts by adding the literal relative address of the `&loop` sub-label to the queue, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.
 In this way, the loop repeats, printing each byte, until it hits a null byte, at which point it stops and returns.
+
+And there we have it; Hello world!
