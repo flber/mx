@@ -78,3 +78,4 @@
 2021-04-24T19:37:59-07:00	[Mineral-Existence] stack, not queue
 2021-04-24T19:42:34-07:00	[Mineral-Existence] updated now page
 2021-04-24T19:43:16-07:00	[Mineral-Existence] actually update now page
+2021-04-24T20:52:51-07:00	[Mineral-Existence] updated guess
