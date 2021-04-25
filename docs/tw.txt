@@ -73,3 +73,4 @@
 2021-04-18T14:46:53-07:00	[Mineral-Existence] bee
 2021-04-24T16:32:24-07:00	[Mineral-Existence] uxn notes
 2021-04-24T17:30:03-07:00	[Mineral-Existence] more work on uxn notes
+2021-04-24T17:55:55-07:00	[Mineral-Existence] finished(?) example in uxn notes
