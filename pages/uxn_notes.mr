@@ -4,9 +4,10 @@ title: Uxn Notes
 
 ## Uxn Notes
 
-[Uxn](https://wiki.xxiivv.com/site/uxn.html) is an 8-bit virtual stack machine, created by [Devine](https://wiki.xxiivv.com/site/devine_lu_linvega.html), and programmed in [uxnambly](https://wiki.xxiivv.com/site/uxambly.html), a unique flavor of assembly. These are my notes for it.
+[Uxn](https://wiki.xxiivv.com/site/uxn.html) is an 8-bit virtual stack machine, created by [Devine](https://wiki.xxiivv.com/site/devine_lu_linvega.html), and programmed in [uxnambly](https://wiki.xxiivv.com/site/uxambly.html), a unique flavor of assembly. 
+These are my notes for it.
 
-### Breakdown of an example
+### Breakdown of "Hello world"
 !code!
 ( dev/console )
 
@@ -41,7 +42,7 @@ In uxn, everything is a stack of data. This often means that commands seem backw
 
 The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the stack.
 
-The next actual line is very interesting, and definitely confused me for a while!
+The next line is very interesting, and definitely confused me for a while!
 !code!
 |10 @Console    [ &pad $8 &char $1 ]
 └──────────┘      └─────┘ └──────┘
@@ -87,4 +88,4 @@ At part A we duplicate and `GET` the two bytes at the top of the stack (remember
 Part C starts by adding the literal relative address of the `&loop` sub-label to the stack, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.
 In this way, the loop repeats, printing each byte, until it hits a null byte, at which point it stops and returns.
 
-And there we have it; Hello world!
+And there we have it: Hello world!
