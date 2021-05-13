@@ -1,7 +1,7 @@
 :root{
 	--text: #3A3738;
 	--bg: #FBF0F0;
-	--highlight: #00BB8D;
+	--highlight: #80dec5;
 	--max: 800px;
 	--fonts: "Times New Roman", Times, serif;
 }
@@ -9,6 +9,7 @@
 
 ::selection{background: var(--text);color: var(--bg);}
 ::-moz-selection{background: var(--text);color: var(--bg);}
+mark{background-color: var(--highlight)}
 
 
 body{
@@ -21,10 +22,6 @@ body{
 	line-height: 1.6;
 	color:var(--text);
 	background-color:var(--bg);
-	background-image: url('background.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;  
-	background-size: cover;
 }
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2;} 
 h1{font-size: clamp(1.5em, 5vw, 2.5em);}

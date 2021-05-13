@@ -1,13 +1,7 @@
 !meta!
-title: Home
+template: center
+title: Index
 !meta!
 
-## Hello there
-
-Thank you for visiting my humble virtual abode. This site is the third, and hopefully final, iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the [wiki](wiki.html) page. It is inspired by many sites from the [Town of Merveilles](https://merveilles.town/about) and the [Webring](https://webring.xxiivv.com/).
-
-Here is what I'm working on [now](now.html).
-
-And here are the 15 most recently updated pages. The dates are semi messed up right now because I added a header to all of the files a little while ago so, the older dates are likely not relevant.
-
-{{latest}}
+### The colored sands in their patterns, the fluted and scalloped canyon walls, the volcanoes rising right through the sky, the rubbled rock of the chaotic terrain, the infinity of craters, ringed emblems of the planet’s beginning … Beautiful, or harsher than that: spare, austere, stripped down, silent, stoic, rocky, changeless. Sublime. The visible language of nature’s <mark>[mineral existence](home.html)</mark>
+*Green Mars*
