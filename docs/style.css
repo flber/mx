@@ -84,7 +84,7 @@ svg:hover{color: var(--bg);}
 
 
 div.right-border{padding-left: 10px;padding-right: 10px;}
-div.right-border a::after{content: "│"}
+div.right-border a::after{content: "|"}
 
 
 body:target{--bg: #3A3738;--text: #FBFBF3;}

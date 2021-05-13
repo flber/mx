@@ -94,3 +94,4 @@
 2021-05-12T19:10:07-07:00	[Mineral-Existence] small color change
 2021-05-12T19:17:09-07:00	[Mineral-Existence] removed temp file
 2021-05-12T19:28:10-07:00	[Mineral-Existence] times new roman
+2021-05-12T19:31:37-07:00	[Mineral-Existence] reducing unicode
