@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>Mineral Existence</title>
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
-		<link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css">
+		<!-- <link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css"> -->
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body id="dark">
@@ -37,9 +37,10 @@
 
 <h2>Uxn Notes</h2>
 
-<p><a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> is an 8-bit virtual stack machine, created by <a href="https://wiki.xxiivv.com/site/devine_lu_linvega.html">Devine</a>, and programmed in <a href="https://wiki.xxiivv.com/site/uxambly.html">uxnambly</a>, a unique flavor of assembly. These are my notes for it.</p>
+<p><a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> is an 8-bit virtual stack machine, created by <a href="https://wiki.xxiivv.com/site/devine_lu_linvega.html">Devine</a>, and programmed in <a href="https://wiki.xxiivv.com/site/uxambly.html">uxnambly</a>, a unique flavor of assembly. </p>
+<p>These are my notes for it.</p>
 
-<h3>Breakdown of an example</h3>
+<h3>Breakdown of "Hello world"</h3>
 <pre>
 ( dev/console )
 
@@ -74,7 +75,7 @@ RTN
 
 <p>The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the stack.</p>
 
-<p>The next actual line is very interesting, and definitely confused me for a while!</p>
+<p>The next line is very interesting, and definitely confused me for a while!</p>
 <pre>
 |10 @Console    [ &pad $8 &char $1 ]
 └──────────┘      └─────┘ └──────┘
@@ -120,7 +121,7 @@ RTN
 <p>Part C starts by adding the literal relative address of the `&loop` sub-label to the stack, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.</p>
 <p>In this way, the loop repeats, printing each byte, until it hits a null byte, at which point it stops and returns.</p>
 
-<p>And there we have it; Hello world!</p>
+<p>And there we have it: Hello world!</p>
 		</article>
 		<footer>
 			<nav aria-label="Contact links">
