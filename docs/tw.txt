@@ -98,3 +98,4 @@
 2021-05-13T14:13:43-07:00	[Mineral-Existence] removed old template files
 2021-05-13T14:15:03-07:00	[Mineral-Existence] added to wiki
 2021-05-13T15:19:06-07:00	[Mineral-Existence] splash page!
+2021-05-17T11:35:33-07:00	[Mineral-Existence] added author to splash
