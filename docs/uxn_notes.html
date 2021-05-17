@@ -39,6 +39,76 @@
 <p><a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> is an 8-bit virtual stack machine, created by <a href="https://wiki.xxiivv.com/site/devine_lu_linvega.html">Devine</a>, and programmed in <a href="https://wiki.xxiivv.com/site/uxambly.html">uxnambly</a>, a unique flavor of assembly. </p>
 <p>These are my notes for it.</p>
 
+<h3>Opcodes</h3>
+
+<pre>
+<strong>Stack</strong>
+0x00	|BRK	|break		|	|
+0x01	|LIT	|literal	|++	|
+0x02	|	|		|	|
+0x03	|POP	|pop		|a	|
+0x04	|DUP	|duplicate	|a	|a a
+0x05	|SWP	|swap		|a b	|b a
+0x06	|OVR	|over		|a b	|a b a
+0x07	|ROT	|rotate		|a b c	|b c a
+
+<strong>Logic</strong>
+0x08	|EQU	|equal		|a b	|c
+0x09	|NEQ	|not equal	|a b	|c
+0x0a	|GTH	|greater	|a b	|c
+0x0b	|LTH	|less		|a b	|c
+0x0c	|JMP	|jump		|[a]	|
+0x0d	|JCN	|jump cond.	|a [b]	|
+0x0e	|JSR	|jump stash	|[a]	|rs
+0x0f	|STH	|stash		|a	|rs
+
+<strong>Memory</strong>
+0x10	|LDZ	|load zp	|a	|[b]
+0x11	|STZ	|store zp	|a b	|
+0x12	|LDR	|load rel	|a	|[b]
+0x13	|STR	|store rel	|[b] a	|
+0x14	|LDA	|load abs	|a*	|[b]
+0x15	|STA	|store abs	|[b] a*	|
+0x16	|DEI	|device in	|a	|[b]
+0x17	|DEO	|device out	|[b] a	|
+
+<strong>Arithmetic</strong>
+0x18	|ADD	|add		|a b	|c
+0x19	|SUB	|subtract	|a b	|c
+0x1a	|MUL	|multiply	|a b	|c
+0x1b	|DIV	|divide		|a b	|c
+0x1c	|AND	|and		|a b	|c
+0x1d	|ORA	|or		|a b	|c
+0x1e	|EOR	|excl. or	|a b	|c
+0x1f	|SFT	|shift		|a b	|c
+</pre>
+
+<h3>Modes</h3>
+
+<p><em>Keep mode</em>: lets operators work without consuming items from the stack. Results are simply pushed to the top.</p>
+
+<p><em>Short mode</em>: allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.</p>
+
+<p><em>Return mode</em>: sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.</p>
+
+<h3>Runes</h3>
+
+<pre>
+%	| macro-define
+|	| pad absolute
+$	| pad relative
+@	| label-define
+&	| sublabel-define
+/	| sublabel spacer
+"#"	| literal hex
+.	| literal addr (zero page)
+,	| literal addr (relative)
+;	| literal addr (absolute)
+:	| raw addr
+'	| raw char
+"	| raw word
+</pre>
+
 <h3>Breakdown of "Hello world"</h3>
 <pre>
 ( dev/console )
@@ -53,21 +123,17 @@
 
 |0100 ( -> )
 	
-	;hello-world ;print JSR2
+	,hello-word 
+
+<p>	&loop</p>
+		( send ) LDRk .Console/char DEO
+		( incr ) #01 ADD
+		( loop ) DUP ,&loop JCN
+	POP
 	
 BRK
 
-@print ( addr -- )
-	
-<p>	&loop</p>
-		( send ) DUP2 GET .Console/char DEO
-		( incr ) #0001 ADD2
-		( loop ) DUP2 GET #00 NEQ ,&loop JNZ
-<p>	POP2</p>
-
-RTN
-
-@hello-world [ "Hello 20 "World! ]
+@hello-word "hello 20 "World!
 </pre>
 
 <p>In uxn, everything is a stack of data. This often means that commands seem backward, as data is added to that stack before operations can use it.</p>
@@ -132,7 +198,7 @@ RTN
 		        	<span class="light"><a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.white.svg' alt="a white on black symbol of the webring"/></a></span> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 250421</em>
+					<em>Last updated: 170521</em>
 				</div>
 			</nav>
 		</footer>
