@@ -9,47 +9,261 @@ These are my notes for it.
 
 ### Opcodes
 
-!code!
-<strong>Stack</strong>
-0x00	|BRK	|break		|	|
-0x01	|LIT	|literal	|++	|
-0x02	|	|		|	|
-0x03	|POP	|pop		|a	|
-0x04	|DUP	|duplicate	|a	|a a
-0x05	|SWP	|swap		|a b	|b a
-0x06	|OVR	|over		|a b	|a b a
-0x07	|ROT	|rotate		|a b c	|b c a
-
-<strong>Logic</strong>
-0x08	|EQU	|equal		|a b	|c
-0x09	|NEQ	|not equal	|a b	|c
-0x0a	|GTH	|greater	|a b	|c
-0x0b	|LTH	|less		|a b	|c
-0x0c	|JMP	|jump		|[a]	|
-0x0d	|JCN	|jump cond.	|a [b]	|
-0x0e	|JSR	|jump stash	|[a]	|rs
-0x0f	|STH	|stash		|a	|rs
-
-<strong>Memory</strong>
-0x10	|LDZ	|load zp	|a	|[b]
-0x11	|STZ	|store zp	|a b	|
-0x12	|LDR	|load rel	|a	|[b]
-0x13	|STR	|store rel	|[b] a	|
-0x14	|LDA	|load abs	|a*	|[b]
-0x15	|STA	|store abs	|[b] a*	|
-0x16	|DEI	|device in	|a	|[b]
-0x17	|DEO	|device out	|[b] a	|
-
-<strong>Arithmetic</strong>
-0x18	|ADD	|add		|a b	|c
-0x19	|SUB	|subtract	|a b	|c
-0x1a	|MUL	|multiply	|a b	|c
-0x1b	|DIV	|divide		|a b	|c
-0x1c	|AND	|and		|a b	|c
-0x1d	|ORA	|or		|a b	|c
-0x1e	|EOR	|excl. or	|a b	|c
-0x1f	|SFT	|shift		|a b	|c
-!code!
+<table border="1">
+	<tbody>
+		<tr>
+			<th colspan="5"><strong>Stack</strong></th>
+		</tr>
+		<tr>
+			<td>0x00</td>
+			<td>BRK</td>
+			<td>break</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x01</td>
+			<td>LIT</td>
+			<td>literal</td>
+			<td>++</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x02</td>
+			<td>---</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x03</td>
+			<td>POP</td>
+			<td>pop</td>
+			<td>a</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x04</td>
+			<td>DUP</td>
+			<td>duplicate</td>
+			<td>a</td>
+			<td>a a</td>
+		</tr>
+		<tr>
+			<td>0x05</td>
+			<td>SWP</td>
+			<td>swap</td>
+			<td>a b</td>
+			<td>b a</td>
+		</tr>
+		<tr>
+			<td>0x06</td>
+			<td>OVR</td>
+			<td>over</td>
+			<td>a b</td>
+			<td>a b a</td>
+		</tr>
+		<tr>
+			<td>0x07</td>
+			<td>ROT</td>
+			<td>rotate</td>
+			<td>a b c</td>
+			<td>b c a</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<table border="1">
+	<tbody>
+		<tr>
+			<th colspan="5"><strong>Logic</strong></th>
+		</tr>
+		<tr>
+			<td>0x08</td>
+			<td>EQU</td>
+			<td>equal</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x09</td>
+			<td>NEQ</td>
+			<td>not equal</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x0a</td>
+			<td>GTH</td>
+			<td>greater than</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x0b</td>
+			<td>LTH</td>
+			<td>less than</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x0c</td>
+			<td>JMP</td>
+			<td>jump</td>
+			<td>[a]</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x0d</td>
+			<td>JCN</td>
+			<td>jump conditional</td>
+			<td>a [b]</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x0e</td>
+			<td>JSR</td>
+			<td>jump stash</td>
+			<td>[a]</td>
+			<td>rs</td>
+		</tr>
+		<tr>
+			<td>0x0f</td>
+			<td>STH</td>
+			<td>stash</td>
+			<td>a</td>
+			<td>rs</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<table border="1">
+	<tbody>
+		<tr>
+			<th colspan="5"><strong>Memory</strong></th>
+		</tr>
+		<tr>
+			<td>0x10</td>
+			<td>LDZ</td>
+			<td>load zero page</td>
+			<td>a</td>
+			<td>[b]</td>
+		</tr>
+		<tr>
+			<td>0x11</td>
+			<td>STZ</td>
+			<td>store zero page</td>
+			<td>a b</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x12</td>
+			<td>LDR</td>
+			<td>load relative</td>
+			<td>a</td>
+			<td>[b]</td>
+		</tr>
+		<tr>
+			<td>0x13</td>
+			<td>STR</td>
+			<td>store relative</td>
+			<td>[b] a</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x14</td>
+			<td>LDA</td>
+			<td>load absolute</td>
+			<td>a*</td>
+			<td>[b]</td>
+		</tr>
+		<tr>
+			<td>0x15</td>
+			<td>STA</td>
+			<td>store absolute</td>
+			<td>[b] a*</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>0x16</td>
+			<td>DEI</td>
+			<td>device in</td>
+			<td>a</td>
+			<td>[b]</td>
+		</tr>
+		<tr>
+			<td>0x17</td>
+			<td>DEO</td>
+			<td>device out</td>
+			<td>[b] a</td>
+			<td>rs</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<table border="1">
+	<tbody>
+		<tr>
+			<th colspan="5"><strong>Arithmetic</strong></th>
+		</tr>
+		<tr>
+			<td>0x18</td>
+			<td>ADD</td>
+			<td>add</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x19</td>
+			<td>SUB</td>
+			<td>subtract</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x1a</td>
+			<td>MUL</td>
+			<td>multiply</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x1b</td>
+			<td>DIV</td>
+			<td>divide</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x1c</td>
+			<td>AND</td>
+			<td>and</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x1d</td>
+			<td>ORA</td>
+			<td>or</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x1e</td>
+			<td>EOR</td>
+			<td>exclusive or</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+		<tr>
+			<td>0x1f</td>
+			<td>SFT</td>
+			<td>shit</td>
+			<td>a b</td>
+			<td>c</td>
+		</tr>
+	</tbody>
+</table>
 
 ### Modes
 
@@ -61,23 +275,120 @@ These are my notes for it.
 
 ### Runes
 
+<table border="1">
+	<tbody>
+		<tr>
+			<td>%</td><td>macro-define</td>
+		</tr>
+		<tr>
+			<td>|</td><td>pad absolute</td>
+		</tr>
+		<tr>
+			<td>$</td><td>pad relative</td>
+		</tr>
+		<tr>
+			<td>@</td><td>label-define</td>
+		</tr>
+		<tr>
+			<td>&</td><td>sublabel-define</td>
+		</tr>
+		<tr>
+			<td>/</td><td>sublabel spacer</td>
+		</tr>
+		<tr>
+			<td>"#"</td><td>literal hex</td>
+		</tr>
+		<tr>
+			<td>.</td><td>literal addr (zero page)</td>
+		</tr>
+		<tr>
+			<td>,</td><td>literal addr (relative)</td>
+		</tr>
+		<tr>
+			<td>;</td><td>literal addr (absolute)</td>
+		</tr>
+		<tr>
+			<td>:</td><td>raw addr</td>
+		</tr>
+		<tr>
+			<td>'</td><td>raw char</td>
+		</tr>
+		<tr>
+			<td>"</td><td>raw word</td>
+		</tr>
+	</tbody>
+</table>
+
+### Hello world, part 2!
+
 !code!
-%	| macro-define
-|	| pad absolute
-$	| pad relative
-@	| label-define
-&	| sublabel-define
-/	| sublabel spacer
-"#"	| literal hex
-.	| literal addr (zero page)
-,	| literal addr (relative)
-;	| literal addr (absolute)
-:	| raw addr
-'	| raw char
-"	| raw word
+( dev/console )
+
+|10 @Console [ &pad $8 &char ]
+
+( init )
+
+|0100 ( -> )
+	
+	;hello-word 
+
+	&loop
+		( send ) LDAk .Console/char DEO
+		( incr ) #0001 ADD2
+		( loop ) LDAk ,&loop JCN
+	POP2
+	
+BRK
+
+@hello-word "Hello 20 "World!
 !code!
 
-### Breakdown of "Hello world"
+This is the new version of hello world (as of commit ea0584a2), which is significantly more concise, and uses some of the new opcodes. If you want an example which is a bit longer, I'd recommend checking out the first breakdown.
+
+The couple of lines are the same as they were before, so I won't go over them again.
+
+To start, everything happens in one space, and isn't broken up between functions. The general overview of how the program works is the same as the older version; the newer version is just a bit more concise.
+
+Once again, let's go through this line by line, starting at line 9.
+
+!code!
+;hello-world
+└──────────┘
+      A
+!code!
+This one's pretty simple (though it may look weird if you're not quite familiar with uxn's concepts yet). The semicolon tells the cpu to use absolute addresses, and in this case the address it's referring to is the `@hello-world` label. That absolute address is added to the stack, and the program continues to line 11.
+
+!code!
+&loop 
+└───┘ 
+  A
+!code!
+This one is also super short; part A just creates a sublabel called `loop` for later use.
+
+!code!
+( send ) LDAk .Console/char DEO
+└──────┘ └──┘ └───────────────┘
+   A      B           C
+!code!
+Part A is just a comment, but part B is where we see a new opcode! `LDA` takes an absolute address and adds the value at that address to the stack. Here it's used with the keep mode, so it doesn't consume that address (which points to the start of our `"hello 20 "world`) text. With the character at that address now on the top of the stack, part C takes that value and prints it to the console.
+
+!code!
+( incr ) #0001 ADD2
+└──────┘ └────────┘
+   A         B
+!code!
+Part B, as the comment says, just increments our address, which is now at the top of the stack. The address on the stack now points to the next character of the text.
+
+!code!
+( loop ) LDAk ,&loop JCN
+└──────┘ └──┘ └────────┘
+   A      B       C
+!code!
+Part B is the same thing as used before, it gets the value at the address, keeps the address on the stack, and adds the value to the top of the stack. This value is then used by part C, which passes two arguments, (that value, and the relative address of the `loop` sublabel which was defined earlier) to the `JCN` opcode. `JCN` takes a boolean value and an address, and if the boolean is true (not a zero), it jumps to that address. Here, it looks at that value, which is normally a character, and repeats. However, if the address has been incremented past where we have characters, the value will be #00 (I think, but the point is it's a zero), and the loop stops.
+
+The final opcode, `POP2`, removes the top two-byte item on the stack, which is our address. With everything done and "hello world" printed to the console, we break.
+
+### Breakdown of Hello world
 !code!
 ( dev/console )
 
@@ -91,17 +402,21 @@ $	| pad relative
 
 |0100 ( -> )
 	
-	,hello-word 
-
-	&loop
-		( send ) LDRk .Console/char DEO
-		( incr ) #01 ADD
-		( loop ) DUP ,&loop JCN
-	POP
+	;hello-world ;print JSR2
 	
 BRK
 
-@hello-word "hello 20 "World!
+@print ( addr -- )
+	
+	&loop
+		( send ) DUP2 GET .Console/char DEO
+		( incr ) #0001 ADD2
+		( loop ) DUP2 GET #00 NEQ ,&loop JNZ
+	POP2
+
+RTN
+
+@hello-world [ "Hello 20 "World! ]
 !code!
 
 In uxn, everything is a stack of data. This often means that commands seem backward, as data is added to that stack before operations can use it.
@@ -115,8 +430,8 @@ The next line is very interesting, and definitely confused me for a while!
       A              B       C
 !code!
 Part A starts the line by making sense. It defines a label: "Console", which is an address to the console device (at 0110). 
-Part B is where things start to get a bit confusing, and where Devine's [devices](https://wiki.xxiivv.com/site/uxnemu.html) table is very helpful. The first part, `&pad`, defines a sub-label (of `Console`), which is assigned by the `$8` part to an address one byte further than the `Console` address. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sub-label is never actually called.
-Part C then uses the same method as part B to assign the sub-label `char` to one bit past the `pad` label, which is the start of the "char" section of the console device!
+Part B is where things start to get a bit confusing, and where Devine's [devices](https://wiki.xxiivv.com/site/uxnemu.html) table is very helpful. The first part, `&pad`, defines a sublabel (of `Console`), which is assigned by the `$8` part to an address one byte further than the `Console` address. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sublabel is never actually called.
+Part C then uses the same method as part B to assign the sublabel `char` to one bit past the `pad` label, which is the start of the "char" section of the console device!
 
 The main part of the program starts with the line `|0100 ( -> )`, which moves us into the "system" device's memory space.
 !code!
@@ -151,7 +466,7 @@ While a bit scary, I promise this next line isn't too complicated!
             A        B         C
 !code!
 At part A we duplicate and `GET` the two bytes at the top of the stack (remember, that's now the address to the next byte of our string), and the value at that address is compared to `#00`, the ascii null char, at part B. The `NEQ` opcode, as the name suggests, checks if its inputs are not equal. If they aren't equal, it returns a 1, and if they are equal it returns a 0.
-Part C starts by adding the literal relative address of the `&loop` sub-label to the stack, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.
+Part C starts by adding the literal relative address of the `&loop` sublabel to the stack, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.
 In this way, the loop repeats, printing each byte, until it hits a null byte, at which point it stops and returns.
 
 And there we have it: Hello world!
