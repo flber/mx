@@ -101,3 +101,4 @@
 2021-05-17T11:35:33-07:00	[Mineral-Existence] added author to splash
 2021-05-17T16:34:58-07:00	[Mineral-Existence] more comprehensive uxn notes
 2021-05-20T13:36:50-07:00	[Mineral-Existence] updated uxn notes
+2021-05-20T14:41:02-07:00	[Mineral-Existence] chaotic license
