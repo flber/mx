@@ -1,24 +1,4 @@
 !meta!
+template: hello
 title: Hello!
 !meta!
-
-This page is shamelessly borrowed from [Josh's](https://merveilles.town/@jrc03c) [website](https://ameyama.com), and is my little experiment into running more than a static-file-serving server.
-
-With that out of the way, hi! 
-If you press the button below, my pi will get a message and update the counter (I'll probably write up a description of this later...)
-
-<blockquote id="count">
-	Loading...
-</blockquote>
-
-<button id="hi-button" onclick="say-hi()">Say Hi</button>
-
-<script>
-	async function say-hi(){
-		let response = await fetch("https://mineralexistence.com/api/hey")
-		let data = await response.json()
-		let countElement = document.getElementById("count")
-		document.getElementById("hi-button").disabled = true;
-		countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in ^_^`
-	}
-</script>
