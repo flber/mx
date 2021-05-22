@@ -34,32 +34,26 @@
 		</nav>
 		<article class="inner">
 
-<h2>Hello there</h2>
+<p>This page is shamelessly borrowed from <a href="https://merveilles.town/@jrc03c">Josh's</a> <a href="https://ameyama.com">website</a>, and is my little experiment into running more than a static-file-serving server.</p>
 
-<p>Thank you for visiting my humble virtual abode. This site is the third, and hopefully final, iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/">Webring</a>.</p>
+<p>With that out of the way, hi! </p>
+<p>If you press the button below, my pi will get a message and update the counter (I'll probably write up a description of this later...)</p>
 
-<p>Here is what I'm working on <a href="now.html">now</a>.</p>
+<blockquote id="count">
+<p>	Loading...</p>
+</blockquote>
 
-<p>And here are the 15 most recently updated pages. The dates are semi messed up right now because I added a header to all of the files a little while ago so, the older dates are likely not relevant.</p>
+<button id="hi-button" onclick="say-hi()">Say Hi</button>
 
-<ul>
-<li>220521 <a href="hello.html">Hello!</a></li>
-<li>200521 <a href="uxn_notes.html">Uxn Notes</a></li>
-<li>170521 <a href="index.html">Index</a></li>
-<li>130521 <a href="wiki.html">Wiki</a></li>
-<li>250421 <a href="now.html">Now</a></li>
-<li>120421 <a href="home.html">Home</a></li>
-<li>100421 <a href="strawberry_canyon_080421.html">Strawberry Canyon Hike</a></li>
-<li>100421 <a href="hiking.html">Hiking</a></li>
-<li>280321 <a href="about.html">Now</a></li>
-<li>270321 <a href="grimoire.html">Grimoire</a></li>
-<li>270321 <a href="inventory.html">Inventory</a></li>
-<li>270321 <a href="backyard_hike_260321.html">Backyard Hike</a></li>
-<li>050321 <a href="bucephalus.html">Bucephalus</a></li>
-<li>020321 <a href="plan9.html">Plan 9</a></li>
-<li>210221 <a href="marin_headlands_200221.html">Marin Headlands Hike</a></li>
-</ul>
-
+<script>
+<p>	async function say-hi(){</p>
+<p>		let response = await fetch("https://mineralexistence.com/api/hey")</p>
+<p>		let data = await response.json()</p>
+<p>		let countElement = document.getElementById("count")</p>
+<p>		document.getElementById("hi-button").disabled = true;</p>
+<p>		countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in <b>_</b>`</p>
+	}
+</script>
 		</article>
 		<footer>
 			<nav aria-label="Contact links">
@@ -71,7 +65,7 @@
 		        	<span class="light"><a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.white.svg' alt="a white on black symbol of the webring"/></a></span> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 120421</em>
+					<em>Last updated: 220521</em>
 				</div>
 			</nav>
 		</footer>
