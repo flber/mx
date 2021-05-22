@@ -34,6 +34,8 @@
 		</nav>
 		<article class="inner">
 
+			<mark>THIS IS CURRENTLY NON-FUNCTIONAL</mark>
+
 			<h2>Hello!</h2>
 			<p>This page is shamelessly borrowed from <a href="https://merveilles.town/@jrc03c">Josh's</a> <a href="https://ameyama.com">website</a>, and is my little experiment into running more than a static-file-serving server.</p>
 			
@@ -41,20 +43,21 @@
 			<p>If you press the button below, my pi will get a message and update the counter (I'll probably write up a description of this later...)</p>
 			
 			<blockquote id="count">
-				Loading...
+				<p>Loading...</p>
 			</blockquote>
 
-			<button id="hi-button" onclick="say-hi()">Say Hi</button>
+			<button id="hi-button" onclick="sayhi()">Say Hi</button>
 
-			<script>
-				async function say-hi(){
-					let response = await fetch("https://mineralexistence.com/api/hey")
-					let data = await response.json()
-					let countElement = document.getElementById("count")
-					document.getElementById("hi-button").disabled = true;
-					countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in ^_^`
-				}
-			</script>
+			<script> 
+				async function sayhi(){ 
+					console.log("testing") 
+					let response = await fetch("https://mineralexistence.com/api/hey") 
+					let data = await response.json() 
+					let countElement = document.getElementById("count") 
+					document.getElementById("hi-button").disabled = true; 
+					countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in ^_^` 
+				} 
+			</script> 
 
 		</article>
 		<footer>
