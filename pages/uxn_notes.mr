@@ -271,9 +271,9 @@ These are my notes for it.
 <details>
 	<summary>Modes</summary>
 	<strong>Keep mode</strong>: lets operators work without consuming items from the stack. Results are simply pushed to the top.
-
+	<br>
 	<strong>Short mode</strong>: allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.
-
+	<br>
 	<strong>Return mode</strong>: sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.
 </details>
 

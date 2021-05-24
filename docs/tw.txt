@@ -109,3 +109,4 @@
 2021-05-22T02:22:24-07:00	[Mineral-Existence] work on hello page
 2021-05-23T14:56:37-07:00	[Mineral-Existence] added writing page and short story
 2021-05-23T19:28:20-07:00	[Mineral-Existence] details on uxn notes
+2021-05-23T19:35:44-07:00	[Mineral-Existence] small updates to home

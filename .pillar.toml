@@ -5,4 +5,4 @@ html_path = "docs/"
 music_path = "/home/benh/Music/"
 
 [values]
-latest_length = 15
+latest_length = 100
