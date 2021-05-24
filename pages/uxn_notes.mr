@@ -7,317 +7,324 @@ title: Uxn Notes
 [Uxn](https://wiki.xxiivv.com/site/uxn.html) is an 8-bit virtual stack machine, created by [Devine](https://wiki.xxiivv.com/site/devine_lu_linvega.html), and programmed in [uxnambly](https://wiki.xxiivv.com/site/uxambly.html), a unique flavor of assembly. 
 These are my notes for it.
 
-### Opcodes
+<details>
+	<summary>Opcodes</summary>
+	<table border="1">
+		<tbody>
+			<tr>
+				<th colspan="5"><strong>Stack</strong></th>
+			</tr>
+			<tr>
+				<td>0x00</td>
+				<td>BRK</td>
+				<td>break</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x01</td>
+				<td>LIT</td>
+				<td>literal</td>
+				<td>++</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x02</td>
+				<td>---</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x03</td>
+				<td>POP</td>
+				<td>pop</td>
+				<td>a</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x04</td>
+				<td>DUP</td>
+				<td>duplicate</td>
+				<td>a</td>
+				<td>a a</td>
+			</tr>
+			<tr>
+				<td>0x05</td>
+				<td>SWP</td>
+				<td>swap</td>
+				<td>a b</td>
+				<td>b a</td>
+			</tr>
+			<tr>
+				<td>0x06</td>
+				<td>OVR</td>
+				<td>over</td>
+				<td>a b</td>
+				<td>a b a</td>
+			</tr>
+			<tr>
+				<td>0x07</td>
+				<td>ROT</td>
+				<td>rotate</td>
+				<td>a b c</td>
+				<td>b c a</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table border="1">
+		<tbody>
+			<tr>
+				<th colspan="5"><strong>Logic</strong></th>
+			</tr>
+			<tr>
+				<td>0x08</td>
+				<td>EQU</td>
+				<td>equal</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x09</td>
+				<td>NEQ</td>
+				<td>not equal</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x0a</td>
+				<td>GTH</td>
+				<td>greater than</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x0b</td>
+				<td>LTH</td>
+				<td>less than</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x0c</td>
+				<td>JMP</td>
+				<td>jump</td>
+				<td>[a]</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x0d</td>
+				<td>JCN</td>
+				<td>jump conditional</td>
+				<td>a [b]</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x0e</td>
+				<td>JSR</td>
+				<td>jump stash</td>
+				<td>[a]</td>
+				<td>rs</td>
+			</tr>
+			<tr>
+				<td>0x0f</td>
+				<td>STH</td>
+				<td>stash</td>
+				<td>a</td>
+				<td>rs</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table border="1">
+		<tbody>
+			<tr>
+				<th colspan="5"><strong>Memory</strong></th>
+			</tr>
+			<tr>
+				<td>0x10</td>
+				<td>LDZ</td>
+				<td>load zero page</td>
+				<td>a</td>
+				<td>[b]</td>
+			</tr>
+			<tr>
+				<td>0x11</td>
+				<td>STZ</td>
+				<td>store zero page</td>
+				<td>a b</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x12</td>
+				<td>LDR</td>
+				<td>load relative</td>
+				<td>a</td>
+				<td>[b]</td>
+			</tr>
+			<tr>
+				<td>0x13</td>
+				<td>STR</td>
+				<td>store relative</td>
+				<td>[b] a</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x14</td>
+				<td>LDA</td>
+				<td>load absolute</td>
+				<td>a*</td>
+				<td>[b]</td>
+			</tr>
+			<tr>
+				<td>0x15</td>
+				<td>STA</td>
+				<td>store absolute</td>
+				<td>[b] a*</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>0x16</td>
+				<td>DEI</td>
+				<td>device in</td>
+				<td>a</td>
+				<td>[b]</td>
+			</tr>
+			<tr>
+				<td>0x17</td>
+				<td>DEO</td>
+				<td>device out</td>
+				<td>[b] a</td>
+				<td>rs</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<table border="1">
+		<tbody>
+			<tr>
+				<th colspan="5"><strong>Arithmetic</strong></th>
+			</tr>
+			<tr>
+				<td>0x18</td>
+				<td>ADD</td>
+				<td>add</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x19</td>
+				<td>SUB</td>
+				<td>subtract</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x1a</td>
+				<td>MUL</td>
+				<td>multiply</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x1b</td>
+				<td>DIV</td>
+				<td>divide</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x1c</td>
+				<td>AND</td>
+				<td>and</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x1d</td>
+				<td>ORA</td>
+				<td>or</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x1e</td>
+				<td>EOR</td>
+				<td>exclusive or</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+			<tr>
+				<td>0x1f</td>
+				<td>SFT</td>
+				<td>shit</td>
+				<td>a b</td>
+				<td>c</td>
+			</tr>
+		</tbody>
+	</table>
+</details>
 
-<table border="1">
-	<tbody>
-		<tr>
-			<th colspan="5"><strong>Stack</strong></th>
-		</tr>
-		<tr>
-			<td>0x00</td>
-			<td>BRK</td>
-			<td>break</td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x01</td>
-			<td>LIT</td>
-			<td>literal</td>
-			<td>++</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x02</td>
-			<td>---</td>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x03</td>
-			<td>POP</td>
-			<td>pop</td>
-			<td>a</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x04</td>
-			<td>DUP</td>
-			<td>duplicate</td>
-			<td>a</td>
-			<td>a a</td>
-		</tr>
-		<tr>
-			<td>0x05</td>
-			<td>SWP</td>
-			<td>swap</td>
-			<td>a b</td>
-			<td>b a</td>
-		</tr>
-		<tr>
-			<td>0x06</td>
-			<td>OVR</td>
-			<td>over</td>
-			<td>a b</td>
-			<td>a b a</td>
-		</tr>
-		<tr>
-			<td>0x07</td>
-			<td>ROT</td>
-			<td>rotate</td>
-			<td>a b c</td>
-			<td>b c a</td>
-		</tr>
-	</tbody>
-</table>
 <br>
-<table border="1">
-	<tbody>
-		<tr>
-			<th colspan="5"><strong>Logic</strong></th>
-		</tr>
-		<tr>
-			<td>0x08</td>
-			<td>EQU</td>
-			<td>equal</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x09</td>
-			<td>NEQ</td>
-			<td>not equal</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x0a</td>
-			<td>GTH</td>
-			<td>greater than</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x0b</td>
-			<td>LTH</td>
-			<td>less than</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x0c</td>
-			<td>JMP</td>
-			<td>jump</td>
-			<td>[a]</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x0d</td>
-			<td>JCN</td>
-			<td>jump conditional</td>
-			<td>a [b]</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x0e</td>
-			<td>JSR</td>
-			<td>jump stash</td>
-			<td>[a]</td>
-			<td>rs</td>
-		</tr>
-		<tr>
-			<td>0x0f</td>
-			<td>STH</td>
-			<td>stash</td>
-			<td>a</td>
-			<td>rs</td>
-		</tr>
-	</tbody>
-</table>
+
+<details>
+	<summary>Modes</summary>
+	<strong>Keep mode</strong>: lets operators work without consuming items from the stack. Results are simply pushed to the top.
+
+	<strong>Short mode</strong>: allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.
+
+	<strong>Return mode</strong>: sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.
+</details>
+
 <br>
-<table border="1">
-	<tbody>
-		<tr>
-			<th colspan="5"><strong>Memory</strong></th>
-		</tr>
-		<tr>
-			<td>0x10</td>
-			<td>LDZ</td>
-			<td>load zero page</td>
-			<td>a</td>
-			<td>[b]</td>
-		</tr>
-		<tr>
-			<td>0x11</td>
-			<td>STZ</td>
-			<td>store zero page</td>
-			<td>a b</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x12</td>
-			<td>LDR</td>
-			<td>load relative</td>
-			<td>a</td>
-			<td>[b]</td>
-		</tr>
-		<tr>
-			<td>0x13</td>
-			<td>STR</td>
-			<td>store relative</td>
-			<td>[b] a</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x14</td>
-			<td>LDA</td>
-			<td>load absolute</td>
-			<td>a*</td>
-			<td>[b]</td>
-		</tr>
-		<tr>
-			<td>0x15</td>
-			<td>STA</td>
-			<td>store absolute</td>
-			<td>[b] a*</td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>0x16</td>
-			<td>DEI</td>
-			<td>device in</td>
-			<td>a</td>
-			<td>[b]</td>
-		</tr>
-		<tr>
-			<td>0x17</td>
-			<td>DEO</td>
-			<td>device out</td>
-			<td>[b] a</td>
-			<td>rs</td>
-		</tr>
-	</tbody>
-</table>
-<br>
-<table border="1">
-	<tbody>
-		<tr>
-			<th colspan="5"><strong>Arithmetic</strong></th>
-		</tr>
-		<tr>
-			<td>0x18</td>
-			<td>ADD</td>
-			<td>add</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x19</td>
-			<td>SUB</td>
-			<td>subtract</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x1a</td>
-			<td>MUL</td>
-			<td>multiply</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x1b</td>
-			<td>DIV</td>
-			<td>divide</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x1c</td>
-			<td>AND</td>
-			<td>and</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x1d</td>
-			<td>ORA</td>
-			<td>or</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x1e</td>
-			<td>EOR</td>
-			<td>exclusive or</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-		<tr>
-			<td>0x1f</td>
-			<td>SFT</td>
-			<td>shit</td>
-			<td>a b</td>
-			<td>c</td>
-		</tr>
-	</tbody>
-</table>
 
-### Modes
-
-<strong>Keep mode</strong>: lets operators work without consuming items from the stack. Results are simply pushed to the top.
-
-<strong>Short mode</strong>: allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.
-
-<strong>Return mode</strong>: sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.
-
-### Runes
-
-<table border="1">
-	<tbody>
-		<tr>
-			<td>%</td><td>macro-define</td>
-		</tr>
-		<tr>
-			<td>|</td><td>pad absolute</td>
-		</tr>
-		<tr>
-			<td>$</td><td>pad relative</td>
-		</tr>
-		<tr>
-			<td>@</td><td>label-define</td>
-		</tr>
-		<tr>
-			<td>&</td><td>sublabel-define</td>
-		</tr>
-		<tr>
-			<td>/</td><td>sublabel spacer</td>
-		</tr>
-		<tr>
-			<td>"#"</td><td>literal hex</td>
-		</tr>
-		<tr>
-			<td>.</td><td>literal addr (zero page)</td>
-		</tr>
-		<tr>
-			<td>,</td><td>literal addr (relative)</td>
-		</tr>
-		<tr>
-			<td>;</td><td>literal addr (absolute)</td>
-		</tr>
-		<tr>
-			<td>:</td><td>raw addr</td>
-		</tr>
-		<tr>
-			<td>'</td><td>raw char</td>
-		</tr>
-		<tr>
-			<td>"</td><td>raw word</td>
-		</tr>
-	</tbody>
-</table>
+<details>
+	<summary>Runes</summary>
+	<table border="1">
+		<tbody>
+			<tr>
+				<td>%</td><td>macro-define</td>
+			</tr>
+			<tr>
+				<td>|</td><td>pad absolute</td>
+			</tr>
+			<tr>
+				<td>$</td><td>pad relative</td>
+			</tr>
+			<tr>
+				<td>@</td><td>label-define</td>
+			</tr>
+			<tr>
+				<td>&</td><td>sublabel-define</td>
+			</tr>
+			<tr>
+				<td>/</td><td>sublabel spacer</td>
+			</tr>
+			<tr>
+				<td>"#"</td><td>literal hex</td>
+			</tr>
+			<tr>
+				<td>.</td><td>literal addr (zero page)</td>
+			</tr>
+			<tr>
+				<td>,</td><td>literal addr (relative)</td>
+			</tr>
+			<tr>
+				<td>;</td><td>literal addr (absolute)</td>
+			</tr>
+			<tr>
+				<td>:</td><td>raw addr</td>
+			</tr>
+			<tr>
+				<td>'</td><td>raw char</td>
+			</tr>
+			<tr>
+				<td>"</td><td>raw word</td>
+			</tr>
+		</tbody>
+	</table>
+</details>
 
 ### Hello world, part 2!
 

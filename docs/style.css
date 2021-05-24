@@ -55,6 +55,12 @@ blockquote > :first-child:after{bottom:0;left:0;border-width: 0 0 1px 1px}
 blockquote > p{padding: 16px;}
 
 
+details {border: 1px solid var(--text);border-radius: 4px;padding: .5em .5em 0;}
+details[open] {padding: .5em;}
+details[open] summary {border-bottom: 1px solid var(--text);margin-bottom: .5em;}
+summary {font-weight: bold;margin: -.5em -.5em 0;padding: .5em;}
+
+
 a{color: var(--text);text-decoration: none;}
 a:hover{color: var(--bg);background-color: var(--text);}
 article a:not([href*=':'])::before{content:"{"}

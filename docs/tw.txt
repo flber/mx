@@ -108,3 +108,4 @@
 2021-05-21T21:36:36-07:00	[Mineral-Existence] testing hi page: pt 2
 2021-05-22T02:22:24-07:00	[Mineral-Existence] work on hello page
 2021-05-23T14:56:37-07:00	[Mineral-Existence] added writing page and short story
+2021-05-23T19:28:20-07:00	[Mineral-Existence] details on uxn notes
