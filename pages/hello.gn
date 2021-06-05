@@ -1,4 +1,28 @@
 !meta!
-template: hello
 title: Hello!
 !meta!
+
+[mark|THIS IS CURRENTLY NON-FUNCTIONAL]
+
+[h2|Hello!]
+[p|This page is shamelessly borrowed from [a, href: "https://merveilles.town/@jrc03c"|Josh's] [a, href: "https://ameyama.com"|website], and is my little experiment into running more than a static-file-serving server.]
+
+[p|With that out of the way, hi!]
+[p|If you press the button below, my pi will get a message and update the counter (I'll probably write up a description of this later...)]
+
+[blockquote id: "count"|
+	[p|Loading...]
+]
+
+[button, id: "hi-button", onclick: "sayhi()"|Say Hi]
+
+[script| 
+	async function sayhi(){ 
+		console.log("testing") 
+		let response = await fetch("https://mineralexistence.com/api/hey") 
+		let data = await response.json() 
+		let countElement = document.getElementById("count") 
+		document.getElementById("hi-button").disabled = true; 
+		countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in ^_^` 
+	} 
+] 
