@@ -1,0 +1,31 @@
+!meta!
+title: Inventory
+!meta!
+
+[h2|Inventory]
+
+[p|[strong|Everyday items:]]
+[ul|
+	[li|[a, href: "https://fieldnotesbrand.com/"|Field Notes] winter 2018 edition (x3)]
+	[li|[a, href: "https://fieldnotesbrand.com/products/space-pen"|Fisher space pen]]
+	[li|[a, href: "https://www.casio.com/products/watches/databank/ca53w-1"|Casio CA53W-1 calculator watch]]
+	[li|[a, href: "https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=kindle+4&_sacat=0"|Kindle 4]]
+]
+
+[p|[strong|Computers:]]
+[ul|
+	[li|Sinclair: Thinkpad T420s running [a, href: "https://manjaro.org/downloads/community/i3/"|Manjaro i3]]
+	[li|Demian: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/"|Raspberry pi 4] running [a, href: "https://www.raspberrypi.org/software/operating-systems/"|Pi OS Lite]]
+	[li|[a, href: "bucephalus.html"|Bucephalus]: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/" |Raspberry pi 4] running [a, href: "plan9.html"|9front]]
+]
+
+[p|[strong|Software:]]
+[ul|
+	[li|web browser: [a, href: "https://minbrowser.org/"|Min]]
+	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
+	[li|file explorer: [a, href: "https://ranger.github.io/"|ranger]]
+	[li|music player: [a, href: "https://cmus.github.io/"|cmus]]
+	[li|habit tracker: [a, href: "https://github.com/NerdyPepper/dijo"|dijo]]
+	[li|mastodon client: [a, href: "https://github.com/ihabunek/toot"|toot]]
+	[li|IRC client: [a, href: "https://github.com/osa1/tiny"|tiny]]
+]

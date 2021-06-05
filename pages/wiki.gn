@@ -1,0 +1,54 @@
+!meta!
+title: Wiki
+!meta!
+
+[h2|Wiki]
+
+[p|This is a loose collection of notes, links, and other resources. See my [a, href: "grimoire.html"|grimoire] for snippets which I find useful if perhaps a bit haunted.]
+
+[ul|
+	[li|[strong|Design][ul|
+		[li|[a, href: "https://spacecraft.ssl.umd.edu/akins_laws.html"|Akin's laws of spacecraft design]]
+		[li|[strong|Web][ul|
+			[li|[a, href: "https://thomasorus.com/html-tips.html"|Thomasorus' html-tips]]
+			[li|[a, href: "https://fdisk.space/css/"|Fred Bednarski's css tips page]]
+			[li|[a, href: "https://1linelayouts.glitch.me/"|1-Line Layouts]]
+		]]
+	]]
+	[li|[strong|Programming][ul|
+		[li|[a, href: "https://devhints.io/bash"|Bash]]
+		[li|[a, href: "https://help.github.jp/enterprise/2.11/user/articles/changing-a-remote-s-url/"|Change git urls]]
+		[li|[a, href: "https://linuxize.com/post/how-to-create-bash-aliases/"|Bash aliases]]
+		[li|[a, href: "learning_rust.html"|Rust]]
+		[li|[strong|Rsync]]
+		[li|[a, href: "https://git.sr.ht/~rabbits/uxn"|uxn][ul|
+			[li|[a, href: "https://wiki.xxiivv.com/site/uxnemu.html"|uxnemu]]
+			[li|[a, href: "https://wiki.xxiivv.com/site/uxambly.html"|uxambly]]
+			[li|[a, href: "https://wiki.xxiivv.com/site/ascii.html"|ascii]]
+			[li|[a, href: "uxn_notes.html"|my notes]]
+		]]
+	]]
+	[li|[strong|Drawing][ul|
+		[li|[a, href: "https://wiki.xxiivv.com/site/noodle.html"|Noodle]]
+		[li|[a, href: "https://git.sr.ht/~rabbits/nasu"|Nasu]]
+		[li|[strong|ASCII][ul|
+			[li|[a, href: "https://theasciicode.com.ar/"|Extended ASCII table]]
+		]]
+	]]
+	[li|[strong|Music][ul|
+		[li|[a, href: "https://git.sr.ht/~rabbits/orca-toy"|Orca repo] (soon to be moved to uxn)]
+	]]
+	[li|[strong|Language][ul|
+		[li|[a, href: "https://tokipona.org/"|Toki Pona website]]
+		[li|[a, href: "norwegian.html"|My Norwegian page]]
+		[li|[a, href: "https://cass.si"|Norwegian Inspiration]]
+	]]
+	[li|[strong|Food][ul|
+		[li|[strong|Vegan/Vegetarian][ul|
+			[li|[a, href: "https://grimgrains.com/site/home.html"|Grimgrains]]
+			[li|[a, href: "https://ritualdust.com/food/"|Ritual Dust]]
+		]]
+		[li|[a, href: "recipes.html"|My Recipes]]
+		[li|[a, href: "https://oddworlds.org/cooking/0-sourdough.html"|Sourdough basics]]
+	]]
+]

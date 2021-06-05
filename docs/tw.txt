@@ -110,3 +110,20 @@
 2021-05-23T14:56:37-07:00	[Mineral-Existence] added writing page and short story
 2021-05-23T19:28:20-07:00	[Mineral-Existence] details on uxn notes
 2021-05-23T19:35:44-07:00	[Mineral-Existence] small updates to home
+2021-06-02T10:04:51-07:00	[example] mostly done with v0.2.0
+2021-06-02T15:01:49-07:00	[example] changed readme and extension name
+2021-06-02T15:04:42-07:00	[example] edits to readme
+2021-06-02T15:05:53-07:00	[example] edits to readme
+2021-06-02T15:06:56-07:00	[example] more edits to readme
+2021-06-02T15:14:34-07:00	[example] unecessary commit
+2021-06-02T15:19:47-07:00	[example] removed old html files
+2021-06-02T15:25:54-07:00	[Pillar] changed marble to granite in config
+2021-06-02T19:44:35-07:00	[Pillar] fixed small parsing error
+2021-06-02T19:48:03-07:00	[Pillar] that was a mistake
+2021-06-02T21:26:16-07:00	[Pillar] debug skip feature
+2021-06-02T21:26:53-07:00	[Pillar] type change
+2021-06-03T19:12:11-07:00	[example] longer test file and debug work
+2021-06-03T19:13:37-07:00	[Pillar] uncommented code
+2021-06-04T17:13:48-07:00	[example] fixed many small bugs
+2021-06-04T17:46:19-07:00	[example] comments to finish v0.2.1
+2021-06-04T17:46:53-07:00	[Mineral-Existence] moved site to granite + pillar v0.2.1

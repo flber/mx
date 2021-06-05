@@ -1,0 +1,38 @@
+!meta!
+title: Games
+!meta!
+
+[h2|Games]
+
+[p|I play quite a lot of video games. Here are a few of my favorites]
+
+[h3|[a, href: "https://bay12games.com/dwarves"|Dwarf Fortress]]
+[p|Dwarf fortress is definitely one of my most constant favorites, and holds a special place in my heart for its nostalgia factor. A friend introduced me to it around six years ago, and it's taken me since then to learn the limits to its absurd scope. If you've never tried it before, but always thought it looked interesting (if a bit daunting), I can highly recommend [a, href: "https://www.youtube.com/watch?v=eTeQJOC1H38&t=1751s"|Kruggsmash's crash-course], which offers a great way to just quickly get into the game, and Nookrium's slightly longer [a, href: "https://www.youtube.com/watch?v=QtQyRNNEMRA&t=72s"|tutorial], which is a similar sort of quick introduction. In general, if you're a new player you should consider starting with the [a, href: "https://dwarffortresswiki.org/index.php/Utility:Lazy_Newb_Pack"|Lazy Newb Pack] because it offers many helpful utilities in one user-friendly tool. If you want to just fling yourself headlong into the void of complexity which Dwarf Fortress, you can always start by playing [a, href: "http://bay12games.com/dwarves/older_versions.html"|vanilla DF] (though I seriously don't recommend it to start). Whichever way you choose to learn, the [a, href: "http://dwarffortresswiki.org/"|DF wiki] is your friend.]
+[p|There's very little which sounds better than staying up late with a cup of tea, some good music, and a new Dwarf Fortress embark.]
+
+[h3|[a, href: "https://sites.google.com/site/broguegame/"|Brogue]]
+[p|I was introduced to Brogue at the 2018 Roguelike celebration, where its creator, Brian Walker, gave a talk about procedural level design. It is colorful, dynamic take on traditional roguelikes, and stays pretty true to those older aesthetics while also increases the amount of environmental complexity beyond what most old-school roguelikes include. Brogue has an assortment of procedurally generated traps, environmental interactions such as fire, gas, water, and lava, and lovely ASCII graphics. I haven't played a ton of Brogue, and can't claim to be particularly good at it, but it is a very rewarding game.]
+
+[h3|[a, href: "https://www.badnorth.com/"|Bad North]]
+[p|First of all, Bad North is a beautiful game. You control a collection of soldiers on procedurally generated islands to fend off waves of vikings, moving through an archipelago. I actually found this game through my research into the [a, href: "intro_to_wfc.html"|wave function collapse algorithm], as one of the devs, [a, href: "https://oskarstalberg.tumblr.com/"|Oskar Stålberg], has done a lot of work in the field and actually used an implementation of WFC to generate the islands in Bad North. This game is all around super fun, with a nice learning curve that is fun to start and challenging to finish.]
+
+[h3|[a, href: "https://www.minecraft.net"|Minecraft]]
+[p|A classic; what more needs to be said?]
+
+[h3|[a, href: "https://www.failbettergames.com/sunless/"|Sunless Seas]]
+[p|With beautiful backdrops and compelling stories, Sunless Seas is a work of art. While I personally enjoy just hauling goods between small islands in the subterranean sea in which the game takes place, there are a myriad of other ways to play the game, ranging from piracy to alignment with one of the major powers. Failbetter games, the studio that made Sunless Seas, also made a similar game more recently called Sunless skies. Sunless skies is set (sort of) in the same world, and the games are similar enough that I think of them in similar terms. Both are great, and I highly recommend them (as well as Failbetter's first game, Fallen London).]
+
+[h3|[a, href: "https://noitagame.com/"|Noita]]
+[p|I actually also first heard about this game at the Roguelike celebration, though I think in 2019. Noita has definitely been one of my more recent favorites, though my play time on steam (around a hundred hours) suggests that I've certainly been enjoying it. Noita has a crazy amount of lore, but even if you just play the game it has plenty to offer. You go through a 2d, pixelated world where almost everything has some kind of physics process running behind it, exploring the world and building wands to fight enemies. I love Noita in part because it while it seems to follow a pretty standard pattern in roguelikes: collect items, kill enemies, go deeper, fight a boss, it has entire other worlds to find if you go against the initial suggestions and explore a bit. I also love Noita because the primary game loop is crazy fun on its own.]
+[p|[strong|Update:] I've played way too much of this game]
+
+[h3|[a, href: "https://landfall.se/totally-accurate-battlegrounds"|TABG]]
+[p|A break from the roguelike pattern, TABG (Totally Accurate Battlegrounds) is a fun battle royale with super derpy physics (it is, after all, made by Landfall games) which was originally made as an April fools joke. I don't play this as often as some of the other games, but it's always a good bit of fun.]
+
+[h3|[a, href: "https://streetsofrogue.com/"|Streets of Rogue]]
+[p|And now back to roguelikes :>]
+Streets of Rogue is generally a fast, colorful, and arcade-y roguelike which is consistently a joy to play. It sticks pretty closely to the traditional roguelike archetype, with lots of items, NPCs, and leveling systems, but is way, way more approachable for people who don't want to decipher ASCII. It's also just an satisfying game overall: colorful, graphically and stylistically punchy, and with a soundtrack that fits the combination of arcade game and roguelike it's hard to go wrong.
+
+[h3|[a, href: "https://blindsky.itch.io/mandagon"|Mandagon]]
+[p|Mandagon is a total outlier in this list, but is nonetheless a beautiful game. I don't even remember when I first played it, but it always reminds me of looking for games on itch.io as a kid and collecting my favorites. With gorgeous art and a haunting soundtrack it's hard not to love.]
+
