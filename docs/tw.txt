@@ -128,3 +128,4 @@
 2021-06-04T17:46:19-07:00	[example] comments to finish v0.2.1
 2021-06-04T17:46:53-07:00	[Mineral-Existence] moved site to granite + pillar v0.2.1
 2021-06-04T18:57:48-07:00	[Mineral-Existence] moved hello to granite
+2021-06-07T13:56:32-07:00	[Mineral-Existence] added images to games page
