@@ -10,7 +10,7 @@ for lines in file:
     if len(k) > 0 and k[0] == "music_path":
         music_path = k[2]
 
-for line in sys.stdin:
+for index, line in enumerate(sys.stdin):
     if "{{music}}" in line:
         albums = "<ul>\n"
         for file in os.scandir(music_path[1:-1]):

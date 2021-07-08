@@ -165,3 +165,9 @@
 2021-07-07T22:45:05-07:00	[Mineral-Existence] small updates
 2021-07-07T22:57:54-07:00	[Mineral-Existence] added question prefaces to about page
 2021-07-07T22:59:24-07:00	[Mineral-Existence] fixed syntax error
+2021-07-07T23:13:29-07:00	[Pillar] implemented partial builds
+2021-07-07T23:40:57-07:00	[Pillar] debug builds every page
+2021-07-07T23:42:11-07:00	[Pillar] fixed checks
+2021-07-08T00:40:42-07:00	[Pillar]
+2021-07-08T00:41:01-07:00	[Pillar] pillar now handles removal of path from files for scripts
+2021-07-08T01:07:22-07:00	[Mineral-Existence] updated dates, path is at top of pages :(
