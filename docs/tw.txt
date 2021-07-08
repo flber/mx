@@ -163,3 +163,4 @@
 2021-06-13T00:40:56-07:00	[gmtk2021] builds
 2021-07-02T10:15:54-07:00	[Pillar] finally added partial builds
 2021-07-07T22:45:05-07:00	[Mineral-Existence] small updates
+2021-07-07T22:57:54-07:00	[Mineral-Existence] added question prefaces to about page
