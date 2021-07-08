@@ -129,3 +129,37 @@
 2021-06-04T17:46:53-07:00	[Mineral-Existence] moved site to granite + pillar v0.2.1
 2021-06-04T18:57:48-07:00	[Mineral-Existence] moved hello to granite
 2021-06-07T13:56:32-07:00	[Mineral-Existence] added images to games page
+2021-06-11T14:53:04-07:00	[gmtk2021] dev branch
+2021-06-11T15:00:51-07:00	[workflows] ci/cd workflows
+2021-06-11T15:37:39-07:00	[builds] builds folder
+2021-06-11T15:39:29-07:00	[builds] builds folder
+2021-06-11T16:36:48-07:00	[gmtk2021] small aesthetic changes to file structure
+2021-06-11T21:29:42-07:00	[gmtk2021] todo additions
+2021-06-11T21:30:54-07:00	[gmtk2021] todo additions
+2021-06-12T14:30:56-07:00	[gmtk2021] added some art
+2021-06-12T16:42:44-07:00	[gmtk2021] more art
+2021-06-12T17:57:28-07:00	[gmtk2021] high score output
+2021-06-12T18:23:14-07:00	[gmtk2021] usernames
+2021-06-12T19:55:12-07:00	[assets] title art
+2021-06-12T19:56:21-07:00	[assets] whoops
+2021-06-12T21:31:15-07:00	[assets] faces
+2021-06-12T22:21:33-07:00	[assets] added cat
+2021-06-12T22:28:08-07:00	[assets] still working on cat commit
+2021-06-12T22:32:40-07:00	[assets] title screen art
+2021-06-12T23:02:38-07:00	[loadingtexture] changed cursor size
+2021-06-12T23:04:19-07:00	[gmtk2021] fixed merge
+2021-06-12T23:28:28-07:00	[gmtk2021] updated name in workflow
+2021-06-12T23:35:06-07:00	[gmtk2021] massive update of master
+2021-06-12T23:39:38-07:00	[gmtk2021] back to dev branch
+2021-06-12T23:58:14-07:00	[gmtk2021] moved to game folder
+2021-06-13T00:02:29-07:00	[gmtk2021] fixed publish
+2021-06-13T00:04:15-07:00	[gmtk2021] fixed publish again
+2021-06-13T00:07:25-07:00	[gmtk2021] went back to old dir structure
+2021-06-13T00:08:24-07:00	[gmtk2021] changed export
+2021-06-13T00:09:56-07:00	[gmtk2021] built
+2021-06-13T00:14:08-07:00	[gmtk2021] export update
+2021-06-13T00:16:00-07:00	[gmtk2021] export update 2
+2021-06-13T00:23:39-07:00	[gmtk2021] cicd work
+2021-06-13T00:40:56-07:00	[gmtk2021] builds
+2021-07-02T10:15:54-07:00	[Pillar] finally added partial builds
+2021-07-07T22:45:05-07:00	[Mineral-Existence] small updates
