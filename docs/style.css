@@ -4,8 +4,68 @@
 	/* --bg: #FBF0F0; */
 	--bg: #FFFFFF;
 	--highlight: #80dec5;
-	--max: 75ch;
+	--max: 90ch;
 	--fonts: "Times New Roman", Times, serif;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 
@@ -17,12 +77,13 @@ mark{background-color: var(--highlight)}
 .with-sidebar {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2em;
+	gap: 3em;
+	padding: 0 15px;
+	padding-top: 4ex;
 }
 
 .with-sidebar > :first-child {
 	flex-grow: 1;
-	padding: 0 15px;
 }
 
 .with-sidebar > :last-child {
@@ -37,7 +98,7 @@ body{
 	font-family: var(--fonts);
 	font-style: normal;
 	max-width: var(--max);
-	padding: 0 15px;
+	padding:1em 7%;
 	margin: 0px auto;
 	line-height: 1.6;
 	color:var(--text);
@@ -55,7 +116,6 @@ body::-webkit-scrollbar-thumb{background-color: var(--text);}
 
 
 article{margin:0px auto;background-color:var(--bg);}
-.inner{padding:1em 7%;}
 
 
 pre{overflow-x: auto;padding: 2%;padding-left: 2.5%;border-style: solid;border-width: thin;}
