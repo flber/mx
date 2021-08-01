@@ -2,12 +2,16 @@
 title: Home
 !meta!
 
-[h2| Hello there]
+[h2|Hello there]
 
-[p| Thank you for visiting my humble virtual abode. This site is hopefully the final iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the [a, href: "wiki.html"|wiki] page. It is inspired by many sites from the [a, href: "https://merveilles.town/about"|Town of Merveilles] and the [a, href: "https://webring.xxiivv.com/"|Webring]]
+[p|Thank you for visiting my humble virtual abode. This site is hopefully the final iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the [a, href: "wiki.html"|wiki] page. It is inspired by many sites from the [a, href: "https://merveilles.town/about"|Town of Merveilles] and the [a, href: "https://webring.xxiivv.com/"|Webring]]
 
-[p| Here is what I'm working on [a, href: "now.html"|now].]
+[p|Here is what I'm working on [a, href: "now.html"|now].]
 
-[p| And this is just a list of every page on this site, ordered by last updated. This is a bit of a temporary change, as eventually I want to implement a slightly more... interesting way to navigate pages :>]
+[p|And this is just a list of every page on this site, ordered by last updated. This is a bit of a temporary change, as eventually I want to implement a slightly more... interesting way to navigate pages.]
 
 {{latest}}
+ 
+ 
+ 
+ 

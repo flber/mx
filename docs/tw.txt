@@ -171,3 +171,4 @@
 2021-07-08T00:40:42-07:00	[Pillar]
 2021-07-08T00:41:01-07:00	[Pillar] pillar now handles removal of path from files for scripts
 2021-07-08T01:07:22-07:00	[Mineral-Existence] updated dates, path is at top of pages :(
+2021-08-01T11:59:29-07:00	[Mineral-Existence] lots of changes, sidebar

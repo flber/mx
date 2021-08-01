@@ -26,3 +26,7 @@ title: Hello!
 		countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in ^_^` 
 	} 
 ] 
+ 
+ 
+ 
+ 

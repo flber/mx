@@ -44,3 +44,7 @@ title: Grimoire
 
 [p|Find all files which match a given regex]
 [blockquote|[p|grep -rnw 'dir/' -e 'pattern']]
+ 
+ 
+ 
+ 

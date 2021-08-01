@@ -7,34 +7,23 @@
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body id="dark">
-		<nav>
-			<div style="display:flex; align-items: center;"> 
-				<div class="right-border">
-					<span class="dark"><h1><a href="home.html">Home</a></h1></span>
-					<span class="light"><h1><a href="home.html#dark">Home</a></h1></span>
-				</div>
-				<div class="right-border">
-					<span class="dark"><h1><a href="now.html">now</a></h1></span>
-					<span class="light"><h1><a href="now.html#dark">now</a></h1></span>
-				</div>
-				<div class="right-border">
-					<span class="dark"><h1><a href="wiki.html">wiki</a></h1></span>
-					<span class="light"><h1><a href="wiki.html#dark">wiki</a></h1></span>
-				</div>
-				<div class="right-border">
-					<span class="dark"><h1><a href="about.html">about</a></h1></span>
-					<span class="light"><h1><a href="about.html#dark">about</a></h1></span>
-				</div>
-				<div style="margin-left: auto;">
-					<span class="dark"><b><a href="#dark">{dark}</a></b></span>
-					<span class="light"><b><a href="#">{light}</a></b></span>
-				</div>
-				<div style="clear: both;"></div>
+		<div class="with-sidebar">
+			<div>
+		  		<!-- sidebar -->
+				<nav>
+					<span><h1><a href="home.html">Home</a></h1></span>
+					<span><h1><a href="now.html">now</a></h1></span>
+					<span><h1><a href="wiki.html">wiki</a></h1></span>
+					<span><h1><a href="about.html">about</a></h1></span>
+				</nav>
 			</div>
-		</nav>
-		<article class="inner">
-			{{content}}
-		</article>
+			<div>
+				<!-- non-sidebar -->
+				<article class="inner">
+					{{content}}
+				</article>
+			</div>
+		</div>
 		<footer>
 			<nav aria-label="Contact links">
 				<div style="float: left; margin-top: -3px;">
