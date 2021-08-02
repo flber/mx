@@ -174,3 +174,4 @@
 2021-08-01T11:59:29-07:00	[Mineral-Existence] lots of changes, sidebar
 2021-08-01T14:48:27-07:00	[Mineral-Existence] clean css
 2021-08-02T12:05:16-07:00	[Mineral-Existence] projects page
+2021-08-02T12:07:23-07:00	[Mineral-Existence] renamed projects to tools
