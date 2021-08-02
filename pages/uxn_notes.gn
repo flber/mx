@@ -7,6 +7,8 @@ title: Uxn Notes
 [p|[a, href; "https://wiki.xxiivv.com/site/uxn.html"|Uxn] is an 8-bit virtual stack machine, created by [a, href: "https://wiki.xxiivv.com/site/devine_lu_linvega.html"|Devine], and programmed in [a, href: "https://wiki.xxiivv.com/site/uxambly.html"|uxnambly], a unique flavor of assembly. ]
 [p|These are my notes for it.]
 
+[br|]
+
 [details|
 	[summary|Opcodes]
 	[table border: "1"| [tbody|
@@ -21,8 +23,6 @@ title: Uxn Notes
 		[tr| [td|0x07]	[td|ROT]	[td|rotate]		[td|a b c]	[td|b c a]	]
 	]]
 	
-	[br|]
-
 	[table border: "1"| [tbody|
 		[tr| [th colspan: "5"|[strong|Logic]] ]
 		[tr| [td|0x08]	[td|EQU]	[td|equal]				[td|a b]	[td|c]	]
@@ -35,8 +35,6 @@ title: Uxn Notes
 		[tr| [td|0x0f]	[td|STH]	[td|stash]				[td|a]		[td|rs]	]
 	]]
 
-	[br|]
-
 	[table border: "1"| [tbody|
 		[tr| [th colspan: "5"|[strong|Memory]] ]
 		[tr| [td|0x10]	[td|LDZ]	[td|load zero page]		[td|a]		[td|{b}]	]
@@ -48,8 +46,6 @@ title: Uxn Notes
 		[tr| [td|0x16]	[td|DEI]	[td|device in]			[td|a]		[td|{b}]	]
 		[tr| [td|0x17]	[td|DEO]	[td|device out]			[td|{b} a]	[td|rs]		]
 	]]
-
-	[br|]
 
 	[table border: "1"| [tbody|
 		[tr| [th colspan: "5"|[strong|Arithmetic]] ]
@@ -64,16 +60,12 @@ title: Uxn Notes
 	]]
 ]
 
-[br|]
-
 [details|
 	[summary|Modes]
 	[p|[strong|Keep mode:] lets operators work without consuming items from the stack. Results are simply pushed to the top.]
 	[p|[strong|Short mode:] allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.]
 	[p|[strong|Return mode:] sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.]
 ]
-
-[br|]
 
 [details|
 	[summary|Runes]
@@ -93,6 +85,8 @@ title: Uxn Notes
 		[tr| [td|{quote}]	[td|raw word]					]
 	]]
 ]
+
+[br|]
 
 [h3|Hello world, part 2!]
 

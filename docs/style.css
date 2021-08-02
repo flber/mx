@@ -1,3 +1,37 @@
+/*                            ...
+           s,                .                    .s
+            ss,              . ..               .ss
+            'SsSs,           ..  .           .sSsS'
+             sSs'sSs,        .   .        .sSs'sSs
+              sSs  'sSs,      ...      .sSs'  sSs
+               sS,    'sSs,         .sSs'    .Ss
+               'Ss       'sSs,   .sSs'       sS'
+      ...       sSs         ' .sSs'         sSs       ...
+     .           sSs       .sSs' ..,       sSs       .
+     . ..         sS,   .sSs'  .  'sSs,   .Ss        . ..
+     ..  .        'Ss .Ss'     .     'sSs. ''        ..  .
+     .   .         sSs '       .        'sSs,        .   .
+      ...      .sS.'sSs        .        .. 'sSs,      ...
+            .sSs'    sS,     .....     .Ss    'sSs,
+         .sSs'       'Ss       .       sS'       'sSs,
+      .sSs'           sSs      .      sSs           'sSs,
+   .sSs'____________________________ sSs ______________'sSs,
+.sSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS'.Ss SSSSSSSSSSSSSSSSSSSSSs,
+                        ...         sS'
+                         sSs       sSs
+                          sSs     sSs
+                           sS,   .Ss
+                           'Ss   sS'
+                            sSs sSs
+                             sSsSs
+                              sSs
+                               s
+
+                     YOU ARE YOUR OWN GOD.
+             YOU HAVE THE POWER TO CHANGE THE WORLD.
+                     MAKE THE MOST OF IT.
+*/
+
 :root{
 	/* --text: #3A3738; */
 	--text: #000000;
@@ -74,6 +108,7 @@ select {
 mark{background-color: var(--highlight)}
 
 
+/* main wrapper for sidebar elements */
 .with-sidebar {
 	display: flex;
 	flex-wrap: wrap;
@@ -82,10 +117,12 @@ mark{background-color: var(--highlight)}
 	padding-top: 4ex;
 }
 
+/* the actual sidebar */
 .with-sidebar > :first-child {
 	flex-grow: 1;
 }
 
+/* the main content */
 .with-sidebar > :last-child {
 	flex-basis: 20rem;
 	flex-grow: 999;
@@ -110,6 +147,7 @@ h2{font-size: clamp(1.25rem, 5vw, 2.25rem);}
 h3{font-size: clamp(1rem, 3vw, 1.5rem);}
 
 
+/* fancy scrollbar */
 body::-webkit-scrollbar{width: 0.75rem;}
 body::-webkit-scrollbar-track{background-color: var(--bg);border: 1px solid var(--text);}
 body::-webkit-scrollbar-thumb{background-color: var(--text);}
@@ -118,7 +156,16 @@ body::-webkit-scrollbar-thumb{background-color: var(--text);}
 article{margin:0px auto;background-color:var(--bg);}
 
 
-pre{overflow-x: auto;padding: 2%;padding-left: 2.5%;border-style: solid;border-width: thin;}
+pre{
+	font-size: calc(1rem + 0.25vw);
+	overflow-x: auto;
+	padding: 2%;
+	padding-left: 2.5%;
+	border-style: solid;
+	border-width: thin;
+	color: var(--bg);
+	background-color: var(--text);
+}
 table td, table th{vertical-align:top;padding:2.5px 5px;text-align:left}
 blockquote{position:relative;}
 blockquote:before, blockquote:after, blockquote>:first-child:before, blockquote>:first-child:after{
@@ -141,6 +188,7 @@ details[open] summary {border-bottom: 1px solid var(--text);margin-bottom: .5em;
 summary {font-weight: bold;margin: -.5em -.5em 0;padding: .5em;}
 
 
+/* link inverts when hovered */
 a{color: var(--text);text-decoration: none;}
 a:hover{color: var(--bg);background-color: var(--text);}
 article a:not([href*=':'])::before{content:"{"}
@@ -166,15 +214,3 @@ footer img {height: 20px;width: 20px;margin: 2px;}
 
 svg{fill: var(--text);}
 svg:hover{color: var(--bg);}
-
-
-div.right-border{padding-left: 10px;padding-right: 10px;}
-div.right-border a::after{content: "|"}
-
-
-/* body:target{--bg: #3A3738;--text: #FBFBF3;} */
-/* body:target{--bg: #000000;--text: #FFFFFF;} */
-/* body span.light{display: none;} */
-/* body span.dark{display: inline;} */
-/* body:target span.light{display: inline;} */
-/* body:target span.dark{display: none;} */

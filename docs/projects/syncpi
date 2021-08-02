@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd ~/ip && git pull origin
+ip=$(cat ip.txt)
+
+rsync -vauzhP ~/.config/mtrack/ benh@$ip:/home/benh/.config/mtrack
+rsync -vauzhP --exclude=.git/ ~/Documents/ benh@$ip:/home/benh/Documents
+rsync -vauzhP ~/Music/ benh@$ip:/home/benh/Music
+rsync -vauzhP ~/Pictures/backgrounds/ benh@$ip:/home/benh/Pictures/backgrounds
+rsync -vauzhP --exclude=Min-development/ ~/.config/ benh@$ip:/home/benh/.config_sinclair

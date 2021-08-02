@@ -28,6 +28,8 @@
 <p><a href;"https://wiki.xxiivv.com/site/uxn.html">Uxn</a> is an 8-bit virtual stack machine, created by <a href="https://wiki.xxiivv.com/site/devine_lu_linvega.html">Devine</a>, and programmed in <a href="https://wiki.xxiivv.com/site/uxambly.html">uxnambly</a>, a unique flavor of assembly. </p>
 <p>These are my notes for it.</p>
 
+<br></br>
+
 <details>
 	<summary>Opcodes</summary>
 	<table border="1"> <tbody>
@@ -42,8 +44,6 @@
 		<tr> <td>0x07</td>	<td>ROT</td>	<td>rotate</td>		<td>a b c</td>	<td>b c a</td>	</tr>
 	</tbody></table>
 	
-	<br></br>
-
 	<table border="1"> <tbody>
 		<tr> <th colspan="5"><strong>Logic</strong></th> </tr>
 		<tr> <td>0x08</td>	<td>EQU</td>	<td>equal</td>				<td>a b</td>	<td>c</td>	</tr>
@@ -56,8 +56,6 @@
 		<tr> <td>0x0f</td>	<td>STH</td>	<td>stash</td>				<td>a</td>		<td>rs</td>	</tr>
 	</tbody></table>
 
-	<br></br>
-
 	<table border="1"> <tbody>
 		<tr> <th colspan="5"><strong>Memory</strong></th> </tr>
 		<tr> <td>0x10</td>	<td>LDZ</td>	<td>load zero page</td>		<td>a</td>		<td>{b}</td>	</tr>
@@ -69,8 +67,6 @@
 		<tr> <td>0x16</td>	<td>DEI</td>	<td>device in</td>			<td>a</td>		<td>{b}</td>	</tr>
 		<tr> <td>0x17</td>	<td>DEO</td>	<td>device out</td>			<td>{b} a</td>	<td>rs</td>		</tr>
 	</tbody></table>
-
-	<br></br>
 
 	<table border="1"> <tbody>
 		<tr> <th colspan="5"><strong>Arithmetic</strong></th> </tr>
@@ -85,16 +81,12 @@
 	</tbody></table>
 </details>
 
-<br></br>
-
 <details>
 	<summary>Modes</summary>
 	<p><strong>Keep mode:</strong> lets operators work without consuming items from the stack. Results are simply pushed to the top.</p>
 	<p><strong>Short mode:</strong> allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.</p>
 	<p><strong>Return mode:</strong> sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.</p>
 </details>
-
-<br></br>
 
 <details>
 	<summary>Runes</summary>
@@ -114,6 +106,8 @@
 		<tr> <td>{quote}</td>	<td>raw word</td>					</tr>
 	</tbody></table>
 </details>
+
+<br></br>
 
 <h3>Hello world, part 2!</h3>
 
