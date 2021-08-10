@@ -30,7 +30,16 @@ title: Inventory
 	[li|IRC client: [a, href: "https://github.com/osa1/tiny"|tiny]]
 ]
  
- 
- 
- 
- 
+[p|[strong|Configs:]]
+[ul|
+	[li|Kitty[ul|
+		[li|main: [a, href: "files/kitty.conf"|kitty.conf]]
+		[li|snazzy colors: [a, href: "files/kitty-snazzy.conf"|kitty-snazzy.conf]]
+		[li|unicode: [a, href: "files/kitty-unicode-favorites.conf"|kitty-unicode-favorites.conf]]
+	]]
+	[li|Micro[ul|
+		[li|main: [a, href: "files/micro-settings.json"|micro-settings.json]]
+		[li|key-binds: [a, href: "files/micro-bindings.json"|micro-bindings.json]]
+		[li|granite colors: [a, href: "files/micro-granite.yaml"|micro-granite.yaml]]
+	]]
+]

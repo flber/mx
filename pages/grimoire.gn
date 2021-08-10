@@ -9,6 +9,9 @@ title: Grimoire
 [p|To change the extensions of audio files in a directory:]
 [blockquote|[p|for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done]]
 
+[p|More generally, to do something to some files:]
+[blockquote|[p|for file in $(ls | grep "something"); do echo "match: ${file}"; done]]
+
 [p|To download the mp3 audio (or the best audio if that fails) of a youtube video:]
 [blockquote|[p|youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"]]
 
@@ -44,8 +47,3 @@ title: Grimoire
 
 [p|Find all files which match a given regex]
 [blockquote|[p|grep -rnw 'dir/' -e 'pattern']]
- 
- 
- 
- 
- 

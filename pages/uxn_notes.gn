@@ -7,8 +7,6 @@ title: Uxn Notes
 [p|[a, href; "https://wiki.xxiivv.com/site/uxn.html"|Uxn] is an 8-bit virtual stack machine, created by [a, href: "https://wiki.xxiivv.com/site/devine_lu_linvega.html"|Devine], and programmed in [a, href: "https://wiki.xxiivv.com/site/uxambly.html"|uxnambly], a unique flavor of assembly. ]
 [p|These are my notes for it.]
 
-[br|]
-
 [details|
 	[summary|Opcodes]
 	[table border: "1"| [tbody|
@@ -56,7 +54,7 @@ title: Uxn Notes
 		[tr| [td|0x1c]	[td|AND]	[td|and]			[td|a b]	[td|c]	]
 		[tr| [td|0x1d]	[td|ORA]	[td|or]				[td|a b]	[td|c]	]
 		[tr| [td|0x1e]	[td|EOR]	[td|exclusive or]	[td|a b]	[td|c]	]
-		[tr| [td|0x1f]	[td|SFT]	[td|shit]			[td|a b]	[td|c]	]
+		[tr| [td|0x1f]	[td|SFT]	[td|shift]			[td|a b]	[td|c]	]
 	]]
 ]
 
@@ -85,8 +83,6 @@ title: Uxn Notes
 		[tr| [td|{quote}]	[td|raw word]					]
 	]]
 ]
-
-[br|]
 
 [h3|Hello world, part 2!]
 
