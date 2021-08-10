@@ -21,6 +21,7 @@ title: Inventory
 
 [p|[strong|Software:]]
 [ul|
+	[li|terminal: [a, href: "https://sw.kovidgoyal.net/kitty/"|Kitty]]
 	[li|web browser: [a, href: "https://minbrowser.org/"|Min]]
 	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
 	[li|file explorer: [a, href: "https://ranger.github.io/"|ranger]]

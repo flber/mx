@@ -8,7 +8,6 @@ title: Home
 
 [p|Here is what I'm working on [a, href: "now.html"|now].]
 
-[p|And this is just a list of every page on this site, ordered by last updated. This is a bit of a temporary change, as eventually I want to implement a slightly more interesting way to navigate pages.]
+[p|And this is just a list of every page on this site, ordered by last updated. Eventually I want to implement a slightly more interesting way to navigate pages.]
 
 {{latest}}
- 
