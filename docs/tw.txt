@@ -177,3 +177,4 @@
 2021-08-02T12:07:23-07:00	[Mineral-Existence] renamed projects to tools
 2021-08-10T13:54:49-07:00	[Mineral-Existence] various changes
 2021-08-10T14:08:10-07:00	[Mineral-Existence] updated 404 to current style
+2021-08-16T16:49:33-07:00	[Mineral-Existence] testing change to default html

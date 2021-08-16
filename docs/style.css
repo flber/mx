@@ -184,8 +184,8 @@ summary {font-weight: bold;margin: -.5em -.5em 0;padding: .5em;}
 
 
 /* link inverts when hovered */
-a{color: var(--text);text-decoration: none;}
-a:hover{color: var(--bg);background-color: var(--text);}
+a{color: var(--bg);background-color: var(--text);text-decoration: none;}
+a:hover{color: var(--text);background-color: var(--highlight);}
 article a:not([href*=':'])::before{content:"{"}
 article a:not([href*=':'])::after{content:"}"}
 article a[href*=':']::before{content:"["}
