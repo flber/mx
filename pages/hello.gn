@@ -10,6 +10,9 @@ title: Hello!
 [p|With that out of the way, hi!]
 [p|If you press the button below, my pi will get a message and update the counter (I'll probably write up a description of this later...)]
 
+[p|As of {{date}} the button doesn't work, but the number below should be the correct(ish) number of unique visitors!]
+[h3|Visitors:]
+
 [blockquote id: "count"|
 	[p|Loading...]
 ]
