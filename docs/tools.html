@@ -31,18 +31,52 @@
 
 <h3><a href="projects/ptable">ptable</a></h3>
 <p>This was a simple utility I wrote a while ago for chem class. It can print out a periodic table (which I wrote by hand!), give you atomic data from an atomic symbol, and average atomic mass from one (or more) elements in the form of `{coefficient}{atomic symbol} {coefficient}{atomic symbol} ...`.</p>
+<p>Example:</p>
+<pre>> ptable -m H 7C 4H N S 3O
+mass of H: 1.008
+coefficient of H: 1
+total mass of H: 1.008
+...
+            ┌─────────┐
+total mass: │ 183.180 │
+            └─────────┘
+</pre>
 
 <h3><a href="projects/uxnrun">uxnrun</a></h3>
 <p>The build process for <a href="uxn_notes.html">uxn</a> really isn't that complicated, but to streamline things a bit for myself I wrote this script! It requires you to have a .uxn folder in your home directory, with a bin directory in that with `uxnasm` and `uxnemu`. It takes the relative path of a .tal file in the .uxn directory, assembles it into a rom in the bin directory, and runs the rom with varvara.</p>
+<p>Example:</p>
+<pre>
+> uxnrun left.tal
+building and running left
+</pre>
 
 <h3><a href="projects/mtrack">mtrack</a></h3>
-<p>I wrote this a while ago to track changes in mood, because I wanted some more data on my mental health (I think it was also one of the first programs I wrote in Rust?). It requires an "mtrack" directory in your .config folder, with a log.txt file (though I think it should also create those things when you first run it). you can then use it by running `mtrack xxx message`, where `xxx` is a string up to three characters to designate a change in mood. I, for example, use "u" to mark positive changes, and "d" to mark negative changes, with fewer characters being a smaller change. The `message` portion is an optional note about the reason for the change, which I would recommend putting in quotes to sanitize it. I haven't written any parsing programs for the log file yet, but it's on my todo list!</p>
+<p>I wrote this a while ago to track changes in mood, because I wanted some more data on my mental health (I think it was also one of the first programs I wrote in Rust?). It requires an "mtrack" directory in your .config folder, with a log.txt file (though I think it should also create those things when you first run it). you can then use it by running `mtrack xxx message`, where `xxx` is a string up to three characters to designate a change in mood. I, for example, use "+" to mark positive changes, and "-" to mark negative changes, with fewer characters being a smaller change. The `message` portion is an optional note about the reason for the change, which I would recommend putting in quotes to sanitize it. I haven't written any parsing programs for the log file yet, but it's on my todo list!</p>
+<p>Example:</p>
+<pre>
+> mtrack ++ "working on website"
+logged
+</pre>
 
 <h3><a href="projects/syncpi">syncpi</a></h3>
 <p>A really bare-bones bash script, but one I use all the time, syncpi syncs my laptop with my pi. I have an ip/ dir in my home folder which is a git repo of a gist I have which is just a text file with the ip address of my pi. This may seem a bit over-complicated (and it probably is), but it was a quick way to get around the fact that my pi doesn't have a static ip. Every five minutes or so my pi checks its ip and pushes it to the gist. To sync my laptop to my pi, this script pulls that repo to make sure its up to date, then uses rsync to sync the folders I want. Those are currently my mtrack config folder, my Documents folder, my backgrounds, and my .config folder.</p>
+<p>Example:</p>
+<pre>
+> syncpi
+Already up to date
+sending incremental file list
+...
+</pre>
 
 <h3><a href="projects/sumtime">sumtime</a></h3>
 <p>A small bash script to figure out how much time I spent on a project. It takes a newline-separated list of times, in the format `hour:minute`, and gives a total. That list of times is just given through stdin, so you can run it and manually type in the list of times, or do something like pass the contents of a file containing your data. 
+<p>Example:</p>
+<pre>
+> cat times.txt | sumtime
+Pipe in times, or type and ctrl-d when done
+Total time:
+29:35
+</pre>
 
 						<!-- <hr></hr> -->
 					</article>

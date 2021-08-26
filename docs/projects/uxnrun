@@ -30,6 +30,7 @@ else
 		* )
 		nopath="${1##*/}"
 		clean="${nopath%.*}"
+		echo "building and running "$clean
 		./bin/uxnasm $1 bin/$clean.rom
 		./bin/uxnemu bin/$clean.rom
 		;;

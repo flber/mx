@@ -160,11 +160,13 @@ p{padding-bottom: 2ex;}
 pre{
 	font-size: calc(1rem + 0.25vw);
 	overflow-x: auto;
-	padding: 2%;
-	padding-left: 2.5%;
-	border-style: solid;
-	color: var(--bg);
-	background-color: var(--text);
+	padding: 2%; 
+	text-align: left; 
+	border-style: solid; 
+	color: var(--bg); 
+	background-color: var(--text); 
+	line-height: 1.15em;
+	margin-top: 0; 
 }
 table td, table th{vertical-align:top;padding:2.5px 5px;text-align:left}
 blockquote {
