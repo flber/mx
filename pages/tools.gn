@@ -18,3 +18,5 @@ title: Tools
 [h3|[a, href: "projects/syncpi"|syncpi]]
 [p|A really bare-bones bash script, but one I use all the time, syncpi syncs my laptop with my pi. I have an ip/ dir in my home folder which is a git repo of a gist I have which is just a text file with the ip address of my pi. This may seem a bit over-complicated (and it probably is), but it was a quick way to get around the fact that my pi doesn't have a static ip. Every five minutes or so my pi checks its ip and pushes it to the gist. To sync my laptop to my pi, this script pulls that repo to make sure its up to date, then uses rsync to sync the folders I want. Those are currently my mtrack config folder, my Documents folder, my backgrounds, and my .config folder.]
 
+[h3|[a, href: "projects/sumtime"|sumtime]]
+[p|A small bash script to figure out how much time I spent on a project. It takes a newline-separated list of times, in the format `hour:minute`, and gives a total. That list of times is just given through stdin, so you can run it and manually type in the list of times, or do something like pass the contents of a file containing your data. 

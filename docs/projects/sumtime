@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Pipe in times, or type and ctrl-d when done"
+times=$(cat)
+
+hours=0
+minutes=0
+
+for t in $times; do
+	hrmin=(${t//:/ })
+	h=${hrmin[0]}
+	m=${hrmin[1]}
+	hours=$[$hours+$h]
+	minutes=$[$minutes+$m]
+done
+
+round(){
+	echo $(printf %.$2f $(echo "scale=$2;(((10^$2)*$1)+0.5)/(10^$2)" | bc))
+};
+
+extrahours=$(echo "${minutes} / 60.0" | bc -l)
+decminutes=$(echo "(${extrahours} % 1) * 60" | bc)
+extrahours=$(round $(echo "scale=0;${extrahours} - (${extrahours} % 1)" | bc) 0)
+
+newminutes=$(round $decminutes 0);
+
+echo "Total time:"
+echo $[$hours+$extrahours]":"$newminutes
