@@ -28,7 +28,8 @@ total mass: │ 183.180 │
 building and running left
 ]
 
-[h3|[a, href: "projects/mtrack"|mtrack]]
+[h3|[a, href: "files/mtrack.rs"|mtrack]]
+[mark|[strong|Not an executable; needs compiling]]
 [p|I wrote this a while ago to track changes in mood, because I wanted some more data on my mental health (I think it was also one of the first programs I wrote in Rust?). It requires an "mtrack" directory in your .config folder, with a log.txt file (though I think it should also create those things when you first run it). you can then use it by running `mtrack xxx message`, where `xxx` is a string up to three characters to designate a change in mood. I, for example, use "+" to mark positive changes, and "-" to mark negative changes, with fewer characters being a smaller change. The `message` portion is an optional note about the reason for the change, which I would recommend putting in quotes to sanitize it. I haven't written any parsing programs for the log file yet, but it's on my todo list!]
 [p|Example:]
 [pre|

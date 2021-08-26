@@ -32,7 +32,8 @@
 <h3><a href="projects/ptable">ptable</a></h3>
 <p>This was a simple utility I wrote a while ago for chem class. It can print out a periodic table (which I wrote by hand!), give you atomic data from an atomic symbol, and average atomic mass from one (or more) elements in the form of `{coefficient}{atomic symbol} {coefficient}{atomic symbol} ...`.</p>
 <p>Example:</p>
-<pre>> ptable -m H 7C 4H N S 3O
+<pre>
+> ptable -m H 7C 4H N S 3O
 mass of H: 1.008
 coefficient of H: 1
 total mass of H: 1.008
@@ -50,7 +51,8 @@ total mass: │ 183.180 │
 building and running left
 </pre>
 
-<h3><a href="projects/mtrack">mtrack</a></h3>
+<h3><a href="files/mtrack.rs">mtrack</a></h3>
+<mark><strong>Not an executable; needs compiling</strong></mark>
 <p>I wrote this a while ago to track changes in mood, because I wanted some more data on my mental health (I think it was also one of the first programs I wrote in Rust?). It requires an "mtrack" directory in your .config folder, with a log.txt file (though I think it should also create those things when you first run it). you can then use it by running `mtrack xxx message`, where `xxx` is a string up to three characters to designate a change in mood. I, for example, use "+" to mark positive changes, and "-" to mark negative changes, with fewer characters being a smaller change. The `message` portion is an optional note about the reason for the change, which I would recommend putting in quotes to sanitize it. I haven't written any parsing programs for the log file yet, but it's on my todo list!</p>
 <p>Example:</p>
 <pre>
