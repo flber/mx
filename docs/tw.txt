@@ -188,3 +188,4 @@
 2021-08-26T11:07:30-07:00	[Mineral-Existence] examples to tools page
 2021-08-26T11:11:48-07:00	[Mineral-Existence] changed mtrack from exec to source
 2021-08-29T22:24:11-07:00	[Mineral-Existence] temp music files
+2021-08-29T22:32:33-07:00	[Mineral-Existence] gave up on music
