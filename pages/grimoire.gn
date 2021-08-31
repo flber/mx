@@ -6,44 +6,65 @@ title: Grimoire
 
 [p|Inspired by the [a, href: "https://fdisk.space/grimoire/"|grimoire of Fred Bednarski], this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.]
 
-[p|To change the extensions of audio files in a directory:]
+[p|[strong|(Bash)] To change the extensions of audio files in a directory:]
 [blockquote|[p|for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done]]
 
-[p|More generally, to do something to some files:]
+[p|[strong|(Bash)] More generally, to do something to some files:]
 [blockquote|[p|for file in $(ls | grep "something"); do echo "match: ${file}"; done]]
 
-[p|To download the mp3 audio (or the best audio if that fails) of a youtube video:]
+[p|[strong|(Bash)] To download the mp3 audio (or the best audio if that fails) of a youtube video:]
 [blockquote|[p|youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"]]
 
-[p|To download a playlist of music from youtube (more stable for playlists than youtube-dl):]
+[p|[strong|(Bash)] To download a playlist of music from youtube (more stable for playlists than youtube-dl):]
 [blockquote|[p|youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"]]
 
-[p|To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):]
+[p|[strong|(Bash)] To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):]
 [blockquote|[p|ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver]]
 
-[p|To sanitize a file name (the .opus can be any extension):]
+[p|[strong|(Bash)] To sanitize a file name (the .opus can be any extension):]
 [blockquote|[p|mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"]]
 
-[p|To push file changes over ssh:]
+[p|[strong|(Fish)] To sanitize everything in a directory, preserving extensions:]
+[blockquote|[p|function sanitize
+    for file in *
+        set ext (string match -r "\.\w*\$" $file | \
+            string trim --chars=.)
+    
+        set new (echo "{$file}" | \
+            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
+            tr -d '[:punct:]' | \
+            tr '[:upper:]' '[:lower:]' | \
+            tr ' ' '-' | \
+            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
+
+        set final (string replace "$ext" ".$ext" "$new")
+        
+        if [ "$file" != "$final" ]
+            mv "$file" "$final"
+        end
+    end
+end]]
+
+[p|[strong|(Bash)] To push file changes over ssh:]
 [blockquote|[p|rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder]]
 
-[p|To dither and shrink an image ([a, href: "https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63" |courtesy] of [a, href: "https://merveilles.town/web/accounts/33648"|Thomasorus] with some modification for personal preference):]
+[p|[strong|(Bash)] To dither and shrink an image ([a, href: "https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63" |courtesy] of [a, href: "https://merveilles.town/web/accounts/33648"|Thomasorus] with some modification for personal preference):]
 [blockquote|[p|mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from]]
 
-[p|To simply dither of an image:]
+[p|[strong|(Bash)] To simply dither of an image:]
 [blockquote|[p|convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png]]
 
-[p|Super simple, but to make a div element take up the whole height of a veiwport]
+[p|[strong|(CSS)] Super simple, but to make a div element take up the whole height of a veiwport]
 [blockquote|[p|height: 100vh;]]
 
-[p|This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:]
+[p|[strong|(Bash)] This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:]
 [blockquote|[p|alsactl restore]]
 
-[p|To play a streaming file]
+[p|[strong|(Bash)] To play a streaming file]
 [blockquote|[p|mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u]]
 
-[p|Grab some html from the Noita wiki]
+[p|[strong|(Bash)] Grab some html from the Noita wiki]
 [blockquote|[p|curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}']]
 
-[p|Find all files which match a given regex]
+[p|[strong|(Bash)] Find all files which match a given regex]
 [blockquote|[p|grep -rnw 'dir/' -e 'pattern']]

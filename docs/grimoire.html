@@ -29,46 +29,67 @@
 
 <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
 
-<p>To change the extensions of audio files in a directory:</p>
+<p><strong>(Bash)</strong> To change the extensions of audio files in a directory:</p>
 <blockquote><p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p></blockquote>
 
-<p>More generally, to do something to some files:</p>
+<p><strong>(Bash)</strong> More generally, to do something to some files:</p>
 <blockquote><p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p></blockquote>
 
-<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
+<p><strong>(Bash)</strong> To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
 <blockquote><p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p></blockquote>
 
-<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
+<p><strong>(Bash)</strong> To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
 <blockquote><p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p></blockquote>
 
-<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
+<p><strong>(Bash)</strong> To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
 <blockquote><p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p></blockquote>
 
-<p>To sanitize a file name (the .opus can be any extension):</p>
+<p><strong>(Bash)</strong> To sanitize a file name (the .opus can be any extension):</p>
 <blockquote><p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p></blockquote>
 
-<p>To push file changes over ssh:</p>
+<p><strong>(Fish)</strong> To sanitize everything in a directory, preserving extensions:</p>
+<blockquote><p>function sanitize
+    for file in *
+        set ext (string match -r "\.\w*\$" $file | \
+            string trim --chars=.)
+    
+        set new (echo "{$file}" | \
+            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
+            tr -d '[:punct:]' | \
+            tr '[:upper:]' '[:lower:]' | \
+            tr ' ' '-' | \
+            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
+
+        set final (string replace "$ext" ".$ext" "$new")
+        
+        if [ "$file" != "$final" ]
+            mv "$file" "$final"
+        end
+    end
+end</p></blockquote>
+
+<p><strong>(Bash)</strong> To push file changes over ssh:</p>
 <blockquote><p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p></blockquote>
 
-<p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</p>
+<p><strong>(Bash)</strong> To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</p>
 <blockquote><p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p></blockquote>
 
-<p>To simply dither of an image:</p>
+<p><strong>(Bash)</strong> To simply dither of an image:</p>
 <blockquote><p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p></blockquote>
 
-<p>Super simple, but to make a div element take up the whole height of a veiwport</p>
+<p><strong>(CSS)</strong> Super simple, but to make a div element take up the whole height of a veiwport</p>
 <blockquote><p>height: 100vh;</p></blockquote>
 
-<p>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</p>
+<p><strong>(Bash)</strong> This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</p>
 <blockquote><p>alsactl restore</p></blockquote>
 
-<p>To play a streaming file</p>
+<p><strong>(Bash)</strong> To play a streaming file</p>
 <blockquote><p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p></blockquote>
 
-<p>Grab some html from the Noita wiki</p>
+<p><strong>(Bash)</strong> Grab some html from the Noita wiki</p>
 <blockquote><p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p></blockquote>
 
-<p>Find all files which match a given regex</p>
+<p><strong>(Bash)</strong> Find all files which match a given regex</p>
 <blockquote><p>grep -rnw 'dir/' -e 'pattern'</p></blockquote>
 
 						<!-- <hr></hr> -->
@@ -85,7 +106,7 @@
 		        	<a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.black.svg' alt="the merveilles webring"/></a> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 040821</em>
+					<em>Last updated: 310821</em>
 				</div>
 			</nav>
 		</footer>

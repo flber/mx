@@ -189,3 +189,4 @@
 2021-08-26T11:11:48-07:00	[Mineral-Existence] changed mtrack from exec to source
 2021-08-29T22:24:11-07:00	[Mineral-Existence] temp music files
 2021-08-29T22:32:33-07:00	[Mineral-Existence] gave up on music
+2021-08-31T15:05:10-07:00	[Mineral-Existence] new spell
