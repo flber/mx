@@ -144,7 +144,7 @@ body{
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2;} 
 h1{font-size: clamp(2.0rem, 5vw, 3.0rem);}
 h2{font-size: clamp(1.25rem, 5vw, 2.25rem);padding-bottom: 1ex;}
-h3{font-size: clamp(1rem, 3vw, 1.5rem);padding-top: 1ex;}
+h3{font-size: clamp(1rem, 3vw, 1.5rem);padding-top: 2em;}
 
 
 /* fancy scrollbar */
@@ -156,7 +156,7 @@ body::-webkit-scrollbar-thumb{background-color: var(--text);}
 article{margin:0px auto;background-color:var(--bg);}
 
 
-p{padding-bottom: 2ex;}
+/* p{padding-bottom: 2ex;} */
 pre{
 	font-size: calc(1rem + 0.25vw);
 	overflow-x: auto;
@@ -179,6 +179,17 @@ blockquote {
 blockquote > p{padding: 2em;}
 
 
+legend{padding:0;}
+fieldset{
+	border: 1px solid;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+}
+div .break {margin-bottom: 2em;}
+
+
 details {border: 1px solid var(--text);border-radius: 4px;padding: .5em .5em 0;}
 details[open] {padding: .5em;}
 details[open] summary {border-bottom: 1px solid var(--text);margin-bottom: .5em;}
@@ -194,14 +205,14 @@ article a[href*=':']::before{content:"["}
 article a[href*=':']::after{content:"]"}
 
 
-img{width: 100%;} 
+img{width: 100%; margin-top: 1em;margin-bottom: 1em;} 
 img.webring{transform:scale(1.4);} 
 
 
 audio{border-radius:0px;}
 
 
-hr{border: 1px solid var(--text);}
+hr{border: 1px solid var(--text);margin: 2em;}
 
 
 footer{margin:24px;padding-bottom: 16px;}
