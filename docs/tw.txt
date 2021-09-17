@@ -196,3 +196,4 @@
 2021-09-17T12:37:04-07:00	[Mineral-Existence] lots of updates, split software from inventory
 2021-09-17T12:42:49-07:00	[Mineral-Existence] build home to update latest
 2021-09-17T13:45:23-07:00	[Mineral-Existence] images to inventory
+2021-09-17T13:53:37-07:00	[Mineral-Existence] added sway configs

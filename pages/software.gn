@@ -7,6 +7,7 @@ title: Software
 
 [h3|Software:]
 [ul|
+	[li|window manager: [a, href: "https://swaywm.org/"|Sway]]
 	[li|terminal: [a, href: "https://sw.kovidgoyal.net/kitty/"|Kitty]]
 	[li|web browser: [a, href: "https://minbrowser.org/"|Min] / [a, href: "https://qutebrowser.org/"|qutebrowser]]
 	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
@@ -20,13 +21,18 @@ title: Software
 [h3|Configs:]
 [ul|
 	[li|Kitty[ul|
-		[li|main: [a, href: "files/kitty.conf"|kitty.conf]]
-		[li|snazzy colors: [a, href: "files/kitty-snazzy.conf"|kitty-snazzy.conf]]
-		[li|unicode: [a, href: "files/kitty-unicode-favorites.conf"|kitty-unicode-favorites.conf]]
+		[li|main: [a, href: "files/kitty/kitty.conf"|kitty.conf]]
+		[li|snazzy colors: [a, href: "files/kitty/kitty-snazzy.conf"|kitty-snazzy.conf]]
+		[li|unicode: [a, href: "files/kitty/kitty-unicode-favorites.conf"|kitty-unicode-favorites.conf]]
 	]]
 	[li|Micro[ul|
-		[li|main: [a, href: "files/micro-settings.json"|micro-settings.json]]
-		[li|key-binds: [a, href: "files/micro-bindings.json"|micro-bindings.json]]
-		[li|granite colors: [a, href: "files/micro-granite.yaml"|micro-granite.yaml]]
+		[li|main: [a, href: "files/micro/micro-settings.json"|micro-settings.json]]
+		[li|key-binds: [a, href: "files/micro/micro-bindings.json"|micro-bindings.json]]
+		[li|granite colors: [a, href: "files/micro/micro-granite.yaml"|micro-granite.yaml]]
+	]]
+	[li|Sway[ul|
+		[li|main: [a, href: "files/sway/config"|config]]
+		[li|screen saver: [a, href: "files/sway/config.d/screenlock_powersave"|screenlock_powersave]]
+		[li|swaybar: [a, href: "files/sway/scripts/sway_bar.sh"|sway_bar.sh]]
 	]]
 ]
