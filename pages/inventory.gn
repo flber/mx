@@ -4,15 +4,21 @@ title: Inventory
 
 [h2|Inventory]
 
-[p|[strong|Everyday items:]]
-[ul|
-	[li|[a, href: "https://fieldnotesbrand.com/"|Field Notes] winter 2018 edition (x3)]
-	[li|[a, href: "https://fieldnotesbrand.com/products/space-pen"|Fisher space pen]]
-	[li|[a, href: "https://www.casio.com/products/watches/databank/ca53w-1"|Casio CA53W-1 calculator watch]]
-	[li|[a, href: "https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=kindle+4&_sacat=0"|Kindle 4]]
-]
+[h3|Everyday items:]
+[img, src: "images/inventory/field-notes.gif", alt: "a field notes special edition yosemite memo notebook"|]
+[p|[a, href: "https://fieldnotesbrand.com/"|Field Notes] U.S. National Parks special edition memo notebook]]
+[img, src: "images/inventory/space-pen.gif", alt: "black fisher space pen"|]
+[p|[a, href: "https://fieldnotesbrand.com/products/space-pen"|Fisher space pen]]
+[img, src: "images/inventory/watch.gif", alt: "a casio calculator watch on my wrist"|]
+[p|[a, href: "https://www.casio.com/products/watches/databank/ca53w-1"|Casio CA53W-1 calculator watch]]
+[img, src: "images/inventory/kindle.gif", alt: "the best kindle ever made, the kindle 4 paperwhite, in black"|]
+[p|[a, href: "https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=kindle+4&_sacat=0"|Kindle 4]]
+[img, src: "images/inventory/midori.gif", alt: "a midori notebook, with a red ribbon pageholder, a small tag on the upper-right that says 2021-, and the midori MD logo imprinted in the middle right of the cover"|]
+[p|[a, href: "https://www.midori-japan.co.jp/md/en/products/mdnote/#&gid=4&pid=1"|Midori MD A6 notebook]]
+[img, src: "images/inventory/uni-ball.gif", alt: "just a normal pen. writes real good."|]
+[p|Sanford uni-ball Onyx micro pen]
 
-[p|[strong|Computers:]]
+[h3|Computers:]
 [ul|
 	[li|Sinclair: Thinkpad T420s running [a, href: "https://manjaro.org/downloads/community/i3/"|Manjaro i3]]
 	[li|Demian: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/"|Raspberry pi 4] running [a, href: "https://www.raspberrypi.org/software/operating-systems/"|Pi OS Lite]]
