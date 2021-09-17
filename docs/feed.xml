@@ -1,0 +1,12 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Mineral Existence</title>
+    <subtitle>New articles... occasionally</subtitle>
+    <link href="https://mineralexistence.com/feed.xml" rel="self"/>
+    <link href="https://mineralexistence.com/"/>
+    <updated>2021-09-15T19:57:59</updated>
+    <id>https://mineralexistence.com/</id>
+    <author>
+    	<name>flbr</name>
+    	<email>benrhammond@gmail.com</email>
+    </author>
+</feed>

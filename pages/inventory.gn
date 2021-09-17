@@ -18,29 +18,3 @@ title: Inventory
 	[li|Demian: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/"|Raspberry pi 4] running [a, href: "https://www.raspberrypi.org/software/operating-systems/"|Pi OS Lite]]
 	[li|[a, href: "bucephalus.html"|Bucephalus]: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/" |Raspberry pi 4] running [a, href: "plan9.html"|9front]]
 ]
-
-[p|[strong|Software:]]
-[ul|
-	[li|terminal: [a, href: "https://sw.kovidgoyal.net/kitty/"|Kitty]]
-	[li|web browser: [a, href: "https://minbrowser.org/"|Min]]
-	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
-	[li|file explorer: [a, href: "https://ranger.github.io/"|ranger]]
-	[li|music player: [a, href: "https://cmus.github.io/"|cmus]]
-	[li|habit tracker: [a, href: "https://github.com/NerdyPepper/dijo"|dijo]]
-	[li|mastodon client: [a, href: "https://github.com/ihabunek/toot"|toot]]
-	[li|IRC client: [a, href: "https://github.com/osa1/tiny"|tiny]]
-]
- 
-[p|[strong|Configs:]]
-[ul|
-	[li|Kitty[ul|
-		[li|main: [a, href: "files/kitty.conf"|kitty.conf]]
-		[li|snazzy colors: [a, href: "files/kitty-snazzy.conf"|kitty-snazzy.conf]]
-		[li|unicode: [a, href: "files/kitty-unicode-favorites.conf"|kitty-unicode-favorites.conf]]
-	]]
-	[li|Micro[ul|
-		[li|main: [a, href: "files/micro-settings.json"|micro-settings.json]]
-		[li|key-binds: [a, href: "files/micro-bindings.json"|micro-bindings.json]]
-		[li|granite colors: [a, href: "files/micro-granite.yaml"|micro-granite.yaml]]
-	]]
-]

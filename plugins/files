@@ -1,0 +1,18 @@
+#!/bin/python
+
+import os
+import sys
+import fnmatch
+
+def files_within(directory_path, pattern="*"):
+    for dirpath, dirnames, filenames in os.walk(directory_path):
+        for file_name in fnmatch.filter(filenames, pattern):
+            yield os.path.join(dirpath, file_name)
+
+for index, line in enumerate(sys.stdin):
+    if "{{files}}" in line:
+        html = ""
+        for file in files_within("./docs/files"):
+            html += "<p><a href=\"" + str(file[7:]) + "\">" + str(file[13:]) + "</a></p>\n"
+        line = line.replace("{{files}}", html)
+    sys.stdout.write(line)

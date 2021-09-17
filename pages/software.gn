@@ -1,0 +1,32 @@
+!meta!
+title: Software
+!meta!
+
+[h2|Software]
+[p|Just a small list of the software I use, and my configs for that software]
+
+[h3|Software:]
+[ul|
+	[li|terminal: [a, href: "https://sw.kovidgoyal.net/kitty/"|Kitty]]
+	[li|web browser: [a, href: "https://minbrowser.org/"|Min] / [a, href: "https://qutebrowser.org/"|qutebrowser]]
+	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
+	[li|file explorer: [a, href: "https://ranger.github.io/"|ranger]]
+	[li|music player: [a, href: "https://cmus.github.io/"|cmus]]
+	[li|habit tracker: [a, href: "https://github.com/NerdyPepper/dijo"|dijo]]
+	[li|mastodon client: [a, href: "https://github.com/ihabunek/toot"|toot]]
+	[li|IRC client: [a, href: "https://github.com/osa1/tiny"|tiny]]
+]
+ 
+[h3|Configs:]
+[ul|
+	[li|Kitty[ul|
+		[li|main: [a, href: "files/kitty.conf"|kitty.conf]]
+		[li|snazzy colors: [a, href: "files/kitty-snazzy.conf"|kitty-snazzy.conf]]
+		[li|unicode: [a, href: "files/kitty-unicode-favorites.conf"|kitty-unicode-favorites.conf]]
+	]]
+	[li|Micro[ul|
+		[li|main: [a, href: "files/micro-settings.json"|micro-settings.json]]
+		[li|key-binds: [a, href: "files/micro-bindings.json"|micro-bindings.json]]
+		[li|granite colors: [a, href: "files/micro-granite.yaml"|micro-granite.yaml]]
+	]]
+]
