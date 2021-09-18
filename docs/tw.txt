@@ -200,3 +200,4 @@
 2021-09-17T14:15:50-07:00	[Mineral-Existence] new about photo
 2021-09-17T14:16:55-07:00	[Mineral-Existence] space added to about page
 2021-09-17T15:14:32-07:00	[Mineral-Existence] added proper titles
+2021-09-17T17:14:28-07:00	[Mineral-Existence] tweaks to file page
