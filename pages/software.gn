@@ -33,6 +33,6 @@ title: Software
 	[li|Sway[ul|
 		[li|main: [a, href: "files/sway/config"|config]]
 		[li|screen saver: [a, href: "files/sway/config.d/screenlock_powersave"|screenlock_powersave]]
-		[li|swaybar: [a, href: "files/sway/scripts/sway_bar.sh"|sway_bar.sh]]f
+		[li|swaybar: [a, href: "files/sway/scripts/sway_bar.sh"|sway_bar.sh]]
 	]]
 ]
