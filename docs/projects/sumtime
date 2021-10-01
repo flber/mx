@@ -19,9 +19,7 @@ minutes=0
 seconds=0
 
 for t in $times; do
-	numunits=$(echo $t | sed -e 's/\(.\)/\1\n/g' | grep ":" | wc -l)
-	numunits=$[$numunits+1]
-
+	# adds zeros to smaller times
 	case $unit in
 		"m" )
 			t="00:00:${t}"
@@ -32,6 +30,7 @@ for t in $times; do
 		* ) ;;
 	esac
 
+	# breaks time into units
 	IFS=':'
 	read -ra parts <<< "$t"
 	IFS=' '
@@ -40,16 +39,19 @@ for t in $times; do
 	m=${parts[2]}
 	s=${parts[3]}
 
+	# changes empty units to 0 for math
 	if [ "$h" = "" ]; then h=0; fi
 	if [ "$m" = "" ]; then m=0; fi
 	if [ "$s" = "" ]; then s=0; fi
-	
+
+	# sums all units (forcing decimal math, can get confused with leading 0's otherwise)
 	days=$[10#$days+10#$d]
 	hours=$[10#$hours+10#$h]
 	minutes=$[10#$minutes+10#$m]
 	seconds=$[10#$seconds+10#$s]
 done
 
+# "simple" round function. black magic.
 round(){
 	echo $(printf %.$2f $(echo "scale=$2;(((10^$2)*$1)+0.5)/(10^$2)" | bc))
 };
@@ -67,6 +69,7 @@ spillup(){
 	echo $(round $decsmall 0);
 }
 
+# spills extra time up units for formatting
 if (( seconds >= 60 )); then
 	{
 	  read -r extra
@@ -74,12 +77,6 @@ if (( seconds >= 60 )); then
 	} <<< "$( spillup ${seconds} 60.0 )"
 	minutes=$[$minutes+$extra]
 	second=$new
-	
-	# extralarge=$(echo "${seconds} / 60.0" | bc -l)
-	# decsmall=$(echo "(${extralarge} % 1) * 60" | bc)
-	# extralarge=$(round $(echo "scale=0;${extralarge} - (${extralarge} % 1)" | bc) 0)
-	# minutes=$[$minutes+$extralarge]
-	# seconds=$(round $decsmall 0);
 fi
 if (( minutes >= 60 )); then
 	{
@@ -88,12 +85,6 @@ if (( minutes >= 60 )); then
 	} <<< "$( spillup ${minutes} 60.0 )"
 	hours=$[$hours+$extra]
 	minutes=$new
-
-	# extralarge=$(echo "${minutes} / 60.0" | bc -l)
-	# decsmall=$(echo "(${extralarge} % 1) * 60" | bc)
-	# extralarge=$(round $(echo "scale=0;${extralarge} - (${extralarge} % 1)" | bc) 0)
-	# hours=$[$hours+$extralarge]
-	# minutes=$(round $decsmall 0);
 fi
 if (( hours >= 24 )); then
 	{
@@ -102,14 +93,7 @@ if (( hours >= 24 )); then
 	} <<< "$( spillup ${hours} 24.0 )"
 	days=$[$days+$extra]
 	hours=$new
-
-	# extralarge=$(echo "${hours} / 60.0" | bc -l)
-	# decsmall=$(echo "(${extralarge} % 1) * 60" | bc)
-	# extralarge=$(round $(echo "scale=0;${extralarge} - (${extralarge} % 1)" | bc) 0)
-	# days=$[$days+$extralarge]
-	# hours=$(round $decsmall 0);
 fi
 
 echo "Time (d:h:m:s)"
 echo "${days}:${hours}:${minutes}:${seconds}"
-# echo $[$large+$extralarge]":"$newsmall
