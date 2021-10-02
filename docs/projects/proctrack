@@ -51,6 +51,5 @@ done < <(cat ~/.proctimes)
 
 # if first run, just adds newtime
 if [[ $foundmatch < 1 ]]; then
-	echo ${1}" was not found, adding"
 	prpnd "${1} ${newtime}" ~/.proctimes
 fi
