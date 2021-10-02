@@ -21,10 +21,10 @@ seconds=0
 for t in $times; do
 	# adds zeros to smaller times
 	case $unit in
-		"m" )
+		"m" | "min" )
 			t="00:00:${t}"
 		;;
-		"h" )
+		"h" | "hour")
 			t="00:${t}"
 		;;
 		* ) ;;
@@ -95,5 +95,4 @@ if (( hours >= 24 )); then
 	hours=$new
 fi
 
-echo "Time (d:h:m:s)"
 echo "${days}:${hours}:${minutes}:${seconds}"

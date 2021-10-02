@@ -81,3 +81,13 @@ This goes at the top
 this is a test
 such test, much wow
 ]
+
+[h3|[a, href: "projects/proctrack"|proctrack]]
+[p|Uses prpnd, proctime, and sumtime to track how much time programs have been run for. Most useful to alias programs you're interested in tracking like so: `alias brogue='proctrack brogue'`] 
+[p|Example:]
+[pre|
+> proctrack brogue
+> cat ~/.proctimes
+brogue-ce-git 0:0:1:49
+micro 0:0:0:19
+]
