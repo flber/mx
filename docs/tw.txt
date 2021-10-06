@@ -225,3 +225,4 @@
 2021-10-05T16:33:38-07:00	[Mineral-Existence] fixed small error in about
 2021-10-05T22:40:33-07:00	[Mineral-Existence] added learning nim page
 2021-10-05T22:41:33-07:00	[Mineral-Existence] spacing modifications
+2021-10-05T22:42:33-07:00	[Mineral-Existence] spacing modifications
