@@ -223,3 +223,4 @@
 2021-10-01T19:38:08-07:00	[Mineral-Existence] standardized spacing in mtrack
 2021-10-01T20:05:59-07:00	[Mineral-Existence] fixed sumtime bug
 2021-10-05T16:33:38-07:00	[Mineral-Existence] fixed small error in about
+2021-10-05T22:40:33-07:00	[Mineral-Existence] added learning nim page
