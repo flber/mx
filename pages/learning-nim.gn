@@ -5,9 +5,12 @@ title: Learning Nim
 [h2|Learning Nim]
 
 [p|Over the past week or so I've been learning a new language, called [a, href: "https://nim-lang.org"|Nim]. It's been... an experience]
+[p|]
 
 [p|Nim is pretty interesting for a few reasons; it has similar syntax to python, but compiles to C (or other similarly low-level backends). It can be object-oriented, or functionally written. It's statically typed, but has some real wild syntax extension. Those sort of curious dualities in a language can, in my opinion, sometimes lead to a fun and expressive experience, but I unfortunately found that for me it just had the worst of both worlds. I found myself just sort of fumbling through the flexible syntax, trying to get stuff to work but often running into the more rigid, c-like aspects of the language. A large part of that was definitely due to my inexperience, as I'm still not super familiar with the language, but that learning process was not made much easier by the docs.]
+[p|]
 
 [p|The Nim docs themselves are fine, a bit fragmented into different (and not cross-searchable) sections, but the main problem I had with the online resources was that the tutorials were pretty quick and didn't go especially in-depth. Compared to something like Rust, which has a *very* thorough [a, href: "https://doc.rust-lang.org/book/"|official tutorial], or C, which has a million tutorials by various individuals and a lovely physical spec book, Nim's introductory resources are definitely lacking.]
+[p|]
 
 [p|That is, of course, because Nim is a pretty new language. With that in mind I definitely cut it some slack, but I'm not sure I want to invest more time into it as a development platform. It has some pretty cool features, and I think it's absolutely still worth taking a look at, but I don't think I'll be re-writing any of my project in Nim just yet.]
