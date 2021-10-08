@@ -229,3 +229,4 @@
 2021-10-05T22:47:14-07:00	[Mineral-Existence] uxn addendum to nim page
 2021-10-07T19:58:39-07:00	[Mineral-Existence] reading page
 2021-10-07T19:58:52-07:00	[Mineral-Existence] updated home
+2021-10-07T20:08:40-07:00	[Mineral-Existence] added books to read
