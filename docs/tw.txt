@@ -238,3 +238,4 @@
 2021-10-08T17:22:41-07:00	[Mineral-Existence] fixed proctime creating extra 'time' files everywhere
 2021-10-08T17:24:04-07:00	[Mineral-Existence] updated music
 2021-10-09T17:54:35-07:00	[Mineral-Existence] added more books
+2021-10-09T22:30:23-07:00	[Mineral-Existence] under construction to reading from
