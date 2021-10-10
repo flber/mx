@@ -76,7 +76,7 @@ title: Reading
 
 [div, class: "break"|]
 
-[mark|[h3|Under Construction]]
+[mark|Under Construction]
 [form, action: "/reading-form", method: "post"|
 	[ul|
 		[li|
