@@ -27,10 +27,95 @@
 					<article class="inner">
 						<!-- <hr></hr> -->
 
+<style>
+	form {
+	  /* Center the form on the page
+	  margin: 0 auto;
+	  */
+	  /* Form outline */
+	  padding: 1em;
+	  border: 1px solid #000;
+	}
+
+	form ul {
+	  list-style: none;
+	  padding: 0;
+	  margin: 0;
+	}
+
+	form li + li {
+	  margin-top: 1em;
+	}
+
+	label {
+	  /* Uniform size & alignment */
+	  display: inline-block;
+	  width: 90px;
+	  text-align: right;
+	}
+
+	input,
+	textarea {
+	  /* To make sure that all text fields have the same font settings
+	     By default, textareas have a monospace font
+	  font: 1em sans-serif;
+	  */
+
+	  /* Uniform text field size */
+	  width: 300px;
+	  box-sizing: border-box;
+
+	  /* Match form field borders */
+	  border: 1px solid #000;
+	}
+
+	input:focus,
+	textarea:focus {
+	  /* Additional highlight for focused elements */
+	  border-color: #000;
+	}
+
+	textarea {
+	  /* Align multiline text fields with their labels */
+	  vertical-align: top;
+	  /* Provide space to type some text */
+	  height: 5em;
+	}
+
+	.button {
+	  /* Align buttons with the text fields */
+	  padding-left: 90px; /* same size as the label elements */
+	}
+
+	button {
+	  /* This extra margin represent roughly the same space as the space
+	     between the labels and their text fields */
+	  margin-left: .5em;
+	}
+</style>
+
 <h2>Reading</h2>
 
 <p>I quite enjoy reading. Though far from a comprehensive list, here are some books I have read, and am currently reading.</p>
 <p>If you have any recommendations, please let me know!</p>
+
+<div class="break"></div>
+
+<form action="/reading-form" method="post">
+	<ul>
+		<li>
+			<label for="name">Name:</label>
+			<input required type="text" id="name" name="user_name"></input>
+		</li>
+		<li>
+			<label for="msg">Message:</label>
+			<textarea required id="msg" name="user_message"></textarea>
+		</li>
+		<li class="button">
+			<button type="submit">Send your suggestion</button>
+		</li>
+	</ul>
+</form>
 
 <div class="break"></div>
 
@@ -41,6 +126,8 @@
 	<li><b>Do Androids Dream of Electric Sheep?</b>, Philip K. Dick</li>
 	<li><b>The Sandman</b>, Neil Gaiman</li>
 	<li><b>The Complete Works of H.P. Lovecraft</b>, H.P. Lovecraft</li>
+	<li><b>The Foundation</b>, Isaac Asimov</li>
+	<li><b>The One Straw Revolution</b>, Masanobu Fukuoka</li>
 </ul>
 
 <b>Past</b>
@@ -103,7 +190,7 @@
 		        	<a href='https://webring.xxiivv.com/#random' target='_blank'><img class="webring" src='https://webring.xxiivv.com/icon.black.svg' alt="the merveilles webring"/></a> 
 				</div>
 				<div style="float: right; margin-top: -6px;">
-					<em>Last updated: 081021</em>
+					<em>Last updated: 101021</em>
 				</div>
 			</nav>
 		</footer>
