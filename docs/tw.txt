@@ -240,3 +240,4 @@
 2021-10-09T17:54:35-07:00	[Mineral-Existence] added more books
 2021-10-09T22:30:23-07:00	[Mineral-Existence] under construction to reading from
 2021-10-09T22:31:22-07:00	[Mineral-Existence] uc rework
+2021-10-09T22:35:46-07:00	[Mineral-Existence] reading form relative width
