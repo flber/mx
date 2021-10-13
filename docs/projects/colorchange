@@ -1,0 +1,10 @@
+#!/bin/bash
+
+help="""Usage:
+	color-change [from-file] [foreground-color] [background-color] [to-file]"""
+fromfile=$1
+forecolor=$2
+backcolor=$3
+tofile=$4
+
+convert "${fromfile}" +level-colors "${forecolor}","${backcolor}" "${tofile}"

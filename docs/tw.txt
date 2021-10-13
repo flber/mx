@@ -243,3 +243,6 @@
 2021-10-09T22:35:46-07:00	[Mineral-Existence] reading form relative width
 2021-10-11T11:45:36-07:00	[Mineral-Existence] looking at uxn logo
 2021-10-11T12:37:47-07:00	[Mineral-Existence] icon changes
+2021-10-11T17:37:04-07:00	[brhammon] readme to md
+2021-10-11T17:37:56-07:00	[brhammon] added lab1.lgi to Lab1/
+2021-10-12T21:24:22-07:00	[Mineral-Existence] grimoire updates and fixed(?) footer highlighting

@@ -129,3 +129,10 @@ title: Grimoire
 	[legend|Bash]
 	[p|grep -rnw 'dir/' -e 'pattern']
 ]
+
+
+[p|Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)]
+[fieldset|
+	[legend|ImageMagick]
+	[p|convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png]
+]

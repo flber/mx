@@ -198,8 +198,8 @@ details > *:not(summary) {margin-left: 1em;}
 
 
 /* link inverts when hovered */
-a{color: var(--bg);background-color: var(--text);text-decoration: none;}
-a:hover{color: var(--text);background-color: var(--highlight);}
+*:not(footer) a{color: var(--bg);background-color: var(--text);text-decoration: none;}
+*:not(footer) a:hover{color: var(--text);background-color: var(--highlight);}
 article a:not([href*=':'])::before{content:"{"}
 article a:not([href*=':'])::after{content:"}"}
 article a[href*=':']::before{content:"["}
@@ -216,9 +216,9 @@ audio{border-radius:0px;}
 hr{border: 1px solid var(--text);margin: 2em;}
 
 
-footer{margin:24px;padding-bottom: 16px;}
-footer svg {height: 20px;width: 20px;margin: 2px;}
-footer img {height: 20px;width: 20px;margin: 2px;}
+footer { border-top:1.5px solid;padding:30px 0 0 0;clear:both } 
+footer > * { display:inline-block;}
+footer img { margin:0 0 -10px 0;width:30px } 
 
 
 svg{fill: var(--text);}
