@@ -198,8 +198,8 @@ details > *:not(summary) {margin-left: 1em;}
 
 
 /* link inverts when hovered */
-*:not(footer) a{color: var(--bg);background-color: var(--text);text-decoration: none;}
-*:not(footer) a:hover{color: var(--text);background-color: var(--highlight);}
+*:not(footer) > a{color: var(--bg);background-color: var(--text);text-decoration: none;}
+*:not(footer) > a:hover{color: var(--text);background-color: var(--highlight);}
 article a:not([href*=':'])::before{content:"{"}
 article a:not([href*=':'])::after{content:"}"}
 article a[href*=':']::before{content:"["}
