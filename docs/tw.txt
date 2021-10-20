@@ -247,3 +247,8 @@
 2021-10-11T17:37:56-07:00	[brhammon] added lab1.lgi to Lab1/
 2021-10-12T21:24:22-07:00	[Mineral-Existence] grimoire updates and fixed(?) footer highlighting
 2021-10-18T18:55:26-07:00	[Mineral-Existence] added pong image
+2021-10-18T21:37:39-07:00	[brhammon] restored lab1 README
+2021-10-18T23:18:20-07:00	[Lab1] finished Lab1
+2021-10-19T23:38:34-07:00	[uxn-tests]
+2021-10-19T23:38:45-07:00	[uxn-tests] day 6 of uxn
+2021-10-19T23:56:41-07:00	[Mineral-Existence] removed form from reading
