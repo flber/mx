@@ -252,3 +252,4 @@
 2021-10-19T23:38:34-07:00	[uxn-tests]
 2021-10-19T23:38:45-07:00	[uxn-tests] day 6 of uxn
 2021-10-19T23:56:41-07:00	[Mineral-Existence] removed form from reading
+2021-10-20T00:19:09-07:00	[Mineral-Existence] digtial nest page
