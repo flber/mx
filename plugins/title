@@ -14,7 +14,7 @@ for line in lines:
 		title = "unknown page!"
 		for c_line in lines:
 			if "<h2>" in c_line and match == 0:
-				title = re.search(r"<h2>[\w\s]+<\/h2>", c_line).group()[4:-5]
+				title = re.search(r"<h2>[^<]+<\/h2>", c_line).group()[4:-5]
 				match = 1
 		line = line.replace("{{title}}", title)
 	sys.stdout.write(line)

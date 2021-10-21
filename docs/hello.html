@@ -2,3 +2,85 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<title>MX - Hello!</title>
+		<link rel="icon" href="favicon.ico?" type="image/x-icon">
+		<link rel="stylesheet" href="style.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Yes, I know. This is just a test for now -->
+	    <script defer data-domain="mineralexistence.com" src="https://plausible.io/js/plausible.js"></script>
+	</head>
+	<body id="dark">
+		<div class="with-sidebar">
+			<div>
+		  		<!-- sidebar -->
+				<nav>
+					<span><h1><a href="home.html">Home</a></h1></span>
+					<span><h1><a href="now.html">now</a></h1></span>
+					<span><h1><a href="wiki.html">wiki</a></h1></span>
+					<span><h1><a href="about.html">about</a></h1></span>
+				</nav>
+			</div>
+			<div>
+				<main>
+					<!-- non-sidebar -->
+					<article class="inner">
+						<!-- <hr></hr> -->
+
+<mark>THIS IS CURRENTLY NON-FUNCTIONAL</mark>
+
+<h2>Hello!</h2>
+<p>This page is shamelessly borrowed from <a href="https://merveilles.town/@jrc03c">Josh's</a> <a href="https://ameyama.com">website</a>, and is my little experiment into running more than a static-file-serving server.</p>
+
+<p>With that out of the way, hi!</p>
+<p>If you press the button below, my pi will get a message and update the counter (I'll probably write up a description of this later...)</p>
+
+<p>As of 211021 the button doesn't work, but the number below should be the correct(ish) number of unique visitors!</p>
+
+<blockquote id="count">
+	<p>Visitors:</p>
+</blockquote>
+
+<button id="hi-button" onclick="sayhi()">Say Hi</button>
+
+<script> 
+	async function sayhi(){ 
+		console.log("testing") 
+		let response = await fetch("https://mineralexistence.com/api/hey") 
+		let data = await response.json() 
+		let countElement = document.getElementById("count") 
+		document.getElementById("hi-button").disabled = true; 
+		countElement.innerHTML = `Visitors: ${data.count} so far! Welcome on in ^_^` 
+	} 
+</script> 
+ 
+ 
+ 
+ 
+ 
+
+						<!-- <hr></hr> -->
+					</article>
+				</main>
+			</div>
+		</div>
+		<footer>
+			<a href="mailto:benrhammond@gmail.com" target="_blank">
+				<img src="images/mail.svg" alt="Mailto"/>
+			</a>
+			<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+				<img src="images/merveilles.svg" alt="Merveilles"/>
+			</a>
+			<a rel="me" href="https://github.com/flber" target="_blank">
+				<img src="images/github.svg" alt="Github"/>
+			</a>
+        	<a href='https://webring.xxiivv.com/#random' target='_blank'>
+        		<img class="webring" src='https://webring.xxiivv.com/icon.black.svg' alt="the merveilles webring"/>
+       		</a>
+        	<a href="https://wiki.xxiivv.com/site/uxn.html">
+        		<img src="https://wiki.xxiivv.com/media/icon/uxn.svg" alt="Uxn Powered"/>
+       		</a>
+			<em>Last updated: 211021</em>
+		</footer>
+	</body>
+</html>
