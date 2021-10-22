@@ -206,7 +206,7 @@ article a[href*=':']::before{content:"["}
 article a[href*=':']::after{content:"]"}
 
 
-img{width: 100%; margin-top: 1em;margin-bottom: 1em;} 
+img{width: 100%; margin-top: 1em;margin-bottom: 1em;font-style:italic;}
 img.webring{transform:scale(1.4);} 
 
 
