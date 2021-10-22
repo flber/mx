@@ -39,7 +39,7 @@
 	--bg: #FFFFFF;
 	--highlight: #80dec5;
 	--max: 90ch;
-	--fonts: "Times New Roman", Times, serif;
+	--fonts: "Times New Roman", Times, serif, gothicus;
 }
 
 
@@ -222,4 +222,4 @@ footer img { margin:0 0 -10px 0;width:30px }
 
 
 svg{fill: var(--text);}
-svg:hover{color: var(--bg);}
+/* svg:hover{color: var(--bg);} */

@@ -2,6 +2,16 @@
 title: Mignight Hike
 !meta!
 
+
+[style|
+	:root{
+		--text: #fff;
+		--bg: #000;
+	}
+	h1,h2,h3{font-family:gothicus;font-weight:200;} 
+	a > img { filter:invert(100%); }
+]
+
 [h2|Midnight Hike 211021]
 
 [audio controls loop src: "assets/midnight-hike.m4a" type: "audio/mpeg" preload: "auto"|]
