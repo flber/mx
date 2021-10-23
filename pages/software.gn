@@ -9,7 +9,7 @@ title: Software
 [ul|
 	[li|window manager: [a, href: "https://swaywm.org/"|Sway]]
 	[li|terminal: [a, href: "https://sw.kovidgoyal.net/kitty/"|Kitty]]
-	[li|web browser: [a, href: "https://minbrowser.org/"|Min] / [a, href: "https://qutebrowser.org/"|qutebrowser]]
+	[li|web browser: [a, href: "https://qutebrowser.org/"|qutebrowser]]
 	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
 	[li|file explorer: [a, href: "https://ranger.github.io/"|ranger]]
 	[li|music player: [a, href: "https://cmus.github.io/"|cmus]]
