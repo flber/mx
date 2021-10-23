@@ -20,7 +20,7 @@ title: Inventory
 
 [h3|Computers:]
 [ul|
-	[li|Sinclair: Thinkpad T420s [a, href: "software.html"|running] [a, href: "https://manjaro.org/downloads/community/i3/"|Manjaro i3]]
+	[li|Sinclair: Thinkpad T420s [a, href: "software.html"|running] [a, href: "https://arcolinux.com/"|Arco] (more info [a, href: "software.html"|here])]
 	[li|Demian: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/"|Raspberry pi 4] running [a, href: "https://www.raspberrypi.org/software/operating-systems/"|Pi OS Lite]]
 	[li|[a, href: "bucephalus.html"|Bucephalus]: [a, href: "https://www.raspberrypi.org/products/raspberry-pi-4-model-b/" |Raspberry pi 4] running [a, href: "plan9.html"|9front]]
 ]
