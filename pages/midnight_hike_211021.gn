@@ -5,7 +5,7 @@ title: Mignight Hike
 
 [style|
 	:root{
-		--text: #fff;
+		--text: #ff8000;
 		--bg: #000;
 	}
 	h1,h2,h3{font-family:gothicus;font-weight:200;} 
