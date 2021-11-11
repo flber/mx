@@ -161,6 +161,23 @@
 	<p>convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png</p>
 </fieldset>
 
+
+<p>Function to convert a string into a hashed long</p>
+<fieldset>
+	<legend>C89</legend>
+	<p>
+	long
+	hash(char *str)
+	{
+	    long hash = 5381;
+	    int c;
+	    while ((c = *str++))
+	        hash = ((hash << 5) + hash) + c;
+	    return hash;
+	}
+	</p>
+</fieldset>
+
 						<!-- <hr></hr> -->
 					</article>
 				</main>
@@ -182,7 +199,7 @@
         	<a href="https://wiki.xxiivv.com/site/uxn.html">
         		<img src="https://wiki.xxiivv.com/media/icon/uxn.svg" alt="Uxn Powered"/>
        		</a>
-			<em>Last updated: 201021</em>
+			<em>Last updated: 111121</em>
 		</footer>
 	</body>
 </html>

@@ -136,3 +136,20 @@ title: Grimoire
 	[legend|ImageMagick]
 	[p|convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png]
 ]
+
+
+[p|Function to convert a string into a hashed long]
+[fieldset|
+	[legend|C89]
+	[p|
+	long
+	hash(char *str)
+	{
+	    long hash = 5381;
+	    int c;
+	    while ((c = *str++))
+	        hash = ((hash << 5) + hash) + c;
+	    return hash;
+	}
+	]
+]
