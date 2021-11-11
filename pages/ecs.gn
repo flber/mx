@@ -1,0 +1,11 @@
+!meta!
+title: Entity Component System
+!meta!
+
+[h2|Entity Component System]
+
+[p|I'm working on a small ECS in C with raylib. You can see the up-to-date files below, and I'll write something about my C + Raylib setup later.]
+
+[a, href: "files/ecs/main.c"|main.c]
+[a, href: "files/ecs/ecs.c"|ecs.c]
+[a, href: "files/ecs/components.c"|components.c]
