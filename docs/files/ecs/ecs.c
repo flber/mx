@@ -8,7 +8,7 @@
 #define NCMPS 128
 
 typedef struct Entity {
-  int index;
+  int in_use;
   Component *comps;
   int comps_len;
 } Entity;
@@ -18,61 +18,61 @@ typedef struct Manager {
   int len;
 } Manager;
 
-Manager   m_new                       ();
-Entity    m_create_entity             (Manager *ctx);
-void      m_remove_entity             (Manager *ctx, int id);
-void      m_add_component             (Manager *ctx, int id, Component comp);
-void      m_add_componenets           (Manager *ctx, int id, Component comps[], int size);
-Entity    m_components_of             (Manager *ctx, int id);
-int       m_has_component_of_type     (Manager *ctx, int id, char *comp_name);
-Component m_get_component             (Manager *ctx, int id, char *comp_name);
-int*      m_entities_with_component   (Manager *ctx, char *comp_name);
-int*      m_entities_with_components  (Manager *ctx, char **comp_name);
+Manager     m_new                       ();
+int         m_create_entity             (Manager *ctx);
+void        m_remove_entity             (Manager *ctx, int id);
+void        m_add_component             (Manager *ctx, int id, Component comp);
+void        m_add_componenets           (Manager *ctx, int id, Component comps[], int size);
+Component*  m_components_of             (Manager *ctx, int id);
+int         m_has_component_of_type     (Manager *ctx, int id, char *comp_name);
+Component   m_get_component             (Manager *ctx, int id, char *comp_name);
+int*        m_entities_with_component   (Manager *ctx, char *comp_name);
+int*        m_entities_with_components  (Manager *ctx, char **comp_name);
 
 Manager
 m_new()
 {
-  Entity e[NENTS];
-  int len = 0;
-
+  Entity e[NENTS] = {};
   Manager m = {
-    e,
-    len,
+    .entities = e,
+    .len = 0,
   };
   return m;
 }
 
-Entity
+int
 m_create_entity(Manager *ctx)
 {
-  Component c[NCMPS];
-  Entity e = {
-    ctx->len,
-    c,
-    0,
-  };
-  ctx->entities[ctx->len] = e;
   ctx->len++;
-  return ctx->entities[ctx->len-1];
+  for(int i = 0; i < ctx->len; i++){
+    if(!ctx->entities[i].in_use){
+      Component c[NCMPS];
+      Entity e = {
+        .in_use = 1,
+        .comps = c,
+        .comps_len = 0,
+      };
+      
+      ctx->entities[i] = e;
+      return i;
+    }
+  }
+  return -1;
 }
 
 void
 m_remove_entity(Manager *ctx, int id)
 {
-  fprintf(stderr, "removing entity");
-  Component c[NCMPS];
+  Component c[NCMPS] = {};
   Entity n = {
-    -1,
-    c,
-    0,
+    .in_use = 0,
+    .comps = c,
+    .comps_len = 0,
   };
   ctx->entities[id] = n;
 
-  for(int i = id; i < NENTS-1; i++){
-    ctx->entities[i] = ctx->entities[i+1];
-  }
-  ctx->entities[NENTS] = n;
-  ctx->len--;
+  for(int i = ctx->len; !ctx->entities[i].in_use; i--)
+    ctx->len--;
 }
 
 void
@@ -89,4 +89,19 @@ m_add_components(Manager *ctx, int id, Component comps[], int size)
     ctx->entities[id].comps[ctx->entities[id].comps_len] = comps[i];
     ctx->entities[id].comps_len++;
   }
+}
+
+Component*
+m_components_of(Manager *ctx, int id)
+{
+  return ctx->entities[id].comps;
+}
+
+int
+m_has_component_of_type(Manager *ctx, int id, char *comp_name)
+{
+  for(int i = 0; i < ctx->entities[id].comps_len; i++)
+    if(ctx->entities[id].comps[i].t == comp_name)
+      return 1;
+  return 0;
 }
