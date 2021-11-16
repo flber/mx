@@ -32,9 +32,9 @@ int*        m_entities_with_components  (Manager *ctx, char **comp_name);
 Manager
 m_new()
 {
-  Entity e[NENTS] = {};
+  // Entity e[NENTS] = {};
   Manager m = {
-    .entities = e,
+    .entities = {},
     .len = 0,
   };
   return m;
@@ -43,10 +43,10 @@ m_new()
 int
 m_create_entity(Manager *ctx)
 {
-  Component c[NCMPS] = {};
+  // Component c[NCMPS] = {};
   Entity e = {
     .in_use = 1,
-    .comps = c,
+    .comps = {},
     .comps_len = 0,
   };
   
@@ -57,10 +57,10 @@ m_create_entity(Manager *ctx)
 void
 m_remove_entity(Manager *ctx, int id)
 {
-  Component c[NCMPS] = {};
+  // Component c[NCMPS] = {};
   Entity n = {
     .in_use = 0,
-    .comps = c,
+    .comps = {},
     .comps_len = 0,
   };
   ctx->entities[id] = &n;
