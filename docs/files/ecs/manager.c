@@ -10,7 +10,6 @@ c_new(Entity_ptr ctx)
   ctx->in_use = 0;
   Component comps[NCMPS];
   memcpy(ctx->comps, comps, sizeof(comps));
-  // ctx->comps = {};
   ctx->comps_len = 0;
 }
 

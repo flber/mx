@@ -153,3 +153,12 @@ title: Grimoire
 	}
 	]
 ]
+
+[p|Copy an array to a pointer's value]
+[fieldset|
+	[legend|C]
+	[p|
+		int dst[ARRAY_LENGTH];
+		memcpy(dst, src, sizeof(dst));
+	]
+]
