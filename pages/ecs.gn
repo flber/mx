@@ -12,4 +12,6 @@ title: Entity Component System
 	[li|[a, href: "files/ecs/main.c"|main.c]]
 	[li|[a, href: "files/ecs/ecs.c"|ecs.c]]
 	[li|[a, href: "files/ecs/components.c"|components.c]]
+	[li|[a, href: "files/ecs/manager.c"|manager.c]]
+	[li|[a, href: "files/ecs/manager.h"|manager.h]]
 ]
