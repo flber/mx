@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -99,3 +100,4 @@ m_has_component_of_type(Manager *ctx, int id, char *comp_name)
       return 1;
   return 0;
 }
+*/

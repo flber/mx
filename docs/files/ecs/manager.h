@@ -1,4 +1,4 @@
-#include "components.c"
+/*#include "components.c"
 
 #define NENTS 2048
 #define NCMPS 128
@@ -29,3 +29,4 @@ int         m_has_component_of_type     (Manager_ptr ctx, int id, char *comp_nam
 Component   m_get_component             (Manager_ptr ctx, int id, char *comp_name);
 int*        m_entities_with_component   (Manager_ptr ctx, char *comp_name);
 int*        m_entities_with_components  (Manager_ptr ctx, char **comp_name);
+*/
