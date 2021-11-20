@@ -4,6 +4,8 @@ title: Entity Component System
 
 [h2|Entity Component System]
 
+[mark|ehhhh... not sure if I'm going to continue this in C]
+
 [p|I'm working on a small ECS in C with raylib. You can see the up-to-date files below, and I'll write something about my C + Raylib setup later.]
 
 [div, class: "break"|]

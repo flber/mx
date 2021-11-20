@@ -12,10 +12,13 @@ int main(void)
 
   InitWindow(screenWidth, screenHeight, "ecs");
 
-  // Entity_ptr entities[NENTS];
-  Manager_ptr m;
+  Entity entities[NENTS];
+  Manager m_init;
+  memcpy(m_init.entities, entities, sizeof(entities));
+  m_init.len = 0;
+  Manager_ptr m = &m_init;
   m_new(m);
-  printf("m.len: %d", m->len);
+  // printf("m.len: %d", m->len);
 
   /*
   int e1 = m_create_entity(m);
