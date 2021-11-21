@@ -2,7 +2,6 @@
 <br>
 alignment: LN	level: 4	speed: 25'	hit dice: 1d8 <br>
 race: dwarf		class: Artificer (battle smith)
-
 HP: 35	AC: 12 <br>
 proficiency: +2
 
@@ -36,16 +35,16 @@ Prf	Mod	Skill 				Bonus	<br>
 
 ---
 ## Weapons
-*Name*			*Attack*	*Damage/Type*
-light crossbow	-			1d8 piercing
-warhammer		-			1d8/10 bludgeoning
+*Name*			*Attack*	*Damage/Type*		<br>
+light crossbow	-			1d8 piercing		<br>
+warhammer		-			1d8/10 bludgeoning	<br>
 
 ---
 ## Wearing
-*Name*						*Properties*
-traveler's clothing			-
-studded leather armor		AC 12+DEX
-ring o' dodging				AC +1
+*Name*						*Properties*	<br>
+traveler's clothing			-				<br>
+studded leather armor		AC 12+DEX		<br>
+ring o' dodging				AC +1 			<br>
 
 ---
 ## Items
@@ -60,9 +59,11 @@ ring o' dodging				AC +1
 ## Spells
 Infusions: 4
 Infused items: 2
+
 Cantrips: 2
 - *Mending*
 - *Fire Bolt*
+
 1st level: 3
 - *Identify*: choose one object, if it is a magic item or some other magic-imbued object, you learn its properties and how to use them
 - *Cure Wounds*: regain a number of hit points equal to 1d8 + your spellcasting ability
@@ -102,3 +103,5 @@ Cantrips: 2
 - You always know which way is north.
 - You always know the number of hours left before the next sunrise or sunset.
 - You can accurately recall anything you have seen or heard within the past month.
+
+
