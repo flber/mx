@@ -1,0 +1,17 @@
+#!/bin/bash
+
+command=$1
+
+function watcher()
+{
+    # lines=$(tput lines)
+    while true; do
+        # output="$($@ | head -n $lines)"
+        # clear
+        # echo -e "$output"
+        $@
+        sleep 2
+    done
+}
+
+watcher $command

@@ -224,3 +224,19 @@ footer img { margin:0 0 -10px 0;width:30px }
 
 svg{fill: var(--text);}
 /* svg:hover{color: var(--bg);} */
+
+
+/* used in character sheet */
+div #containter {
+	display: flex;
+	height: 10;
+	margin-bottom: 2ex;
+}
+div #block {
+	display: inline;
+	border: 1px solid var(--text);
+	margin: 1ex;
+	padding: 0.7ex;
+	line-height: 0.8ex;
+}
+

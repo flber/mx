@@ -1,37 +1,61 @@
 # Thul Nalrab
 <br>
-alignment: LN	level: 4	speed: 25'	hit dice: 1d8 <br>
-race: dwarf		class: Artificer (battle smith)
-HP: 35	AC: 12 <br>
-proficiency: +2
 
-STR: 13(+1)		DEX: 8(-1)	CON: 17(+3) <br>
-INT: 17(+3)		WIS 10(0)	CHA: 12(+1)
+**alignment**: LN
+**level**: 4 
+**alignment**: LN 
 
-*Languages*: common, dwarvish <br>
-*Proficiencies*: light armor, medium armor, shields, simple weapons, firearms, thieves' tools, tinker's tools, smith's tools
+**level**: 4
+**speed**: 25'
+**hit dice**: 1d8
+
+**race**: dwarf 
+**class**: Artificer (battle smith) 
+
+<br>
+<div id="containter">
+	<div id="block"> <b>HP</b>: 27 </div>
+	<div id="block"> <b>AC</b>: 12 </div>
+	<div id="block"> <b>proficiency</b>: +2 </div>
+</div>
+<br>
+<div id="containter">
+	<div id="block"> STR: 13(+1) </div>
+	<div id="block"> DEX: 8(-1) </div>
+	<div id="block"> CON: 17(+3) </div>
+</div>
+<br>
+<div id="containter">
+	<div id="block"> INT: 17(+3) </div>
+	<div id="block"> WIS 10(0) </div>
+	<div id="block"> CHA: 12(+1) </div>
+</div>
+<br>
+
+**Languages**: common, dwarvish <br>
+**Proficiencies**: light armor, medium armor, shields, simple weapons, firearms, thieves' tools, tinker's tools, smith's tools
 
 ---
 ## Skills
-Prf	Mod	Skill 				Bonus	<br>
-[ ]	dex	*acrobatics*		-1		<br>
-[ ]	wis	*animal handling*	0		<br>
-[x]	int	*arcana*			4		<br>
-[ ]	str	*athletics*			2		<br>
-[ ]	cha	*deception*			1 		<br>
-[ ]	int	*history*			2 		<br>
-[ ]	wis	*insight*			0 		<br>
-[ ]	cha	*intitmidation*		1 		<br>
-[ ]	int	*investigation*		2 		<br>
-[ ]	wis	*medicine*			0 		<br>
-[ ]	int	*nature*			2 		<br>
-[x]	wis	*perception*		2 		<br>
-[ ]	cha	*performance*		1 		<br>
-[ ]	cha	*persuasion*		1 		<br>
-[ ]	int	*religion*			2 		<br>
-[ ]	dex	*sleight of hand*	-1 		<br>
-[ ]	dex	*stealth*			-1 		<br>
-[ ]	wis	*survival*			0 		<br>
+*Prf*	*Mod*	*Skill* 			*Bonus*	<br>
+[ ]		dex		*acrobatics*		-1		<br>
+[ ]		wis		*animal handling*	0		<br>
+[x]		int		*arcana*			4		<br>
+[ ]		str		*athletics*			2		<br>
+[ ]		cha		*deception*			1 		<br>
+[ ]		int		*history*			2 		<br>
+[ ]		wis		*insight*			0 		<br>
+[ ]		cha		*intitmidation*		1 		<br>
+[ ]		int		*investigation*		2 		<br>
+[ ]		wis		*medicine*			0 		<br>
+[ ]		int		*nature*			2 		<br>
+[x]		wis		*perception*		2 		<br>
+[ ]		cha		*performance*		1 		<br>
+[ ]		cha		*persuasion*		1 		<br>
+[ ]		int		*religion*			2 		<br>
+[ ]		dex		*sleight of hand*	-1 		<br>
+[ ]		dex		*stealth*			-1 		<br>
+[ ]		wis		*survival*			0 		<br>
 
 ---
 ## Weapons
@@ -61,13 +85,13 @@ Infusions: 4
 Infused items: 2
 
 Cantrips: 2
-- *Mending*
-- *Fire Bolt*
+- **Mending**
+- **Fire Bolt**
 
 1st level: 3
-- *Identify*: choose one object, if it is a magic item or some other magic-imbued object, you learn its properties and how to use them
-- *Cure Wounds*: regain a number of hit points equal to 1d8 + your spellcasting ability
-- *Feather Fall*: up to five within range, rate of descent slows to 60 feet per round until the spell ends
+- **Identify**: choose one object, if it is a magic item or some other magic-imbued object, you learn its properties and how to use them
+- **Cure Wounds**: regain a number of hit points equal to 1d8 + your spellcasting ability
+- **Feather Fall**: up to five within range, rate of descent slows to 60 feet per round until the spell ends
 
 ---
 ## Abilities
@@ -90,11 +114,11 @@ Cantrips: 2
 
 ---
 ## Features & traits
-- *Darkvision*: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
-- *Dwarven Resilience*: You have advantage on saving throws against poison, and you have resistance against poison damage.
-- *Dwarven Combat Training*: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.
-- *Tool Proficiency*: You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.
-- *Stonecunning*: Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
+- **Darkvision**: Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.
+- **Dwarven Resilience**: You have advantage on saving throws against poison, and you have resistance against poison damage.
+- **Dwarven Combat Training**: You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.
+- **Tool Proficiency**: You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.
+- **Stonecunning**: Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.
 
 ---
 ## Feats
