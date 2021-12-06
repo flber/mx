@@ -264,3 +264,4 @@
 2021-12-02T18:55:56-08:00	[benh] new link to bookmarks
 2021-12-02T18:56:04-08:00	[mx] new link to bookmarks
 2021-12-02T19:04:28-08:00	[mx] pigeon image alt
+2021-12-05T20:26:48-08:00	[mx] fixed dl styling

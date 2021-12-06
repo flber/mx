@@ -214,6 +214,11 @@ img.webring{transform:scale(1.4);}
 audio{border-radius:0px;}
 
 
+dd {
+  margin-left: 2em;
+}
+
+
 hr{border: 1px solid var(--text);margin: 2em;}
 
 
