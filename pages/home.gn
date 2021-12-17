@@ -6,7 +6,7 @@ title: Home
 
 [p|Thank you for visiting my humble virtual abode. This site is hopefully the final iteration of such a place, and will serve as a space for me to talk about my projects and thoughts, as well as a personal knowledge base in the form of the [a, href: "wiki.html"|wiki] page. It is inspired by many sites from the [a, href: "https://merveilles.town/about"|Town of Merveilles] and the [a, href: "https://webring.xxiivv.com/#icons"|Webring]]
 
-[p|Below is a list of pages, sorted by last updated, as well as a cute little search bar utilizing [a, href: "https://merveilles.town/@cblgh"|Alexander's] search engine, [a, href: "https://lieu.cblgh.org/"|Lieu]!]
+[p|Below is a cute little search bar utilizing [a, href: "https://merveilles.town/@cblgh"|Alexander's] search engine, [a, href: "https://lieu.cblgh.org/"|Lieu]!]
 
 [div, class: "break"|]
 
@@ -18,7 +18,10 @@ title: Home
     </span>
 </form>
 
+[div, class: "break"|]
 
-{{latest}}
+[p|I still don't have an especially insteresting way to organize my pages ( I'm thinking something with graphs for the future :D ), so here's a list of all of my orphaned pages. Over time this list should shrink as I find better ways of organizing things, but for now, here it is. Enjoy, and have fun finding the rest of the pages on this site :>]
+
+{{stats}}
 {{rss}}
 

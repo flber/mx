@@ -43,13 +43,17 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	--text: #FFFFFF;
-	--bg: #000000;
+	body{
+		--text: #FFFFFF;
+		--bg: #000000;
+	}
 }
 
 @media (prefers-color-scheme: light) {
-	--text: #000000;
-	--bg: #FFFFFF;
+	body {
+		--text: #000000;
+		--bg: #FFFFFF;		
+	}
 }
 
 
