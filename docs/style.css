@@ -178,6 +178,7 @@ pre{
 	padding: 2%; 
 	text-align: left; 
 	border-style: solid; 
+	border-color: var(--text); 
 	color: var(--bg); 
 	background-color: var(--text); 
 	line-height: 1.15em;
@@ -196,7 +197,7 @@ blockquote > p{padding: 2em;}
 
 legend{padding:0;}
 fieldset{
-	border: 1px solid #000;
+	border: 1px solid var(--text);
 	padding-left: 2em;
 	padding-right: 2em;
 	padding-bottom: 1em;
