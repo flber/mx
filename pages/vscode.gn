@@ -1,0 +1,54 @@
+!meta!
+title: Some VSCode Bits and Bobs
+!meta!
+
+[h2|VSCode]
+
+[p|I love [a, href: "software.html"|micro], but every once in a while I like using an editor with a bit more pizzazz. Whenever I get that feeling, I usually go to [a, href: "https://vscodium.com/"|VSCodium].
+
+[div, class: "break"|]
+
+[p|Most of my customizing of VSC recently has been around working with [a, href: "https://racket-lang.org/"|Racket], a lisp dialect which I think is pretty neat so far. There are a few things which I really like being able to do with VSC that micro just really can't support, such as fancy syntax highlighting and auto-linting on save. With that in mind, I still like a pretty bare-bones config.]
+
+[div, class: "break"|]
+
+[p|First off, I use three packages: "Magic Racket", "Natty", and "Trigger Task on Save". Here are the rest of my configs:]
+
+[div, class: "break"|]
+
+[b|settings.json]
+[pre|
+{
+  "triggerTaskOnSave.tasks": {
+    "lint-racket": [
+      "*.rkt",
+    ],
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Natty",
+  "window.menuBarVisibility": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "editor.formatOnSave": true
+}
+]
+
+[div, class: "break"|]
+
+[b|tasks.json]
+[pre|
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "lint-racket",
+      "type": "shell",
+      "command": "raco fmt -i ${file}",
+      "group": "build"
+    },
+  ]
+}
+]
