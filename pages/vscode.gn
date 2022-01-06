@@ -12,7 +12,7 @@ title: Some VSCode Bits and Bobs
 
 [div, class: "break"|]
 
-[p|First off, I use three packages: "Magic Racket", "Natty", and "Trigger Task on Save". Here are the rest of my configs:]
+[p|First off, I use three packages: "Magic Racket", "Natty", and "Trigger Task on Save". To use the auto-linting, you need a linter. I'm using the "fmt" tool packaged with raco, which you can get by running this command: "raco pkg install fmt". Here are the rest of my configs:]
 
 [div, class: "break"|]
 
