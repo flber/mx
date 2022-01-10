@@ -31,6 +31,7 @@ title: Wiki
 			[li|[a, href: "uxn_notes.html"|my notes]]
 		]]
 		[li|[a, href: "vscode.html"|Some VSCode configs]]
+		[li|[a, href: "https://docs.racket-lang.org/guide/index.html"|The Racket Guide]]
 	]]
 	[li|[strong|Drawing][ul|
 		[li|[a, href: "https://wiki.xxiivv.com/site/noodle.html"|Noodle]]
