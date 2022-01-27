@@ -1,0 +1,8 @@
+User-agent: *
+Disallow:
+
+# robots are our pals
+# a robot helped deploy this blog!
+# i hope we can be friends :)
+
+# - a robots.txt from this neat site: https://regularflolloping.com/
