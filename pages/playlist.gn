@@ -1,0 +1,22 @@
+!meta!
+template: center
+title: Playlists
+!meta!
+
+[h2|Some playlists...]
+
+[fieldset, style: "
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 0.5em;
+	margin-bottom: 2em;
+"|
+	[legend|<|º_º|>]
+  [div, id: "music_list", style: "padding-left: -2em;"|
+    [audio, controls|]
+  ]
+]
+
+[script, src: "scripts/playlist.js"|]
+
+[div, class: "break"|]

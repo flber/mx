@@ -120,7 +120,6 @@ fieldset{
 	margin-bottom: 2em;
 }
 div .break {margin-bottom: 2em;}
-button { }
 
 
 /* details {border: 1px solid var(--text);border-radius: 4px;padding: .5em .5em 0;} */
@@ -144,6 +143,12 @@ img.webring{transform:scale(1.4);}
 
 
 audio{border-radius:0px;}
+audio:focus{outline: none;}
+audio::-webkit-media-controls-enclosure {background-color: var(--bg);}
+audio::-webkit-media-controls-current-time-display {color: var(--text);}
+audio::-webkit-media-controls-time-remaining-display {color: var(--text);}
+
+audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline-container, audio::-webkit-media-controls-timeline, audio::-webkit-media-controls-volume-slider-container, audio::-webkit-media-controls-volume-slider {filter: grayscale(1) invert(100%);}
 
 
 dd {
