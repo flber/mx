@@ -4,7 +4,7 @@ title: About
 
 [h2|Hi]
 
-[img, src: "images/pigeon-dith.jpg", alt: "a pigeon standing on my legs as I sit on a bench"|]
+[img, src: "images/crow.png", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
 
 [div, class: "break"|]
 
@@ -23,7 +23,7 @@ title: About
 
 [div, class: "break"|]
 
-[p|[a, href: "https://github.com/flber/flber.github.io"|Here's] the source code for this site]
+[p|[a, href: "https://codeberg.org/flbr/mx"|Here's] the source code for this site]
 
 [p|You can check out the [a, href: "inventory.html"|inventory] page for a list of the hardware and software I use.]
 
