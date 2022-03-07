@@ -6,11 +6,7 @@ title: About
 
 [img, src: "images/crow.png", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
 
-[div, class: "break"|]
-
-[p|I'm Ben, a person (who prefers he/him pronouns) living in the bay area. I like to make [a, href: "recipes.html"|food], occasionally [a, href: "drawings.html"|draw], and tell computers to do things for me (though we often have disagreements). I've worked on a few [a, href: "https://github.com/flber"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for not following my every command, I enjoy playing [a, href: "games.html"|video games], [a, href: "hiking.html"|hiking], [a, href: "reading.html"|reading], and thinking about designs for watch movements (though I still have yet to build one).]
-
-[div, class: "break"|]
+[p|I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make [a, href: "recipes.html"|food], occasionally [a, href: "drawings.html"|draw], and tell computers to do things for me (though we often have disagreements). I've worked on a few [a, href: "https://github.com/flber"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for not following my every command, I enjoy playing [a, href: "games.html"|video games], [a, href: "hiking.html"|hiking], [a, href: "reading.html"|reading], and thinking about designs for watch movements (though I still have yet to build one).]
 
 [p|Because I'm not super experienced in any one field, I often find myself anxious about asking those more knowledgeable. That's very often due simply to me not wanting to waste their time, but as a result I probably waste everyone's time by adding prefaces to my questions, such as:]
 [ul|
@@ -20,8 +16,6 @@ title: About
 	[li|I probably just missed the answer to this in the docs somewhere, but...]
 ]
 [p|and others. I'll try to just cut to the chase from now on, but if you need some context as to why I'm asking about something introductory, please feel free to mentally add one of the above prefaces to the start of my question!]
-
-[div, class: "break"|]
 
 [p|[a, href: "https://codeberg.org/flbr/mx"|Here's] the source code for this site]
 

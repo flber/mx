@@ -30,7 +30,6 @@
 
 <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
 
-<div class="break"></div>
 
 <p>To change the extensions of audio files in a directory:</p>
 <fieldset>
@@ -38,13 +37,11 @@
 	<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
 </fieldset>
 
-
 <p>More generally, to do something to some files:</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p>
 </fieldset>
-
 
 <p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
 <fieldset>
@@ -52,13 +49,11 @@
 	<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
 </fieldset>
 
-
 <p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p>
 </fieldset>
-
 
 <p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
 <fieldset>
@@ -66,13 +61,11 @@
 	<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
 </fieldset>
 
-
 <p>To sanitize a file name (the .opus can be any extension):</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
 </fieldset>
-
 
 <p>To sanitize everything in a directory, preserving extensions:</p>
 <fieldset>
@@ -98,13 +91,11 @@
 	end</p>
 </fieldset>
 
-
 <p>To push file changes over ssh:</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
 </fieldset>
-
 
 <p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</p>
 <fieldset>
@@ -112,13 +103,11 @@
 	<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
 </fieldset>
 
-
 <p>To simply dither of an image:</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
 </fieldset>
-
 
 <p>Super simple, but to make a div element take up the whole height of a veiwport</p>
 <fieldset>
@@ -126,13 +115,11 @@
 	<p>height: 100vh;</p>
 </fieldset>
 
-
 <p>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>alsactl restore</p>
 </fieldset>
-
 
 <p>To play a streaming file</p>
 <fieldset>
@@ -140,13 +127,11 @@
 	<p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p>
 </fieldset>
 
-
 <p>Grab some html from the Noita wiki</p>
 <fieldset>
 	<legend>Bash</legend>
 	<p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p>
 </fieldset>
-
 
 <p>Find all files which match a given regex</p>
 <fieldset>
@@ -154,13 +139,11 @@
 	<p>grep -rnw 'dir/' -e 'pattern'</p>
 </fieldset>
 
-
 <p>Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)</p>
 <fieldset>
 	<legend>ImageMagick</legend>
 	<p>convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png</p>
 </fieldset>
-
 
 <p>Function to convert a string into a hashed long</p>
 <fieldset>
@@ -187,6 +170,25 @@
 	</p>
 </fieldset>
 
+<p>Convert an mp4 to an animated gif</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif
+	</p>
+</fieldset>
+
+<p>Add centered text in white to a video</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow\
+		walk:fontcolor=white:fontsize=24:box=1:\
+		boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"\
+		-codec:a copy crow-walk-text.mp4
+	</p>
+</fieldset>
+
 						<!-- <hr></hr> -->
 					</article>
 				</main>
@@ -208,7 +210,7 @@
         	<a href="https://wiki.xxiivv.com/site/uxn.html">
         		<img src="https://wiki.xxiivv.com/media/icon/uxn.svg" alt="Uxn Powered"/>
        		</a>
-			<em>Last updated: 161121</em>
+			<em>Last updated: 070322</em>
 		</footer>
 	</body>
 </html>

@@ -19,4 +19,3 @@ title: Playlists
 
 [script, src: "scripts/playlist.js"|]
 
-[div, class: "break"|]
