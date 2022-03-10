@@ -75,7 +75,7 @@ body{
 h1,h2,h3{letter-spacing: -0.02em;line-height: 1.2;} 
 h1{font-size: clamp(2.0rem, 5vw, 3.0rem);}
 h2{font-size: clamp(1.25rem, 5vw, 2.25rem);padding-bottom: 2ex;}
-h3{font-size: clamp(1rem, 3vw, 1.5rem);padding-top: 2em;}
+h3{font-size: clamp(1rem, 3vw, 1.5rem);padding-bottom: 1.75ex;}
 
 
 /* fancy scrollbar */
