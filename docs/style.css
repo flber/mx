@@ -34,14 +34,15 @@
 
 :root{
 	/* --text: #3A3738; */
-	/* --text: #000000; */
+	--text: #000000; 
 	/* --bg: #FBF0F0; */
-	/* --bg: #FFFFFF; */
+	--bg: #FFFFFF; 
 	--highlight: #80dec5;
 	--max: 90ch;
 	--fonts: "Times New Roman", Times, serif, gothicus;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
 	body{
 		--text: #FFFFFF;
@@ -55,6 +56,7 @@
 		--bg: #FFFFFF;		
 	}
 }
+*/
 
 
 /* reset */

@@ -4,10 +4,8 @@ title: Uxn Notes
 
 [h2|Uxn Notes]
 
-[p|[a, href; "https://wiki.xxiivv.com/site/uxn.html"|Uxn] is an 8-bit virtual stack machine, created by [a, href: "https://wiki.xxiivv.com/site/devine_lu_linvega.html"|Devine], and programmed in [a, href: "https://wiki.xxiivv.com/site/uxambly.html"|uxnambly], a unique flavor of assembly. ]
+[p|[a, href; "https://wiki.xxiivv.com/site/uxn.html"|Uxn] is an 8-bit virtual stack machine, created by [a, href: "https://wiki.xxiivv.com/site/devine_lu_linvega.html"|Devine], and programmed in uxnambly, a unique flavor of assembly. ]
 [p|These are my notes for it.]
-
-[div class: "break"|]
 
 [details|
 	[summary|Opcodes]
@@ -85,6 +83,8 @@ title: Uxn Notes
 		[tr| [td|{quote}]	[td|raw word]					]
 	]]
 ]
+
+[div class: "break"|]
 
 [h3|Hello world, part 2!]
 
