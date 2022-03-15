@@ -4,8 +4,8 @@ title: Uxn Notes
 
 [h2|Uxn Notes]
 
-[p|[a, href; "https://wiki.xxiivv.com/site/uxn.html"|Uxn] is an 8-bit virtual stack machine, created by [a, href: "https://wiki.xxiivv.com/site/devine_lu_linvega.html"|Devine], and programmed in uxnambly, a unique flavor of assembly. ]
-[p|These are my notes for it.]
+[p|[a, href: "https://wiki.xxiivv.com/site/uxn.html"|Uxn] is an 8-bit virtual stack machine, created by [a, href: "https://wiki.xxiivv.com/site/devine_lu_linvega.html"|Devine], and programmed in a unique flavor of assembly.]
+[p|I have a [a, href: "files/uxn-zine.pdf"|small zine design] of Rostiger's [a, href: "https://nchrs.xyz/site/uxn_notes.html"|adorable uxn notes], which you can learn how to fold [a, href: "https://en.wikibooks.org/wiki/Zine_Making/Putting_pages_together#An_8-sided_zine_from_1_sheet_with_1_cut"|here]. It turned out alright, and I'll probably be making some small improvements to it soon!]
 
 [details|
 	[summary|Opcodes]
