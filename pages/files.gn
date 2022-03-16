@@ -6,7 +6,5 @@ title: Files
 
 [p|This is a page to give a full list of files and directories saved on this website.]
 
-[div class: "break"|]
-
 {{files}}
 
