@@ -7,7 +7,6 @@ import glob
 import time
 from pathlib import Path
 
-# os.chdir('..')
 file = open(".pillar.toml").readlines()
 for lines in file:
 	k = lines.split()
@@ -15,41 +14,56 @@ for lines in file:
 		granite_path = k[2]
 
 for index, line in enumerate(sys.stdin):
-	if "{{stats}}" in line:
-		stats = "<h3>Orphans:</h3>\n<ul>\n"
+    if "{{stats}}" in line:
+        stats = "<h3>Orphans "
 
-		abspath = os.path.abspath(granite_path[1:-1])
-		files = glob.glob(abspath + "/*.gn")
+        abspath = os.path.abspath(granite_path[1:-1])
+        files = glob.glob(abspath + "/*.gn")
 
-		orphans = []
-		for file in files:
-			orphans.append(file[29:-3] + ".html")
-		remove = ["index.html", "home.html", "wiki.html", "now.html", "about.html"]
-		orphans = [i for i in orphans if i not in remove]
+		# starts with four main pages
+        found = ["/home.gn", "/now.gn", "/wiki.gn", "/about.gn"]
+        found = [abspath + page for page in found]
 
-		for file in files:
-			name = file[29:-3]
-			page = Path(file).read_text()
-			links = re.findall( r'\[a, href: "([^"]+)"\|', page)
-			links = list(filter(lambda x : '/' not in x and ':' not in x, links))
-			orphans = [i for i in orphans if i not in links]
+        # traverses through all pages found so far looking for new links
+        i = 0
+        while i < len(found):
+            file = found[i]
+            name = file[29:-3]
+            page = Path(file).read_text()
 
-		for orphan in orphans:
-			title = "~default~"
-			file = "/home/benh/projects/mx/pages/" + orphan
-			file = file.replace(".html", ".gn")
-			page = open(file).readlines()
-			for p_line in page:
-				if 'title:' in p_line:
-					title = p_line[7:-1]
+            # finds all links
+            links = re.findall( r'\[a, href: "([^"]+)"\|', page)
 
-			stats += "\t<li><a href=\""
-			stats += \
-			orphan + \
-			"\">" + \
-			title + \
-			"</a></li>\n"
+            # eliminated links which are external
+            links = list(filter(lambda x : '/' not in x and ':' not in x, links))
+
+            # adds those links to the found list if they're not already there
+            found_set = set(found)
+            new_pages = [item for item in links if abspath + "/" + item.replace(".html", ".gn") not in found_set]
+
+            # adds abspath to each page string
+            new = [abspath + "/" + page.replace(".html", ".gn") for page in new_pages]
+            found = found + new
+            i += 1
 		
-		stats += "</ul>"
-		line = line.replace("{{stats}}", stats)
-	sys.stdout.write(line)
+        # removes found links from all pages
+        orphans = [i for i in files if i not in found]
+
+        stats += "(" + str(len(orphans)) + "):</h3>\n<ul>\n"
+
+        # adds orphaned pages' names and links to list
+        for orphan in orphans:
+            title = "~default~"
+            file = orphan
+            page = open(file).readlines()
+            for p_line in page:
+                if 'title:' in p_line:
+                    title = p_line[7:-1]
+
+            stats += "\t<li><a href=\""
+            orphan = orphan.replace(".gn", ".html")[29:]
+            stats += orphan + "\">" + title + "</a></li>\n"
+		
+        stats += "</ul>"
+        line = line.replace("{{stats}}", stats)
+    sys.stdout.write(line)

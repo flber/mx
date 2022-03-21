@@ -1,0 +1,273 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2022.1.7)  15 MAR 2022 17:58
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/benh/projects/mx/docs/files/uxn-zine/source.tex
+(/home/benh/projects/mx/docs/files/uxn-zine/source.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2021-11-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count191
+\Gm@cntv=\count192
+\c@Gm@tempcnt=\count193
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks17
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen147
+\Gin@req@width=\dimen148
+)
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7.
+ (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count194
+\l__pdf_internal_box=\box50
+)
+
+LaTeX Warning: Unused global option(s):
+    [paperheight,paperwidth,20pt].
+
+(./source.aux)
+\openout1 = `source.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 614.295pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 794.96999pt, 0.0pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=614.295pt
+* \textheight=794.96999pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count195
+\scratchdimen=\dimen149
+\scratchbox=\box51
+\nofMPsegments=\count196
+\nofMParguments=\count197
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count198
+\MPscratchDim=\dimen150
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+<images/00_uxn_notes-680.png, id=1, 682.55pt x 439.6425pt>
+File: images/00_uxn_notes-680.png Graphic file (type png)
+<use images/00_uxn_notes-680.png>
+Package pdftex.def Info: images/00_uxn_notes-680.png  used on input line 9.
+(pdftex.def)             Requested size: 614.295pt x 395.70142pt.
+<images/01_binary_encoding-680.png, id=2, 682.55pt x 853.1875pt>
+File: images/01_binary_encoding-680.png Graphic file (type png)
+<use images/01_binary_encoding-680.png>
+Package pdftex.def Info: images/01_binary_encoding-680.png  used on input line 10.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/02_cpu-680.png, id=3, 682.55pt x 853.1875pt>
+File: images/02_cpu-680.png Graphic file (type png)
+<use images/02_cpu-680.png>
+Package pdftex.def Info: images/02_cpu-680.png  used on input line 11.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/03_memory-680.png, id=4, 682.55pt x 853.1875pt>
+File: images/03_memory-680.png Graphic file (type png)
+<use images/03_memory-680.png>
+Package pdftex.def Info: images/03_memory-680.png  used on input line 12.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/04_stack-680.png, id=5, 682.55pt x 853.1875pt>
+File: images/04_stack-680.png Graphic file (type png)
+<use images/04_stack-680.png>
+Package pdftex.def Info: images/04_stack-680.png  used on input line 13.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/05_runes_labels_macros-680.png, id=6, 682.55pt x 853.1875pt>
+File: images/05_runes_labels_macros-680.png Graphic file (type png)
+<use images/05_runes_labels_macros-680.png>
+Package pdftex.def Info: images/05_runes_labels_macros-680.png  used on input line 14.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/06_instruction_cycle-680.png, id=7, 682.55pt x 853.1875pt>
+File: images/06_instruction_cycle-680.png Graphic file (type png)
+<use images/06_instruction_cycle-680.png>
+Package pdftex.def Info: images/06_instruction_cycle-680.png  used on input line 15.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/07_aritmetics-680.png, id=8, 682.55pt x 853.1875pt>
+File: images/07_aritmetics-680.png Graphic file (type png)
+<use images/07_aritmetics-680.png>
+Package pdftex.def Info: images/07_aritmetics-680.png  used on input line 16.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/08_bit_shifting-680.png, id=9, 682.55pt x 853.1875pt>
+File: images/08_bit_shifting-680.png Graphic file (type png)
+<use images/08_bit_shifting-680.png>
+Package pdftex.def Info: images/08_bit_shifting-680.png  used on input line 17.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/09_sprite_encoding_1bpp-680.png, id=10, 682.55pt x 853.1875pt>
+File: images/09_sprite_encoding_1bpp-680.png Graphic file (type png)
+<use images/09_sprite_encoding_1bpp-680.png>
+Package pdftex.def Info: images/09_sprite_encoding_1bpp-680.png  used on input line 18.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/10_sprite_encoding_2bpp-680.png, id=11, 682.55pt x 853.1875pt>
+File: images/10_sprite_encoding_2bpp-680.png Graphic file (type png)
+<use images/10_sprite_encoding_2bpp-680.png>
+Package pdftex.def Info: images/10_sprite_encoding_2bpp-680.png  used on input line 19.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/11_drawing_sprites-680.png, id=12, 682.55pt x 853.1875pt>
+File: images/11_drawing_sprites-680.png Graphic file (type png)
+<use images/11_drawing_sprites-680.png>
+Package pdftex.def Info: images/11_drawing_sprites-680.png  used on input line 20.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/12_drawing_sprites2-680.png, id=13, 682.55pt x 853.1875pt>
+File: images/12_drawing_sprites2-680.png Graphic file (type png)
+<use images/12_drawing_sprites2-680.png>
+Package pdftex.def Info: images/12_drawing_sprites2-680.png  used on input line 21.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/13_input-680.png, id=14, 682.55pt x 853.1875pt>
+File: images/13_input-680.png Graphic file (type png)
+<use images/13_input-680.png>
+Package pdftex.def Info: images/13_input-680.png  used on input line 22.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+<images/14_comparison-680.png, id=15, 682.55pt x 853.1875pt>
+File: images/14_comparison-680.png Graphic file (type png)
+<use images/14_comparison-680.png>
+Package pdftex.def Info: images/14_comparison-680.png  used on input line 23.
+(pdftex.def)             Requested size: 614.295pt x 767.91374pt.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/00_uxn_notes-680.png (PNG copy)>] [2 <./images/01_binary_encoding-680.png (PNG copy)>] [3 <./images/02_cpu-680.png (PNG copy)>] [4 <./images/03_memory-680.png (PNG copy)>] [5 <./images/04_stack-680.png (PNG copy)>] [6 <./images/05_runes_labels_macros-680.png (PNG copy)>] [7 <./images/06_instruction_cycle-680.png (PNG copy)>] [8 <./images/07_aritmetics-680.png (PNG copy)>] [9 <./images/08_bit_shifting-680.png (PNG copy)>] [10 <./images/09_sprite_encoding_1bpp-680.png (PNG copy)>] [11 <./images/10_sprite_encoding_2bpp-680.png (PNG copy)>] [12 <./images/11_drawing_sprites-680.png (PNG copy)>] [13 <./images/12_drawing_sprites2-680.png (PNG copy)>] [14 <./images/13_input-680.png (PNG copy)>] [15 <./images/14_comparison-680.png (PNG copy)>] [16] (./source.aux) ) 
+Here is how much of TeX's memory you used:
+ 1982 strings out of 478353
+ 34086 string characters out of 5854636
+ 332846 words of memory out of 5000000
+ 20121 multiletter control sequences out of 15000+600000
+ 406373 words of font info for 28 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 55i,5n,62p,226b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb>
+Output written on source.pdf (16 pages, 790711 bytes).
+PDF statistics:
+ 77 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+

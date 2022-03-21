@@ -33,37 +33,37 @@
 
 <p>To change the extensions of audio files in a directory:</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
 </fieldset>
 
 <p>More generally, to do something to some files:</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p>
 </fieldset>
 
 <p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
 </fieldset>
 
 <p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p>
 </fieldset>
 
 <p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
 </fieldset>
 
 <p>To sanitize a file name (the .opus can be any extension):</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
 </fieldset>
 
@@ -93,19 +93,19 @@
 
 <p>To push file changes over ssh:</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
 </fieldset>
 
 <p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
 </fieldset>
 
 <p>To simply dither of an image:</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
 </fieldset>
 
@@ -117,25 +117,25 @@
 
 <p>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>alsactl restore</p>
 </fieldset>
 
 <p>To play a streaming file</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p>
 </fieldset>
 
 <p>Grab some html from the Noita wiki</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p>
 </fieldset>
 
 <p>Find all files which match a given regex</p>
 <fieldset>
-	<legend>Bash</legend>
+	<legend>bash</legend>
 	<p>grep -rnw 'dir/' -e 'pattern'</p>
 </fieldset>
 
@@ -189,6 +189,12 @@
 	</p>
 </fieldset>
 
+<p>Find the file with the most lines in a directory</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l</p>
+</fieldset>
+
 						<!-- <hr></hr> -->
 					</article>
 				</main>
@@ -205,15 +211,15 @@
 				<img src="images/github.svg" alt="Github"/>
 			</a>
         	<a href='https://webring.xxiivv.com/#random' target='_blank'>
-        		<img class="webring" src='https://webring.xxiivv.com/icon.black.svg' alt="the merveilles webring"/>
+        		<img class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring"/>
        		</a>
         	<a href="https://wiki.xxiivv.com/site/uxn.html">
-        		<img src="https://wiki.xxiivv.com/media/icon/uxn.svg" alt="Uxn Powered"/>
+        		<img src="images/uxn-icon.svg" alt="Uxn Powered"/>
        		</a>
         	<a href="https://wiki.xxiivv.com/site/ethics.html">
-        		<img src="https://wiki.xxiivv.com/media/icon/dreipfeile.svg" alt="Ethics"/>
+        		<img src="images/dreipfeile-icon.svg" alt="Ethics"/>
        		</a>
-			<em>Last updated: 070322</em>
+			<em>Last updated: 210322</em>
 		</footer>
 	</body>
 </html>

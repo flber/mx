@@ -3,7 +3,7 @@
 import os
 import sys
 
-# os.chdir('..')
+# gets music path
 file = open(".pillar.toml").readlines()
 for lines in file:
     k = lines.split()
@@ -13,6 +13,7 @@ for lines in file:
 for index, line in enumerate(sys.stdin):
     if "{{music}}" in line:
         albums = "<ul>\n"
+        # gets album names and adds them to list
         for file in os.scandir(music_path[1:-1]):
             if file.is_dir():
                 albums += "\t<li>" + file.path[len(music_path)-2:] + "</li>\n"

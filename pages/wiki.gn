@@ -32,6 +32,9 @@ title: Wiki
 		]]
 		[li|[a, href: "vscode.html"|Some VSCode configs]]
 		[li|[a, href: "https://docs.racket-lang.org/guide/index.html"|The Racket Guide]]
+		[li|[a, href: "wfc-guide.html"|My work on wfc]]
+		[li|[a, href: "learning-nim.html"|Some thoughts on Nim]]
+		[li|[a, href: "ecs.html"|An (unfinished) entity-component-system]]
 	]]
 	[li|[strong|Drawing][ul|
 		[li|[a, href: "https://wiki.xxiivv.com/site/noodle.html"|Noodle]]

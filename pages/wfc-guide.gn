@@ -1,0 +1,16 @@
+!meta!
+title: My Notes on WFC
+!meta!
+
+[h2|My Notes on WFC]
+
+[p|The wave function collapse algorithm is a novel way of generating textures (and sometimes even 3d models) from a very small input sample, making it interesting for aritists, indie game devs, and programmers who want to spend a lot of time (in [a, href: "https://github.com/flber/WFC"|my case] like 3 years lol) writing a fun proc gen algorithm which you then don't really have to think about once it's done.]
+
+[p|Over time I've also written a few posts on what WFC is, how it works, and how to implement parts of it, so this page will serve to finally tie them all together. Have fun, and good luck not getting sucked down the WFC rabbit hole ;)]
+
+[ol|
+	[li|[a, href: "intro_to_wfc.html"|Intro to WFC]]
+	[li|[a, href: "overview_to_wfc.html"|Overview of WFC]]
+	[li|[a, href: "wfc_tile_generator.html"|The WFC Tile Generator]]
+	[li|[a, href: "wfc_propagator_constructor.html"|The WFC Propagator Constructor]]
+]

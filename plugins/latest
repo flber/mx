@@ -5,7 +5,7 @@ import sys
 import glob
 import time
 
-# os.chdir('..')
+# gets granite path
 file = open(".pillar.toml").readlines()
 for lines in file:
     k = lines.split()
@@ -13,26 +13,31 @@ for lines in file:
         granite_path = k[2]
 
 for index, line in enumerate(sys.stdin):
+    # replaces {{latest}}
     if "{{latest}}" in line:
         latest = "<ul>\n"
+        # sorts files in /pages by reversed edit time
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")
         files.sort(key=os.path.getmtime, reverse=True)
-        
+
         for file in files:
+            # finds title
             title = "~default~"
             page = open(file).readlines()
             for p_line in page:
                 if "title:" in p_line:
                     title = p_line[7:-1]
-            
+
+            # adds edit time to list
             latest += \
             "\t<li>" + \
             time.strftime("%d%m%y", time.gmtime(os.path.getmtime(file[len(abspath)-len(granite_path)+3:]))) + \
             " - <a href=\""
 
             file = file.replace(".gn", ".html")
-            
+
+            # adds file link and title to list
             latest += \
             file[len(abspath)+1:] + \
             "\">" + \
