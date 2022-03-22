@@ -135,14 +135,17 @@ details > *:not(summary) {margin-left: 1em;}
 /* link inverts when hovered */
 *:not(footer) > a{color: var(--bg);background-color: var(--text);text-decoration: none;}
 *:not(footer) > a:hover{color: var(--text);background-color: var(--highlight);}
-article a:not([href*=':'])::before{content:"{"}
-article a:not([href*=':'])::after{content:"}"}
-article a[href*=':']::before{content:"["}
-article a[href*=':']::after{content:"]"}
+article *:not(.banner-span) a:not([href*=':'])::before {content:"{"}
+article *:not(.banner-span) a:not([href*=':'])::after {content:"}"}
+article *:not(.banner-span) a[href*=':']::before {content:"["}
+article *:not(.banner-span) a[href*=':']::after {content:"]"}
 
 
 img{width: 100%; margin-top: 1em;margin-bottom: 1em;font-style:italic;}
-img.webring{transform:scale(1.4);} 
+img.webring{transform:scale(1.4);}
+.banner-img{display:inline-block;width:88px;height:31px}
+.banner-span > a {text-decoration: none;background-color: var(--bg);}
+.clear-margin{margin-top:0ex;margin-bottom:0ex;margin-left:0ex;margin-right:0ex;}
 
 
 audio{border-radius:0px;}
@@ -163,7 +166,7 @@ hr{border: 1px solid var(--text);margin: 2em;}
 
 
 footer { border-top:1.5px solid;padding:30px 0 0 0;margin-top:30px;clear:both } 
-footer > * { display:inline-block;}
+footer > * { display:inline-block; }
 footer img { margin:0 0 -10px 0;width:30px } 
 
 
@@ -174,7 +177,7 @@ svg{fill: var(--text);}
 /* used in character sheet */
 div #containter {
 	display: flex;
-	height: 10;
+	height: 10ex;
 	margin-bottom: 2ex;
 }
 div #block {
