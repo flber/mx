@@ -5,7 +5,7 @@ import sys
 import datetime
 
 def gen_rss():
-    # base xml string
+    #DOC: base xml string
 	xml = """<feed xmlns="http://www.w3.org/2005/Atom">
     <title>Mineral Existence</title>
     <subtitle>New articles... occasionally</subtitle>
@@ -18,7 +18,7 @@ def gen_rss():
 	    k = lines.split()
 	    if len(k) > 0 and k[0] == "last_run":
 	        last_run = k[2]
-	        # adds last run date to xml string
+	        #DOC: adds last run date to xml string
 	        xml += str(datetime.datetime.fromtimestamp(int(last_run)).isoformat())
 	
 	xml += """</updated>
@@ -30,10 +30,10 @@ def gen_rss():
 
 	# ( add entries here )
 
-    # closes xml string
+    #DOC: closes xml string
 	xml += """</feed>"""
 
-	# writes to xml file
+	#DOC: writes to xml file
 	f = open("docs/feed.xml", "w")
 	f.write(xml)
 	f.close()

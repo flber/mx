@@ -1,5 +1,6 @@
 !meta!
 title: Home
+static: true
 !meta!
 
 [h2|Hello there]

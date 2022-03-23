@@ -12,6 +12,6 @@ for index, line in enumerate(sys.stdin):
         sys.stdout.write(line)
     else:
     	if "{{date}}" in line:
-    	    # replaces "{{date}}" with the date.
+    	    #DOC: replaces "{{date}}" with the date.
     		line = line.replace("{{date}}", time.strftime("%d%m%y", time.gmtime(os.path.getmtime(path))))
     	sys.stdout.write(line)

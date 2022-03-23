@@ -20,38 +20,38 @@ for index, line in enumerate(sys.stdin):
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")
 
-		# starts with four main pages
+		#DOC: starts with four main pages
         found = ["/home.gn", "/now.gn", "/wiki.gn", "/about.gn"]
         found = [abspath + page for page in found]
 
-        # traverses through all pages found so far looking for new links
+        #DOC: traverses through all pages found so far looking for new links
         i = 0
         while i < len(found):
             file = found[i]
             name = file[29:-3]
             page = Path(file).read_text()
 
-            # finds all links
+            #DOC: finds all links
             links = re.findall( r'\[a, href: "([^"]+)"\|', page)
 
-            # eliminated links which are external
+            #DOC: eliminated links which are external
             links = list(filter(lambda x : '/' not in x and ':' not in x, links))
 
-            # adds those links to the found list if they're not already there
+            #DOC: adds those links to the found list if they're not already there
             found_set = set(found)
             new_pages = [item for item in links if abspath + "/" + item.replace(".html", ".gn") not in found_set]
 
-            # adds abspath to each page string
+            #DOC: adds abspath to each page string
             new = [abspath + "/" + page.replace(".html", ".gn") for page in new_pages]
             found = found + new
             i += 1
 		
-        # removes found links from all pages
+        #DOC: removes found links from all pages
         orphans = [i for i in files if i not in found]
 
         stats += "(" + str(len(orphans)) + "):</h3>\n<ul>\n"
 
-        # adds orphaned pages' names and links to list
+        #DOC: adds orphaned pages' names and links to list
         for orphan in orphans:
             title = "~default~"
             file = orphan
