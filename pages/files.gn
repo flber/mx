@@ -8,4 +8,3 @@ static: true
 [p|This is a page to give a full list of files and directories saved on this website.]
 
 {{files}}
-

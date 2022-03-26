@@ -30,6 +30,26 @@
 
 <p>It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!</p>
 
+<h3>060322 - Long overdue pillar optimizations</h3>
+<p>Wow I've written some bad code. Turns out the main reason pillar was so slow was because of a <em>truly</em> terrible string insertion function I wrote. It's so bad, actually, that I feel the need to show it off to warn others!</p>
+<pre>
+let insert_len = len(&ins.to_string());
+let final_len = len(&s) + insert_len;
+let mut r = String::with_capacity(final_len);
+for i in 0..final_len {
+  if i < idx {
+    r.push_str(&slice(&s, i..i + 1));
+  } else if i < idx + insert_len {
+    let i_ins = i - idx;
+    r.push_str(&slice(&ins.to_string(), i_ins..i_ins + 1));
+  } else {
+    let a_ins = i - insert_len;
+    r.push_str(&slice(&s, a_ins..a_ins + 1));
+  }
+}
+</pre>
+<p>it's... just awful. I think I must have been possesed by a malevolent code demon when I wrote this, or I at least hope I was! Anyway, with that fixed (the <em>sane</em> solution was 3 lines of code) my whole site builds in 26 seconds. Not great, not terrible, but much better and good enough for now :D</p>
+
 <h3>220322 - Updates to Pillar</h3>
 <p>Work on optimizations continue, mostly focusing on string parsing. An additional page metadata variable was added, called "static", which if set to true tells pillar to always parse that page. On this site I use that for my <a href="home.html">home</a>, <a href="plugins-docs.html">plugin documentation</a>, <a href="files.html">files</a>, and <a href="music.html">music</a> pages to keep them up-to-date.</p>
 
@@ -93,7 +113,7 @@
         	<a href="https://wiki.xxiivv.com/site/ethics.html">
         		<img src="images/dreipfeile-icon.svg" alt="Ethics"/>
        		</a>
-			<em>Last updated: 230322</em>
+			<span style="float: right;"><em>Last updated: 260322</em></span>
 		</footer>
 	</body>
 </html>
