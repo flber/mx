@@ -28,5 +28,7 @@ title: About
 [span, class: "banner-span"|
 	[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img class="banner-img clear-margin" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!"/>]
 	[a, href: "https://blackgnu.net/on-blockchain.html"|<img class="banner-img clear-margin" src="images/banners/web3-is-a-scam.gif"/>]
-	[a, href: ""|<img class="banner-img clear-margin" src="images/banners/trans-flag.png"/>]
+	<img class="banner-img clear-margin" src="images/banners/trans-flag.png"/>
+	[a, href: "https://anybrowser.org/campaign/"|<img class="banner-img clear-margin" title="i like qutebrowser though :3" src="images/banners/any-browser.gif"/>]
+	<img class="banner-img clear-margin" title="surprisingly easy!" src="images/banners/piracy.gif"/>
 ]

@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb{background-color: var(--text);}
 article{margin:0px auto;background-color:var(--bg);}
 
 
-/* p{padding-bottom: 2ex;} */
+p{padding-bottom: 2ex;} 
 pre{
 	font-size: calc(1rem + 0.25vw);
 	overflow-x: auto;
@@ -151,6 +151,7 @@ img.webring{transform:scale(1.4);}
 .clear-margin{margin-top:0ex;margin-bottom:0ex;margin-left:0ex;margin-right:0ex;}
 
 
+/*
 audio{border-radius:0px;}
 audio:focus{outline: none;}
 audio::-webkit-media-controls-enclosure {background-color: var(--bg);}
@@ -158,6 +159,7 @@ audio::-webkit-media-controls-current-time-display {color: var(--text);}
 audio::-webkit-media-controls-time-remaining-display {color: var(--text);}
 
 audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline-container, audio::-webkit-media-controls-timeline, audio::-webkit-media-controls-volume-slider-container, audio::-webkit-media-controls-volume-slider {filter: grayscale(1) invert(100%);}
+*/
 
 
 dd {

@@ -195,6 +195,12 @@
 	<p>wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l</p>
 </fieldset>
 
+<p>Crop an image <em>and</em> the virtual canvas (so a "normal crop" basically)</p>
+<fieldset>
+	<legend>ImageMagick</legend>
+	<p>convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
+</fieldset>
+
 						<!-- <hr></hr> -->
 					</article>
 				</main>
@@ -219,7 +225,7 @@
         	<a href="https://wiki.xxiivv.com/site/ethics.html">
         		<img src="images/dreipfeile-icon.svg" alt="Ethics"/>
        		</a>
-			<span style="float: right;"><em>Last updated: 210322</em></span>
+			<span style="float: right;"><em>Last updated: 260322</em></span>
 		</footer>
 	</body>
 </html>

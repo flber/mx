@@ -170,3 +170,9 @@ title: Grimoire
 	[legend|bash]
 	[p|wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l]
 ]
+
+[p|Crop an image [em|and] the virtual canvas (so a "normal crop" basically)]
+[fieldset|
+	[legend|ImageMagick]
+	[p|convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png]
+]
