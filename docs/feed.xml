@@ -4,6 +4,15 @@
 		<description>an internet garden, tended with love and affection</description>
 		<link>https://mineralexistence.com</link>
 		<item>
+			<title>Home</title>
+			<pubDate>Wed, 06 Apr 2022 15:13:56 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/home.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
+		</item>
+		<item>
 			<title>Inventory</title>
 			<pubDate>Wed, 06 Apr 2022 14:43:54 +0900</pubDate>
 			<description>
@@ -29,15 +38,6 @@
 			</description>
 			<link>https://mineralexistence.com/grimoire.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
-		</item>
-		<item>
-			<title>Home</title>
-			<pubDate>Mon, 04 Apr 2022 18:34:56 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/home.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
 		</item>
 		<item>
 			<title>Casio CA53W</title>
