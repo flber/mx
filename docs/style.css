@@ -92,7 +92,8 @@ body::-webkit-scrollbar-thumb{background-color: var(--text);}
 article{margin:0px auto;background-color:var(--bg);}
 
 
-p{padding-bottom: 2ex;} 
+p{padding-bottom: 2ex;}
+ul{padding-top: 0;margin-top: 0;} 
 pre{
 	font-size: calc(1rem + 0.25vw);
 	overflow-x: auto;
@@ -145,6 +146,7 @@ article *:not(.banner-span) a[href*=':']::after {content:"]"}
 
 
 img{width: 100%; margin-top: 1em;margin-bottom: 1em;font-style:italic;}
+video{width: 100%; margin-top: 1em;margin-bottom: 1em;}
 img.webring{transform:scale(1.4);}
 .banner-img{display:inline-block;width:88px;height:31px}
 .banner-span > a {text-decoration: none;background-color: var(--bg);}
@@ -192,4 +194,3 @@ div #block {
 	padding: 0.7ex;
 	line-height: 0.8ex;
 }
-

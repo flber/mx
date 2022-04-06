@@ -176,3 +176,9 @@ title: Grimoire
 	[legend|ImageMagick]
 	[p|convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png]
 ]
+
+[p|Count all the characters in all files in a directory]
+[fieldset|
+	[legend|bash]
+	[p|find ./* -type f -exec cat {} + | wc -m]
+]

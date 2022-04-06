@@ -11,17 +11,19 @@ for lines in file:
     k = lines.split()
     if len(k) > 0 and k[0] == "granite_path":
         granite_path = k[2]
+    if len(k) > 0 and k[0] == "latest_length":
+        latest_length = k[2]
 
 for index, line in enumerate(sys.stdin):
     #DOC: replaces {{latest}}
     if "{{latest}}" in line:
-        latest = "<ul>\n"
+        latest = "<b>Latest:</b>\n<ul>\n"
         #DOC: sorts files in /pages by reversed edit time
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")
         files.sort(key=os.path.getmtime, reverse=True)
 
-        for file in files:
+        for file in files[:int(latest_length)]:
             #DOC: finds title
             title = "~default~"
             page = open(file).readlines()

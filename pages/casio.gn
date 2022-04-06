@@ -1,0 +1,57 @@
+!meta!
+title: Casio CA53W
+!meta!
+
+[h2|Casio CA53W]
+
+[details|
+	[summary|Context]
+	[p|I love the [a, href: "https://www.casio.com/products/watches/databank/ca53w-1"|Casio CA53W]; it's small, cheap, and has all the features I need (24-hour time, stopwatch, alarm, waterproof) as well as some features I just like (it's a calculator!). A while ago I inverted the display so it was white-on-black, and while it looked really cool, it was almost totally illegible except in direct light. I eventually just reverted the change, and recorded the process because I hadn't seen any good explanations of how to do it. To be honest it's not that complicated, but hopefully this super low-res video could help with some specifics of the process. I'll also add a written description of what I'm doing with timestamps, but considering the video is half an hour long, it might take a while :)]
+]
+
+[video, width: "100%", controls|
+	[source, src: "videos/watch.mp4", type: "video/mp4"|]
+	[mark|Your browser doesn't support the video tag! You can still download the video here though: "https://mineralexistence.com/videos/watch.mp4"]
+]
+
+[h3|Overview]
+[p|The CA53W is made up of a couple of core parts (roughly in order of disassembly): the case, case back, battery cover, circuit board, plastic internals, and finally the LCD. Every part must be removed and disassembled to access the LCD, though this step is relatively trivial. Once the LCD is free, the polarizing film is removed, and replaced with a piece of film at 90 degrees to the original to invert the display. This step requires a decent amount of patience and care, as removing the film with a razor is somewhat time consuming, and care must be taken to not break the LCD itself as this part essentially cannot be replaced.]
+
+[h3|Materials & tools]
+[ul|
+	[li|Small phillips-head screwdriver]
+	[li|Exacto knife or similar razor blade]
+	[li|Q-tips]
+	[li|Acetone]
+	[li|[a, href: "http://polarization.com/polarshop/product_info.php?cPath=21&products_id=29"|Linearly polarized film]]
+]
+
+[h3|Process]
+[dl|
+	[dt|00:00]
+		[dd|Screws holding the case back are removed]
+	[dt|01:10]
+		[dd|Case back is removed]
+	[dt|01:24]
+		[dd|Internals are removed from the case. An exacto knife is used to undo the small clips on the top and bottom which hold the internals in]
+	[dt|02:10]
+		[dd|Small metal clips on the side of the plastic internals are unclipped with the exacto to remove the circuit board]
+	[dt|03:25]
+		[dd|Circuit board is removed from the plastic internals]
+	[dt|03:48]
+		[dd|LCD is carefully removed from the internals by gently pushing on the front, and lifting it up from the back]
+	[dt|04:10]
+		[dd|Small rubber spacer is removed from the LCD (this may be glued on, just peel it off)]
+	[dt|04:20]
+		[dd|Polarizing filter is removed from the LCD by running the exacto around the edges, slowly working inward until the film can be gently removed]
+	[dt|08:00]
+		[dd|New polarizing filter is cut from sheet (at 90 degrees to original filter)]
+	[dt|15:23]
+		[dd|Acetone is used to dissolve and clean glue on LCD]
+	[dt|17:12]
+		[dd|Realize you fucked up the first polarizing filter dimensions, cut a new one (measure twice, cut once!!)]
+	[dt|22:04]
+		[dd|Press the new filter to the LCD after another clean]
+	[dt|23:21]
+		[dd|Reassemble watch, cleaning screen and case with microfiber cleaning cloth to get rid of fingerprints!]
+]

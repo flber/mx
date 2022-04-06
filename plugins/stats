@@ -15,7 +15,7 @@ for lines in file:
 
 for index, line in enumerate(sys.stdin):
     if "{{stats}}" in line:
-        stats = "<h3>Orphans "
+        stats = "<b>Orphans "
 
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")
@@ -49,7 +49,7 @@ for index, line in enumerate(sys.stdin):
         #DOC: removes found links from all pages
         orphans = [i for i in files if i not in found]
 
-        stats += "(" + str(len(orphans)) + "):</h3>\n<ul>\n"
+        stats += "(" + str(len(orphans)) + "):</b>\n<ul>\n"
 
         #DOC: adds orphaned pages' names and links to list
         for orphan in orphans:

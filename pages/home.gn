@@ -21,4 +21,8 @@ static: true
 
 {{stats}}
 
+[p|And because I find myself needing to check recently update pages a lot for debugging, here are the three most recently updated pages:]
+
+{{latest}}
+
 {{rss}}
