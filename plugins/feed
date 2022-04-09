@@ -39,7 +39,7 @@ def granite_path():
 
 def gen_rss():
     # DOC: base xml string
-    xml = """<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">\n\t<channel>\n\t\t<title>Mineral Existence</title>\n\t\t<description>an internet garden, tended with love and affection</description>\n\t\t<link>https://mineralexistence.com</link>\n"""
+    xml = """<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">\n\t<channel>\n\t\t<title>Mineral Existence</title>\n\t\t<description>an internet garden, tended with love and affection</description>\n\t\t<link>https://mineralexistence.com</link>\n\t\t<language>en</language>\n"""
 
     xml_pages = {}
 

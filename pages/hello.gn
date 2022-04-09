@@ -16,7 +16,7 @@ title: Hello!
 	[p|Visitors:]
 ]
 
-[button, id: "hi-button", onclick: "sayhi()"|Say Hi]
+[button, type: "submit", id: "hi-button", onclick: "sayhi()"|Say Hi]
 
 [script| 
 	async function sayhi(){ 

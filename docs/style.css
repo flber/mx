@@ -33,10 +33,10 @@
 */
 
 :root{
-	/* --text: #3A3738; */
-	--text: #000000; 
-	/* --bg: #FBF0F0; */
-	--bg: #FFFFFF; 
+	--text: #3A3738; 
+	/* --text: #000000; */
+	--bg: #FBF0F0; 
+	/* --bg: #FFFFFF; */
 	--highlight: #80dec5;
 	--max: 90ch;
 	--fonts: "Times New Roman", Times, serif, gothicus;
@@ -172,9 +172,34 @@ dd {
 hr{border: 1px solid var(--text);margin: 2em;}
 
 
+input, button {
+	height: 1.5em;
+	line-height: 0em;
+	padding-left: 0.75em;
+	padding-right: 0.75em;
+	margin-bottom: 1.5em;
+	border-radius: 0em;
+}
+
+input[type=search] {
+	border: 2px solid var(--text);
+	color: var(--text);
+	background: var(--bg);
+}
+input[type=search]:focus {
+	border: 3px solid var(--highlight);
+}
+
+button[type=submit] {
+	border: none;
+	color: var(--bg);
+	background: var(--text);
+}
+
+
 footer { border-top:1.5px solid;padding:30px 0 0 0;margin-top:30px;clear:both } 
 footer > * { display:inline-block; }
-footer img { margin:0 0 -10px 0;width:30px } 
+footer img { margin:0 0 -10px 0;width:30px;filter: invert(16%) sepia(6%) saturate(445%) hue-rotate(289deg) brightness(88%) contrast(79%);} 
 
 
 svg{fill: var(--text);}
