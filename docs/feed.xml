@@ -5,6 +5,15 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Pillar</title>
+			<pubDate>Wed, 13 Apr 2022 15:39:01 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><a href="https://codeberg.org/flbr/Pillar">Pillar</a> is my custom static site generator, used to build this <a href="site.html">site</a>. While my site is probably still small enough that I could build it by hand, writing my own site generator (with a custom-ish markup language) was and is a lot of fun :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/pillar.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/pillar.html</guid>
+		</item>
+		<item>
 			<title>Updates</title>
 			<pubDate>Wed, 13 Apr 2022 15:12:35 +0900</pubDate>
 			<description>
