@@ -178,6 +178,30 @@
 	</p>
 </fieldset>
 
+<p>Get the audio from an mp4</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3
+	</p>
+</fieldset>
+
+<p>Convert gif to mp4</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i cats.gif cats-dith.mp4
+	</p>
+</fieldset>
+
+<p>Combine audio and video files</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
+	</p>
+</fieldset>
+
 <p>Add centered text in white to a video</p>
 <fieldset>
 	<legend>ffmpeg</legend>
@@ -187,6 +211,12 @@
 		boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"\
 		-codec:a copy crow-walk-text.mp4
 	</p>
+</fieldset>
+
+<p>Convert mkv to mp4 preserving subtitles</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4</p>
 </fieldset>
 
 <p>Find the file with the most lines in a directory</p>
@@ -207,6 +237,37 @@
 	<p>find ./* -type f -exec cat {} + | wc -m</p>
 </fieldset>
 
+<p>Get disk information (available, used, etc)</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>df -h</p>
+</fieldset>
+
+<p>Prints IP addresses for computer</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>ip addr show | grep "inet "</p>
+</fieldset>
+
+<p>Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>sudo arp-scan --interface=wlp3s0 --localnet</p>
+</fieldset>
+
+<p>Get open ports/ips on local system</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>nmap -vv -sV localhost -oG - | awk -v OFS=':' '
+	/open/ {
+	  for (i=4;i<=NF;i++) {
+	    split($i,a,"/");
+	    if (a[2]=="open") print $2, a[1]
+	  }
+	}'
+	</p>
+</fieldset>
+
 						<!-- <hr></hr> -->
 					</article>
 				</main>
@@ -222,7 +283,7 @@
 			<a rel="me" href="https://github.com/flber" target="_blank">
 				<img src="images/github.svg" alt="Github"/>
 			</a>
-        	<a href='https://webring.xxiivv.com/#random' target='_blank'>
+        	<a href='https://webring.xxiivv.com/#icons' target='_blank'>
         		<img class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring"/>
        		</a>
         	<a href="https://wiki.xxiivv.com/site/uxn.html">
@@ -234,7 +295,7 @@
         	<a href="feed.xml">
         		<img src="images/rss.svg" alt="RSS Feed"/>
        		</a>
-			<span style="float: right;"><em>Last updated: 050422</em></span>
+			<span style="float: right;"><em>Last updated: 270422</em></span>
 		</footer>
 	</body>
 </html>

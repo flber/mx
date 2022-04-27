@@ -5,6 +5,78 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Grimoire</title>
+			<pubDate>Tue, 26 Apr 2022 21:58:27 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/grimoire.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
+		</item>
+		<item>
+			<title>Thoughts</title>
+			<pubDate>Tue, 26 Apr 2022 16:46:21 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/thoughts.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
+		</item>
+		<item>
+			<title>Bookmarks</title>
+			<pubDate>Tue, 26 Apr 2022 16:43:44 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/bookmarks.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
+		</item>
+		<item>
+			<title>About</title>
+			<pubDate>Sat, 23 Apr 2022 14:49:11 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/about.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
+		</item>
+		<item>
+			<title>Inventory</title>
+			<pubDate>Wed, 20 Apr 2022 20:06:37 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try to optimize how much stuff I have, but as with anything, it's a process :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/inventory.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
+		</item>
+		<item>
+			<title>Ideas</title>
+			<pubDate>Thu, 14 Apr 2022 16:15:38 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I often think of <i>great</i> ideas for pages to add to this site... and then promptly forget them. Hopefully this list should help me with that :P</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/ideas.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/ideas.html</guid>
+		</item>
+		<item>
+			<title>Writings</title>
+			<pubDate>Thu, 14 Apr 2022 15:38:31 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/writing.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
+		</item>
+		<item>
+			<title>The Sands of Time</title>
+			<pubDate>Thu, 14 Apr 2022 15:37:53 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Her footsteps echoed off the marble floor, its surface perfectly reflecting the inky shadows far above. The journey up the mountain range which was all that was left of the Colossus’ spine had taken days of walking between ribs and broken bones of metal which leaned precariously, like poorly constructed skyscrapers. Thin beams of red light from the sinking star outside streamed down at a shallow angle through the orbital fissures, illuminating the dunes of old paper within. An entire world’s knowledge had been sacrificed here, offered to a being created with the hope that it could solve their problems. The craters and deserts which still marred the planet’s surface all these millenia later were testaments to their failure; even a giant with the power to move mountains and the knowledge to answer any question could not change their nature. </p> ]]>
+			</description>
+			<link>https://mineralexistence.com/sands-of-time.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/sands-of-time.html</guid>
+		</item>
+		<item>
 			<title>Pillar</title>
 			<pubDate>Wed, 13 Apr 2022 16:21:33 +0900</pubDate>
 			<description>
@@ -50,33 +122,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
 		</item>
 		<item>
-			<title>Inventory</title>
-			<pubDate>Wed, 06 Apr 2022 14:43:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try to optimize how much <em>stuff</em> I have, but as with anything, it's a process :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/inventory.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
-		</item>
-		<item>
-			<title>About</title>
-			<pubDate>Tue, 05 Apr 2022 17:33:53 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/about.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
-		</item>
-		<item>
-			<title>Grimoire</title>
-			<pubDate>Mon, 04 Apr 2022 19:13:30 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/grimoire.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
-		</item>
-		<item>
 			<title>Casio CA53W</title>
 			<pubDate>Mon, 04 Apr 2022 18:31:05 +0900</pubDate>
 			<description>
@@ -102,15 +147,6 @@
 			</description>
 			<link>https://mineralexistence.com/eating.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/eating.html</guid>
-		</item>
-		<item>
-			<title>Ideas</title>
-			<pubDate>Thu, 31 Mar 2022 19:49:06 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I often think of <i>great</i> ideas for pages to add to this site... and then promptly forget them. Hopefully this list should help me with that :P</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/ideas.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/ideas.html</guid>
 		</item>
 		<item>
 			<title>Games</title>
@@ -158,24 +194,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/plugins-docs.html</guid>
 		</item>
 		<item>
-			<title>Bookmarks</title>
-			<pubDate>Mon, 21 Mar 2022 15:44:52 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/bookmarks.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
-		</item>
-		<item>
-			<title>Thoughts</title>
-			<pubDate>Mon, 21 Mar 2022 15:29:15 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/thoughts.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
-		</item>
-		<item>
 			<title>My Notes on WFC</title>
 			<pubDate>Mon, 21 Mar 2022 10:06:22 +0900</pubDate>
 			<description>
@@ -210,15 +228,6 @@
 			</description>
 			<link>https://mineralexistence.com/liminal-spaces.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/liminal-spaces.html</guid>
-		</item>
-		<item>
-			<title>Writings</title>
-			<pubDate>Mon, 07 Mar 2022 13:44:27 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/writing.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
 		</item>
 		<item>
 			<title>WFC Tile Generator</title>
@@ -291,15 +300,6 @@
 			</description>
 			<link>https://mineralexistence.com/side_quests.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/side_quests.html</guid>
-		</item>
-		<item>
-			<title>The Sands of Time</title>
-			<pubDate>Mon, 07 Mar 2022 13:44:27 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Her footsteps echoed off the marble floor, its surface perfectly reflecting the inky shadows far above. The journey up the mountain range which was all that was left of the Colossus’ spine had taken days of walking between ribs and broken bones of metal which leaned precariously, like poorly constructed skyscrapers. Thin beams of red light from the sinking star outside streamed down at a shallow angle through the orbital fissures, illuminating the dunes of old paper within. An entire world’s knowledge had been sacrificed here, offered to a being created with the hope that it could solve their problems. The craters and deserts which still marred the planet’s surface all these millenia later were testaments to their failure; even a giant with the power to move mountains and the knowledge to answer any question could not change their nature. </p> ]]>
-			</description>
-			<link>https://mineralexistence.com/sands-of-time.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/sands-of-time.html</guid>
 		</item>
 		<item>
 			<title>Reading</title>

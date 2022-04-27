@@ -3,53 +3,53 @@
 # this is where the times are stored
 touch ~/.proctimes
 
-# gets the new run time from proctime
-newtime=$(proctime $1)
-# adds appropriate number of zeros (maybe not necessary?)
-numunits=$(echo $newtime | sed -e 's/\(.\)/\1\n/g' | grep ":" | wc -l)
-numunits=$[$numunits+1]
-case $numunits in
-	2 )
-		newtime="00:00:${newtime}"
+function focus-task {
+	while true; do
+		pass;
+	done
+}
+
+function enter-time {
+	# gets the new run time from proctime
+	newtime=$(proctime "$1")
+	# adds appropriate number of zeros (maybe not necessary?)
+	# numunits=$(echo "$newtime" | sed -e 's/\(.\)/\1\n/g' | grep -c ":")
+	# numunits=$numunits+1
+	# case $numunits in
+	# 	2 )
+	# 		newtime="00:00:${newtime}"
+	# 	;;
+	# 	3 )
+	# 		newtime="00:${newtime}"
+	# 	;;
+	# esac
+	prpnd "$(date +%d%m%y) ${1} ${newtime}" ~/.proctimes
+	formated=$(column -t ~/.proctimes)
+	echo "$formated" > ~/.proctimes
+}
+
+case $1 in
+	-h | --help )
+		printf "small utility for tracking time!
+usage: proctrack [options] [program]
+options:
+  'focus [name]' for arbitrary activities which may not be programs. will add an entry for [name] in .proctimes
+  'focus end'    ends timer started by 'focus [name]'"
 	;;
-	3 )
-		newtime="00:${newtime}"
+	focus )
+		if [[ $# -gt 1 ]]; then case $2 in
+			end )
+				printf "ending timer"
+			;;
+			* )
+				printf "sorry, not sure what you want me to do :)"
+			;;
+		esac else
+			printf "starting timer for %s" "$1"
+			enter-time focus-task "$1"
+		fi
+	;;
+	* )
+		enter-time "$1"
 	;;
 esac
-
-# goes through .proctimes
-foundmatch=0
-while read line ; do
-	IFS=' '
-	read -ra data <<< "$line"
-	total=${data[1]}
-
-	# finds same program
-	if [ ${data[0]} = $1 ]; then
-		numunits=$(echo $total | sed -e 's/\(.\)/\1\n/g' | grep ":" | wc -l)
-		numunits=$[$numunits+1]
-		case $numunits in
-			2 )
-				total="00:00:${total}"
-			;;
-			3 )
-				total="00:${total}"
-			;;
-		esac
-
-		# removes old time
-		remline="${data[0]} ${data[1]}"
-		sed -i "/${remline}/d" ~/.proctimes
-
-		# adds newtime to old total and prepends to file
-		foundmatch=1
-		newtime=$(echo "${total}
-${newtime}" | sumtime "d")
-		prpnd "${1} ${newtime}" ~/.proctimes
-	fi
-done < <(cat ~/.proctimes)
-
-# if first run, just adds newtime
-if [[ $foundmatch < 1 ]]; then
-	prpnd "${1} ${newtime}" ~/.proctimes
-fi

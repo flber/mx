@@ -154,6 +154,30 @@ title: Grimoire
 	]
 ]
 
+[p|Get the audio from an mp4]
+[fieldset|
+	[legend|ffmpeg]
+	[p|
+		ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3
+	]
+]
+
+[p|Convert gif to mp4]
+[fieldset|
+	[legend|ffmpeg]
+	[p|
+		ffmpeg -i cats.gif cats-dith.mp4
+	]
+]
+
+[p|Combine audio and video files]
+[fieldset|
+	[legend|ffmpeg]
+	[p|
+		ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
+	]
+]
+
 [p|Add centered text in white to a video]
 [fieldset|
 	[legend|ffmpeg]
@@ -163,6 +187,12 @@ title: Grimoire
 		boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"\
 		-codec:a copy crow-walk-text.mp4
 	]
+]
+
+[p|Convert mkv to mp4 preserving subtitles]
+[fieldset|
+	[legend|ffmpeg]
+	[p|ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4]
 ]
 
 [p|Find the file with the most lines in a directory]
@@ -181,4 +211,35 @@ title: Grimoire
 [fieldset|
 	[legend|bash]
 	[p|find ./* -type f -exec cat {} + | wc -m]
+]
+
+[p|Get disk information (available, used, etc)]
+[fieldset|
+	[legend|bash]
+	[p|df -h]
+]
+
+[p|Prints IP addresses for computer]
+[fieldset|
+	[legend|bash]
+	[p|ip addr show | grep "inet "]
+]
+
+[p|Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)]
+[fieldset|
+	[legend|bash]
+	[p|sudo arp-scan --interface=wlp3s0 --localnet]
+]
+
+[p|Get open ports/ips on local system]
+[fieldset|
+	[legend|bash]
+	[p|nmap -vv -sV localhost -oG - | awk -v OFS=':' '
+	/open/ {
+	  for (i=4;i<=NF;i++) {
+	    split($i,a,"/");
+	    if (a[2]=="open") print $2, a[1]
+	  }
+	}'
+	]
 ]

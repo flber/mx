@@ -80,7 +80,25 @@ h2{font-size: clamp(1.25rem, 5vw, 2.25rem);padding-bottom: 2ex;}
 h3{font-size: clamp(1rem, 3vw, 1.5rem);padding-bottom: 1ex;padding-top: 2ex;}
 
 
-.listing span{float: right; padding-right: 2ex; padding-left: 2ex;background: var(--bg)}
+.listing span { float: right; padding-right: 2ex; padding-left: 2ex;background: var(--bg); }
+.half { width:50%; }
+.third { width:31%; }
+.left {
+	margin-top: 0em;
+	float: left;
+	margin-right: 2em;
+	clear:both;
+}
+.block {
+	margin-top: 1em;
+	margin-left: 0px;
+	clear: both;
+}
+.block * {
+	overflow:auto;
+	/* display:block; */
+}
+.block + * {clear: both;}
 
 
 /* fancy scrollbar */
