@@ -1,0 +1,21 @@
+[2022-04-14 18:55:16.811] [exthost] [info] Extension host with pid 310530 started
+[2022-04-14 18:55:16.811] [exthost] [info] Skipping acquiring lock for /home/benh/.config/VSCodium/User/workspaceStorage/b6c2ef292bbc2546877926cbbf3560a0.
+[2022-04-14 18:55:17.314] [exthost] [info] ExtensionService#_doActivateExtension mads-hartmann.bash-ide-vscode, startup: false, activationEvent: 'onLanguage:shellscript'
+[2022-04-14 18:55:17.503] [exthost] [info] ExtensionService#_doActivateExtension timonwong.shellcheck, startup: false, activationEvent: 'onLanguage:shellscript'
+[2022-04-14 18:55:17.541] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-04-14 18:55:17.546] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-04-14 18:55:17.549] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-04-14 18:55:17.586] [exthost] [info] ExtensionService#_doActivateExtension Gruntfuggly.triggertaskonsave, startup: true, activationEvent: '*'
+[2022-04-14 18:55:17.593] [exthost] [info] ExtensionService#_doActivateExtension sainnhe.gruvbox-material, startup: true, activationEvent: '*'
+[2022-04-14 18:55:18.835] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-04-14 18:55:18.871] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-04-14 18:55:19.164] [exthost] [info] Eager extensions activated
+[2022-04-14 18:55:19.241] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-04-14 18:55:19.257] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-04-14 18:58:45.389] [exthost] [info] ExtensionService#_doActivateExtension vscode.grunt, startup: false, activationEvent: 'onTaskType:grunt'
+[2022-04-14 18:58:45.395] [exthost] [info] ExtensionService#_doActivateExtension vscode.gulp, startup: false, activationEvent: 'onTaskType:gulp'
+[2022-04-14 18:58:45.400] [exthost] [info] ExtensionService#_doActivateExtension vscode.jake, startup: false, activationEvent: 'onTaskType:jake'
+[2022-04-14 18:58:45.404] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTaskType:npm'
+[2022-04-14 18:58:45.418] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onTaskType:typescript'
+[2022-04-14 20:18:16.698] [exthost] [info] extension host terminating: renderer closed the socket
+[2022-04-14 20:18:16.719] [exthost] [info] Extension host with pid 310530 exiting with code 0

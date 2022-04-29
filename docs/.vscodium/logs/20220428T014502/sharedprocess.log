@@ -1,0 +1,12 @@
+[2022-04-28 01:45:08.002] [sharedprocess] [info] Starting worker process with pid 12762 (type: fileWatcher, window: 1).
+[2022-04-28 01:45:10.516] [sharedprocess] [info] Getting Manifest... sumneko.lua
+[2022-04-28 01:45:12.253] [sharedprocess] [info] Worker process with pid 12762 terminated normally (type: fileWatcher, window: 1).
+[2022-04-28 01:45:12.717] [sharedprocess] [info] Installing extension: sumneko.lua
+[2022-04-28 01:45:14.808] [sharedprocess] [info] Starting worker process with pid 12789 (type: fileWatcher, window: 1).
+[2022-04-28 01:45:18.575] [sharedprocess] [info] Getting Manifest... sumneko.lua
+[2022-04-28 01:45:19.031] [sharedprocess] [info] Extensions is already requested to install sumneko.lua
+[2022-04-28 01:45:43.823] [sharedprocess] [info] Downloaded extension: sumneko.lua /home/benh/.config/VSCodium/CachedExtensionVSIXs/sumneko.lua-3.2.0
+[2022-04-28 01:45:45.265] [sharedprocess] [info] Extracted extension to /home/benh/.vscode-oss/extensions/.08f8baeb-46a8-4b9a-ab01-26135b57fd19: sumneko.lua
+[2022-04-28 01:45:45.283] [sharedprocess] [info] Renamed to /home/benh/.vscode-oss/extensions/sumneko.lua-3.2.0
+[2022-04-28 01:45:45.287] [sharedprocess] [info] Extracting completed. sumneko.lua
+[2022-04-28 01:45:45.297] [sharedprocess] [info] Extension installed successfully: sumneko.lua

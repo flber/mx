@@ -1,0 +1,15 @@
+#!/usr/bin/luajit
+
+-- function lines(s)
+--   if s:sub(-1)~="\n" then s=s.."\n" end
+--   return s:gmatch("(.-)\n")
+-- end
+
+local input = io.stdin:read("*all")
+
+if input:find("{{date}}") then
+  local start_i, end_i = input:find("{{date}}")
+  local first = strsub(input, 1, start_i)
+else
+  print(input)
+end

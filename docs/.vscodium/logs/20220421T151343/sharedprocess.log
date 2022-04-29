@@ -1,0 +1,19 @@
+[2022-04-21 15:13:47.458] [sharedprocess] [info] Starting worker process with pid 72719 (type: fileWatcher, window: 1).
+[2022-04-21 15:13:50.055] [sharedprocess] [info] Getting Manifest... bmalehorn.vscode-fish
+[2022-04-21 15:13:50.056] [sharedprocess] [info] Getting Manifest... mads-hartmann.bash-ide-vscode
+[2022-04-21 15:13:51.238] [sharedprocess] [info] Installing extension: mads-hartmann.bash-ide-vscode
+[2022-04-21 15:13:51.300] [sharedprocess] [info] Installing extension: bmalehorn.vscode-fish
+[2022-04-21 15:13:53.434] [sharedprocess] [info] Downloaded extension: bmalehorn.vscode-fish /home/benh/.config/VSCodium/CachedExtensionVSIXs/bmalehorn.vscode-fish-1.0.29
+[2022-04-21 15:13:53.538] [sharedprocess] [info] Extracted extension to /home/benh/.vscode-oss/extensions/.1b1db02b-1955-48cb-92fb-9a5b56a47c7c: bmalehorn.vscode-fish
+[2022-04-21 15:13:53.545] [sharedprocess] [info] Renamed to /home/benh/.vscode-oss/extensions/bmalehorn.vscode-fish-1.0.29
+[2022-04-21 15:13:53.546] [sharedprocess] [info] Extracting completed. bmalehorn.vscode-fish
+[2022-04-21 15:13:53.553] [sharedprocess] [info] Extension installed successfully: bmalehorn.vscode-fish
+[2022-04-21 15:13:53.836] [sharedprocess] [info] Downloaded extension: mads-hartmann.bash-ide-vscode /home/benh/.config/VSCodium/CachedExtensionVSIXs/mads-hartmann.bash-ide-vscode-1.13.0
+[2022-04-21 15:13:55.949] [sharedprocess] [info] Extracted extension to /home/benh/.vscode-oss/extensions/.e5708a80-84a8-4cb7-a1c5-2cd44a092665: mads-hartmann.bash-ide-vscode
+[2022-04-21 15:13:55.978] [sharedprocess] [info] Renamed to /home/benh/.vscode-oss/extensions/mads-hartmann.bash-ide-vscode-1.13.0
+[2022-04-21 15:13:55.981] [sharedprocess] [info] Extracting completed. mads-hartmann.bash-ide-vscode
+[2022-04-21 15:13:56.082] [sharedprocess] [info] Extension installed successfully: mads-hartmann.bash-ide-vscode
+[2022-04-21 15:14:36.066] [sharedprocess] [info] Worker process with pid 72719 terminated normally (type: fileWatcher, window: 1).
+[2022-04-21 15:14:38.044] [sharedprocess] [info] Starting worker process with pid 73506 (type: fileWatcher, window: 1).
+[2022-04-21 20:23:21.937] [sharedprocess] [info] Starting worker process with pid 112811 (type: fileWatcher, window: 3).
+[2022-04-21 20:23:22.972] [sharedprocess] [info] Worker process with pid 112811 terminated normally (type: fileWatcher, window: 3).

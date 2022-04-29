@@ -1,0 +1,15 @@
+[2022-04-28 02:04:07.605] [exthost] [info] Extension host with pid 14001 started
+[2022-04-28 02:04:07.606] [exthost] [info] Skipping acquiring lock for /home/benh/.config/VSCodium/User/workspaceStorage/8ca0ef7a3579af2b352bdb9f5aa39ef7.
+[2022-04-28 02:04:08.145] [exthost] [info] ExtensionService#_doActivateExtension rust-lang.rust, startup: false, activationEvent: 'onLanguage:rust'
+[2022-04-28 02:04:08.410] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-04-28 02:04:08.415] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-04-28 02:04:08.419] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-04-28 02:04:08.428] [exthost] [info] ExtensionService#_doActivateExtension Gruntfuggly.triggertaskonsave, startup: true, activationEvent: '*'
+[2022-04-28 02:04:08.433] [exthost] [info] ExtensionService#_doActivateExtension sainnhe.gruvbox-material, startup: true, activationEvent: '*'
+[2022-04-28 02:04:08.780] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-04-28 02:04:08.810] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-04-28 02:04:08.901] [exthost] [info] Eager extensions activated
+[2022-04-28 02:04:09.078] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-04-28 02:04:09.099] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-04-28 02:27:35.614] [exthost] [info] extension host terminating: renderer closed the socket
+[2022-04-28 02:27:35.634] [exthost] [info] Extension host with pid 14001 exiting with code 0

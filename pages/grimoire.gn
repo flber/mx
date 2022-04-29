@@ -243,3 +243,9 @@ title: Grimoire
 	}'
 	]
 ]
+
+[p|Downloads whole website]
+[fieldset|
+	[legend|bash]
+	[p|wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"]
+]

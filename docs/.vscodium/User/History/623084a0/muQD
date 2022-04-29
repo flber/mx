@@ -1,0 +1,26 @@
+#!/bin/python
+
+import os
+import sys
+import time
+
+file = open(".pillar.toml").readlines()
+for lines in file:
+    k = lines.split()
+    if len(k) > 0 and k[0] == "granite_path":
+        granite_path = k[2]
+abspath = os.path.abspath(granite_path[1:-1])
+files = glob.glob(abspath + "/*.gn")
+files.sort(key=os.path.getmtime, reverse=True)
+
+for file in files:
+
+    # for index, line in enumerate(sys.stdin):
+    #     if index < 1:
+    #         path = line[:-1]
+    #         sys.stdout.write(line)
+    #     else:
+    #     	if "{{date}}" in line:
+    #     	    #DOC: replaces "{{date}}" with the date.
+    #     		line = line.replace("{{date}}", time.strftime("%d%m%y", time.gmtime(os.path.getmtime(path))))
+    #     	sys.stdout.write(line)

@@ -1,0 +1,19 @@
+#!/usr/bin/luajit
+
+-- function lines(s)
+--   if s:sub(-1)~="\n" then s=s.."\n" end
+--   return s:gmatch("(.-)\n")
+-- end
+
+Filename = io.stdin:read()
+Input = io.stdin:read("*all")
+
+if Input:find("{{date}}") then
+  local command = "date -r " .. Filename .. " +%d%m%y"
+  local f = io.popen(command)
+  local last_modified = f:read()
+  
+  print(Input:gsub("{{date}}", last_modified))
+else
+  print(Input)
+end

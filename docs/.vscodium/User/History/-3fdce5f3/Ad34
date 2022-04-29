@@ -1,0 +1,11 @@
+#!/usr/bin/luajit
+
+Filename = io.stdin:read()
+Input = io.stdin:read("*all")
+
+if Input:find("{{feed}}") then
+  local feed = generate_feed()
+  print(Input:gsub("{{feed}}", feed))
+else
+  print(Input)
+end

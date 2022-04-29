@@ -1,0 +1,10 @@
+[Info  - 3:13:49 PM] BashLanguageServer initializing...
+Analyzing files matching glob "**/*@(.sh|.inc|.bash|.command)" inside /home/benh/projects/mx
+Glob resolved with 1 files after 0.045 seconds
+Analyzing file:///home/benh/projects/mx/docs/files/sway/scripts/sway_bar.sh
+Analyzer finished after 0.055 seconds
+[Info  - 3:13:50 PM] BashLanguageServer initialized
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol

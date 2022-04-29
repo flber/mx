@@ -1,0 +1,426 @@
+thread 'request-worker-2' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+thread 'request-worker-1' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: expected one of `:`, `@`, or `|`, found `,`
+   --> <stdin>:275:8
+    |
+275 |     out, &String,
+    |        ^ expected one of `:`, `@`, or `|`
+    |
+    = note: anonymous parameters are removed in the 2018 edition (see RFC 1685)
+help: if this is a parameter name, give it a type
+    |
+275 |     out: TypeName, &String,
+    |     ~~~~~~~~~~~~~
+help: if this is a type, explicitly ignore the parameter name
+    |
+275 |     _: out, &String,
+    |     ~~~~~~
+
+error: expected one of `:`, `@`, or `|`, found `,`
+   --> <stdin>:275:17
+    |
+275 |     out, &String,
+    |                 ^ expected one of `:`, `@`, or `|`
+    |
+    = note: anonymous parameters are removed in the 2018 edition (see RFC 1685)
+help: if this is a parameter name, give it a type
+    |
+275 |     out, String: &TypeName,
+    |          ~~~~~~~~~~~~~~~~~
+help: if this is a type, explicitly ignore the parameter name
+    |
+275 |     out, _: &String,
+    |          ~~~~~~~~~~
+
+[Error - 3:28:28 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-3' panicked at 'byte index 11083 is not a char boundary; it is inside 'ඞ' (bytes 11081..11084) of `pub mod progress {
+
+  use std::io::{self, Write};
+
+  pub struct Bar {
+    pub left_pad: usize,
+    pub bar_width: usize,
+    pub max: usize,
+  }
+
+  impl Bar {
+    pub fn print(&self, i: usize) {
+      let inverse = 1.0 / (i as f32 / self.max as f32);
+     `[...]', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/util.rs:402:5
+[2022-04-21T22:40:16Z ERROR rls::actions::hover] racer_def: racer panicked
+thread 'request-worker-0' panicked at 'byte index 11173 is not a char boundary; it is inside 'ඞ' (bytes 11172..11175) of `pub mod progress {
+
+  use std::io::{self, Write};
+
+  pub struct Bar {
+    pub left_pad: usize,
+    pub bar_width: usize,
+    pub max: usize,
+  }
+
+  impl Bar {
+    pub fn print(&self, i: usize) {
+      let inverse = 1.0 / (i as f32 / self.max as f32);
+     `[...]', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/util.rs:354:15
+[2022-04-21T22:40:17Z ERROR rls::actions::hover] racer_def: racer panicked
+thread 'request-worker-3' panicked at 'byte index 11177 is not a char boundary; it is inside 'ඞ' (bytes 11176..11179) of `pub mod progress {
+
+  use std::io::{self, Write};
+
+  pub struct Bar {
+    pub left_pad: usize,
+    pub bar_width: usize,
+    pub max: usize,
+  }
+
+  impl Bar {
+    pub fn print(&self, i: usize) {
+      let inverse = 1.0 / (i as f32 / self.max as f32);
+     `[...]', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/util.rs:354:15
+[2022-04-21T22:40:21Z ERROR rls::actions::hover] racer_def: racer panicked
+error: character literal may only contain one codepoint
+   --> <stdin>:428:32
+    |
+428 |             '[' => output.push('<char>'),
+    |                                ^^^^^^^^
+    |
+help: if you meant to write a `str` literal, use double quotes
+    |
+428 |             '[' => output.push("<char>"),
+    |                                ~~~~~~~~
+
+[Error - 3:40:57 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-1' panicked at 'byte index 11119 is not a char boundary; it is inside 'ඞ' (bytes 11118..11121) of `pub mod progress {
+
+  use std::io::{self, Write};
+
+  pub struct Bar {
+    pub left_pad: usize,
+    pub bar_width: usize,
+    pub max: usize,
+  }
+
+  impl Bar {
+    pub fn print(&self, i: usize) {
+      let inverse = 1.0 / (i as f32 / self.max as f32);
+     `[...]', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/util.rs:354:15
+[2022-04-21T22:41:30Z ERROR rls::actions::hover] racer_def: racer panicked
+thread 'request-worker-1' panicked at 'byte index 11157 is not a char boundary; it is inside 'ඞ' (bytes 11155..11158) of `pub mod progress {
+
+  use std::io::{self, Write};
+
+  pub struct Bar {
+    pub left_pad: usize,
+    pub bar_width: usize,
+    pub max: usize,
+  }
+
+  impl Bar {
+    pub fn print(&self, i: usize) {
+      let inverse = 1.0 / (i as f32 / self.max as f32);
+     `[...]', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/util.rs:402:5
+[2022-04-21T22:41:35Z ERROR rls::actions::hover] racer_def: racer panicked
+error[E0762]: unterminated character literal
+   --> <stdin>:429:32
+    |
+429 |             ']' => output.push('</>'),
+    |                                ^^
+
+[Error - 3:41:38 PM] Request textDocument/formatting failed.
+  Message: Reformat failed to complete successfully
+  Code: -32603 
+thread 'request-worker-2' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: expected `{`, found `}`
+   --> <stdin>:432:13
+    |
+432 |             },
+    |             ^ expected `{`
+
+[Error - 3:43:52 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+error: expected `{`, found `}`
+   --> <stdin>:432:13
+    |
+432 |             },
+    |             ^ expected `{`
+
+[Error - 3:44:01 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-0' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-0' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: expected one of `,`, `.`, `?`, `}`, or an operator, found reserved identifier `_`
+   --> <stdin>:435:19
+    |
+434 |                   ' ' => break
+    |                       --      - expected one of `,`, `.`, `?`, `}`, or an operator
+    |                       |
+    |                       while parsing the `match` arm starting here
+435 |                   _ => new_elem.push(tchar),
+    |                   ^ unexpected token
+
+[Error - 3:49:42 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+error: expected identifier, found reserved identifier `_`
+   --> <stdin>:436:19
+    |
+436 |                   _ => new_elem.push(tchar),
+    |                   ^ expected identifier, found reserved identifier
+
+error: expected one of `(`, `,`, `.`, `::`, `?`, `}`, or an operator, found `=>`
+   --> <stdin>:436:21
+    |
+435 |                   '|' => break.
+    |                       -- while parsing the `match` arm starting here
+436 |                   _ => new_elem.push(tchar),
+    |                     ^^ expected one of 7 possible tokens
+
+[Error - 3:49:53 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-3' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-1' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-2' panicked at 'byte index 11677 is not a char boundary; it is inside 'ඞ' (bytes 11676..11679) of `pub mod progress {
+
+  use std::io::{self, Write};
+
+  pub struct Bar {
+    pub left_pad: usize,
+    pub bar_width: usize,
+    pub max: usize,
+  }
+
+  impl Bar {
+    pub fn print(&self, i: usize) {
+      let inverse = 1.0 / (i as f32 / self.max as f32);
+     `[...]', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/util.rs:402:5
+[2022-04-21T22:53:11Z ERROR rls::actions::hover] racer_def: racer panicked
+thread 'request-worker-1' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+thread 'request-worker-3' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: unexpected closing delimiter: `}`
+   --> <stdin>:471:1
+    |
+62  | pub mod granite {
+    |                 - this opening brace...
+...
+470 |   }
+    |   - ...matches this closing brace
+471 | }
+    | ^ unexpected closing delimiter
+
+error: mismatched closing delimiter: `]`
+   --> <stdin>:349:63
+    |
+349 |   pub fn parse_granite(s: &String, mut debug: bool) -> String {
+    |                                                               ^ unclosed delimiter
+...
+372 |     let mut blacklist = ["pre", "code"];]
+    |                                         ^ mismatched closing delimiter
+
+[Error - 4:09:24 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+error: expected `{`, found `}`
+   --> <stdin>:411:9
+    |
+408 |           if in_content && {
+    |           -- this `if` expression has a condition, but no block
+...
+411 |         }
+    |         ^ expected `{`
+    |
+    = help: maybe you forgot the right operand of the condition?
+
+[Error - 4:09:25 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+error: expected `{`, found `}`
+   --> <stdin>:411:9
+    |
+408 |           if in_content && {
+    |           -- this `if` expression has a condition, but no block
+...
+411 |         }
+    |         ^ expected `{`
+    |
+    = help: maybe you forgot the right operand of the condition?
+
+[Error - 4:10:06 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-3' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+error: unknown start of token: \
+   --> <stdin>:487:48
+    |
+487 |       if !hit_text && (next == " " || next == "\t") {
+    |                                                ^
+
+error: unknown start of token: \
+   --> <stdin>:498:48
+    |
+498 |       if !hit_text && (next == " " || next == "\t") {
+    |                                                ^
+
+error: unknown start of token: \
+   --> <stdin>:540:34
+    |
+540 |       if char == " " || char == "\t" {
+    |                                  ^
+
+error[E0765]: unterminated double quote string
+   --> <stdin>:570:72
+    |
+570 |       assert!(idx <= len(&s), "the index was larger than the target slice");
+    |  ________________________________________________________________________^
+571 | |
+572 | |     let mut r = String::with_capacity(s.len() + ins.len());
+573 | |     let split_point = s.char_indices().nth(idx).map(|(i, _)| i).unwrap_or(s.len());
+...   |
+594 | |   }
+595 | | }
+    | |__^
+
+[Error - 4:12:57 PM] Request textDocument/formatting failed.
+  Message: Reformat failed to complete successfully
+  Code: -32603 
+thread 'request-worker-0' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+thread 'request-worker-0' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+error: empty character literal
+   --> <stdin>:433:40
+    |
+433 |               let mut new_elem = vec![''];
+    |                                        ^ empty character literal
+
+[Error - 4:21:22 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-1' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-1' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-3' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+thread 'request-worker-2' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-1' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+thread 'request-worker-3' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: expected `;`, found keyword `if`
+   --> <stdin>:408:45
+    |
+408 |           println!("elems[0]: {}", elems[0])
+    |                                             ^ help: add `;` here
+409 |           if in_content && !blacklist.contains(&elems[0]) {
+    |           -- unexpected token
+
+[Error - 4:28:04 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-1' panicked at 'explicit panic', /cargo/registry/src/github.com-1ecc6299db9ec823/rustc-ap-rustc_errors-722.0.0/src/diagnostic_builder.rs:424:13
+error: unexpected closing delimiter: `}`
+   --> <stdin>:477:1
+    |
+62  | pub mod granite {
+    |                 - this opening brace...
+...
+476 |   }
+    |   - ...matches this closing brace
+477 | }
+    | ^ unexpected closing delimiter
+
+error: mismatched closing delimiter: `)`
+   --> <stdin>:455:20
+    |
+455 |             ']' => {
+    |                    ^ unclosed delimiter
+456 |               if elems.len()) > 0 {
+    |                             ^ mismatched closing delimiter
+
+[Error - 4:36:39 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-0' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+thread 'request-worker-2' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: expected `{`, found `}`
+   --> <stdin>:465:13
+    |
+464 |               if slice(s, i-1..i) == "|" || slice(s, i+1..i+2) == "|"
+    |               -- this `if` expression has a condition, but no block
+465 |             },
+    |             ^ expected `{`
+
+[Error - 4:51:03 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+error: comparison operators cannot be chained
+   --> <stdin>:464:35
+    |
+464 |               if slice(s, i-1..i) == "|" | slice(s, i+1..i+2) == "|"
+    |                                   ^^                          ^^
+    |
+help: split the comparison into two
+    |
+464 |               if slice(s, i-1..i) == "|" | slice(s, i+1..i+2) && "|" | slice(s, i+1..i+2) == "|"
+    |                                                               +++++++++++++++++++++++++++
+
+error: expected `{`, found `}`
+   --> <stdin>:465:13
+    |
+464 |               if slice(s, i-1..i) == "|" | slice(s, i+1..i+2) == "|"
+    |               -- this `if` expression has a condition, but no block
+465 |             },
+    |             ^ expected `{`
+
+[Error - 4:51:04 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+error: expected `{`, found `}`
+   --> <stdin>:465:13
+    |
+464 |               if (slice(s, i-1..i) == "|") | slice(s, i+1..i+2) == "]"
+    |               -- this `if` expression has a condition, but no block
+465 |             },
+    |             ^ expected `{`
+
+[Error - 4:51:34 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-3' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: unexpected closing delimiter: `}`
+   --> <stdin>:479:1
+    |
+62  | pub mod granite {
+    |                 - this opening brace...
+...
+478 |   }
+    |   - ...matches this closing brace
+479 | }
+    | ^ unexpected closing delimiter
+
+error: mismatched closing delimiter: `)`
+   --> <stdin>:463:21
+    |
+463 |             '\"' => {
+    |                     ^ unclosed delimiter
+464 |               println!("back 1: {}", slice(s, i - 1..i)));
+    |                                                         ^ mismatched closing delimiter
+
+[Error - 4:53:19 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-3' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+thread 'request-worker-1' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14
+error: expected `;`, found keyword `if`
+   --> <stdin>:473:47
+    |
+473 |         println!("b1: {}", slice(s, i - 1..i))
+    |                                               ^ help: add `;` here
+474 |         if slice(s, i - 1..i) == "]" {
+    |         -- unexpected token
+
+[Error - 5:01:12 PM] Request textDocument/formatting failed.
+  Message: Formatting could not be completed.
+  Code: -32603 
+thread 'request-worker-0' panicked at 'Failed load file "/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.": Custom { kind: Other, error: Io(Some("/home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/."), Some("Could not read file: /home/benh/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/os/.")) }', /cargo/registry/src/github.com-1ecc6299db9ec823/racer-2.1.48/src/racer/core.rs:816:14

@@ -1,0 +1,17 @@
+[2022-04-21T22:13:48.297Z] Validating found git in: git
+[2022-04-21T22:13:48.317Z] Using git 2.35.1 from git
+[2022-04-21T22:13:48.346Z] > git rev-parse --git-dir [3ms]
+[2022-04-21T22:13:48.351Z] Open repository: /home/benh/projects/mx
+[2022-04-21T22:13:48.474Z] > git symbolic-ref --short HEAD [35ms]
+[2022-04-21T22:13:48.494Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master [13ms]
+[2022-04-21T22:13:48.554Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [37ms]
+[2022-04-21T22:13:48.560Z] > git remote --verbose [23ms]
+[2022-04-21T22:13:48.587Z] > git config --get commit.template [7ms]
+[2022-04-21T22:13:48.636Z] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/benh/projects/mx/docs/projects/proctrack [185ms]
+[2022-04-21T22:13:48.953Z] > git ls-files --stage -- /home/benh/projects/mx/docs/projects/proctrack [2ms]
+[2022-04-21T22:13:48.960Z] > git cat-file -s 9e943ec343eec602e475bf4917ca2dfeec0000bd [2ms]
+[2022-04-21T22:13:49.111Z] > git rev-list --count 4262b41d141921ebdbe6bea06370e9876d75ef4c.. -- /home/benh/projects/mx/docs/projects/proctrack [15ms]
+[2022-04-21T22:13:49.135Z] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n3 -- /home/benh/projects/mx/docs/projects/proctrack [19ms]
+[2022-04-21T22:14:27.975Z] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/benh/projects/mx/docs/projects/proctime [24ms]
+[2022-04-21T22:14:28.135Z] > git ls-files --stage -- /home/benh/projects/mx/docs/projects/proctime [2ms]
+[2022-04-21T22:14:28.141Z] > git cat-file -s 407327b7027dccd49350b3280ed6cc23c0e8766e [2ms]

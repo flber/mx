@@ -1,0 +1,27 @@
+[2022-04-14 18:22:22.051] [sharedprocess] [info] Deleted from disk ms-toolsai.jupyter /home/benh/.vscode-oss/extensions/ms-toolsai.jupyter-2022.3.1000752054
+[2022-04-14 18:22:22.334] [sharedprocess] [info] Starting worker process with pid 305578 (type: fileWatcher, window: 1).
+[2022-04-14 18:22:22.493] [sharedprocess] [info] Deleted from disk james-yu.latex-workshop /home/benh/.vscode-oss/extensions/james-yu.latex-workshop-8.24.1
+[2022-04-14 18:22:24.109] [sharedprocess] [info] Deleted from disk ms-python.python /home/benh/.vscode-oss/extensions/ms-python.python-2022.2.1924087327
+[2022-04-14 18:22:25.509] [sharedprocess] [info] Worker process with pid 305578 terminated normally (type: fileWatcher, window: 1).
+[2022-04-14 18:22:28.225] [sharedprocess] [info] Starting worker process with pid 305646 (type: fileWatcher, window: 1).
+[2022-04-14 18:24:37.311] [sharedprocess] [info] Getting Manifest... bmalehorn.vscode-fish
+[2022-04-14 18:24:37.465] [sharedprocess] [info] Installing extension: bmalehorn.vscode-fish
+[2022-04-14 18:24:39.761] [sharedprocess] [info] Downloaded extension: bmalehorn.vscode-fish /home/benh/.config/VSCodium/CachedExtensionVSIXs/bmalehorn.vscode-fish-1.0.20
+[2022-04-14 18:24:39.899] [sharedprocess] [info] Extracted extension to /home/benh/.vscode-oss/extensions/.80481c07-a7db-4989-9a72-9ca75dd68efe: bmalehorn.vscode-fish
+[2022-04-14 18:24:39.910] [sharedprocess] [info] Renamed to /home/benh/.vscode-oss/extensions/bmalehorn.vscode-fish-1.0.20
+[2022-04-14 18:24:39.914] [sharedprocess] [info] Extracting completed. bmalehorn.vscode-fish
+[2022-04-14 18:24:39.919] [sharedprocess] [info] Extension installed successfully: bmalehorn.vscode-fish
+[2022-04-14 18:27:09.060] [sharedprocess] [info] Getting Manifest... mads-hartmann.bash-ide-vscode
+[2022-04-14 18:27:09.335] [sharedprocess] [info] Installing extension: mads-hartmann.bash-ide-vscode
+[2022-04-14 18:27:11.688] [sharedprocess] [info] Downloaded extension: mads-hartmann.bash-ide-vscode /home/benh/.config/VSCodium/CachedExtensionVSIXs/mads-hartmann.bash-ide-vscode-1.12.1
+[2022-04-14 18:27:20.277] [sharedprocess] [info] Extracted extension to /home/benh/.vscode-oss/extensions/.14ed8d4e-6494-4c44-abea-71f2443a1b33: mads-hartmann.bash-ide-vscode
+[2022-04-14 18:27:20.297] [sharedprocess] [info] Renamed to /home/benh/.vscode-oss/extensions/mads-hartmann.bash-ide-vscode-1.12.1
+[2022-04-14 18:27:20.301] [sharedprocess] [info] Extracting completed. mads-hartmann.bash-ide-vscode
+[2022-04-14 18:27:20.303] [sharedprocess] [info] Extension installed successfully: mads-hartmann.bash-ide-vscode
+[2022-04-14 18:28:13.754] [sharedprocess] [info] Getting Manifest... timonwong.shellcheck
+[2022-04-14 18:28:14.031] [sharedprocess] [info] Installing extension: timonwong.shellcheck
+[2022-04-14 18:30:05.955] [sharedprocess] [info] Downloaded extension: timonwong.shellcheck /home/benh/.config/VSCodium/CachedExtensionVSIXs/timonwong.shellcheck-0.19.2
+[2022-04-14 18:30:08.690] [sharedprocess] [info] Extracted extension to /home/benh/.vscode-oss/extensions/.19ba08b5-aac3-47c5-8017-cdf36a1682e2: timonwong.shellcheck
+[2022-04-14 18:30:08.703] [sharedprocess] [info] Renamed to /home/benh/.vscode-oss/extensions/timonwong.shellcheck-0.19.2
+[2022-04-14 18:30:08.712] [sharedprocess] [info] Extracting completed. timonwong.shellcheck
+[2022-04-14 18:30:08.716] [sharedprocess] [info] Extension installed successfully: timonwong.shellcheck

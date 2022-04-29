@@ -1,0 +1,24 @@
+#!/usr/bin/luajit
+
+-- function lines(s)
+--   if s:sub(-1)~="\n" then s=s.."\n" end
+--   return s:gmatch("(.-)\n")
+-- end
+
+local filename = io.stdin:read()
+local input = io.stdin:read("*all")
+
+if input:find("{{date}}") then
+  local start_i, end_i = input:find("{{date}}")
+  local first = input:sub(1, start_i)
+  local last = input:sub(end_i)
+
+  local command = "stat -c %Y" .. filename
+  local f = io.popen(command)
+  local last_modified = f:read()
+  local day = last_modified:sub(9)
+  local mid = ""
+  print(first, mid, last)
+else
+  print(input)
+end

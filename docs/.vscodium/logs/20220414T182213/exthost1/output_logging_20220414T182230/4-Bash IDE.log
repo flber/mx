@@ -1,0 +1,561 @@
+[Info  - 6:27:22 PM] BashLanguageServer initializing...
+Analyzing files matching glob "**/*@(.sh|.inc|.bash|.command)" inside /home/benh/projects/mx
+Glob resolved with 1 files after 0.1 seconds
+Analyzing file:///home/benh/projects/mx/docs/files/sway/scripts/sway_bar.sh
+Analyzer finished after 0.116 seconds
+[Info  - 6:27:23 PM] BashLanguageServer initialized
+onDocumentSymbol
+onDefinition 15:37 word="# adds appropriate number of zeros (maybe not necessary?)"
+onHover 15:37 word="# adds appropriate number of zeros (maybe not necessary?)"
+onDocumentSymbol
+onDocumentHighlight 184:20 word=null
+onDocumentHighlight 188:7 word=null
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 10:4 word="_"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 18:9 word="$("
+onHover 16:3 word="newtime"
+onHover 15:7 word="# gets the new run time from proctime"
+onDocumentHighlight 15:7 word="# gets the new run time from proctime"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 12:5 word="newtime"
+onDefinition 12:5 word="newtime"
+onHover 12:4 word="newtime"
+onHover 12:4 word="newtime"
+onDefinition 12:5 word="newtime"
+onHover 12:4 word="newtime"
+onDefinition 13:31 word="# adds appropriate number of zeros (maybe not necessary?)"
+onHover 13:34 word="# adds appropriate number of zeros (maybe not necessary?)"
+onDocumentHighlight 13:34 word="# adds appropriate number of zeros (maybe not necessary?)"
+onDefinition 13:34 word="# adds appropriate number of zeros (maybe not necessary?)"
+onDefinition 13:34 word="# adds appropriate number of zeros (maybe not necessary?)"
+onDocumentHighlight 12:13 word="proctime"
+onHover 14:28 word="sed"
+onHover 62:15 word="# if [[ $foundmatch < 1 ]]; then"
+onDocumentHighlight 62:16 word="# if [[ $foundmatch < 1 ]]; then"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 28:2 word="# fi"
+onDocumentHighlight 28:3 word="# fi"
+onDocumentSymbol
+onHover 27:6 word=null
+onDocumentHighlight 27:5 word="prpnd"
+onDocumentSymbol
+onHover 21:9 word="="
+onHover 21:10 word="""
+onHover 15:15 word="numunits+1"
+onHover 14:54 word="grep"
+onHover 15:9 word="$"
+onHover 16:17 word=null
+onHover 15:11 word="$"
+onHover 21:7 word="newtime"
+onHover 12:4 word="newtime"
+onHover 12:2 word="newtime"
+onDocumentHighlight 12:2 word="newtime"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentHighlight 24:6 word="prpnd"
+onDocumentSymbol
+onDocumentHighlight 23:6 word=null
+onHover 15:12 word="["
+onHover 15:12 word="["
+onHover 15:18 word="numunits+1"
+onDocumentSymbol
+onDocumentSymbol
+onHover 15:26 word=null
+onDocumentSymbol
+onHover 15:20 word="numunits"
+onHover 15:20 word="numunits"
+onHover 15:13 word="("
+onDocumentSymbol
+onDocumentSymbol
+onHover 14:22 word="newtime"
+onHover 14:22 word="newtime"
+onDocumentSymbol
+onDocumentSymbol
+onHover 13:29 word="# adds appropriate number of zeros (maybe not necessary?)"
+onHover 12:21 word="$"
+onHover 12:22 word="1"
+onDocumentSymbol
+onHover 14:19 word="newtime"
+onHover 14:18 word="$"
+onDocumentSymbol
+onHover 14:58 word="grep"
+onHover 14:60 word="grep"
+onHover 14:61 word=null
+onHover 14:61 word=null
+onHover 14:62 word="""
+onDocumentSymbol
+onDocumentSymbol
+onHover 14:68 word=null
+onDocumentSymbol
+onDocumentSymbol
+onHover 10:3 word=")"
+onHover 11:5 word="# gets the new run time from proctime"
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 7:3 word="e"
+onCompletionResolve name=e2freefrag type=1
+onCompletionResolve name=echo type=0
+onCompletionResolve name=echo type=0
+onCompletionResolve name=echo type=0
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 9:3 word=null
+onHover 7:3 word="echo"
+onDocumentHighlight 7:3 word="echo"
+onCompletion 7:3 word="p"
+onCompletionResolve name=p11-kit type=1
+onCompletionResolve name=pr type=1
+onCompletionResolve name=printafm type=1
+onCompletionResolve name=printafm type=1
+onCompletionResolve name=printafm type=1
+onCompletionResolve name=printf type=0
+onDocumentSymbol
+onHover 9:5 word=null
+onHover 9:4 word="""
+onDocumentHighlight 9:4 word="""
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 10:6 word="f"
+onCompletionResolve name=f2fs_io type=1
+onCompletionResolve name=fold type=1
+onCompletionResolve name=foomatic-cleanupdrivers type=1
+onCompletionResolve name=foomatic-cleanupdrivers type=1
+onCompletionResolve name=foomatic-cleanupdrivers type=1
+onDocumentSymbol
+onCompletionResolve name=fold type=1
+onCompletionResolve name=f2fs_io type=1
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 10:9 word=null
+onHover 10:10 word=null
+onDocumentHighlight 10:10 word=null
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 10:52 word="""
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 9:6 word=null
+onHover 8:5 word=null
+onDocumentHighlight 8:5 word=null
+onDocumentSymbol
+onDocumentSymbol
+onHover 10:83 word=null
+onHover 10:1 word=null
+onDocumentHighlight 10:2 word=null
+onHover 10:68 word=null
+onDocumentSymbol
+onHover 11:3 word=null
+onHover 11:2 word=null
+onDocumentHighlight 11:2 word=null
+onDocumentSymbol
+onHover 18:37 word="# adds appropriate number of zeros (maybe not necessary?)"
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 14:3 word="p"
+onCompletionResolve name=p11-kit type=1
+onCompletionResolve name=pr type=1
+onCompletionResolve name=printafm type=1
+onDocumentSymbol
+onCompletionResolve name=printf type=0
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 14:30 word="$"
+onCompletionResolve name=battery_charge type=3
+onDocumentSymbol
+onDocumentSymbol
+onHover 14:15 word=null
+onHover 14:15 word=null
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 14:34 word="$"
+onCompletionResolve name=battery_charge type=3
+onDocumentSymbol
+onDocumentSymbol
+onHover 14:34 word="1"
+onHover 14:34 word="1"
+onDocumentSymbol
+onHover 14:26 word=null
+onDocumentSymbol
+onCompletion 15:3 word="c"
+onCompletionResolve name=c++ type=1
+onCompletionResolve name=caca-config type=1
+onCompletionResolve name=case type=2
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 15:8 word="$"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 15:11 word="i"
+onCompletionResolve name=i type=3
+onCompletionResolve name=in type=2
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 17:3 word="e"
+onCompletionResolve name=e2freefrag type=1
+onCompletionResolve name=esac type=2
+onDocumentSymbol
+onCompletionResolve name=ecryptfs-recover-private type=1
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 16:4 word="e"
+onCompletionResolve name=enable type=0
+onCompletionResolve name=encode_keychange type=1
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 17:5 word="e"
+onCompletionResolve name=e2freefrag type=1
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 17:5 word="p"
+onCompletionResolve name=p11-kit type=1
+onCompletionResolve name=pr type=1
+onCompletionResolve name=printafm type=1
+onCompletionResolve name=printafm type=1
+onCompletionResolve name=printafm type=1
+onDocumentSymbol
+onCompletionResolve name=printf type=0
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 19:4 word="l"
+onCompletionResolve name=l2ping type=1
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 20:5 word="p"
+onCompletionResolve name=p11-kit type=1
+onCompletionResolve name=pr type=1
+onCompletionResolve name=printafm type=1
+onCompletionResolve name=printf type=0
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 20:21 word=null
+onHover 15:1 word=null
+onHover 15:2 word="case"
+onDocumentHighlight 15:2 word="case"
+onDocumentSymbol
+onCompletion 15:6 word="$"
+onCompletionResolve name=battery_charge type=3
+onCompletionResolve name=network type=3
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 16:4 word="end"
+onHover 15:5 word="$"
+onHover 15:11 word=null
+onDocumentSymbol
+onDocumentHighlight 15:13 word=null
+onCompletion 15:18 word="t"
+onCompletionResolve name=t1dotlessj type=1
+onCompletionResolve name=then type=2
+onDocumentSymbol
+onHover 227:34 word="'mass: ([0-9]+\.[0-9]+)'"
+onDefinition 227:34 word="'mass: ([0-9]+\.[0-9]+)'"
+onDocumentHighlight 22:6 word=null
+onCompletion 22:8 word="f"
+onCompletionResolve name=f2fs_io type=1
+onCompletionResolve name=fi type=2
+onDocumentSymbol
+onHover 15:4 word=null
+onHover 15:4 word=null
+onHover 15:3 word="if"
+onHover 15:15 word=";"
+onHover 15:6 word="[["
+onHover 16:4 word="end"
+onHover 15:11 word=null
+onHover 15:7 word="$"
+onDocumentSymbol
+onHover 15:15 word=null
+onHover 15:14 word=null
+onDocumentHighlight 15:14 word=null
+onDocumentSymbol
+onHover 15:8 word="$"
+onHover 15:8 word="$"
+onHover 15:13 word="1"
+onHover 15:11 word=">"
+onDocumentSymbol
+onCompletion 15:13 word="-g"
+onDocumentSymbol
+onHover 15:13 word="-gt"
+onHover 15:9 word="n"
+onHover 15:9 word="n"
+onDocumentHighlight 20:17 word=null
+onHover 20:21 word=null
+onHover 15:22 word="then"
+onHover 14:10 word=null
+onDocumentHighlight 14:10 word=null
+onDocumentHighlight 15:10 word=null
+onDocumentSymbol
+onDocumentSymbol
+onDocumentHighlight 15:36 word=null
+onHover 15:20 word=null
+onHover 15:10 word=null
+onHover 14:10 word=null
+onHover 14:10 word=null
+onHover 14:8 word=null
+onHover 15:9 word="#"
+onHover 22:7 word="fi"
+onDocumentHighlight 22:7 word="fi"
+onHover 228:28 word="'mass: \(([0-9]+)'"
+onCompletion 22:8 word="e"
+onCompletionResolve name=e2freefrag type=1
+onDocumentSymbol
+onCompletionResolve name=electron13 type=1
+onCompletionResolve name=else type=2
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 24:3 word="e"
+onCompletionResolve name=e2freefrag type=1
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 24:3 word="f"
+onCompletionResolve name=f2fs_io type=1
+onCompletionResolve name=fi type=2
+onDocumentSymbol
+onCompletionResolve name=fc-conflist type=1
+onDocumentSymbol
+onHover 22:8 word="else"
+onDocumentSymbol
+onDocumentSymbol
+onHover 15:24 word="then"
+onHover 14:7 word="printf"
+onDocumentHighlight 14:7 word="printf"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onDocumentHighlight 22:5 word="printf"
+onDocumentSymbol
+onDocumentHighlight 23:4 word=null
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 22:2 word="printf"
+onDocumentHighlight 22:2 word="printf"
+onDocumentSymbol
+onHover 26:18 word="run"
+onDocumentSymbol
+onDocumentSymbol
+onHover 39:30 word="${"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 29:63 word=null
+onDocumentHighlight 29:64 word="c"
+onHover 30:13 word="numunits"
+onDocumentHighlight 29:64 word="""
+onDocumentSymbol
+onDocumentSymbol
+onHover 39:28 word="}"
+onHover 39:9 word="$("
+onHover 39:8 word="""
+onHover 39:9 word="$("
+onDocumentSymbol
+onHover 10:7 word="1"
+onHover 10:6 word="$"
+onDocumentSymbol
+onHover 8:8 word="temp"
+onHover 8:7 word="$"
+onDocumentSymbol
+onHover 11:13 word="temp"
+onHover 10:12 word=null
+onHover 10:13 word="$"
+onHover 10:18 word=null
+onDocumentSymbol
+onHover 11:5 word="$"
+onHover 11:7 word=null
+onDocumentSymbol
+onHover 11:12 word=null
+onHover 11:13 word="$"
+onDocumentSymbol
+onHover 13:3 word=null
+onDocumentSymbol
+onHover 14:4 word="$"
+onDocumentSymbol
+onHover 14:13 word="2"
+onHover 14:11 word=null
+onDocumentSymbol
+onHover 27:24 word="""
+onHover 36:24 word="newtime"
+onHover 39:25 word="${"
+onHover 39:25 word="${"
+onDocumentSymbol
+onDocumentSymbol
+onHover 39:33 word="${"
+onDocumentHighlight 39:33 word="${"
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onHover 39:29 word="${"
+onHover 39:31 word="${"
+onDocumentSymbol
+onDocumentHighlight 39:54 word=null
+onDocumentSymbol
+onCompletion 40:4 word="fo"
+onCompletionResolve name=fold type=1
+onCompletionResolve name=for type=2
+onCompletionResolve name=foomatic-replaceoldprinterids type=1
+onCompletionResolve name=foomatic-printermap-to-gutenprint-xml type=1
+onCompletionResolve name=foomatic-extract-text type=1
+onCompletionResolve name=foomatic-replaceoldprinterids type=1
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 40:12 word="$"
+onCompletionResolve name=battery_charge type=3
+onDocumentSymbol
+onHover 39:25 word="${"
+onDocumentSymbol
+onDefinition 40:40 word=".proctimes"
+onHover 40:32 word=".proctimes"
+onHover 40:31 word=".proctimes"
+onHover 40:31 word=".proctimes"
+onDocumentSymbol
+onHover 40:37 word="~/.proctimes"
+onDocumentSymbol
+onCompletion 41:3 word="e"
+onCompletionResolve name=e2freefrag type=1
+onCompletionResolve name=echo type=0
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 41:8 word="$"
+onCompletionResolve name=battery_charge type=3
+onDocumentSymbol
+onCompletionResolve name=formated type=3
+onDocumentSymbol
+onDocumentSymbol
+onHover 41:7 word="$"
+onDocumentSymbol
+onHover 39:41 word=null
+onHover 41:2 word="echo"
+onDocumentHighlight 41:3 word="echo"
+onHover 41:17 word="""
+onDocumentSymbol
+onDocumentSymbol
+onDocumentSymbol
+onCompletion 41:25 word="~/.p"
+onDocumentSymbol
+onCompletion 41:33 word="~/.proctimes"
+onDocumentSymbol
+onHover 26:0 word=null
+onHover 10:34 word=null

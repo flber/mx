@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# this is where the times are stored
+touch ~/.proctimes
+
+function focus-task {
+	while true; do
+		pass;
+	done
+}
+
+function enter-time {
+	# gets the new run time from proctime
+	newtime=$(proctime "$1")
+	# adds appropriate number of zeros (maybe not necessary?)
+	# numunits=$(echo "$newtime" | sed -e 's/\(.\)/\1\n/g' | grep -c ":")
+	# numunits=$numunits+1
+	# case $numunits in
+	# 	2 )
+	# 		newtime="00:00:${newtime}"
+	# 	;;
+	# 	3 )
+	# 		newtime="00:${newtime}"
+	# 	;;
+	# esac
+	prpnd "$(date +%d%m%y) ${1} ${newtime}" ~/.proctimes
+	formated=$(column -t ~/.proctimes)
+	echo "$formated" > ~/.proctimes
+}
+
+case $1 in
+	-h | --help )
+		printf "small utility for tracking time!
+usage: proctrack [options] [program]
+options:
+  'focus [name]' for arbitrary activities which may not be programs. will add an entry for [name] in .proctimes
+  'focus end'    ends timer started by 'focus [name]'"
+	;;
+	focus )
+		if [[ $# -gt 1 ]]; then case $2 in
+			end )
+				printf "ending timer"
+			;;
+			* )
+				printf "sorry, not sure what you want me to do :)"
+			;;
+		esac else
+			printf "starting timer for %s" "$1"
+			enter-time focus-task "$1"
+		fi
+	;;
+	* )
+		enter-time "$1"
+	;;
+esac

@@ -1,0 +1,19 @@
+#!/bin/python
+
+import os
+import sys
+import time
+
+path = ".pillar.toml"
+
+print("hi!")
+
+# for index, line in enumerate(sys.stdin):
+#     if index < 1:
+#         path = line[:-1]
+#         sys.stdout.write(line)
+#     else:
+#     	if "{{date}}" in line:
+#     	    #DOC: replaces "{{date}}" with the date.
+#     		line = line.replace("{{date}}", time.strftime("%d%m%y", time.gmtime(os.path.getmtime(path))))
+#     	sys.stdout.write(line)

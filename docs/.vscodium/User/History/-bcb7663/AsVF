@@ -1,0 +1,4 @@
+#!/local/usr/bin/luajit
+
+local input = io.stdin:read()
+
