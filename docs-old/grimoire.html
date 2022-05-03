@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>MX - Grimoire</title>
+		<link rel="icon" href="favicon.ico?" type="image/x-icon">
+		<link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css">
+		<link rel="stylesheet" href="style.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body id="dark">
+		<div class="with-sidebar">
+			<div>
+		  		<!-- sidebar -->
+				<nav>
+					<span><h1><a href="home.html">Home</a></h1></span>
+					<span><h1><a href="now.html">now</a></h1></span>
+					<span><h1><a href="wiki.html">wiki</a></h1></span>
+					<span><h1><a href="about.html">about</a></h1></span>
+				</nav>
+			</div>
+			<div>
+				<main>
+					<!-- non-sidebar -->
+					<article class="inner">
+
+<h2>Grimoire</h2>
+
+<p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
+
+
+<p>To change the extensions of audio files in a directory:</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
+</fieldset>
+
+<p>More generally, to do something to some files:</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p>
+</fieldset>
+
+<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
+</fieldset>
+
+<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p>
+</fieldset>
+
+<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
+</fieldset>
+
+<p>To sanitize a file name (the .opus can be any extension):</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
+</fieldset>
+
+<p>To sanitize everything in a directory, preserving extensions:</p>
+<fieldset>
+	<legend>Fish</legend>
+	<p>function sanitize
+	    for file in *
+	        set ext (string match -r "\.\w*\$" $file | \
+	            string trim --chars=.)
+	    
+	        set new (echo "{$file}" | \
+	            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
+	            tr -d '[:punct:]' | \
+	            tr '[:upper:]' '[:lower:]' | \
+	            tr ' ' '-' | \
+	            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
+	
+	        set final (string replace "$ext" ".$ext" "$new")
+	        
+	        if [ "$file" != "$final" ]
+	            mv "$file" "$final"
+	        end
+	    end
+	end</p>
+</fieldset>
+
+<p>To push file changes over ssh:</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
+</fieldset>
+
+<p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
+</fieldset>
+
+<p>To simply dither of an image:</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
+</fieldset>
+
+<p>Super simple, but to make a div element take up the whole height of a veiwport</p>
+<fieldset>
+	<legend>CSS</legend>
+	<p>height: 100vh;</p>
+</fieldset>
+
+<p>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>alsactl restore</p>
+</fieldset>
+
+<p>To play a streaming file</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p>
+</fieldset>
+
+<p>Grab some html from the Noita wiki</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p>
+</fieldset>
+
+<p>Find all files which match a given regex</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>grep -rnw 'dir/' -e 'pattern'</p>
+</fieldset>
+
+<p>Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)</p>
+<fieldset>
+	<legend>ImageMagick</legend>
+	<p>convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png</p>
+</fieldset>
+
+<p>Function to convert a string into a hashed long</p>
+<fieldset>
+	<legend>C89</legend>
+	<p>
+	long
+	hash(char *str)
+	{
+	    long hash = 5381;
+	    int c;
+	    while ((c = *str++))
+	        hash = ((hash << 5) + hash) + c;
+	    return hash;
+	}
+	</p>
+</fieldset>
+
+<p>Copy an array to a pointer's value</p>
+<fieldset>
+	<legend>C</legend>
+	<p>
+		int dst[ARRAY_LENGTH];
+		memcpy(dst, src, sizeof(dst));
+	</p>
+</fieldset>
+
+<p>Convert an mp4 to an animated gif</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif
+	</p>
+</fieldset>
+
+<p>Get the audio from an mp4</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3
+	</p>
+</fieldset>
+
+<p>Convert gif to mp4</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i cats.gif cats-dith.mp4
+	</p>
+</fieldset>
+
+<p>Combine audio and video files</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
+	</p>
+</fieldset>
+
+<p>Add centered text in white to a video</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>
+		ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow\
+		walk:fontcolor=white:fontsize=24:box=1:\
+		boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"\
+		-codec:a copy crow-walk-text.mp4
+	</p>
+</fieldset>
+
+<p>Convert mkv to mp4 preserving subtitles</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4</p>
+</fieldset>
+
+<p>Find the file with the most lines in a directory</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l</p>
+</fieldset>
+
+<p>Crop an image <em>and</em> the virtual canvas (so a "normal crop" basically)</p>
+<fieldset>
+	<legend>ImageMagick</legend>
+	<p>convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
+</fieldset>
+
+<p>Count all the characters in all files in a directory</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>find ./* -type f -exec cat {} + | wc -m</p>
+</fieldset>
+
+<p>Get disk information (available, used, etc)</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>df -h</p>
+</fieldset>
+
+<p>Prints IP addresses for computer</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>ip addr show | grep "inet "</p>
+</fieldset>
+
+<p>Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>sudo arp-scan --interface=wlp3s0 --localnet</p>
+</fieldset>
+
+<p>Get open ports/ips on local system</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>nmap -vv -sV localhost -oG - | awk -v OFS=':' '
+	/open/ {
+	  for (i=4;i<=NF;i++) {
+	    split($i,a,"/");
+	    if (a[2]=="open") print $2, a[1]
+	  }
+	}'
+	</p>
+</fieldset>
+
+<p>Downloads whole website</p>
+<fieldset>
+	<legend>bash</legend>
+	<p>wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"</p>
+</fieldset>
+
+					</article>
+				</main>
+			</div>
+		</div>
+		<footer>
+			<a href="mailto:benrhammond@gmail.com" target="_blank">
+				<img src="images/mail.svg" alt="Mailto"/>
+			</a>
+			<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+				<img src="images/merveilles.svg" alt="Merveilles"/>
+			</a>
+			<a rel="me" href="https://github.com/flber" target="_blank">
+				<img src="images/github.svg" alt="Github"/>
+			</a>
+        	<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+        		<img class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring"/>
+       		</a>
+        	<a href="https://wiki.xxiivv.com/site/uxn.html">
+        		<img src="images/uxn-icon.svg" alt="Uxn Powered"/>
+       		</a>
+        	<a href="https://wiki.xxiivv.com/site/ethics.html">
+        		<img src="images/dreipfeile-icon.svg" alt="Ethics"/>
+       		</a>
+        	<a href="feed.xml">
+        		<img src="images/rss.svg" alt="RSS Feed"/>
+       		</a>
+			<span style="float: right;"><em>Last updated: 290422</em></span>
+		</footer>
+	</body>
+</html>

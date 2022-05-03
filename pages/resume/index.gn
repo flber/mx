@@ -1,0 +1,28 @@
+!meta!
+template: resume
+title: Resume
+static: true
+!meta!
+
+[h2|Resume]
+
+[p|I'm Ben, a college freshman working on various software projects. You can view my Github profile [a, href: "https://github.com/flber"|here], which shows most of my work over the past four years.]
+
+[p|The rest of this site is a blog and personal wiki where I talk about everything from postmortems of projects to cooking. I wrote my own markup language and site generator in Rust to create the html, the source code of which you can see on my [a, href: "https://github.com/flber/Pillar"|Pillar] Github repository. I host the site on a raspberry pi, served with nginx.]
+
+[p|Along with the languages listed below, I'm comfortable with bash, batch, rysnc, git, CI/CD, Github actions, frontend and backend development in general, AWS EC2 deployment, some React and React Native, and nginx. I also have experience with Windows 10, Mac, and linux (Arch, Debian, and Ubuntu).]
+
+[ul|
+	[li|HTML5 - 3 years]
+	[li|Ruby - 5 years]
+	[li|Rust - 1 year]
+	[li|Java - 3 years]
+	[li|JavaScript - 2 years]
+	[li|Lua - 3 years]
+	[li|CSS - 3 years]
+	[li|Python - 4 years]
+	[li|Node.js - 2 years]
+	[li|React Native - 1 year]
+	[li|C++ - 1 year]
+	[li|C - 2 years]
+]

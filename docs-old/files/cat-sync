@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd ~/caellus.github.io
+make
+git commit -a -m "auto-update"
+git push origin master

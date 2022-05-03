@@ -1,0 +1,98 @@
+#!/bin/bash
+
+unit=$1
+case $unit in
+	"-h" | "--help" )
+		echo "Pipe in times, or type and ctrl-d when done
+Define largest unit with m (minutes), h (hours), or d (days); defaults to hours"
+	;;
+	"" )
+		unit="h"
+	;;
+esac
+
+times=$(cat)
+
+days=0
+hours=0
+minutes=0
+seconds=0
+
+for t in $times; do
+	# adds zeros to smaller times
+	case $unit in
+		"m" | "min" )
+			t="00:00:${t}"
+		;;
+		"h" | "hour")
+			t="00:${t}"
+		;;
+		* ) ;;
+	esac
+
+	# breaks time into units
+	IFS=':'
+	read -ra parts <<< "$t"
+	IFS=' '
+	d=${parts[0]}
+	h=${parts[1]}
+	m=${parts[2]}
+	s=${parts[3]}
+
+	# changes empty units to 0 for math
+	if [ "$h" = "" ]; then h=0; fi
+	if [ "$m" = "" ]; then m=0; fi
+	if [ "$s" = "" ]; then s=0; fi
+
+	# sums all units (forcing decimal math, can get confused with leading 0's otherwise)
+	days=$[10#$days+10#$d]
+	hours=$[10#$hours+10#$h]
+	minutes=$[10#$minutes+10#$m]
+	seconds=$[10#$seconds+10#$s]
+done
+
+# "simple" round function. black magic.
+round(){
+	echo $(printf %.$2f $(echo "scale=$2;(((10^$2)*$1)+0.5)/(10^$2)" | bc))
+};
+
+# takes a time int and a break int, returns extra and new current
+# example:
+# spillup 100 60.0
+# > 1 40
+spillup(){
+	extralarge=$(echo "${1} / ${2}" | bc -l)
+	decsmall=$(echo "(${extralarge} % 1) * ${2}" | bc)
+	# extra large units
+	echo $(round $(echo "scale=0;${extralarge} - (${extralarge} % 1)" | bc) 0)
+	# new small units
+	echo $(round $decsmall 0);
+}
+
+# spills extra time up units for formatting
+if (( seconds >= 60 )); then
+	{
+	  read -r extra
+	  read -r new
+	} <<< "$( spillup ${seconds} 60.0 )"
+	minutes=$[$minutes+$extra]
+	seconds=$new
+fi
+if (( minutes >= 60 )); then
+	{
+	  read -r extra
+	  read -r new
+	} <<< "$( spillup ${minutes} 60.0 )"
+	hours=$[$hours+$extra]
+	minutes=$new
+fi
+if (( hours >= 24 )); then
+	{
+	  read -r extra
+	  read -r new
+	} <<< "$( spillup ${hours} 24.0 )"
+	days=$[$days+$extra]
+	hours=$new
+fi
+
+echo "${days}:${hours}:${minutes}:${seconds}"

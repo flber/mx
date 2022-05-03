@@ -1,0 +1,267 @@
+2020-08-29T13:17:15-07:00	testing, testing, 1, 2, 3
+2020-08-29T16:11:00-07:00	test 2?
+2020-08-29T16:17:33-07:00	Hey @koehr, I see you recently joined as well!
+2021-02-16T13:59:07-08:00	testing new setup
+2021-02-16T14:02:38-08:00	(cd): changed twtxt file
+2021-02-16T14:04:24-08:00	(cd): testing twtxt updates
+2021-02-16T14:04:49-08:00	/home/benh/Documents/Mineral-Existence: testing twtxt updates: pt 3
+2021-02-16T14:11:31-08:00	: testing twtxt updates: pt 4
+2021-02-16T14:12:22-08:00	Mineral-Existence ><> : testing twtxt updates: pt 5
+2021-02-16T14:13:03-08:00	Mineral-Existence: testing twtxt updates: pt 6
+2021-02-16T14:21:03-08:00	Mineral-Existence: twtxt + git integration is good to go!
+2021-02-17T11:10:07-08:00	[Pillar] massive refactor, much more idiomatic
+2021-02-17T11:11:36-08:00	[Pillar] removed temporary files
+2021-02-17T11:14:39-08:00	[Pillar] updated readme, built release
+2021-02-17T11:17:14-08:00	[Mineral-Existence] twtxt updates, added new Pillar build
+2021-02-17T11:23:49-08:00	[example] changed test back to japanese
+2021-02-17T11:24:59-08:00	[Mineral-Existence] built site with new Pillar version
+2021-02-17T11:29:39-08:00	[Mineral-Existence] manual indent adjustment
+2021-02-17T11:31:04-08:00	[Mineral-Existence] whoops, I think I just had a typo in the css
+2021-02-17T11:41:56-08:00	[Mineral-Existence] removed typo
+2021-02-17T12:09:48-08:00	[Mineral-Existence] actually removing typo
+2021-02-17T12:13:25-08:00	[Pillar] fixed date substitution
+2021-02-17T12:13:41-08:00	[Mineral-Existence] fixed dates
+2021-02-20T17:09:14-08:00	[Mineral-Existence] moved to rpi4!
+2021-02-20T17:10:28-08:00	[Mineral-Existence] changed some aliases so twtxt will match with current progress
+2021-02-20T17:39:42-08:00	[Mineral-Existence] added hike page
+2021-02-20T17:50:07-08:00	[Mineral-Existence] fixed new file names
+2021-02-20T18:02:53-08:00	[Mineral-Existence] fixed image file name in post
+2021-02-23T10:30:27-08:00	[todo_list_rust] small aesthetic changes
+2021-02-23T14:57:04-08:00	[todo_list_rust] changed readme to reflect current ui
+2021-02-24T22:17:19-08:00	[todo_list_rust] changed version number
+2021-03-01T16:31:57-08:00	[Mineral-Existence] added habit tracker to inventory
+2021-03-01T17:36:34-08:00	[Mineral-Existence] added Bucephalus page
+2021-03-04T12:07:16-08:00	[Mineral-Existence] cleaning up
+2021-03-04T12:35:54-08:00	[Mineral-Existence] updated readme
+2021-03-04T12:36:10-08:00	[Mineral-Existence] built site
+2021-03-04T17:11:15-08:00	[Mineral-Existence] rebuilt site, testing sync
+2021-03-07T13:37:52-08:00	[forth] some basic files
+2021-03-07T22:30:45-08:00	[Mineral-Existence] misc changes
+2021-03-09T13:47:21-08:00	[nasu] minor changes
+2021-03-09T14:00:32-08:00	[nasu] added to readme
+2021-03-09T14:08:00-08:00	[nasu] added to readme
+2021-03-09T14:10:22-08:00	[nasu] attempting to use git send-email to try an suggest an update?
+2021-03-09T16:52:37-08:00	[webring] added icon to Mineral Existence
+2021-03-23T13:17:02-07:00	[example] updating dev to current state
+2021-03-26T18:51:38-07:00	[Mineral-Existence] fixing merging mistakes
+2021-03-26T19:04:11-07:00	[Mineral-Existence] all done with merge conflicts now?
+2021-03-26T19:16:12-07:00	[Mineral-Existence] removing jpgs
+2021-03-27T17:41:19-07:00	[text] new tests
+2021-03-27T19:09:00-07:00	[Mineral-Existence] fixed tw.txt
+2021-03-27T22:02:28-07:00	[example] still working, commiting to save
+2021-03-27T22:04:34-07:00	[example] lazy loading
+2021-03-27T22:10:56-07:00	[Mineral-Existence] lazy image loading!
+2021-03-27T22:46:16-07:00	[Mineral-Existence] edit of about page
+2021-03-27T22:50:03-07:00	[webring] fixed broken twtxt link for Mineral Existence
+2021-03-27T23:43:17-07:00	[Mineral-Existence] new icon
+2021-03-27T23:59:21-07:00	[Mineral-Existence] even newer icon
+2021-03-28T00:06:26-07:00	[Mineral-Existence] update .ico
+2021-03-28T00:16:10-07:00	[Mineral-Existence] newest icon?
+2021-03-28T16:19:52-07:00	[text] got recursive method working (partially)
+2021-03-28T19:19:47-07:00	[Mineral-Existence] fixed wiki page
+2021-03-28T19:20:30-07:00	[Mineral-Existence] built fixed pages
+2021-04-09T22:09:54-07:00	[Mineral-Existence] updated music
+2021-04-10T15:02:53-07:00	[Mineral-Existence] new hike
+2021-04-10T16:53:51-07:00	[Mineral-Existence] fixed image link
+2021-04-13T21:39:18-07:00	[RustPractice]
+2021-04-13T21:39:33-07:00	[RustPractice] new tests and gitignore
+2021-04-14T11:36:31-07:00	[example] added progress bars
+2021-04-14T12:03:34-07:00	[example] progress bars in main!
+2021-04-14T12:10:40-07:00	[Mineral-Existence] new pillar version
+2021-04-14T12:11:29-07:00	[Pillar] minor changes
+2021-04-16T16:45:51-07:00	[Mineral-Existence] hecking r
+2021-04-18T14:46:53-07:00	[Mineral-Existence] bee
+2021-04-24T16:32:24-07:00	[Mineral-Existence] uxn notes
+2021-04-24T17:30:03-07:00	[Mineral-Existence] more work on uxn notes
+2021-04-24T17:55:55-07:00	[Mineral-Existence] finished(?) example in uxn notes
+2021-04-24T17:58:15-07:00	[Mineral-Existence] small addition
+2021-04-24T19:37:59-07:00	[Mineral-Existence] stack, not queue
+2021-04-24T19:42:34-07:00	[Mineral-Existence] updated now page
+2021-04-24T19:43:16-07:00	[Mineral-Existence] actually update now page
+2021-04-24T20:52:51-07:00	[Mineral-Existence] updated guess
+2021-04-24T22:16:54-07:00	[uxn] forked rabbits' repo
+2021-04-24T22:34:36-07:00	[uxn] fiddling on game controls
+2021-04-24T22:47:31-07:00	[uxn] fixed underflow!
+2021-04-25T12:54:20-07:00	[Pillar] misc work
+2021-04-25T12:56:29-07:00	[example] added back kraken
+2021-04-25T12:56:46-07:00	[example] added back kraken
+2021-04-25T13:58:33-07:00	[uxn] small changes to game controls
+2021-04-29T12:54:06-07:00	[uxn] merged rabbits' changes
+2021-04-29T13:48:20-07:00	[uxn_tests] added start files
+2021-04-29T13:51:24-07:00	[Mineral-Existence] small changes, testing github keys?
+2021-04-29T13:53:42-07:00	[uxn_tests] test change
+2021-05-12T18:53:37-07:00	[Mineral-Existence] removed custom web font
+2021-05-12T19:10:07-07:00	[Mineral-Existence] small color change
+2021-05-12T19:17:09-07:00	[Mineral-Existence] removed temp file
+2021-05-12T19:28:10-07:00	[Mineral-Existence] times new roman
+2021-05-12T19:31:37-07:00	[Mineral-Existence] reducing unicode
+2021-05-13T14:13:43-07:00	[Mineral-Existence] removed old template files
+2021-05-13T14:15:03-07:00	[Mineral-Existence] added to wiki
+2021-05-13T15:19:06-07:00	[Mineral-Existence] splash page!
+2021-05-17T11:35:33-07:00	[Mineral-Existence] added author to splash
+2021-05-17T16:34:58-07:00	[Mineral-Existence] more comprehensive uxn notes
+2021-05-20T13:36:50-07:00	[Mineral-Existence] updated uxn notes
+2021-05-20T14:41:02-07:00	[Mineral-Existence] chaotic license
+2021-05-20T14:41:19-07:00	[Pillar] chaotic license
+2021-05-20T14:42:10-07:00	[Pillar] chaotic license
+2021-05-21T21:29:33-07:00	[Mineral-Existence] testing hi page
+2021-05-21T21:36:36-07:00	[Mineral-Existence] testing hi page: pt 2
+2021-05-22T02:22:24-07:00	[Mineral-Existence] work on hello page
+2021-05-23T14:56:37-07:00	[Mineral-Existence] added writing page and short story
+2021-05-23T19:28:20-07:00	[Mineral-Existence] details on uxn notes
+2021-05-23T19:35:44-07:00	[Mineral-Existence] small updates to home
+2021-06-02T10:04:51-07:00	[example] mostly done with v0.2.0
+2021-06-02T15:01:49-07:00	[example] changed readme and extension name
+2021-06-02T15:04:42-07:00	[example] edits to readme
+2021-06-02T15:05:53-07:00	[example] edits to readme
+2021-06-02T15:06:56-07:00	[example] more edits to readme
+2021-06-02T15:14:34-07:00	[example] unecessary commit
+2021-06-02T15:19:47-07:00	[example] removed old html files
+2021-06-02T15:25:54-07:00	[Pillar] changed marble to granite in config
+2021-06-02T19:44:35-07:00	[Pillar] fixed small parsing error
+2021-06-02T19:48:03-07:00	[Pillar] that was a mistake
+2021-06-02T21:26:16-07:00	[Pillar] debug skip feature
+2021-06-02T21:26:53-07:00	[Pillar] type change
+2021-06-03T19:12:11-07:00	[example] longer test file and debug work
+2021-06-03T19:13:37-07:00	[Pillar] uncommented code
+2021-06-04T17:13:48-07:00	[example] fixed many small bugs
+2021-06-04T17:46:19-07:00	[example] comments to finish v0.2.1
+2021-06-04T17:46:53-07:00	[Mineral-Existence] moved site to granite + pillar v0.2.1
+2021-06-04T18:57:48-07:00	[Mineral-Existence] moved hello to granite
+2021-06-07T13:56:32-07:00	[Mineral-Existence] added images to games page
+2021-06-11T14:53:04-07:00	[gmtk2021] dev branch
+2021-06-11T15:00:51-07:00	[workflows] ci/cd workflows
+2021-06-11T15:37:39-07:00	[builds] builds folder
+2021-06-11T15:39:29-07:00	[builds] builds folder
+2021-06-11T16:36:48-07:00	[gmtk2021] small aesthetic changes to file structure
+2021-06-11T21:29:42-07:00	[gmtk2021] todo additions
+2021-06-11T21:30:54-07:00	[gmtk2021] todo additions
+2021-06-12T14:30:56-07:00	[gmtk2021] added some art
+2021-06-12T16:42:44-07:00	[gmtk2021] more art
+2021-06-12T17:57:28-07:00	[gmtk2021] high score output
+2021-06-12T18:23:14-07:00	[gmtk2021] usernames
+2021-06-12T19:55:12-07:00	[assets] title art
+2021-06-12T19:56:21-07:00	[assets] whoops
+2021-06-12T21:31:15-07:00	[assets] faces
+2021-06-12T22:21:33-07:00	[assets] added cat
+2021-06-12T22:28:08-07:00	[assets] still working on cat commit
+2021-06-12T22:32:40-07:00	[assets] title screen art
+2021-06-12T23:02:38-07:00	[loadingtexture] changed cursor size
+2021-06-12T23:04:19-07:00	[gmtk2021] fixed merge
+2021-06-12T23:28:28-07:00	[gmtk2021] updated name in workflow
+2021-06-12T23:35:06-07:00	[gmtk2021] massive update of master
+2021-06-12T23:39:38-07:00	[gmtk2021] back to dev branch
+2021-06-12T23:58:14-07:00	[gmtk2021] moved to game folder
+2021-06-13T00:02:29-07:00	[gmtk2021] fixed publish
+2021-06-13T00:04:15-07:00	[gmtk2021] fixed publish again
+2021-06-13T00:07:25-07:00	[gmtk2021] went back to old dir structure
+2021-06-13T00:08:24-07:00	[gmtk2021] changed export
+2021-06-13T00:09:56-07:00	[gmtk2021] built
+2021-06-13T00:14:08-07:00	[gmtk2021] export update
+2021-06-13T00:16:00-07:00	[gmtk2021] export update 2
+2021-06-13T00:23:39-07:00	[gmtk2021] cicd work
+2021-06-13T00:40:56-07:00	[gmtk2021] builds
+2021-07-02T10:15:54-07:00	[Pillar] finally added partial builds
+2021-07-07T22:45:05-07:00	[Mineral-Existence] small updates
+2021-07-07T22:57:54-07:00	[Mineral-Existence] added question prefaces to about page
+2021-07-07T22:59:24-07:00	[Mineral-Existence] fixed syntax error
+2021-07-07T23:13:29-07:00	[Pillar] implemented partial builds
+2021-07-07T23:40:57-07:00	[Pillar] debug builds every page
+2021-07-07T23:42:11-07:00	[Pillar] fixed checks
+2021-07-08T00:40:42-07:00	[Pillar]
+2021-07-08T00:41:01-07:00	[Pillar] pillar now handles removal of path from files for scripts
+2021-07-08T01:07:22-07:00	[Mineral-Existence] updated dates, path is at top of pages :(
+2021-08-01T11:59:29-07:00	[Mineral-Existence] lots of changes, sidebar
+2021-08-01T14:48:27-07:00	[Mineral-Existence] clean css
+2021-08-02T12:05:16-07:00	[Mineral-Existence] projects page
+2021-08-02T12:07:23-07:00	[Mineral-Existence] renamed projects to tools
+2021-08-10T13:54:49-07:00	[Mineral-Existence] various changes
+2021-08-10T14:08:10-07:00	[Mineral-Existence] updated 404 to current style
+2021-08-16T16:49:33-07:00	[Mineral-Existence] testing change to default html
+2021-08-16T16:52:38-07:00	[Mineral-Existence] didn't like that previous test
+2021-08-16T19:17:01-07:00	[Mineral-Existence] added to hello
+2021-08-16T19:30:49-07:00	[Mineral-Existence] hello page changes
+2021-08-20T08:40:34-07:00	[Mineral-Existence] aria label webring changed
+2021-08-25T11:39:28-07:00	[Mineral-Existence] updating accessibility
+2021-08-25T11:50:04-07:00	[Mineral-Existence] more accessibility work
+2021-08-26T10:20:23-07:00	[Mineral-Existence] added sumtime to tools
+2021-08-26T11:07:30-07:00	[Mineral-Existence] examples to tools page
+2021-08-26T11:11:48-07:00	[Mineral-Existence] changed mtrack from exec to source
+2021-08-29T22:24:11-07:00	[Mineral-Existence] temp music files
+2021-08-29T22:32:33-07:00	[Mineral-Existence] gave up on music
+2021-08-31T15:05:10-07:00	[Mineral-Existence] new spell
+2021-08-31T20:09:28-07:00	[Mineral-Existence] css changes, changed grimoire
+2021-08-31T20:13:02-07:00	[Mineral-Existence] whoops, fieldset wrong color
+2021-09-02T17:06:55-07:00	[Mineral-Existence] changed mastodon link
+2021-09-17T12:37:04-07:00	[Mineral-Existence] lots of updates, split software from inventory
+2021-09-17T12:42:49-07:00	[Mineral-Existence] build home to update latest
+2021-09-17T13:45:23-07:00	[Mineral-Existence] images to inventory
+2021-09-17T13:53:37-07:00	[Mineral-Existence] added sway configs
+2021-09-17T14:15:50-07:00	[Mineral-Existence] new about photo
+2021-09-17T14:16:55-07:00	[Mineral-Existence] space added to about page
+2021-09-17T15:14:32-07:00	[Mineral-Existence] added proper titles
+2021-09-17T17:14:28-07:00	[Mineral-Existence] tweaks to file page
+2021-09-17T17:16:31-07:00	[Mineral-Existence] prettified html of files page
+2021-09-17T17:17:29-07:00	[Mineral-Existence] moved kitty unicode
+2021-09-17T17:18:01-07:00	[Mineral-Existence] built for last change
+2021-09-17T23:59:02-07:00	[Mineral-Existence] spacing to recipes
+2021-09-18T00:04:39-07:00	[Mineral-Existence] removed f
+2021-09-23T14:06:57-07:00	[F21] first commit
+2021-09-23T14:30:17-07:00	[brhammon] first commits
+2021-09-23T14:31:07-07:00	[brhammon] added project readme
+2021-09-25T11:03:47-07:00	[Mineral-Existence] added plausible tracking and rebuilt music
+2021-09-28T20:53:34-07:00	[Mineral-Existence] updated music
+2021-09-28T22:09:09-07:00	[Mineral-Existence] spacing to sot
+2021-09-28T22:09:54-07:00	[Mineral-Existence] spacing to sot - 2
+2021-10-01T16:11:32-07:00	[Mineral-Existence] new sumtime
+2021-10-01T16:17:35-07:00	[Mineral-Existence] updated tools for new sumtime
+2021-10-01T16:23:17-07:00	[Mineral-Existence] added proctime to tools
+2021-10-01T16:24:03-07:00	[Mineral-Existence] wc
+2021-10-01T16:29:49-07:00	[Mineral-Existence] changed h2 of tools to tools from projects
+2021-10-01T16:53:30-07:00	[Mineral-Existence] added prpnd to tools
+2021-10-01T18:46:51-07:00	[Mineral-Existence] added proctrack
+2021-10-01T19:38:08-07:00	[Mineral-Existence] standardized spacing in mtrack
+2021-10-01T20:05:59-07:00	[Mineral-Existence] fixed sumtime bug
+2021-10-05T16:33:38-07:00	[Mineral-Existence] fixed small error in about
+2021-10-05T22:40:33-07:00	[Mineral-Existence] added learning nim page
+2021-10-05T22:41:33-07:00	[Mineral-Existence] spacing modifications
+2021-10-05T22:42:33-07:00	[Mineral-Existence] spacing modifications
+2021-10-05T22:47:14-07:00	[Mineral-Existence] uxn addendum to nim page
+2021-10-07T19:58:39-07:00	[Mineral-Existence] reading page
+2021-10-07T19:58:52-07:00	[Mineral-Existence] updated home
+2021-10-07T20:08:40-07:00	[Mineral-Existence] added books to read
+2021-10-07T20:11:35-07:00	[Mineral-Existence] added more neil gaiman
+2021-10-07T20:13:39-07:00	[Mineral-Existence] tintin
+2021-10-07T20:27:42-07:00	[Mineral-Existence] DUNE
+2021-10-07T20:39:38-07:00	[Mineral-Existence] lots of old books
+2021-10-07T21:06:21-07:00	[Mineral-Existence] removed time file?
+2021-10-08T17:22:41-07:00	[Mineral-Existence] fixed proctime creating extra 'time' files everywhere
+2021-10-08T17:24:04-07:00	[Mineral-Existence] updated music
+2021-10-09T17:54:35-07:00	[Mineral-Existence] added more books
+2021-10-09T22:30:23-07:00	[Mineral-Existence] under construction to reading from
+2021-10-09T22:31:22-07:00	[Mineral-Existence] uc rework
+2021-10-09T22:35:46-07:00	[Mineral-Existence] reading form relative width
+2021-10-11T11:45:36-07:00	[Mineral-Existence] looking at uxn logo
+2021-10-11T12:37:47-07:00	[Mineral-Existence] icon changes
+2021-10-11T17:37:04-07:00	[brhammon] readme to md
+2021-10-11T17:37:56-07:00	[brhammon] added lab1.lgi to Lab1/
+2021-10-12T21:24:22-07:00	[Mineral-Existence] grimoire updates and fixed(?) footer highlighting
+2021-10-18T18:55:26-07:00	[Mineral-Existence] added pong image
+2021-10-18T21:37:39-07:00	[brhammon] restored lab1 README
+2021-10-18T23:18:20-07:00	[Lab1] finished Lab1
+2021-10-19T23:38:34-07:00	[uxn-tests]
+2021-10-19T23:38:45-07:00	[uxn-tests] day 6 of uxn
+2021-10-19T23:56:41-07:00	[Mineral-Existence] removed form from reading
+2021-10-20T00:19:09-07:00	[Mineral-Existence] digtial nest page
+2021-10-20T00:27:36-07:00	[Mineral-Existence] small changes
+2021-10-20T00:28:08-07:00	[Mineral-Existence] small changes
+2021-11-30T13:03:55-08:00	test
+2021-11-30T13:06:02-08:00	[mx] adding watch script
+2021-11-30T17:06:00-08:00	[benh] addition to bookmarks
+2021-11-30T17:06:21-08:00	[mx] addition to bookmarks
+2021-11-30T17:07:03-08:00	[mx] addition to bookmarks
+2021-12-02T18:55:52-08:00	[mx] new link to bookmarks
+2021-12-02T18:55:56-08:00	[benh] new link to bookmarks
+2021-12-02T18:56:04-08:00	[mx] new link to bookmarks
+2021-12-02T19:04:28-08:00	[mx] pigeon image alt
+2021-12-05T20:26:48-08:00	[mx] fixed dl styling

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+cd $HOME
+
+DIRECTORY=.uxn
+HELP=$'uxnrun utility version 1.0\n\nUsage: uxnrun <path of .tal file>\n\n\tuxnrun takes the path of a .tal file within a .uxn directory in your home\n\tfolder, runs the uxn build.sh script, saves the assembled file and exectuable\n\tin a bin directory within the .uxn dir, and runs the program with the uxn\n\temulator.'
+
+if [ -d "$DIRECTORY" ]; then
+	cd $DIRECTORY
+else
+	read -p ".uxn directory not found, should it be cloned from the repo? [y/n]
+" choice
+	if [ "$choice" = "y" ]; then
+		git clone https://git.sr.ht/~rabbits/uxn .uxn
+		cd $DIRECTORY
+	else
+		echo "Won't clone repo, quitting now"
+		exit
+	fi
+fi
+
+if [ "$#" == "0" ]; then
+	echo "$HELP"
+	echo $'\nNo .tal file given'
+else
+	case $1 in
+		-h | --help )
+		echo "$HELP"
+		;;
+		* )
+		nopath="${1##*/}"
+		clean="${nopath%.*}"
+		echo "building and running "$clean
+		./bin/uxnasm $1 bin/$clean.rom
+		./bin/uxnemu bin/$clean.rom
+		;;
+	esac
+fi

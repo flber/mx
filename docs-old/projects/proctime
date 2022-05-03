@@ -1,0 +1,11 @@
+#!/bin/bash
+
+{ time $1 2> /dev/null ; } 2> "time.tmp"
+
+t=$(cat "time.tmp" | head -n 2 | tail -1)
+t=$(echo $t | tr -s ' ' | cut -d ' ' -f 2)
+t=$(echo "$t" | tr 'm' ':')
+t=$(echo "$t" | sed 's/\.[0-9]\+s//')
+
+echo "$t"
+rm "time.tmp"

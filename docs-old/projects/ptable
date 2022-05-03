@@ -1,0 +1,267 @@
+#!/bin/bash
+
+declare -A elements
+
+elements["H"]="atomic number: 1\navg. atomic mass: 1.008\n"
+elements["He"]="atomic number: 2\navg. atomic mass: 4.003\n"
+
+elements["Li"]="atomic number: 3\navg. atomic mass: 6.940\n"
+elements["Be"]="atomic number: 4\navg. atomic mass: 9.012\n"
+elements["B"]="atomic number: 5\navg. atomic mass: 10.81\n"
+elements["C"]="atomic number: 6\navg. atomic mass: 12.01\n"
+elements["N"]="atomic number: 7\navg. atomic mass: 14.01\n"
+elements["O"]="atomic number: 8\navg. atomic mass: 16.00\n"
+elements["F"]="atomic number: 9\navg. atomic mass: 19.00\n"
+elements["Ne"]="atomic number: 10\navg. atomic mass: 20.18\n"
+
+elements["Na"]="atomic number: 11\navg. atomic mass: 22.99\n"
+elements["Mg"]="atomic number: 12\navg. atomic mass: 24.31\n"
+elements["Al"]="atomic number: 13\navg. atomic mass: 26.98\n"
+elements["Si"]="atomic number: 14\navg. atomic mass: 28.09\n"
+elements["P"]="atomic number: 15\navg. atomic mass: 30.97\n"
+elements["S"]="atomic number: 16\navg. atomic mass: 32.06\n"
+elements["Cl"]="atomic number: 17\navg. atomic mass: 35.45\n"
+elements["Ar"]="atomic number: 18\navg. atomic mass: 39.95\n"
+
+elements["K"]="atomic number: 19\navg. atomic mass: 39.10\n"
+elements["Ca"]="atomic number: 20\navg. atomic mass: 40.08\n"
+elements["Sc"]="atomic number: 21\navg. atomic mass: 44.96\n"
+elements["Ti"]="atomic number: 22\navg. atomic mass: 47.87\n"
+elements["V"]="atomic number: 23\navg. atomic mass: 50.94\n"
+elements["Cr"]="atomic number: 24\navg. atomic mass: 52.00\n"
+elements["Mn"]="atomic number: 25\navg. atomic mass: 54.94\n"
+elements["Fe"]="atomic number: 26\navg. atomic mass: 55.85\n"
+elements["Co"]="atomic number: 27\navg. atomic mass: 58.93\n"
+elements["Ni"]="atomic number: 28\navg. atomic mass: 58.69\n"
+elements["Cu"]="atomic number: 29\navg. atomic mass: 63.55\n"
+elements["Zn"]="atomic number: 30\navg. atomic mass: 65.38\n"
+elements["Ga"]="atomic number: 31\navg. atomic mass: 69.72\n"
+elements["Ge"]="atomic number: 32\navg. atomic mass: 72.63\n"
+elements["As"]="atomic number: 33\navg. atomic mass: 74.92\n"
+elements["Se"]="atomic number: 34\navg. atomic mass: 78.97\n"
+elements["Br"]="atomic number: 35\navg. atomic mass: 79.90\n"
+elements["Kr"]="atomic number: 36\navg. atomic mass: 83.80\n"
+
+elements["Rb"]="atomic number: 37\navg. atomic mass: 85.47\n"
+elements["Sr"]="atomic number: 38\navg. atomic mass: 87.62\n"
+elements["Y"]="atomic number: 39\navg. atomic mass: 88.91\n"
+elements["Zr"]="atomic number: 40\navg. atomic mass: 91.22\n"
+elements["Nb"]="atomic number: 41\navg. atomic mass: 92.91\n"
+elements["Mo"]="atomic number: 42\navg. atomic mass: 95.95\n"
+elements["Tc"]="atomic number: 43\navg. atomic mass: (98)\n"
+elements["Ru"]="atomic number: 44\navg. atomic mass: 101.07\n"
+elements["Rh"]="atomic number: 45\navg. atomic mass: 102.91\n"
+elements["Pd"]="atomic number: 46\navg. atomic mass: 106.42\n"
+elements["Ag"]="atomic number: 47\navg. atomic mass: 107.87\n"
+elements["Cd"]="atomic number: 48\navg. atomic mass: 112.41\n"
+elements["In"]="atomic number: 49\navg. atomic mass: 114.82\n"
+elements["Sn"]="atomic number: 50\navg. atomic mass: 118.71\n"
+elements["Sb"]="atomic number: 51\navg. atomic mass: 121.76\n"
+elements["Te"]="atomic number: 52\navg. atomic mass: 127.60\n"
+elements["I"]="atomic number: 53\navg. atomic mass: 126.90\n"
+elements["Xe"]="atomic number: 54\navg. atomic mass: 131.29\n"
+
+elements["Cs"]="atomic number: 55\navg. atomic mass: 126.90\n"
+elements["Ba"]="atomic number: 56\navg. atomic mass: 131.29\n"
+
+elements["La"]="atomic number: 57\navg. atomic mass: 138.91\n"
+elements["Ce"]="atomic number: 58\navg. atomic mass: 140.12\n"
+elements["Pr"]="atomic number: 59\navg. atomic mass: 140.91\n"
+elements["Nd"]="atomic number: 60\navg. atomic mass: 144.24\n"
+elements["Pm"]="atomic number: 61\navg. atomic mass: (145)\n"
+elements["Sm"]="atomic number: 62\navg. atomic mass: 150.36\n"
+elements["Eu"]="atomic number: 63\navg. atomic mass: 151.96\n"
+elements["Gd"]="atomic number: 64\navg. atomic mass: 157.25\n"
+elements["Tb"]="atomic number: 65\navg. atomic mass: 158.93\n"
+elements["Dy"]="atomic number: 66\navg. atomic mass: 162.50\n"
+elements["Ho"]="atomic number: 67\navg. atomic mass: 164.93\n"
+elements["Er"]="atomic number: 68\navg. atomic mass: 167.26\n"
+elements["Tm"]="atomic number: 69\navg. atomic mass: 168.93\n"
+elements["Yb"]="atomic number: 70\navg. atomic mass: 173.05\n"
+elements["Lu"]="atomic number: 71\navg. atomic mass: 174.97\n"
+
+elements["Hf"]="atomic number: 72\navg. atomic mass: 178.49\n"
+elements["Ta"]="atomic number: 73\navg. atomic mass: 180.95\n"
+elements["W"]="atomic number: 74\navg. atomic mass: 183.84\n"
+elements["Re"]="atomic number: 75\navg. atomic mass: 186.21\n"
+elements["Os"]="atomic number: 76\navg. atomic mass: 190.23\n"
+elements["Ir"]="atomic number: 77\navg. atomic mass: 192.22\n"
+elements["Pt"]="atomic number: 78\navg. atomic mass: 195.08\n"
+elements["Au"]="atomic number: 79\navg. atomic mass: 196.97\n"
+elements["Hg"]="atomic number: 80\navg. atomic mass: 200.59\n"
+elements["Tl"]="atomic number: 81\navg. atomic mass: 205.38\n"
+elements["Pb"]="atomic number: 82\navg. atomic mass: 207.2\n"
+elements["Bi"]="atomic number: 83\navg. atomic mass: 208.98\n"
+elements["Po"]="atomic number: 84\navg. atomic mass: (209)\n"
+elements["At"]="atomic number: 85\navg. atomic mass: (210)\n"
+elements["Rn"]="atomic number: 86\navg. atomic mass: (222)\n"
+
+elements["Fr"]="atomic number: 87\navg. atomic mass: (223)\n"
+elements["Ra"]="atomic number: 88\navg. atomic mass: (226)\n"
+
+elements["Ac"]="atomic number: 89\navg. atomic mass: (227)\n"
+elements["Th"]="atomic number: 90\navg. atomic mass: 232.04\n"
+elements["Pa"]="atomic number: 91\navg. atomic mass: 231.04\n"
+elements["U"]="atomic number: 92\navg. atomic mass: 238.03\n"
+elements["Np"]="atomic number: 93\navg. atomic mass: (237)\n"
+elements["Pu"]="atomic number: 94\navg. atomic mass: (244)\n"
+elements["Am"]="atomic number: 95\navg. atomic mass: (243)\n"
+elements["Cm"]="atomic number: 96\navg. atomic mass: (247)\n"
+elements["Bk"]="atomic number: 97\navg. atomic mass: (247)\n"
+elements["Cf"]="atomic number: 98\navg. atomic mass: (251)\n"
+elements["Es"]="atomic number: 99\navg. atomic mass: (252)\n"
+elements["Fm"]="atomic number: 100\navg. atomic mass: (257)\n"
+elements["Md"]="atomic number: 101\navg. atomic mass: (258)\n"
+elements["No"]="atomic number: 102\navg. atomic mass: (259)\n"
+elements["Lw"]="atomic number: 103\navg. atomic mass: (266)\n"
+
+elements["Rf"]="atomic number: 104\navg. atomic mass: (267)\n"
+elements["Db"]="atomic number: 105\navg. atomic mass: (268)\n"
+elements["Sb"]="atomic number: 106\navg. atomic mass: (269)\n"
+elements["Bh"]="atomic number: 107\navg. atomic mass: (270)\n"
+elements["Hs"]="atomic number: 108\navg. atomic mass: (277)\n"
+elements["Mt"]="atomic number: 109\navg. atomic mass: (278)\n"
+elements["Ds"]="atomic number: 110\navg. atomic mass: (281)\n"
+elements["Rg"]="atomic number: 111\navg. atomic mass: (282)\n"
+elements["Cn"]="atomic number: 112\navg. atomic mass: (285)\n"
+elements["Nh"]="atomic number: 113\navg. atomic mass: (286)\n"
+elements["Fl"]="atomic number: 114\navg. atomic mass: (289)\n"
+elements["Mc"]="atomic number: 115\navg. atomic mass: (290)\n"
+elements["Lv"]="atomic number: 116\navg. atomic mass: (293)\n"
+elements["Ts"]="atomic number: 117\navg. atomic mass: (294)\n"
+elements["Og"]="atomic number: 118\navg. atomic mass: (294)\n"
+
+
+if [ "$#" == "0" ]; then
+	echo ""
+	echo "      1      2      3      4      5      6      7      8      9      10     11     12     13     14     15     16     17     18"
+	echo ""
+	echo "   ┌──────┐                                                                                                               ┌──────┐"
+	echo "   │1     │                                                                                                               │2     │"
+	echo "1  │H     │                                                                                                               │He    │"
+	echo "   │1.008 │                                                                                                               │4.003 │"
+	echo "   ├──────┼──────┐                                                                     ┌──────┬──────┬──────┬──────┬──────┼──────┤"
+	echo "   │3     │4     │                                                                     │5     │6     │7     │8     │9     │10    │"
+	echo "2  │Li    │Be    │                                                                     │B     │C     │N     │O     │F     │Ne    │"
+	echo "   │6.940 │9.012 │                                                                     │10.81 │12.01 │14.01 │16.00 │19.00 │20.18 │"
+	echo "   ├──────┼──────┤                                                                     ├──────┼──────┼──────┼──────┼──────┼──────┤"
+	echo "   │11    │12    │                                                                     │13    │14    │15    │16    │17    │18    │"
+	echo "3  │Na    │Mg    │                                                                     │Al    │Si    │P     │S     │Cl    │Ar    │"
+	echo "   │22.99 │24.31 │                                                                     │26.98 │28.09 │30.97 │32.06 │35.45 │39.95 │"
+	echo "   ├──────┼──────┼──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┼──────┼──────┼──────┼──────┼──────┼──────┤"
+	echo "   │19    │20    │21    │22    │23    │24    │25    │26    │27    │28    │29    │30    │31    │32    │33    │34    │35    │36    │"
+	echo "4  │K     │Ca    │Sc    │Ti    │V     │Cr    │Mn    │Fe    │Co    │Ni    │Cu    │Zn    │Ga    │Ge    │As    │Se    │Br    │Kr    │"
+	echo "   │39.10 │40.08 │44.96 │47.87 │50.94 │52.00 │54.94 │55.85 │58.93 │58.69 │63.55 │65.38 │69.72 │72.63 │74.92 │78.97 │79.90 │83.80 │"
+	echo "   ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤"
+	echo "   │37    │38    │39    │40    │41    │42    │43    │44    │45    │46    │47    │48    │49    │50    │51    │52    │53    │54    │"
+	echo "5  │Rb    │Sr    │Y     │Zr    │Nb    │Mo    │Tc    │Ru    │Rh    │Pd    │Ag    │Cd    │In    │Sn    │Sb    │Te    │I     │Xe    │"
+	echo "   │85.47 │87.62 │88.91 │91.22 │92.91 │95.95 │(98)  │101.07│102.91│106.42│107.87│112.41│114.82│118.71│121.76│127.60│126.90│131.29│"
+	echo "   ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤"
+	echo "   │55    │56    │      │72    │73    │74    │75    │76    │77    │78    │79    │80    │81    │82    │83    │84    │85    │86    │"
+	echo "6  │Cs    │Ba    │LAN   │Hf    │Ta    │W     │Re    │Os    │Ir    │Pt    │Au    │Hg    │Tl    │Pb    │Bi    │Po    │At    │Rn    │"
+	echo "   │132.91│137.33│      │178.49│180.95│183.84│186.21│190.23│192.22│195.08│196.97│200.59│205.38│207.2 │208.98│(209) │(210) │(222) │"
+	echo "   ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤"
+	echo "   │87    │88    │      │104   │105   │106   │107   │108   │109   │110   │111   │112   │113   │114   │115   │116   │117   │118   │"
+	echo "7  │Fr    │Ra    │ACT   │Rf    │Db    │Sb    │Bh    │Hs    │Mt    │Ds    │Rg    │Cn    │Nh    │Fl    │Mc    │Lv    │Ts    │Og    │"
+	echo "   │(223) │(226) │      │(267) │(268) │(269) │(270) │(277) │(278) │(281) │(282) │(285) │(286) │(289) │(290) │(293) │(294) │(294) │"
+	echo "   └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘"
+	echo ""
+	echo ""
+	echo "                 ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┐"
+	echo "                 │57    │58    │59    │60    │61    │62    │63    │64    │65    │66    │67    │68    │69    │70    │71    │"
+	echo "              6  │La    │Ce    │Pr    │Nd    │Pm    │Sm    │Eu    │Gd    │Tb    │Dy    │Ho    │Er    │Tm    │Yb    │Lu    │"
+	echo "                 │138.91│140.12│140.91│144.24│(145) │150.36│151.96│157.25│158.93│162.50│164.93│167.26│168.93│173.05│174.97│"
+	echo "                 ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤"
+	echo "                 │89    │90    │91    │92    │93    │94    │95    │96    │97    │98    │99    │100   │101   │102   │103   │"
+	echo "              7  │Ac    │Th    │Pa    │U     │Np    │Pu    │Am    │Cm    │Bk    │Cf    │Es    │Fm    │Md    │No    │Lw    │"
+	echo "                 │(227) │232.04│231.04│238.03│(237) │(244) │(243) │(247) │(247) │(251) │(252) │(257) │(258) │(259) │(266) │"
+	echo "                 └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘"
+	echo ""
+else
+	case $1 in
+		-h | --help )
+		echo "use ptable with no parameters to print out table
+		-a or --atom to get data from given atomic symbol
+		-m or --mass with a list of elements and coefficients to get molar mass
+		-h or --help for this menu"
+		;;
+		-a | --atom )
+		shift
+		case $1 in
+			-h | --help )
+			echo "prints an element's data given its atomic symbol"
+			;;
+			"" )
+			echo "please provide an atomic symbol (or --help for information)"
+			exit 0
+			;;
+			* )
+			printf "${elements[$1]}"
+			;;
+		esac
+		;;
+		-m | --mass )
+		shift
+		case $1 in
+			-h | --help )
+			echo "adds masses of elements (give list of elements with coefficients)\nexample: ptable -m 2Cu 5Li"
+			;;
+			"" )
+			echo "please provide a list of elements"
+			;;
+			* )
+			mass=0
+			while [ $1 ]; do
+				coef=1
+				element=$1
+				coefRegex='([0-9]+)'
+				if [[ $1 =~ $coefRegex ]]; then
+					coef=${BASH_REMATCH[1]}
+					elemRegex='([A-Z][a-z]*)'
+					if [[ $1 =~ $elemRegex ]]; then
+						element=${BASH_REMATCH[1]}
+					else
+						echo "couldn't find element name..."
+					fi
+				fi
+				tempMass=-1
+				massRegex='mass: ([0-9]+\.[0-9]+)'
+				synthMassRegex='mass: \(([0-9]+)'
+				if [[ ${elements[$element]} =~ $massRegex ]]; then
+					tempMass=${BASH_REMATCH[1]}
+				elif [[ ${elements[$element]} =~ $synthMassRegex ]]; then
+					tempMass=${BASH_REMATCH[1]}
+				else
+					echo "couldn't find atomic mass in data :("
+				fi
+				echo "mass of $element: $tempMass"
+				echo "coefficient of $element: $coef"
+				elementMass=$(echo "$tempMass * $coef" | bc)
+				mass=$(echo "$mass + $elementMass" | bc)
+				echo "total mass of $element: $elementMass"
+				echo ""
+				shift
+			done
+			top="┌"
+			bot="└"
+			i="0"
+			len=${#mass}
+			len=$[$len+2]
+			while [ $i -lt $len ]; do
+				top+="─"
+				bot+="─"
+				i=$[$i+1]
+			done
+			top+="┐"
+			bot+="┘"
+			echo "            $top"
+			echo "total mass: │ $mass │" 
+			echo "            $bot"
+			;;
+		esac
+		;;
+		* )
+		echo "not a valid command, use ptable -h for help"
+		;;
+	esac
+fi

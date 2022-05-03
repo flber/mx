@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" = "--help" ]; then
+	echo "Usage:
+  prpnd [text] [file]"
+else
+	dt=$(date +"%d%m%y")
+	temp="temp${dt}"
+	touch "$temp"
+
+	echo "$1" > "$temp"
+	cat "$2" >> "$temp"
+
+	rm "$2"
+	mv "$temp" "$2"
+fi
