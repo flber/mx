@@ -2,38 +2,25 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>MX - {{title}}</title>
+		<title>Resume</title>
 		<link rel="icon" href="favicon.ico?" type="image/x-icon">
 		<link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css">
 		<link rel="stylesheet" href="style.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body id="dark">
-		<div class="with-sidebar">
-			<div>
-		  		<!-- sidebar -->
-				<nav>
-					<span><h1><a href="home.html">Home</a></h1></span>
-					<span><h1><a href="now.html">now</a></h1></span>
-					<span><h1><a href="wiki.html">wiki</a></h1></span>
-					<span><h1><a href="about.html">about</a></h1></span>
-				</nav>
-			</div>
-			<div>
-				<main>
-					<!-- non-sidebar -->
-					<article class="inner">
-						{{content}}
-					</article>
-				</main>
-			</div>
-		</div>
+
+	<body>
+		<main>
+			{{content}}
+		</main>
+
 		<footer>
 			<a href="mailto:benrhammond@gmail.com" target="_blank">
 				<img src="../images/mail.svg" alt="Mailto"/>
 			</a>
 			<span style="float: right;"><em>Last updated: {{date}}</em></span>
-		</footer>
+		</footer>	
 	</body>
+
 </html>

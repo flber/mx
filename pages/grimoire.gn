@@ -207,6 +207,20 @@ title: Grimoire
 	[p|convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png]
 ]
 
+[p|Cut a video file with start and end points]
+[fieldset|
+	[legend|ffmpeg]
+	[p|ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4]
+]
+
+[p|Combine videos from text file]
+[fieldset|
+	[legend|bash/ffmpeg]
+	[p|> cat files.txt]
+	[p|file 'input1.mp4' \n file 'input2.mp4']
+	[p|ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4]
+]
+
 [p|Count all the characters in all files in a directory]
 [fieldset|
 	[legend|bash]

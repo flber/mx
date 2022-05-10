@@ -230,6 +230,20 @@
 	<p>convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
 </fieldset>
 
+<p>Cut a video file with start and end points</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4</p>
+</fieldset>
+
+<p>Combine videos from text file</p>
+<fieldset>
+	<legend>bash/ffmpeg</legend>
+	<p>> cat files.txt</p>
+	<p>file 'input1.mp4' \n file 'input2.mp4'</p>
+	<p>ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4</p>
+</fieldset>
+
 <p>Count all the characters in all files in a directory</p>
 <fieldset>
 	<legend>bash</legend>
@@ -294,7 +308,7 @@
         		<img src="images/rss.svg" alt="RSS Feed"/>
        		</a>
        		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
-			<span style="float: right;"><em>Last updated: 290422</em></span>
+			<span style="float: right;"><em>Last updated: 060522</em></span>
 		</footer>
 	</body>
 </html>

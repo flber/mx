@@ -9,9 +9,9 @@ function watcher()
         # output="$($@ | head -n $lines)"
         # clear
         # echo -e "$output"
-        $@
+        "$@"
         sleep 2
     done
 }
 
-watcher $command
+watcher "$command"
