@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <title>Art Directing for the Web | Stuff &#38; Nonsense</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Andy Clarke">
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Arimo:400,700|Lora:400,700|Alfa+Slab+One:400");
+
+    :root {
+      --font-family: "Arimo", sans-serif;
+      --font-family-alt: "Lora", serif;
+      --font-weight: normal;
+      --font-size-display: 16vmin;
+      --font-size-large: 1.424rem;
+      --font-size-medium: 1.266rem;
+      --font-size: 1.125rem;
+      --font-size-small: 1rem;
+      --font-size-x-small: 0.889rem;
+      --font-size-xx-small: 0.79rem;
+      --lineheight-text: 1.5;
+      --lineheight-heading: 1;
+      --color-background: #fff;
+      --color-text-default: #0b1016;
+      --grid-gap: 2vw;
+      --max-width: 92rem;
+      --spacing-xx-small: .125rem;
+      --spacing-x-small: .25rem;
+      --spacing-small: .5rem;
+      --spacing: .75rem;
+      --spacing-medium: 1rem;
+      --spacing-large: 1.5rem;
+      --spacing-x-large: 2rem;
+      --spacing-xx-large: 3rem;
+    }
+
+    /* =viewport */
+
+    @-ms-viewport {
+      width: device-width;
+    }
+
+    @-o-viewport {
+      width: device-width;
+    }
+
+    @viewport {
+      width: device-width;
+    }
+
+    /* =root */
+
+    html {
+      background-color: var(--color-background);
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 2vh 4vw;
+      font-family: var(--font-family);
+      font-size: var(--font-size-small);
+      line-height: var(--lineheight-text);
+      color: var(--color-text-default);
+      display: grid;
+      grid-column-gap: 2vw;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas:
+        "fig-1       aside       aside       aside       aside"
+        "fig-1       title       title       title       title"
+        "banner     banner      banner      banner      banner"
+        "....       main        main        main        main";
+    }
+
+    h1 {
+      margin: 0 0 var(--spacing) 0;
+      font-size: var(--font-size-display);
+      font-weight: 700;
+      letter-spacing: -.015em;
+      line-height: var(--lineheight-heading);
+      grid-area: title;
+    }
+
+    p {
+      margin: 0;
+      font-family: var(--font-family-alt);
+      font-size: var(--font-size-xx-small);
+    }
+
+    p+p {
+      text-indent: var(--grid-gap);
+    }
+
+    [role="banner"] {
+      grid-area: banner;
+      margin-bottom: var(--spacing-large);
+    }
+
+    main {
+      grid-area: main;
+      margin-bottom: var(--spacing-large);
+    }
+
+    aside {
+      grid-area: aside;
+      align-self: center;
+      margin-bottom: var(--spacing);
+    }
+
+    aside p {
+      font-family: var(--font-family);
+      font-size: var(--font-size-x-small);
+      font-weight: 700;
+    }
+
+    .fig-1 {
+      grid-area: fig-1;
+      margin: 0 0 var(--spacing) 0;
+    }
+
+    .fig-2 {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* 48 */
+
+    /* @media screen and (min-width : 48em) {
+
+      body {
+        grid-template-rows: auto;
+        grid-template-areas:
+          "fig-1      ....        ....       aside       aside"
+          "....      title       title       title       title"
+          "banner     banner      banner      banner     ...."
+          "....       main        main        main       main";
+      }
+    } */
+
+    /* 64 */
+
+    @media screen and (min-width : 64em) {
+
+      body {
+        padding: 2vh 0;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+          "....       aside       ....        fig-2        fig-2"
+          "title      title       banner      banner      banner"
+          "fig-1      main        banner      banner      banner";
+      }
+
+      .title {
+        padding-left: var(--grid-gap);
+        align-self: center;
+      }
+
+      aside {
+        margin-bottom: var(--spacing);
+        align-self: end;
+      }
+
+      .fig-2 {
+        display: block;
+        margin-bottom: var(--spacing);
+        transform: rotate(-15deg);
+        grid-area: fig-2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <picture role="banner">
+    <source
+      srcset="http://res.cloudinary.com/malarkey/image/upload/v1519221278/Art%20directing%20(Smashing)/banner-sketch.png"
+      media="(min-width: 64em)">
+    <img
+      src="http://res.cloudinary.com/malarkey/image/upload/v1519221281/Art%20directing%20(Smashing)/banner-small-sketch.png"
+      alt="Kiss Me, Deadly">
+  </picture>
+
+  <h1 class="title">Kiss Me, Deadly</h1>
+
+  <main>
+    <p>All I saw was the dame standing there in the glare of the headlights, waving her arms like a huge puppet and the
+      curse I spit out filled the car and my own ears. I wrenched the wheel over, felt the rear end start to slide,
+      brought it out with a splash of power and almost ran up the side of the cliff as the car fishtailed. The brakes
+      bit in, gouging a furrow in the shoulder, then jumped to the pavement and held.</p>
+
+    <p>Somehow I had managed a sweeping curve around the babe. For a few seconds she had been living on stolen time
+      because instead of getting out of the way she had tried to stay in the beam of the headlights. I sat there. and
+      let myself shake. The butt that had fallen out of my mouth had burned a hole in the leg of my pants and I flipped
+      it out the window. The stink of burned rubber and brake lining hung in the air like smoke and I was thinking of
+      every damn thing I ever wanted to say to a harebrained woman so I could have it ready when I got my hands on her.
+    </p>
+  </main>
+
+  <aside>
+    <p>Kiss Me, Deadly is Mickey Spillane&#8221;s sixth novel featuring private investigator Mike Hammer. True to the
+      tradition of Mickey Spillane novels, Kiss Me, Deadly ends in true Mike Hammer fashion.</p>
+  </aside>
+
+  <img src="http://res.cloudinary.com/malarkey/image/upload/v1519221278/Art%20directing%20(Smashing)/fig-1-sketch.png"
+    alt="" class="fig-1">
+  <img src="http://res.cloudinary.com/malarkey/image/upload/v1519219170/Art%20directing%20(Smashing)/fig-2-sketch.png"
+    alt="" class="fig-2">
+
+</body>
+
+</html>

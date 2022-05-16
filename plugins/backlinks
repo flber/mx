@@ -1,0 +1,43 @@
+#!/bin/python
+
+import os
+import re
+import sys
+import glob
+from pathlib import Path
+
+file = open(".pillar.toml").readlines()
+for lines in file:
+    k = lines.split()
+    if len(k) > 0 and k[0] == "granite_path":
+        granite_path = k[2]
+    if len(k) > 0 and k[0] == "html_path":
+        html_path = k[2]
+
+path_str = ""
+for index, line in enumerate(sys.stdin):
+    if index == 0:
+        path_str = line
+    if "{{backlinks}}" in line:
+        backlinks = "<b>Backlinks:</b>\n<p>"
+
+        abspath = os.path.abspath(granite_path[1:-1])
+        files = glob.glob(abspath + "/*.gn")
+
+        for file in files:
+            name = file[29:-3]
+            page = Path(file).read_text()
+            links = re.findall(r'\[a, href: "([^"]+)"\|', page)
+            links = list(
+                filter(lambda x: '/' not in x and ':' not in x, links))
+            links = set(links)
+            for link in links:
+                if link[:-5] == path_str[len(granite_path)-2:-4]:
+                    backlinks += "<a href=\"" + name + ".html" + \
+                        "\">" + name + "</a>\n"
+        if backlinks == "<b>Backlinks:</b>\n<p>":
+            backlinks += "none :P"
+        backlinks += "</p>"
+
+        line = line.replace("{{backlinks}}", backlinks)
+    sys.stdout.write(line)

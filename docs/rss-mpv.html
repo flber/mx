@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>MX - My youtube setup</title>
+	<link rel="icon" href="favicon.ico?" type="image/x-icon">
+	<link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css">
+	<link rel="stylesheet" href="style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="dark">
+	<div class="with-sidebar">
+		<div>
+			<!-- sidebar -->
+			<nav>
+				<span>
+					<h1><a href="home.html">Home</a></h1>
+				</span>
+				<span>
+					<h1><a href="now.html">now</a></h1>
+				</span>
+				<span>
+					<h1><a href="wiki.html">wiki</a></h1>
+				</span>
+				<span>
+					<h1><a href="about.html">about</a></h1>
+				</span>
+			</nav>
+		</div>
+		<div>
+			<main>
+				<!-- non-sidebar -->
+				<article class="inner">
+
+<h2>My youtube setup</h2>
+
+<p>To get the most important parts out of the way, here's my <a href="https://newsboat.org/">newsboat</a> config, using <a href="https://mpv.io/">mpv</a> and <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>.</p>
+
+<pre>
+browser "links -g %u"
+max-items 3000
+
+macro v set browser "mpv --really-quiet --no-terminal --script-opts=ytdl_hook-ytdl_path=yt-dlp -- %u &" ; open-in-browser ; set browser "links -g %u"
+</pre>
+
+<h3>The short version</h3>
+
+<p>TL;DR newsboat is nice to check in on and watch new videos from youtube channels I'm actually interested in, as opposed to videos the youtube gods think I'll be most likely to watch.</p>
+
+<h3>The long version</h3>
+
+<p>I've never really used instagram, twitter, facebook, snapchat, or most other social media platforms. I just never really felt like they were important or interesting, and so never got into them. I used reddit for a little while, but then left it as well. The fediverse has definitely filled some of those behavioral patterns (which I don't mind, I think it's a pretty cool place :3 ), but in terms of media consumption, my intake has been consistently dominated by (<em>dum dum dummmmmm!</em>) youtube :/</p>
+
+<p>I've tried to stop my usage several times, and tried to reduce it many more through various strategies, but it's always been sorta my main media vice, and one which I've had a difficult time reducing my consumption of.</p>
+
+<p>Over the past several months I've been doing a decent amount of my interaction with the small internet of blogs and webcomics through rss, and it's been great! I've got an rss reader app on my phone, but I hadn't got around to setting one up on my laptop until a couple days ago. I really like terminal user interfaces, so after some <a href="https://merveilles.town/@flbr/108279608942453026">recomendations</a> I decided to use <a href="https://newsboat.org/">newsboat</a>!</p>
+
+<p>Newsboat is lovely, and has a ton of really fun little features. One which is pretty interesting (and useful, getting back to the discussion about youtube) is the ability to open links in an arbitrary program.</p>
+
+<p>Now to get newboat reading rss feeds from youtube, you need to get specific urls. Each channel has a unique id, something decently long and alphanumeric (this is not the channel name which often shows up in urls!). To add the channel to your feed reader, format the url like so: <code>https://www.youtube.com/feeds/videos.xml?channel_id=${id}</code>. For example, the url to the rss feed of Tested is <code>https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA</code></p>
+
+<p>The last piece of this weird, specific, little puzzle is the program <a href="https://mpv.io/">mpv</a>. It'll play basically anything, has a truly amazing number of options to customize, and, very interestingly, can play videos from a link (including streams!!). To get the best performance with playing youtube links, I'd definitely recomend downloading <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> as opposed to normal <code>youtube-dl</code> as it has more features and much better cacheing performance. For stand-alone usage with youtube, use the command <code>mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp $url</code>.</p>
+
+<p>Now what the starting config file mostly does is set up a macro for opening youtube links in mpv. It also sets <code>links -g</code> as the browser, because I like it :></p>
+<p>Now you should be able to add some youtube channels to newsboat, see when they post a new video, and watch it (if you think it'll be interesting based on the video description), all without going to youtube!</p>
+
+<p>The long reason I've been enjoying this way of interacting with youtube is that it cuts out the middle man of the youtube recomendation algorithms. <em>I</em> know that there are only a few people who make videos I'll always like, but my stupid new-thing-seeking lizard brain really hasn't gotten the message, and youtube knows that! So while I retrain my brain to maybe <em>not</em> latch onto the nearest new thing for entertainment, removing youtube's manipulative algorithms from the equation should help.</p>
+
+					<b>Backlinks:</b>
+<p><a href="thoughts.html">thoughts</a>
+</p>
+				</article>
+			</main>
+		</div>
+	</div>
+	<footer>
+		<a href="mailto:benrhammond@gmail.com" target="_blank">
+			<img src="images/mail.svg" alt="Mailto" />
+		</a>
+		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+			<img src="images/merveilles.svg" alt="Merveilles" />
+		</a>
+		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+			<img class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
+		</a>
+		<a href="https://wiki.xxiivv.com/site/ethics.html">
+			<img src="images/dreipfeile-icon.svg" alt="Ethics" />
+		</a>
+		<a href="feed.xml">
+			<img src="images/rss.svg" alt="RSS Feed" />
+		</a>
+		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+			src="images/icon.gif" />
+		<span style="float: right;"><em>Last updated: 160522</em></span>
+	</footer>
+</body>
+
+</html>
