@@ -1,49 +1,42 @@
-* {
+[role="banner"] {
+  grid-area: banner;
+}
+
+.title {
+  grid-area: title;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.fig-1 {
+  grid-area: fig-1;
+}
+
+.fig-2 {
+  grid-area: fig-2;
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  display: grid;
+  grid-column-gap: 2vw;
+  grid-template-columns: repeat(5, 1fr);
 }
 
-.menu-container {
-  color: #fff;
-  background-color: #5995DA;  /* Blue */
-  padding: 20px 0;
+body {
+  grid-template-rows: repeat(3, auto);
 }
 
-.menu {
-  border: 1px solid #fff;
-  width: 900px;
-  display: flex;
-  justify-content: space-between;
-  padding: 2ex;
-}
-
-.menu-container {
-  /* ... */
-  display: flex;
-  justify-content: center;    /* Add this */
-}
-
-.links {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.login {
-  margin-left: 20px;
-}
-
-.header-container {
-  color: #5995DA;
-  background-color: #D6E9FE;
-  display: flex;
-  justify-content: center;
-}
-
-.header {
-  width: 900px;
-  height: 300px;
-  display: flex;
-  justify-content: space-between;
-	align-items: center;  /* Add this */
+body {
+  grid-template-areas:
+    ".  aside  .  fig-2  fig-2"
+    "title  title  banner  banner  banner"
+    "fig-2  main  banner  banner  banner";
 }

@@ -5,6 +5,33 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>RSS + MPV</title>
+			<pubDate>Sun, 15 May 2022 20:31:40 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>To get the most important parts out of the way, here's my <a href="https://newsboat.org/">newsboat</a> config, using <a href="https://mpv.io/">mpv</a> and <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/rss-mpv.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
+		</item>
+		<item>
+			<title>Ideas</title>
+			<pubDate>Sun, 15 May 2022 19:26:39 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I often think of <i>great</i> ideas for pages to add to this site... and then promptly forget them. Hopefully this list should help me with that :P</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/ideas.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/ideas.html</guid>
+		</item>
+		<item>
+			<title>Thoughts</title>
+			<pubDate>Sun, 15 May 2022 19:24:08 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/thoughts.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
+		</item>
+		<item>
 			<title>Grimoire</title>
 			<pubDate>Thu, 05 May 2022 17:16:46 +0900</pubDate>
 			<description>
@@ -23,15 +50,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
 		</item>
 		<item>
-			<title>Thoughts</title>
-			<pubDate>Wed, 27 Apr 2022 14:03:34 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/thoughts.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
-		</item>
-		<item>
 			<title>Bookmarks</title>
 			<pubDate>Tue, 26 Apr 2022 16:43:44 +0900</pubDate>
 			<description>
@@ -48,15 +66,6 @@
 			</description>
 			<link>https://mineralexistence.com/inventory.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
-		</item>
-		<item>
-			<title>Ideas</title>
-			<pubDate>Thu, 14 Apr 2022 16:15:38 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I often think of <i>great</i> ideas for pages to add to this site... and then promptly forget them. Hopefully this list should help me with that :P</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/ideas.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/ideas.html</guid>
 		</item>
 		<item>
 			<title>Writings</title>
@@ -350,7 +359,7 @@
 			<title>Now</title>
 			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
 			<description>
-				<![CDATA[ <p>A mystery page!</p> ]]>
+				<![CDATA[ <p>none :P</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/now.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>

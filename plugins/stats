@@ -9,9 +9,9 @@ from pathlib import Path
 
 file = open(".pillar.toml").readlines()
 for lines in file:
-	k = lines.split()
-	if len(k) > 0 and k[0] == "granite_path":
-		granite_path = k[2]
+    k = lines.split()
+    if len(k) > 0 and k[0] == "granite_path":
+        granite_path = k[2]
 
 for index, line in enumerate(sys.stdin):
     if "{{stats}}" in line:
@@ -20,38 +20,41 @@ for index, line in enumerate(sys.stdin):
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")
 
-		#DOC: starts with four main pages
+        # DOC: starts with four main pages
         found = ["/home.gn", "/now.gn", "/wiki.gn", "/about.gn"]
         found = [abspath + page for page in found]
 
-        #DOC: traverses through all pages found so far looking for new links
+        # DOC: traverses through all pages found so far looking for new links
         i = 0
         while i < len(found):
             file = found[i]
             name = file[29:-3]
             page = Path(file).read_text()
 
-            #DOC: finds all links
-            links = re.findall( r'\[a, href: "([^"]+)"\|', page)
+            # DOC: finds all links
+            links = re.findall(r'\[a, href: "([^"]+)"\|', page)
 
-            #DOC: eliminated links which are external
-            links = list(filter(lambda x : '/' not in x and ':' not in x, links))
+            # DOC: eliminated links which are external
+            links = list(
+                filter(lambda x: '/' not in x and ':' not in x, links))
 
-            #DOC: adds those links to the found list if they're not already there
+            # DOC: adds those links to the found list if they're not already there
             found_set = set(found)
-            new_pages = [item for item in links if abspath + "/" + item.replace(".html", ".gn") not in found_set]
+            new_pages = [item for item in links if abspath +
+                         "/" + item.replace(".html", ".gn") not in found_set]
 
-            #DOC: adds abspath to each page string
-            new = [abspath + "/" + page.replace(".html", ".gn") for page in new_pages]
+            # DOC: adds abspath to each page string
+            new = [abspath + "/" +
+                   page.replace(".html", ".gn") for page in new_pages]
             found = found + new
             i += 1
-		
-        #DOC: removes found links from all pages
+
+        # DOC: removes found links from all pages
         orphans = [i for i in files if i not in found]
 
         stats += "(" + str(len(orphans)) + "):</b>\n<ul>\n"
 
-        #DOC: adds orphaned pages' names and links to list
+        # DOC: adds orphaned pages' names and links to list
         for orphan in orphans:
             title = "~default~"
             file = orphan
@@ -63,7 +66,7 @@ for index, line in enumerate(sys.stdin):
             stats += "\t<li><a href=\""
             orphan = orphan.replace(".gn", ".html")[29:]
             stats += orphan + "\">" + title + "</a></li>\n"
-		
+
         stats += "</ul>"
         line = line.replace("{{stats}}", stats)
     sys.stdout.write(line)
