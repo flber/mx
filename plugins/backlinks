@@ -19,7 +19,7 @@ for index, line in enumerate(sys.stdin):
     if index == 0:
         path_str = line
     if "{{backlinks}}" in line:
-        backlinks = "<b>Backlinks:</b>\n<p>"
+        backlinks = "<b>Incoming:</b>\n<p>"
 
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")

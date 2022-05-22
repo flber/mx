@@ -1,0 +1,56 @@
+#!/bin/python
+
+import os
+import re
+import sys
+import glob
+from pathlib import Path
+
+import networkx as nx
+import matplotlib.pyplot as plt
+
+
+class GraphVisualization:
+    def __init__(self):
+        self.visual = []
+
+    def addEdge(self, a, b):
+        temp = [a, b]
+        self.visual.append(temp)
+
+    def visualize(self, path):
+        G = nx.Graph()
+        G.add_edges_from(self.visual)
+        fig = plt.figure(1, figsize=(20, 20), dpi=60)
+        nx.draw_spring(G, with_labels=True, node_color="#3A3738", node_size=[len(v) * 200 for v in G.nodes()],
+                       node_shape="o", font_color="#FBF0F0", edge_color="#FBF0F0", linewidths=1)
+        fig.set_facecolor("#3A3738")
+        plt.savefig(path)
+
+
+file = open(".pillar.toml").readlines()
+for lines in file:
+    k = lines.split()
+    if len(k) > 0 and k[0] == "granite_path":
+        granite_path = k[2]
+    if len(k) > 0 and k[0] == "html_path":
+        html_path = k[2]
+
+for index, line in enumerate(sys.stdin):
+    if "{{graph}}" in line:
+        G = GraphVisualization()
+        abspath = os.path.abspath(granite_path[1:-1])
+        files = glob.glob(abspath + "/*.gn")
+        for file in files:
+            name = file[29:-3]
+            page = Path(file).read_text()
+            links = re.findall(r'\[a, href: "([^"]+)"\|', page)
+            links = list(
+                filter(lambda x: '/' not in x and ':' not in x, links))
+            link_names = [link[:-5] for link in links]
+            for link_name in link_names:
+                G.addEdge(name, link_name)
+        G.visualize(html_path[1:-1] + "images/graph.png")
+        graph = "<img src=\"images/graph.png\" alt=\"a graph of the pages on this site\"></img>"
+        line = line.replace("{{graph}}", graph)
+    sys.stdout.write(line)

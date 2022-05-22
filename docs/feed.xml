@@ -5,6 +5,42 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Wishlist</title>
+			<pubDate>Sun, 22 May 2022 14:45:16 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try not to focus too much on the aquisition of <em>things</em>, but there are some which I make exceptions for because they're cool :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wishlist.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
+		</item>
+		<item>
+			<title>Thoughts</title>
+			<pubDate>Sat, 21 May 2022 19:53:59 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/thoughts.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
+		</item>
+		<item>
+			<title>Home</title>
+			<pubDate>Sat, 21 May 2022 18:25:37 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/home.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Tue, 17 May 2022 15:39:25 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</b></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
+		</item>
+		<item>
 			<title>RSS + MPV</title>
 			<pubDate>Sun, 15 May 2022 20:31:40 +0900</pubDate>
 			<description>
@@ -21,15 +57,6 @@
 			</description>
 			<link>https://mineralexistence.com/ideas.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/ideas.html</guid>
-		</item>
-		<item>
-			<title>Thoughts</title>
-			<pubDate>Sun, 15 May 2022 19:24:08 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/thoughts.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
 		</item>
 		<item>
 			<title>Grimoire</title>
@@ -66,15 +93,6 @@
 			</description>
 			<link>https://mineralexistence.com/inventory.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
-		</item>
-		<item>
-			<title>Writings</title>
-			<pubDate>Thu, 14 Apr 2022 15:38:31 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/writing.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
 		</item>
 		<item>
 			<title>The Sands of Time</title>
@@ -120,15 +138,6 @@
 			</description>
 			<link>https://mineralexistence.com/hello.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/hello.html</guid>
-		</item>
-		<item>
-			<title>Home</title>
-			<pubDate>Fri, 08 Apr 2022 01:25:17 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/home.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
 		</item>
 		<item>
 			<title>Casio CA53W</title>
@@ -212,15 +221,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/wfc-guide.html</guid>
 		</item>
 		<item>
-			<title>Wiki</title>
-			<pubDate>Mon, 21 Mar 2022 09:40:41 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>This is a loose collection of notes, links, and other resources. See my <a href="grimoire.html">grimoire</a> for snippets which I find useful if perhaps a bit haunted.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wiki.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wiki.html</guid>
-		</item>
-		<item>
 			<title>Entity Component System</title>
 			<pubDate>Mon, 21 Mar 2022 09:34:27 +0900</pubDate>
 			<description>
@@ -237,24 +237,6 @@
 			</description>
 			<link>https://mineralexistence.com/liminal-spaces.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/liminal-spaces.html</guid>
-		</item>
-		<item>
-			<title>WFC Tile Generator</title>
-			<pubDate>Mon, 07 Mar 2022 13:44:27 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>The tile generator of wfc is one of the first systems which runs, and its purpose is to break up an input image into usable tiles with additional data about their edges.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>
-		</item>
-		<item>
-			<title>WFC Propagator Constructor</title>
-			<pubDate>Mon, 07 Mar 2022 13:44:27 +0900</pubDate>
-			<description>
-				<![CDATA[ <p> The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
 		</item>
 		<item>
 			<title>Some VSCode Bits and Bobs</title>
@@ -311,6 +293,15 @@
 			<guid isPermaLink="true">https://mineralexistence.com/side_quests.html</guid>
 		</item>
 		<item>
+			<title>~default~</title>
+			<pubDate>Mon, 07 Mar 2022 13:44:27 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/writing.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
+		</item>
+		<item>
 			<title>Reading</title>
 			<pubDate>Mon, 07 Mar 2022 13:44:27 +0900</pubDate>
 			<description>
@@ -354,15 +345,6 @@
 			</description>
 			<link>https://mineralexistence.com/once-upon-a-midday-sunny.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/once-upon-a-midday-sunny.html</guid>
-		</item>
-		<item>
-			<title>Now</title>
-			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>none :P</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
 		</item>
 		<item>
 			<title>Norsk</title>
@@ -446,6 +428,15 @@
 			<guid isPermaLink="true">https://mineralexistence.com/index.html</guid>
 		</item>
 		<item>
+			<title>~default~</title>
+			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>This is a loose collection of notes, links, and other resources. See my <a href="grimoire.html">grimoire</a> for snippets which I find useful if perhaps a bit haunted.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wiki.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wiki.html</guid>
+		</item>
+		<item>
 			<title>Hiking</title>
 			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
 			<description>
@@ -453,6 +444,24 @@
 			</description>
 			<link>https://mineralexistence.com/hiking.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/hiking.html</guid>
+		</item>
+		<item>
+			<title>~default~</title>
+			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>The tile generator of wfc is one of the first systems which runs, and its purpose is to break up an input image into usable tiles with additional data about their edges.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>
+		</item>
+		<item>
+			<title>~default~</title>
+			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
+			<description>
+				<![CDATA[ <p> The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
 		</item>
 		<item>
 			<title>Drawings</title>
