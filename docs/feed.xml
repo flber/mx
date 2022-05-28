@@ -5,6 +5,33 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Climbing</title>
+			<pubDate>Mon, 23 May 2022 15:08:49 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I really enjoy rock climbing, mostly bouldering, but my school doesn't have any official on-campus climbing walls and the nearest gym is a half-hour bus ride away. What I've done recently is found some buildings which have rough sandstone brick walls to climb late at night.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/climbing.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/climbing.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Mon, 23 May 2022 14:58:08 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</b></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
+		</item>
+		<item>
+			<title>Thoughts</title>
+			<pubDate>Mon, 23 May 2022 14:24:26 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/thoughts.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
+		</item>
+		<item>
 			<title>Wishlist</title>
 			<pubDate>Sun, 22 May 2022 14:45:16 +0900</pubDate>
 			<description>
@@ -14,15 +41,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
 		</item>
 		<item>
-			<title>Thoughts</title>
-			<pubDate>Sat, 21 May 2022 19:53:59 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/thoughts.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
-		</item>
-		<item>
 			<title>Home</title>
 			<pubDate>Sat, 21 May 2022 18:25:37 +0900</pubDate>
 			<description>
@@ -30,15 +48,6 @@
 			</description>
 			<link>https://mineralexistence.com/home.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
-		</item>
-		<item>
-			<title>Now</title>
-			<pubDate>Tue, 17 May 2022 15:39:25 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><b>This week, I'm planning on</b></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
 		</item>
 		<item>
 			<title>RSS + MPV</title>
