@@ -297,9 +297,14 @@
 	<p>wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"</p>
 </fieldset>
 
+<p>Dither image while still looking nice</p>
+<fieldset>
+	<legend>ImageMagick</legend>
+	<p>mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *</p>
+</fieldset>
+
 					<b>Incoming:</b>
 <p><a href="now.html">now</a>
-<a href="wiki.html">wiki</a>
 </p>
 				</article>
 			</main>
@@ -323,7 +328,7 @@
 		</a>
 		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 060522</em></span>
+		<span style="float: right;"><em>Last updated: 280522</em></span>
 	</footer>
 </body>
 

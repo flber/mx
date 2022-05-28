@@ -5,6 +5,42 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Wishlist</title>
+			<pubDate>Fri, 27 May 2022 21:17:21 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try not to focus too much on the aquisition of <em>things</em>, but there are some which I make exceptions for because they're cool :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wishlist.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
+		</item>
+		<item>
+			<title>Santa Cruz Hike 260522</title>
+			<pubDate>Fri, 27 May 2022 21:10:39 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Boy this was a long hike! :D</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/hike-260522.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/hike-260522.html</guid>
+		</item>
+		<item>
+			<title>Grimoire</title>
+			<pubDate>Fri, 27 May 2022 19:56:55 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/grimoire.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
+		</item>
+		<item>
+			<title>Hiking</title>
+			<pubDate>Fri, 27 May 2022 19:30:57 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I also occasionally find <a href="mushrooms.html">mushrooms</a> on my hikes :3</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/hiking.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/hiking.html</guid>
+		</item>
+		<item>
 			<title>Climbing</title>
 			<pubDate>Mon, 23 May 2022 15:08:49 +0900</pubDate>
 			<description>
@@ -32,15 +68,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
 		</item>
 		<item>
-			<title>Wishlist</title>
-			<pubDate>Sun, 22 May 2022 14:45:16 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try not to focus too much on the aquisition of <em>things</em>, but there are some which I make exceptions for because they're cool :></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wishlist.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
-		</item>
-		<item>
 			<title>Home</title>
 			<pubDate>Sat, 21 May 2022 18:25:37 +0900</pubDate>
 			<description>
@@ -66,15 +93,6 @@
 			</description>
 			<link>https://mineralexistence.com/ideas.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/ideas.html</guid>
-		</item>
-		<item>
-			<title>Grimoire</title>
-			<pubDate>Thu, 05 May 2022 17:16:46 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/grimoire.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
 		</item>
 		<item>
 			<title>About</title>
@@ -444,15 +462,6 @@
 			</description>
 			<link>https://mineralexistence.com/wiki.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/wiki.html</guid>
-		</item>
-		<item>
-			<title>Hiking</title>
-			<pubDate>Mon, 07 Mar 2022 13:44:26 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I also occasionally find <a href="mushrooms.html">mushrooms</a> on my hikes :3</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/hiking.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/hiking.html</guid>
 		</item>
 		<item>
 			<title>~default~</title>
