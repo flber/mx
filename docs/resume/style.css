@@ -120,9 +120,9 @@ body {
 	grid-area: head;
 }
 
-.sub {
+/* .sub {
 	grid-area: sub;
-}
+} */
 
 main {
 	grid-area: main;
@@ -136,6 +136,6 @@ main {
 	grid-area: langs
 }
 
-footer {
+/* footer {
 	grid-area: foot;
-}
+} */

@@ -11,35 +11,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body id="dark">
-	<div class="with-sidebar">
-		<div>
-			<!-- sidebar -->
-			<nav>
-				<span>
-					<h1><a href="home.html">Home</a></h1>
-				</span>
-				<span>
-					<h1><a href="now.html">now</a></h1>
-				</span>
-				<span>
-					<h1><a href="wiki.html">wiki</a></h1>
-				</span>
-				<span>
-					<h1><a href="about.html">about</a></h1>
-				</span>
-			</nav>
-		</div>
-		<div>
-			<main>
-				<!-- non-sidebar -->
-				<article class="inner">
-					{{content}}
-					{{backlinks}}
-				</article>
-			</main>
-		</div>
-	</div>
+<body>
+	<header>
+		<span>
+			<h1><a href="home.html">Home</a></h1>
+		</span>
+		<span>
+			<h1><a href="now.html">now</a></h1>
+		</span>
+		<span>
+			<h1><a href="wiki.html">wiki</a></h1>
+		</span>
+		<span>
+			<h1><a href="about.html">about</a></h1>
+		</span>
+	</header>
+
+	<main>
+		{{content}}
+		{{backlinks}}
+	</main>
+
 	<footer>
 		<a href="mailto:benrhammond@gmail.com" target="_blank">
 			<img src="images/mail.svg" alt="Mailto" />
@@ -61,5 +53,4 @@
 		<span style="float: right;"><em>Last updated: {{date}}</em></span>
 	</footer>
 </body>
-
 </html>

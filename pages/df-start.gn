@@ -1,0 +1,59 @@
+!meta!
+title: Intro to Dwarf Fortress
+!meta!
+
+[h2|Introductory Dwarf Fortress Tutorial]
+
+[p|I seriously love dwarf fortress; it's a game with such absurd complexity that I've kept coming back to it for years, through tons of updates and changes. Of course, if you're here, you've probably already decided to try it out, so I'll spare you too many of my appreciative ramblings on it's scope and gameplay :)]
+
+[details open|
+	[summary|[b|Contents]]
+	[ol|
+		[li|[b|[a, href: "#installing"|Installing]]]
+		[li|[b|[a, href: "#launch"|First launch and world creation]]]
+		[li|[b|[a, href: "#embark"|Strike the earth!]]]
+	]
+]
+
+[p|First of all, let's define the scope of this article. I'll focus on an almost-vanilla install of df (plus the handy tool dfhack for some quality-of-life improvements), with or without a tileset. Graphics packs are a slightly different thing, and add a bit more complexity when it comes to installing, but most have solid documentation on the process which you can follow if you'd like! Something like the [a, href: "http://dwarffortresswiki.org/index.php/Utility:Lazy_Newb_Pack"|lazy newb pack] is also a perfectly good (maybe even better) way to get started with df, but I actually don't think you need everything it provides as a new player, and the number of options it has can be a bit overwhelming. So, almost-vanilla install it is. From there I'll explain how to get started with a new fortress, and show some handy tricks which a lot of intro guides don't mention.]
+
+
+[h3 id: "installing"|Installing]
+
+[p|So I'll be honest, if you're on a mac this is going to be a pain in the ass. New versions of OSX are [em|really] particular about making sure apps are from "identified developers", so you're probably going to be on your own a bit dealing with all the hoops Apple will put you through to get it running. Looking up how to get around that setting on stackexchange or something will likely be your best bet.]
+
+[p|If you're on windows or linux however, it shouldn't be too bad!]
+
+[p|First of all, download the newest version of df for your system from their [a, href: "http://www.bay12games.com/dwarves/index.html"|website], located under the "Download" banner. If you're on windows this will be a .zip file, on unix it'll be a .tar.bz2. Either way, move it to wherever and decompress it!]
+
+[p|Now we need to get the dfhack files. Go to the [a, href: "https://github.com/DFHack/dfhack/releases"|github releases page], scroll down until you get to a list of files, and download the one for your machine. Again, for unix peeps this'll be a .tar.bz2 file, for windows it'll be a .zip. This time, move it [em|into] your df folder and decompress it there. It'll ask if you want to overwrite certain files, just say yes for all of them; this is dfhack setting itself up.]
+
+[p|And now, optional graphics!]
+
+[p|As I said before, I'm not going to go into installing graphics packs because they're a bit more complicated and can sometimes be tricky to debug, but you can find a list of them [a, href: "http://dwarffortresswiki.org/index.php/DF2014:Graphics_set_repository"|here] if you really want :)]
+
+[p|Tilesets, on the other hand, are super easy to understand and install! A list of tilesets can be found [a, href: "http://dwarffortresswiki.org/index.php/Tileset_repository"|here], so pick whichever one you like! I personally like [a, href: "http://dwarffortresswiki.org/index.php/Tileset_repository#Tocky_square_10x10.png"|Tocky Square], and the pre-installed [code|curses_square_16x16.png]. Once you've found a tileset you like, download it (in page I linked; literally right click, save image; on the pink images on the left side) into your [code|dwarffortress/data/art/] folder. Then, go edit the [code|dwarffortress/data/init/init.txt] file, and change the options [code|FONT], [code|FULLFONT], [code|GRAPHICS_FONT], and [code|GRAPHICS_FULLFONT] to the filename of the image you saved. You can also look through that art folder to see if there are already any tilesets in there that you like!]
+
+[p|If you want to get really fancy with your install, you can also change the default colors to something a little less contrasting. There's a [em|huge] list of colors [a, href: "http://dwarffortresswiki.org/index.php/DF2014:Color_scheme"|here], so just find one you like the look of (my personal favorite right now is the [a, href: "http://dwarffortresswiki.org/index.php/DF2014:Color_scheme#Qud"|Qud] color scheme!), click on "show", and copy the text that's revealed. Then open up your [code|data/init/colors.txt] file, and replace everything in there with those colors you copied.]
+
+[p|Now that's pretty much it for installing and basic customization!]
+
+
+[h3, id: "launch"|First launch and world creation]
+
+[p|With dfhack installed, instead of running the dwarf fortress executable we'll run the [code|dfhack] executable. With the default settings, you'll first see the wonderful dwarf fortress intro animation and then be presented with the main menu. First things first, let's create a new world!]
+
+[p|In the main menu, you can select options by pressing the up and down arrow keys, and press them with enter, so select and press the "Create New World" option. You'll be presented with some initial text saying "Welcome to the alpha of Dwarf Fortress" (yup, it's still in alpha!), just press escape to continue.]
+
+[p|Now you'll be presented with a list of options for the world gen. Here you change each selection between options with the left and right arrows (and still move up and down with the respective arrow keys). The first two options, "World Size" and "History" are the most immediately important options, as they'll effect how long your world gen will take. I would recommend either a "smaller" world and a "medium" history or a "small" world and a "short" history, it just depends on if you want more history or a larger world. Oh, and for some context, the "History" option changes how long the world will have existed before you even start a game!]
+
+[p|I've never found the next two options, "Number of Civilizations" and "Maximum Number of Sites", to be super important, so set them to whatever, just probably don't go above "High" for anything :P]
+
+[p|Honestly, the last three options I would just leave at their default values.]
+
+[p|Now press "y" to continue, and we're off! It'll take a little while to generate the world and it's history, and then it'll give you the option to abort ("a") or accept and continue ("enter"). If you like the look of the world you got, press enter!]
+
+
+[h3, id: "embark"|Strike the earth!]
+
+[p|[mark|under construction :)]]

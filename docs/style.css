@@ -1,3 +1,4 @@
+@import url('reset.css');
 /*                            ...
            s,                .                    .s
             ss,              . ..               .ss
@@ -38,116 +39,8 @@
 	--bg: #FBF0F0;
 	/* --bg: #FFFFFF; */
 	--highlight: #80dec5;
-	--max: 90ch;
+	--max: 80ch;
 	--fonts: "Times New Roman", Times, serif, gothicus;
-}
-
-/*
-@media (prefers-color-scheme: dark) {
-	body{
-		--text: #FFFFFF;
-		--bg: #000000;
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	body {
-		--text: #000000;
-		--bg: #FFFFFF;		
-	}
-}
-*/
-
-
-/* reset */
-/*Boxsizingrules*/
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
-/*Removedefaultmargin*/
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-	margin: 0;
-}
-
-/*Removeliststylesonul,olelementswithalistrole,whichsuggestsdefaultstylingwillberemoved*/
-ul[role='list'],
-ol[role='list'] {
-	list-style: none;
-}
-
-/*Setcorerootdefaults*/
-html:focus-within {
-	scroll-behavior: smooth;
-}
-
-/*Setcorebodydefaults*/
-body {
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
-}
-
-/*Aelementsthatdon'thaveaclassgetdefaultstyles*/
-a:not([class]) {
-	text-decoration-skip-ink: auto;
-}
-
-/*Makeimageseasiertoworkwith*/
-img,
-picture {
-	max-width: 100%;
-	display: block;
-}
-
-/*Inheritfontsforinputsandbuttons*/
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-::selection {
-	background: var(--text);
-	color: var(--bg);
-}
-
-::-moz-selection {
-	background: var(--text);
-	color: var(--bg);
-}
-
-/*mainwrapperforsidebarelements*/
-.with-sidebar {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 3em;
-	padding: 015px;
-	padding-top: 4ex;
-}
-
-/*theactualsidebar*/
-.with-sidebar>:first-child {
-	flex-grow: 1;
-}
-
-/*themaincontent*/
-.with-sidebar>:last-child {
-	flex-basis: 20rem;
-	flex-grow: 999;
-	min-width: 50%;
 }
 
 p {
@@ -162,6 +55,8 @@ body {
 	overflow-wrap: break-word;
 	padding: 1em 7%;
 	margin: 0px auto;
+	margin-top: 2ex;
+	margin-bottom: 2ex;
 	line-height: 1.6;
 	color: var(--text);
 	background-color: var(--bg);
@@ -243,17 +138,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-article {
+/* article {
 	margin: 0px auto;
 	background-color: var(--bg);
-}
+} */
 
 
 p {
 	padding-bottom: 2ex;
 }
 
-ul {
+ul,
+ol {
 	padding-top: 0;
 	margin-top: 0;
 }
@@ -322,7 +218,10 @@ div .break {
 /* details {border: 1px solid var(--text);border-radius: 4px;padding: .5em .5em 0;} */
 /* details[open] {padding: .5em;} */
 /* details[open] summary {border-bottom: 1px solid var(--text);margin-bottom: .5em;} */
-/* summary {font-weight: bold;margin: -.5em -.5em 0;padding: .5em;} */
+details {
+	padding-bottom: 2ex;
+}
+
 details>*:not(summary) {
 	margin-left: 1em;
 }
@@ -340,22 +239,23 @@ details>*:not(summary) {
 	background-color: var(--highlight);
 }
 
-article *:not(.banner-span) a:not([href*=':'])::before {
+/*
+body *:not(.banner-span) a:not([href*=':'])::before {
 	content:"{"
 }
 
-article *:not(.banner-span) a:not([href*=':'])::after {
+body *:not(.banner-span) a:not([href*=':'])::after {
 	content: "}"
 }
 
-article *:not(.banner-span) a[href*=':']::before {
+body *:not(.banner-span) a[href*=':']::before {
 	content: "["
 }
 
-article *:not(.banner-span) a[href*=':']::after {
+body *:not(.banner-span) a[href*=':']::after {
 	content: "]"
 }
-
+*/
 
 img {
 	width: 100%;
@@ -391,17 +291,6 @@ img.webring {
 	margin-left: 0ex;
 	margin-right: 0ex;
 }
-
-
-/*
-audio{border-radius:0px;}
-audio:focus{outline: none;}
-audio::-webkit-media-controls-enclosure {background-color: var(--bg);}
-audio::-webkit-media-controls-current-time-display {color: var(--text);}
-audio::-webkit-media-controls-time-remaining-display {color: var(--text);}
-
-audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline-container, audio::-webkit-media-controls-timeline, audio::-webkit-media-controls-volume-slider-container, audio::-webkit-media-controls-volume-slider {filter: grayscale(1) invert(100%);}
-*/
 
 
 dd {
@@ -467,9 +356,6 @@ svg {
 	fill: var(--text);
 }
 
-/* svg:hover{color: var(--bg);} */
-
-
 /* used in character sheet */
 div #containter {
 	display: flex;
@@ -483,4 +369,34 @@ div #block {
 	margin: 1ex;
 	padding: 0.7ex;
 	line-height: 0.8ex;
+}
+
+
+header {
+	margin-bottom: 3ex;
+}
+
+@media screen and (min-width : 0em) {
+	body {
+		padding: 2vh 4vw;
+	}
+}
+
+@media screen and (min-width : 48em) {
+	header {
+		float: left;
+		margin-right: 3em;
+	}
+
+	/* body {
+		padding: 2vh 4vw;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+
+		grid-template-areas:
+			"head  title"
+			"main  main"
+			"foot  foot";
+	} */
 }

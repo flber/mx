@@ -1,0 +1,90 @@
+/* reset */
+/*Boxsizingrules*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*Removedefaultmargin*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/*Removeliststylesonul,olelementswithalistrole,whichsuggestsdefaultstylingwillberemoved*/
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/*Setcorerootdefaults*/
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/*Setcorebodydefaults*/
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/*Aelementsthatdon'thaveaclassgetdefaultstyles*/
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/*Makeimageseasiertoworkwith*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/*Inheritfontsforinputsandbuttons*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--text);
+  color: var(--bg);
+}
+
+::-moz-selection {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/*mainwrapperforsidebarelements*/
+.with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  padding: 015px;
+  padding-top: 4ex;
+}
+
+/*theactualsidebar*/
+.with-sidebar>:first-child {
+  flex-grow: 1;
+}
+
+/*themaincontent*/
+.with-sidebar>:last-child {
+  flex-basis: 20rem;
+  flex-grow: 999;
+  min-width: 50%;
+}

@@ -28,25 +28,26 @@ for index, line in enumerate(sys.stdin):
         i = 0
         while i < len(found):
             file = found[i]
-            name = file[29:-3]
-            page = Path(file).read_text()
+            if not file.__contains__('#'):
+                # name = file[29:-3]
+                page = Path(file).read_text()
 
-            # DOC: finds all links
-            links = re.findall(r'\[a, href: "([^"]+)"\|', page)
+                # DOC: finds all links
+                links = re.findall(r'\[a, href: "([^"]+)"\|', page)
 
-            # DOC: eliminated links which are external
-            links = list(
-                filter(lambda x: '/' not in x and ':' not in x, links))
+                # DOC: eliminated links which are external
+                links = list(
+                    filter(lambda x: '/' not in x and ':' not in x, links))
 
-            # DOC: adds those links to the found list if they're not already there
-            found_set = set(found)
-            new_pages = [item for item in links if abspath +
-                         "/" + item.replace(".html", ".gn") not in found_set]
+                # DOC: adds those links to the found list if they're not already there
+                found_set = set(found)
+                new_pages = [item for item in links if abspath +
+                             "/" + item.replace(".html", ".gn") not in found_set]
 
-            # DOC: adds abspath to each page string
-            new = [abspath + "/" +
-                   page.replace(".html", ".gn") for page in new_pages]
-            found = found + new
+                # DOC: adds abspath to each page string
+                new = [abspath + "/" +
+                       page.replace(".html", ".gn") for page in new_pages]
+                found = found + new
             i += 1
 
         # DOC: removes found links from all pages
