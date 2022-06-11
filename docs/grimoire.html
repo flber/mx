@@ -297,6 +297,28 @@
 	<p>mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *</p>
 </fieldset>
 
+<p>Grab window (with name including "video2") and put into output.mp4</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>echo "ffmpeg -y -v error -f x11grab -video_size $(wmctrl -lG | awk '$8 ~"video2" {printf("%dx%d -i :0.0+%d,%d", $5, $6, $3, $4)}') output.mp4" | bash</p>
+</fieldset>
+
+<p>In theory, grab video in, pass through complex filter (in this case just add text), and out to virtual webcam</p>
+<fieldset>
+	<legend>ffmpeg</legend>
+	<p>ffmpeg -i /dev/video2 -vf "drawtext=\
+	           text=\
+	             'efelbar':\
+	             fontcolor=white:\
+	             fontsize=64:\
+	             box=1:\
+	             boxcolor=black:\
+	             boxborderw=5:\
+	             x=0:\
+	             y=0" -f v4l2 /dev/video4
+	</p>
+</fieldset>
+
 		<b>Incoming:</b>
 <p><a href="now.html">now</a>
 <a href="wiki.html">wiki</a>
@@ -321,7 +343,7 @@
 		</a>
 		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 300522</em></span>
+		<span style="float: right;"><em>Last updated: 060622</em></span>
 	</footer>
 </body>
 </html>
