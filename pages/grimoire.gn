@@ -291,3 +291,9 @@ title: Grimoire
 	             y=0" -f v4l2 /dev/video4
 	]
 ]
+
+[p|Turn the background of an image transparent]
+[fieldset|
+	[legend|ImageMagick]
+	[p|convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png]
+]

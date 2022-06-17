@@ -5,22 +5,49 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
-			<title>Now</title>
-			<pubDate>Sat, 11 Jun 2022 13:34:40 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><b>This week, I'm planning on</b></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
-		</item>
-		<item>
 			<title>Grimoire</title>
-			<pubDate>Sun, 05 Jun 2022 20:46:25 +0900</pubDate>
+			<pubDate>Wed, 15 Jun 2022 20:07:08 +0900</pubDate>
 			<description>
 				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/grimoire.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
+		</item>
+		<item>
+			<title>Tools</title>
+			<pubDate>Wed, 15 Jun 2022 13:48:24 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for most of these, but don't hesitate to ask me a question if something still doesn't make sense.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/tools.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/tools.html</guid>
+		</item>
+		<item>
+			<title>iOS Sync</title>
+			<pubDate>Mon, 13 Jun 2022 15:29:06 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>After way too long of sharing images from my iphone to my linux laptop with email, I finally hacked something together in shortcuts which can get a photo to my laptop much faster!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/ios-sync.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/ios-sync.html</guid>
+		</item>
+		<item>
+			<title>Projects</title>
+			<pubDate>Mon, 13 Jun 2022 13:39:31 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/projects.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Sat, 11 Jun 2022 13:57:00 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
 		</item>
 		<item>
 			<title>About</title>
@@ -104,19 +131,10 @@
 			<guid isPermaLink="true">https://mineralexistence.com/uxn_notes.html</guid>
 		</item>
 		<item>
-			<title>Tools</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for most of these, but don't hesitate to ask me a question if something still doesn't make sense.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/tools.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/tools.html</guid>
-		</item>
-		<item>
 			<title>~default~</title>
 			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
 			<description>
-				<![CDATA[ <p><a href="wfc-guide.html">wfc-guide</p> ]]>
+				<![CDATA[ <p>A mystery page!</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
@@ -215,7 +233,7 @@
 			<title>~default~</title>
 			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
 			<description>
-				<![CDATA[ <p><a href="now.html">now</p> ]]>
+				<![CDATA[ <p>A mystery page!</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/writing.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
@@ -248,19 +266,10 @@
 			<guid isPermaLink="true">https://mineralexistence.com/site.html</guid>
 		</item>
 		<item>
-			<title>Projects</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/projects.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
-		</item>
-		<item>
 			<title>~default~</title>
 			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
 			<description>
-				<![CDATA[ <p><a href="wfc-guide.html">wfc-guide</p> ]]>
+				<![CDATA[ <p>A mystery page!</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>

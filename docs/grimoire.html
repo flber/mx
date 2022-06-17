@@ -9,6 +9,10 @@
 	<link rel="stylesheet" href="style.css" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Some Page :)"/>
+	<meta property="og:description" content="Inspired by the grimoire of Fred Bednarski, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked."/> 
 </head>
 
 <body>
@@ -319,6 +323,12 @@
 	</p>
 </fieldset>
 
+<p>Turn the background of an image transparent</p>
+<fieldset>
+	<legend>ImageMagick</legend>
+	<p>convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png</p>
+</fieldset>
+
 		<b>Incoming:</b>
 <p><a href="now.html">now</a>
 <a href="wiki.html">wiki</a>
@@ -343,7 +353,7 @@
 		</a>
 		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 060622</em></span>
+		<span style="float: right;"><em>Last updated: 160622</em></span>
 	</footer>
 </body>
 </html>
