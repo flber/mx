@@ -6,6 +6,11 @@ title: Projects
 
 [p|I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.]
 
+[p|]
+
+[h3, class: "listing"|[a, href: "ffstream.html"|ffstream] [span|140622 - Now]]
+[p|Really a loose collection of scripts and miscellaneous files, [code|ffstream] is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an [code|extra/] directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is [em|actually useful], but short-term goal is to actually have something working :)]
+
 [h3, class: "listing"|[a, href: "ios-sync.html"|iOS Sync] [span|120622 - Now]]
 [p|After way, way too long of sharing images from my phone to my laptop with email, I finally hacked something together which can get a photo to my laptop in a fraction of the time!]
 

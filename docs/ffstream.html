@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>MX - ffstream tools</title>
+	<link rel="icon" href="favicon.ico?" type="image/x-icon">
+	<link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css">
+	<link rel="stylesheet" href="style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Some Page :)"/>
+	<meta property="og:description" content="ffstream is really a loose collection of scripts and miscellaneous files, and is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an extra/ directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is actually useful, but the short-term goal is to actually have something working :)"/> 
+</head>
+
+<body>
+	<header>
+		<span>
+			<h1><a href="home.html">Home</a></h1>
+		</span>
+		<span>
+			<h1><a href="now.html">now</a></h1>
+		</span>
+		<span>
+			<h1><a href="wiki.html">wiki</a></h1>
+		</span>
+		<span>
+			<h1><a href="about.html">about</a></h1>
+		</span>
+	</header>
+
+	<main>
+
+<h2>ffstream tools</h2>
+
+<p><a href="https://github.com/flber/ffstream">ffstream</a> is really a loose collection of scripts and miscellaneous files, and is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an <code>extra/</code> directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is <em>actually useful</em>, but the short-term goal is to actually have something working :)</p>
+
+<p>This project started because my laptop <mark>page coming soon :)</mark> really struggles to run OBS and any other software, so streaming games and such was never really feasible. However, after messing around with ffmpeg to encode video and such for months, I realized its (commonly) untapped potential for streaming!</p>
+
+<p>ffmpeg is an <em>incredibly</em> impressive piece of software; it can convert from basically any format to any other with more options than almost anyone will ever use, <em>and that's still not the coolest thing it can do!</em> Unfortunately I won't be going over ffmpeg's awesome complex filter system in this article, as it's a little outside of the scope :/</p>
+
+<p>The current main tool in this repo is the script <code>ffst-main</code>, which is a pretty basic script to stream your desktop to twitch. It's only 14 lines, and could be 1 if I didn't care about readability :)</p>
+
+<pre>
+#!/bin/bash
+
+dunstify "starting stream"
+
+size=$(xrandr | head -n1 | cut -d, -f2 | cut -d" " -f3-5 | sed 's/ //g')
+
+ffmpeg -f x11grab \
+  -video_size $size \
+  -framerate 24 -i $DISPLAY \
+  -f alsa -ac 2 -i pulse -acodec aac \
+  -vf scale=1280x720 \
+  -c:v h264 -g 24 -b:v 2M \
+  -preset ultrafast -vb 3200k \
+  -c:a aac -pix_fmt yuv420p \
+  -f flv "rtmp://live-lax.twitch.tv/app/$STREAM_KEY"
+</pre>
+
+<p>The <code>dunstify</code> call is mostly to let me know the script is still working, and you could replace the <code>size</code> variable with a hardcoded value of your display's dimensions. Most of the ffmpeg flags just set formats and such, but a few flags deserve explanation</p>
+
+<dl>
+	<dt><code>-f x11grab</code></dt>
+	<dd>uses the x11 server api to get desktop video</dd>
+	<dt><code>-video_size $size ... -i $DISPLAY</code></dt>
+	<dd>using x11grab, sets the video dimensions to your screen's values, and the input to your current display</dd>
+	<dt><code>-f alsa -ac 2 -i pulse -acodec aac</code></dt>
+	<dd>adds a second input for desktop audio from alsa and pulseaudio</dd>
+	<dt><code>-f flv "rtmp://live-lax.twitch.tv/app/$STREAM_KEY"</code></dt>
+	<dd>sets the output format to one commonly supported by streaming sites, and the output source to twitch</dd>
+</dl>
+
+		<b>Incoming:</b>
+<p><a href="projects.html">projects</a>
+</p>
+	</main>
+
+	<footer>
+		<a href="mailto:benrhammond@gmail.com" target="_blank">
+			<img src="images/mail.svg" alt="Mailto" />
+		</a>
+		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+			<img src="images/merveilles.svg" alt="Merveilles" />
+		</a>
+		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+			<img class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
+		</a>
+		<a href="https://wiki.xxiivv.com/site/ethics.html">
+			<img src="images/dreipfeile-icon.svg" alt="Ethics" />
+		</a>
+		<a href="feed.xml">
+			<img src="images/rss.svg" alt="RSS Feed" />
+		</a>
+		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+			src="images/icon.gif" />
+		<span style="float: right;"><em>Last updated: 210622</em></span>
+	</footer>
+</body>
+</html>

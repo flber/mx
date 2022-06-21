@@ -1,0 +1,44 @@
+!meta!
+title: ffstream tools
+!meta!
+
+[h2|ffstream tools]
+
+[p|[a, href: "https://github.com/flber/ffstream"|ffstream] is really a loose collection of scripts and miscellaneous files, and is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an [code|extra/] directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is [em|actually useful], but the short-term goal is to actually have something working :)]
+
+[p|This project started because my laptop [mark|page coming soon :)] really struggles to run OBS and any other software, so streaming games and such was never really feasible. However, after messing around with ffmpeg to encode video and such for months, I realized its (commonly) untapped potential for streaming!]
+
+[p|ffmpeg is an [em|incredibly] impressive piece of software; it can convert from basically any format to any other with more options than almost anyone will ever use, [em|and that's still not the coolest thing it can do!] Unfortunately I won't be going over ffmpeg's awesome complex filter system in this article, as it's a little outside of the scope :/]
+
+[p|The current main tool in this repo is the script [code|ffst-main], which is a pretty basic script to stream your desktop to twitch. It's only 14 lines, and could be 1 if I didn't care about readability :)]
+
+[pre|
+#!/bin/bash
+
+dunstify "starting stream"
+
+size=$(xrandr | head -n1 | cut -d, -f2 | cut -d" " -f3-5 | sed 's/ //g')
+
+ffmpeg -f x11grab \
+  -video_size $size \
+  -framerate 24 -i $DISPLAY \
+  -f alsa -ac 2 -i pulse -acodec aac \
+  -vf scale=1280x720 \
+  -c:v h264 -g 24 -b:v 2M \
+  -preset ultrafast -vb 3200k \
+  -c:a aac -pix_fmt yuv420p \
+  -f flv "rtmp://live-lax.twitch.tv/app/$STREAM_KEY"
+]
+
+[p|The [code|dunstify] call is mostly to let me know the script is still working, and you could replace the [code|size] variable with a hardcoded value of your display's dimensions. Most of the ffmpeg flags just set formats and such, but a few flags deserve explanation]
+
+[dl|
+	[dt|[code|-f x11grab]]
+	[dd|uses the x11 server api to get desktop video]
+	[dt|[code|-video_size $size ... -i $DISPLAY]]
+	[dd|using x11grab, sets the video dimensions to your screen's values, and the input to your current display]
+	[dt|[code|-f alsa -ac 2 -i pulse -acodec aac]]
+	[dd|adds a second input for desktop audio from alsa and pulseaudio]
+	[dt|[code|-f flv "rtmp://live-lax.twitch.tv/app/$STREAM_KEY"]]
+	[dd|sets the output format to one commonly supported by streaming sites, and the output source to twitch]
+]

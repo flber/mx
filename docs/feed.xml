@@ -5,6 +5,24 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>ffstream tools</title>
+			<pubDate>Tue, 21 Jun 2022 00:46:34 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><a href="https://github.com/flber/ffstream">ffstream</a> is really a loose collection of scripts and miscellaneous files, and is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an <code>extra/</code> directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is <em>actually useful</em>, but the short-term goal is to actually have something working :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/ffstream.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/ffstream.html</guid>
+		</item>
+		<item>
+			<title>Projects</title>
+			<pubDate>Tue, 21 Jun 2022 00:11:36 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/projects.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
+		</item>
+		<item>
 			<title>Grimoire</title>
 			<pubDate>Wed, 15 Jun 2022 20:07:08 +0900</pubDate>
 			<description>
@@ -30,15 +48,6 @@
 			</description>
 			<link>https://mineralexistence.com/ios-sync.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/ios-sync.html</guid>
-		</item>
-		<item>
-			<title>Projects</title>
-			<pubDate>Mon, 13 Jun 2022 13:39:31 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/projects.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
 		</item>
 		<item>
 			<title>Now</title>
