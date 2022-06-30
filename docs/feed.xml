@@ -5,13 +5,85 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Music</title>
+			<pubDate>Wed, 29 Jun 2022 04:53:21 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Here is a list of the albums I listen to, pulled from my music directory. Suggestions are always welcome!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/music.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/music.html</guid>
+		</item>
+		<item>
+			<title>Thoughts</title>
+			<pubDate>Wed, 29 Jun 2022 04:51:15 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/thoughts.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
+		</item>
+		<item>
+			<title>Writings</title>
+			<pubDate>Wed, 29 Jun 2022 04:50:04 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/writing.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
+		</item>
+		<item>
+			<title>For later</title>
+			<pubDate>Wed, 29 Jun 2022 04:48:04 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Some links to look at later. Started this on a long plane flight when I had some websites downloaded, but wanted to keep track of interesting external links I found while browsing the local copies. I'll probably be adding and removing links from here pretty often, so anything more consistent will be reserved for <a href="bookmarks.html">bookmarks</a>.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/later.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/later.html</guid>
+		</item>
+		<item>
+			<title>About</title>
+			<pubDate>Tue, 28 Jun 2022 15:25:53 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/about.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
+		</item>
+		<item>
+			<title>Games</title>
+			<pubDate>Tue, 21 Jun 2022 12:47:44 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I play quite a lot of video games. Here are a few of my favorites</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/games.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/games.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Tue, 21 Jun 2022 00:53:19 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
+		</item>
+		<item>
 			<title>ffstream tools</title>
-			<pubDate>Tue, 21 Jun 2022 00:46:34 +0900</pubDate>
+			<pubDate>Tue, 21 Jun 2022 00:48:41 +0900</pubDate>
 			<description>
 				<![CDATA[ <p><a href="https://github.com/flber/ffstream">ffstream</a> is really a loose collection of scripts and miscellaneous files, and is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an <code>extra/</code> directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is <em>actually useful</em>, but the short-term goal is to actually have something working :)</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/ffstream.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/ffstream.html</guid>
+		</item>
+		<item>
+			<title>Home</title>
+			<pubDate>Tue, 21 Jun 2022 00:47:54 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/home.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
 		</item>
 		<item>
 			<title>Projects</title>
@@ -50,24 +122,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/ios-sync.html</guid>
 		</item>
 		<item>
-			<title>Now</title>
-			<pubDate>Sat, 11 Jun 2022 13:57:00 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
-		</item>
-		<item>
-			<title>About</title>
-			<pubDate>Wed, 01 Jun 2022 14:00:35 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/about.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
-		</item>
-		<item>
 			<title>Intro to Dwarf Fortress</title>
 			<pubDate>Wed, 01 Jun 2022 13:16:22 +0900</pubDate>
 			<description>
@@ -75,24 +129,6 @@
 			</description>
 			<link>https://mineralexistence.com/df-start.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/df-start.html</guid>
-		</item>
-		<item>
-			<title>Thoughts</title>
-			<pubDate>Wed, 01 Jun 2022 13:15:05 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/thoughts.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
-		</item>
-		<item>
-			<title>Games</title>
-			<pubDate>Tue, 31 May 2022 14:45:32 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I play quite a lot of video games. Here are a few of my favorites</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/games.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/games.html</guid>
 		</item>
 		<item>
 			<title>Wiki</title>
@@ -221,15 +257,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/software.html</guid>
 		</item>
 		<item>
-			<title>Temporary</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>just a place for things I don't know where to put right now :D</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/temporary.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/temporary.html</guid>
-		</item>
-		<item>
 			<title>Some VSCode Bits and Bobs</title>
 			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
 			<description>
@@ -237,15 +264,6 @@
 			</description>
 			<link>https://mineralexistence.com/vscode.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/vscode.html</guid>
-		</item>
-		<item>
-			<title>~default~</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>A mystery page!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/writing.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
 		</item>
 		<item>
 			<title>Recipes</title>
@@ -383,15 +401,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/marin_headlands_200221.html</guid>
 		</item>
 		<item>
-			<title>Home</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/home.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
-		</item>
-		<item>
 			<title>Learning Nim</title>
 			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
 			<description>
@@ -408,15 +417,6 @@
 			</description>
 			<link>https://mineralexistence.com/climbing.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/climbing.html</guid>
-		</item>
-		<item>
-			<title>Music</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Here is a list of the albums I listen to, pulled from my music directory. Suggestions are always welcome!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/music.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/music.html</guid>
 		</item>
 		<item>
 			<title>I Don't Want This to be About SSGs</title>

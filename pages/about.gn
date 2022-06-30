@@ -7,8 +7,8 @@ title: About
 [p|I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make [a, href: "recipes.html"|food], occasionally [a, href: "drawings.html"|draw], and tell computers to do things for me (though we often have disagreements). I've worked on a few [a, href: "projects.html"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for not following my every command, I enjoy playing [a, href: "games.html"|video games], [a, href: "hiking.html"|hiking], [a, href: "reading.html"|reading], and thinking about designs for watch movements (though I still have yet to build one).]
 
 [span|
-	[img, style: "width:50%; display: inline-block;", src: "images/crow.png", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
-	[img, style: "width:48%; display: inline-block;", src: "images/cute-profile-dith.gif", alt: "a profile picture done in picrew.me: very androgynous person with dark hair and red streaks, wearing black overalls and a black choker, and with silver earings and a nose ring; on a pink background"|]
+	[img, style: "width:50%; display: inline-block;", src: "images/crow.jpg", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
+	[img, style: "width:48%; display: inline-block;", src: "images/cute-profile-dith.jpg", alt: "a profile picture done in picrew.me: very androgynous person with dark hair and red streaks, wearing black overalls and a black choker, and with silver earings and a nose ring; on a pink background"|]
 ]
 
 
@@ -45,10 +45,10 @@ title: About
 [p|And finally, here are some fun banners which I've started collecting :3]
 
 [span, class: "banner-span"|
-	[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img class="banner-img clear-margin" src="images/banners/css-cert-blue.png" alt="Valid CSS!"/>]
-	[a, href: "https://blackgnu.net/on-blockchain.html"|<img class="banner-img clear-margin" src="images/banners/web3-is-a-scam.gif"/>]
-	<img class="banner-img clear-margin" src="images/banners/trans-flag.png"/>
-	[a, href: "https://anybrowser.org/campaign/"|<img class="banner-img clear-margin" title="i like qutebrowser though :3" src="images/banners/any-browser.gif"/>]
-	<img class="banner-img clear-margin" title="surprisingly easy!" src="images/banners/piracy.gif"/>
-	<img class="banner-img clear-margin" title="it's pretty neat :)" alt="from nathan wentworth" src="images/banners/love-the-internet.png"/>
+	[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img class="banner-img clear-margin" src="images/banners/css-cert-blue.jpg" alt="Valid CSS!"/>]
+	[a, href: "https://blackgnu.net/on-blockchain.html"|<img class="banner-img clear-margin" src="images/banners/web3-is-a-scam.jpg"/>]
+	<img class="banner-img clear-margin" src="images/banners/trans-flag.jpg"/>
+	[a, href: "https://anybrowser.org/campaign/"|<img class="banner-img clear-margin" title="i like qutebrowser though :3" src="images/banners/any-browser.jpg"/>]
+	<img class="banner-img clear-margin" title="surprisingly easy!" src="images/banners/piracy.jpg"/>
+	<img class="banner-img clear-margin" title="it's pretty neat :)" alt="from nathan wentworth" src="images/banners/love-the-internet.jpg"/>
 ]
