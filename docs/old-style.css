@@ -1,0 +1,340 @@
+
+h1, 
+h2, 
+h3 { 
+	letter-spacing: -0.02em; 
+	line-height: 1.2; 
+} 
+
+h1 { 
+	font-size: clamp(2.0rem, 5vw, 3.0rem); 
+} 
+
+h2 { 
+	font-size: clamp(1.25rem, 5vw, 2.25rem); 
+	padding-bottom: 2ex; 
+} 
+
+h3 { 
+	font-size: clamp(1rem, 3vw, 1.5rem); 
+	padding-bottom: 1ex; 
+	padding-top: 2ex; 
+} 
+
+
+.listing span { 
+	float: right; 
+	padding-right: 2ex; 
+	padding-left: 2ex; 
+	background: var(--bg); 
+} 
+
+.half { 
+	width: 50%; 
+} 
+
+.third { 
+	width: 31%; 
+} 
+
+.left { 
+	margin-top: 0em; 
+	float: left; 
+	margin-right: 2em; 
+	clear: both; 
+} 
+
+.block { 
+	margin-top: 1em; 
+	margin-left: 0px; 
+	clear: both; 
+} 
+
+.block * { 
+	overflow: auto; 
+	/* display:block; */ 
+} 
+
+.block+* { 
+	clear: both; 
+} 
+
+
+/* fancy scrollbar */ 
+body::-webkit-scrollbar { 
+	width: 0.75rem; 
+} 
+
+body::-webkit-scrollbar-track { 
+	background-color: var(--bg); 
+	border: 1px solid var(--text); 
+} 
+
+body::-webkit-scrollbar-thumb { 
+	background-color: var(--text); 
+} 
+
+
+/* article { 
+	margin: 0px auto; 
+	background-color: var(--bg); 
+} */ 
+
+
+p { 
+	padding-bottom: 2ex; 
+} 
+
+ul, 
+ol { 
+	padding-top: 0; 
+	margin-top: 0; 
+} 
+
+pre { 
+	font-size: calc(1rem + 0.25vw); 
+	overflow-x: auto; 
+	padding: 2%; 
+	text-align: left; 
+	border-style: solid; 
+	border-color: var(--text); 
+	color: var(--bg); 
+	background-color: var(--text); 
+	line-height: 1.15em; 
+	margin-top: 0; 
+	padding-bottom: 2ex; 
+} 
+
+table td, 
+table th { 
+	vertical-align: top; 
+	padding: 2.5px 5px; 
+	text-align: left 
+} 
+
+blockquote { 
+	position: relative; 
+	border-color: var(--text); 
+	border-style: solid; 
+	border-width: thin; 
+	margin-bottom: 2ex; 
+} 
+
+blockquote>p { 
+	padding: 2em; 
+} 
+
+code { 
+	font-family: monospace; 
+	font-size: calc(0.75rem + 0.5vw); 
+} 
+
+mark { 
+	color: var(--text); 
+	background-color: var(--highlight); 
+} 
+
+
+legend { 
+	padding: 0; 
+} 
+
+fieldset { 
+	border: 1px solid var(--text); 
+	padding-left: 2em; 
+	padding-right: 2em; 
+	padding-bottom: 1em; 
+	margin-bottom: 2em; 
+} 
+
+div .break { 
+	margin-bottom: 2em; 
+} 
+
+
+details {border: 1px solid var(--text);border-radius: 4px;padding: .5em .5em 0;} 
+details[open] {padding: .5em;} 
+/* details[open] summary {border-bottom: 1px solid var(--text);margin-bottom: .5em;} */ 
+details { 
+	padding-bottom: 2ex; 
+} 
+
+details>*:not(summary) { 
+	margin-left: 1em; 
+} 
+
+
+/* link inverts when hovered */ 
+*:not(footer)>a { 
+	color: var(--bg); 
+	background-color: var(--text); 
+	text-decoration: none; 
+} 
+
+*:not(footer)>a:hover { 
+	color: var(--text); 
+	background-color: var(--highlight); 
+} 
+
+/* 
+body *:not(.banner-span) a:not([href*=':'])::before { 
+	content:"{" 
+} 
+
+body *:not(.banner-span) a:not([href*=':'])::after { 
+	content: "}" 
+} 
+
+body *:not(.banner-span) a[href*=':']::before { 
+	content: "[" 
+} 
+
+body *:not(.banner-span) a[href*=':']::after { 
+	content: "]" 
+} 
+*/ 
+
+img { 
+	width: 100%; 
+	margin-top: 1em; 
+	margin-bottom: 1em; 
+	font-style: italic; 
+} 
+
+video { 
+	width: 100%; 
+	margin-top: 1em; 
+	margin-bottom: 1em; 
+} 
+
+img.webring { 
+	transform: scale(1.4); 
+} 
+
+.banner-img { 
+	display: inline-block; 
+	width: 88px; 
+	height: 31px 
+} 
+
+.banner-span>a { 
+	text-decoration: none; 
+	background-color: var(--bg); 
+} 
+
+.clear-margin { 
+	margin-top: 0ex; 
+	margin-bottom: 0ex; 
+	margin-left: 0ex; 
+	margin-right: 0ex; 
+} 
+
+
+dd { 
+	margin-left: 2em; 
+} 
+
+
+hr { 
+	border: 1px solid var(--text); 
+	margin: 2em; 
+} 
+
+
+input, 
+button { 
+	height: 1.5em; 
+	line-height: 0em; 
+	padding-left: 0.75em; 
+	padding-right: 0.75em; 
+	margin-bottom: 1.5em; 
+	border-radius: 0em; 
+} 
+
+input[type=search] { 
+	border: 2px solid var(--text); 
+	color: var(--text); 
+	background: var(--bg); 
+} 
+
+input[type=search]:focus { 
+	border: 3px solid var(--highlight); 
+} 
+
+button[type=submit] { 
+	border: none; 
+	color: var(--bg); 
+	background: var(--text); 
+} 
+
+
+footer { 
+	border-top: 1.5px solid; 
+	padding: 30px 0 0 0; 
+	margin-top: 30px; 
+	clear: both 
+} 
+
+footer>* { 
+	display: inline-block; 
+} 
+
+footer img { 
+	margin: 0 0 -10px 0; 
+	width: 30px; 
+} 
+
+footer img:not([title*='banner']) { 
+	filter: invert(16%) sepia(6%) saturate(445%) hue-rotate(289deg) brightness(88%) contrast(79%); 
+} 
+
+
+svg { 
+	fill: var(--text); 
+} 
+
+/* used in character sheet */ 
+div #containter { 
+	display: flex; 
+	height: 10ex; 
+	margin-bottom: 2ex; 
+} 
+
+div #block { 
+	display: inline; 
+	border: 1px solid var(--text); 
+	margin: 1ex; 
+	padding: 0.7ex; 
+	line-height: 0.8ex; 
+} 
+
+
+header { 
+	margin-bottom: 3ex; 
+} 
+
+@media screen and (min-width : 0em) { 
+	body { 
+		padding: 2vh 4vw; 
+	} 
+} 
+
+@media screen and (min-width : 48em) { 
+	header { 
+		float: left; 
+		margin-right: 3em; 
+	} 
+
+	/* body { 
+		padding: 2vh 4vw; 
+		display: grid; 
+		grid-template-columns: repeat(2, 1fr); 
+		grid-template-rows: repeat(3, 1fr); 
+
+		grid-template-areas: 
+			"head  title" 
+			"main  main" 
+			"foot  foot"; 
+	} */ 
+} 
+

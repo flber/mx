@@ -30,6 +30,8 @@ for index, line in enumerate(sys.stdin):
             for p_line in page:
                 if "title:" in p_line:
                     title = p_line[7:-1]
+                    #DOC: break once a title is found to prevent potential later matches
+                    break
 
             # DOC: adds edit time to list
             latest += \

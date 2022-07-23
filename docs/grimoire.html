@@ -5,30 +5,23 @@
 	<meta charset="UTF-8">
 	<title>MX - Grimoire</title>
 	<link rel="icon" href="favicon.ico?" type="image/x-icon">
-	<link rel="stylesheet" href="https://use.typekit.net/tsn4urm.css">
 	<link rel="stylesheet" href="style.css" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:type" content="article"/>
 	<meta property="og:title" content="Some Page :)"/>
 	<meta property="og:description" content="Inspired by the grimoire of Fred Bednarski, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked."/> 
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 </head>
 
 <body>
 	<header>
-		<span>
-			<h1><a href="home.html">Home</a></h1>
-		</span>
-		<span>
-			<h1><a href="now.html">now</a></h1>
-		</span>
-		<span>
-			<h1><a href="wiki.html">wiki</a></h1>
-		</span>
-		<span>
-			<h1><a href="about.html">about</a></h1>
-		</span>
+		<h1><a href="home.html">Home</a></h1> 
+		<h1><a href="now.html">now</a></h1>
+		<h1><a href="wiki.html">wiki</a></h1>
+		<h1><a href="about.html">about</a></h1>
+		<hr/>
 	</header>
 
 	<main>
@@ -37,297 +30,359 @@
 
 <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
 
+<details>
+	<summary>To change the extensions of audio files in a directory:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
+	</fieldset>
+</details>
 
-<p>To change the extensions of audio files in a directory:</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
-</fieldset>
+<details>
+	<summary>More generally, to do something to some files:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p>
+	</fieldset>
+</details>
 
-<p>More generally, to do something to some files:</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p>
-</fieldset>
 
-<p>To download the mp3 audio (or the best audio if that fails) of a youtube video:</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
-</fieldset>
+<details>
+	<summary>To download the mp3 audio (or the best audio if that fails) of a youtube video:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
+	</fieldset>
+</details>
 
-<p>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p>
-</fieldset>
+<details>
+	<summary>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p>
+	</fieldset>
+</details>
 
-<p>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
-</fieldset>
+<details>
+	<summary>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
+	</fieldset>
+</details>
 
-<p>To sanitize a file name (the .opus can be any extension):</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
-</fieldset>
+<details>
+	<summary>To sanitize a file name (the .opus can be any extension):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
+	</fieldset>
+</details>
 
-<p>To sanitize everything in a directory, preserving extensions:</p>
-<fieldset>
-	<legend>Fish</legend>
-	<p>function sanitize
-	    for file in *
-	        set ext (string match -r "\.\w*\$" $file | \
-	            string trim --chars=.)
-	    
-	        set new (echo "{$file}" | \
-	            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
-	            tr -d '[:punct:]' | \
-	            tr '[:upper:]' '[:lower:]' | \
-	            tr ' ' '-' | \
-	            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
-	
-	        set final (string replace "$ext" ".$ext" "$new")
-	        
-	        if [ "$file" != "$final" ]
-	            mv "$file" "$final"
-	        end
-	    end
-	end</p>
-</fieldset>
+<details>
+	<summary>To sanitize everything in a directory, preserving extensions:</summary>
+	<fieldset>
+		<legend>Fish</legend>
+		<p>function sanitize
+		    for file in *
+		        set ext (string match -r "\.\w*\$" $file | \
+		            string trim --chars=.)
+		    
+		        set new (echo "{$file}" | \
+		            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
+		            tr -d '[:punct:]' | \
+		            tr '[:upper:]' '[:lower:]' | \
+		            tr ' ' '-' | \
+		            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
+		
+		        set final (string replace "$ext" ".$ext" "$new")
+		        
+		        if [ "$file" != "$final" ]
+		            mv "$file" "$final"
+		        end
+		    end
+		end</p>
+	</fieldset>
+</details>
 
-<p>To push file changes over ssh:</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
-</fieldset>
+<details>
+	<summary>To push file changes over ssh:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
+	</fieldset>
+</details>
 
-<p>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
-</fieldset>
+<details>
+	<summary>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
+	</fieldset>
+</details>
 
-<p>To simply dither of an image:</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
-</fieldset>
 
-<p>Super simple, but to make a div element take up the whole height of a veiwport</p>
-<fieldset>
-	<legend>CSS</legend>
-	<p>height: 100vh;</p>
-</fieldset>
+<details>
+	<summary>To simply dither of an image:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
+	</fieldset>
+</details>
 
-<p>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>alsactl restore</p>
-</fieldset>
+<details>
+	<summary>Super simple, but to make a div element take up the whole height of a veiwport</summary>
+	<fieldset>
+		<legend>CSS</legend>
+		<p>height: 100vh;</p>
+	</fieldset>
+</details>
 
-<p>To play a streaming file</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p>
-</fieldset>
+<details>
+	<summary>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>alsactl restore</p>
+	</fieldset>
+</details>
 
-<p>Grab some html from the Noita wiki</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p>
-</fieldset>
+<details>
+	<summary>To play a streaming file</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p>
+	</fieldset>
+</details>
 
-<p>Find all files which match a given regex</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>grep -rnw 'dir/' -e 'pattern'</p>
-</fieldset>
+<details>
+	<summary>Grab some html from the Noita wiki</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p>
+	</fieldset>
+</details>
 
-<p>Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)</p>
-<fieldset>
-	<legend>ImageMagick</legend>
-	<p>convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png</p>
-</fieldset>
+<details>
+	<summary>Find all files which match a given regex</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>grep -rnw 'dir/' -e 'pattern'</p>
+	</fieldset>
+</details>
 
-<p>Function to convert a string into a hashed long</p>
-<fieldset>
-	<legend>C89</legend>
-	<p>
-	long
-	hash(char *str)
-	{
-	    long hash = 5381;
-	    int c;
-	    while ((c = *str++))
-	        hash = ((hash << 5) + hash) + c;
-	    return hash;
-	}
-	</p>
-</fieldset>
+<details>
+	<summary>Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png</p>
+	</fieldset>
+</details>
 
-<p>Copy an array to a pointer's value</p>
-<fieldset>
-	<legend>C</legend>
-	<p>
-		int dst[ARRAY_LENGTH];
-		memcpy(dst, src, sizeof(dst));
-	</p>
-</fieldset>
+<details>
+	<summary>Function to convert a string into a hashed long</summary>
+	<fieldset>
+		<legend>C89</legend>
+		<p>
+		long
+		hash(char *str)
+		{
+		    long hash = 5381;
+		    int c;
+		    while ((c = *str++))
+		        hash = ((hash << 5) + hash) + c;
+		    return hash;
+		}
+		</p>
+	</fieldset>
+</details>
 
-<p>Convert an mp4 to an animated gif</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>
-		ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif
-	</p>
-</fieldset>
+<details>
+	<summary>Copy an array to a pointer's value</summary>
+	<fieldset>
+		<legend>C</legend>
+		<p>
+			int dst[ARRAY_LENGTH];
+			memcpy(dst, src, sizeof(dst));
+		</p>
+	</fieldset>
+</details>
 
-<p>Get the audio from an mp4</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>
-		ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3
-	</p>
-</fieldset>
+<details>
+	<summary>Convert an mp4 to an animated gif</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif</p>
+	</fieldset>
+</details>
 
-<p>Convert gif to mp4</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>
-		ffmpeg -i cats.gif cats-dith.mp4
-	</p>
-</fieldset>
+<details>
+	<summary>Get the audio from an mp4</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3</p>
+	</fieldset>
+</details>
 
-<p>Combine audio and video files</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>
-		ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
-	</p>
-</fieldset>
+<details>
+	<summary>Convert gif to mp4</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i cats.gif cats-dith.mp4</p>
+	</fieldset>
+</details>
 
-<p>Add centered text in white to a video</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>
-		ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow\
-		walk:fontcolor=white:fontsize=24:box=1:\
-		boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"\
-		-codec:a copy crow-walk-text.mp4
-	</p>
-</fieldset>
+<details>
+	<summary>Combine audio and video files</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4</p>
+	</fieldset>
+</details>
 
-<p>Convert mkv to mp4 preserving subtitles</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4</p>
-</fieldset>
+<details>
+	<summary>Add centered text in white to a video</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow walk:fontcolor=white:fontsize=24:box=1:boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy crow-walk-text.mp4</p>
+	</fieldset>
+</details>
 
-<p>Find the file with the most lines in a directory</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l</p>
-</fieldset>
+<details>
+	<summary>Convert mkv to mp4 preserving subtitles</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4</p>
+	</fieldset>
+</details>
 
-<p>Crop an image <em>and</em> the virtual canvas (so a "normal crop" basically)</p>
-<fieldset>
-	<legend>ImageMagick</legend>
-	<p>convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
-</fieldset>
+<details>
+	<summary>Find the file with the most lines in a directory</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l</p>
+	</fieldset>
+</details>
 
-<p>Cut a video file with start and end points</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4</p>
-</fieldset>
+<details>
+	<summary>Crop an image <em>and</em> the virtual canvas (so a "normal crop" basically)</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
+	</fieldset>
+</details>
 
-<p>Combine videos from text file</p>
-<fieldset>
-	<legend>bash/ffmpeg</legend>
-	<p>> cat files.txt</p>
-	<p>file 'input1.mp4' \n file 'input2.mp4'</p>
-	<p>ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4</p>
-</fieldset>
+<details>
+	<summary>Cut a video file with start and end points</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4</p>
+	</fieldset>
+</details>
 
-<p>Count all the characters in all files in a directory</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>find ./* -type f -exec cat {} + | wc -m</p>
-</fieldset>
+<details>
+	<summary>Combine videos from text file</summary>
+	<fieldset>
+		<legend>bash/ffmpeg</legend>
+		<p>> cat files.txt</p>
+		<p>file 'input1.mp4' \n file 'input2.mp4'</p>
+		<p>ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4</p>
+	</fieldset>
+</details>
 
-<p>Get disk information (available, used, etc)</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>df -h</p>
-</fieldset>
+<details>
+	<summary>Count all the characters in all files in a directory</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>find ./* -type f -exec cat {} + | wc -m</p>
+	</fieldset>
+</details>
 
-<p>Prints IP addresses for computer</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>ip addr show | grep "inet "</p>
-</fieldset>
+<details>
+	<summary>Get disk information (available, used, etc)</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>df -h</p>
+	</fieldset>
+</details>
 
-<p>Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>sudo arp-scan --interface=wlp3s0 --localnet</p>
-</fieldset>
+<details>
+	<summary>Prints IP addresses for computer</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>ip addr show | grep "inet "</p>
+	</fieldset>
+</details>
 
-<p>Get open ports/ips on local system</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>nmap -vv -sV localhost -oG - | awk -v OFS=':' '
-	/open/ {
-	  for (i=4;i<=NF;i++) {
-	    split($i,a,"/");
-	    if (a[2]=="open") print $2, a[1]
-	  }
-	}'
-	</p>
-</fieldset>
+<details>
+	<summary>Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>sudo arp-scan --interface=wlp3s0 --localnet</p>
+	</fieldset>
+</details>
 
-<p>Downloads whole website</p>
-<fieldset>
-	<legend>bash</legend>
-	<p>wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"</p>
-</fieldset>
+<details>
+	<summary>Get open ports/ips on local system</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>nmap -vv -sV localhost -oG - | awk -v OFS=':' '
+		/open/ {
+		  for (i=4;i<=NF;i++) {
+		    split($i,a,"/");
+		    if (a[2]=="open") print $2, a[1]
+		  }
+		}'
+		</p>
+	</fieldset>
+</details>
 
-<p>Dither image while still looking nice</p>
-<fieldset>
-	<legend>ImageMagick</legend>
-	<p>mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *</p>
-</fieldset>
+<details>
+	<summary>Downloads whole website</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"</p>
+	</fieldset>
+</details>
 
-<p>Grab window (with name including "video2") and put into output.mp4</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>echo "ffmpeg -y -v error -f x11grab -video_size $(wmctrl -lG | awk '$8 ~"video2" {printf("%dx%d -i :0.0+%d,%d", $5, $6, $3, $4)}') output.mp4" | bash</p>
-</fieldset>
+<details>
+	<summary>Dither image while still looking nice</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *</p>
+	</fieldset>
+</details>
 
-<p>In theory, grab video in, pass through complex filter (in this case just add text), and out to virtual webcam</p>
-<fieldset>
-	<legend>ffmpeg</legend>
-	<p>ffmpeg -i /dev/video2 -vf "drawtext=\
-	           text=\
-	             'efelbar':\
-	             fontcolor=white:\
-	             fontsize=64:\
-	             box=1:\
-	             boxcolor=black:\
-	             boxborderw=5:\
-	             x=0:\
-	             y=0" -f v4l2 /dev/video4
-	</p>
-</fieldset>
+<details>
+	<summary>Grab window (with name including "video2") and put into output.mp4</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>echo "ffmpeg -y -v error -f x11grab -video_size $(wmctrl -lG | awk '$8 ~"video2" {printf("%dx%d -i :0.0+%d,%d", $5, $6, $3, $4)}') output.mp4" | bash</p>
+	</fieldset>
+</details>
 
-<p>Turn the background of an image transparent</p>
-<fieldset>
-	<legend>ImageMagick</legend>
-	<p>convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png</p>
-</fieldset>
+<details>
+	<summary>In theory, grab video in, pass through complex filter (in this case just add text), and out to virtual webcam</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i /dev/video2 -vf "drawtext=text='efelbar':fontcolor=white:fontsize=64:box=1:boxcolor=black:boxborderw=5:x=0:y=0" -f v4l2 /dev/video4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Turn the background of an image transparent</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Find combined file size of specific filetype (in this case html)</summary>
+	<fieldset>
+		<legend>Bash</legend>
+		<p>du -h ./*.html | awk '{print $1}' | sed -e 's/K//' | paste -sd+ - | bc</p>
+	</fieldset>
+</details>
 
 		<b>Incoming:</b>
 <p><a href="now.html">now</a>
@@ -337,23 +392,23 @@
 
 	<footer>
 		<a href="mailto:benrhammond@gmail.com" target="_blank">
-			<img src="images/mail.svg" alt="Mailto" />
+			<img loading="lazy" src="images/mail.svg" alt="Mailto" />
 		</a>
 		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
-			<img src="images/merveilles.svg" alt="Merveilles" />
+			<img loading="lazy" src="images/merveilles.svg" alt="Merveilles" />
 		</a>
 		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
-			<img class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
+			<img loading="lazy" class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
 		</a>
 		<a href="https://wiki.xxiivv.com/site/ethics.html">
-			<img src="images/dreipfeile-icon.svg" alt="Ethics" />
+			<img loading="lazy" src="images/dreipfeile-icon.svg" alt="Ethics" />
 		</a>
 		<a href="feed.xml">
-			<img src="images/rss.svg" alt="RSS Feed" />
+			<img loading="lazy" src="images/rss.svg" alt="RSS Feed" />
 		</a>
-		<img style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 160622</em></span>
+		<span style="float: right;"><em>Last updated: 110722</em></span>
 	</footer>
 </body>
 </html>

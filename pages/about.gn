@@ -11,15 +11,14 @@ title: About
 	[img, style: "width:48%; display: inline-block;", src: "images/cute-profile-dith.jpg", alt: "a profile picture done in picrew.me: very androgynous person with dark hair and red streaks, wearing black overalls and a black choker, and with silver earings and a nose ring; on a pink background"|]
 ]
 
-
-[p|Because I'm not super experienced in any one field, I often find myself anxious about asking those more knowledgeable. That's very often due simply to me not wanting to waste their time, but as a result I probably waste everyone's time by adding prefaces to my questions, such as:]
+[p|Because I'm not super experienced in any one field, I often find myself anxious those more knowledgeable. That's mostly because I don't want to waste their time, but  I probably end up wasting more time by adding prefaces to my questions, such as:]
 [ul|
 	[li|Sorry to bother you, but...]
 	[li|This may be a simple question, but...]
 	[li|Pardon my lack of knowledge in this, but...]
 	[li|I probably just missed the answer to this in the docs somewhere, but...]
 ]
-[p|and others. I'll try to just cut to the chase from now on, but if you need some context as to why I'm asking about something introductory, please feel free to mentally add one of the above prefaces to the start of my question!]
+[p|and others. I'll try to just cut to the chase from now on, but if you need some context as to why I'm asking about something you think is simple, please feel free to mentally add one of the above prefaces to the start of my question!]
 
 [p|You can find the source code for this site in any of these places:]
 [ul|
@@ -28,7 +27,6 @@ title: About
 	[li|[a, href: "https://git.sr.ht/~flber/mineral-existence"|srht]]
 ]
 
-
 [p|You can check out the [a, href: "inventory.html"|inventory] page for a list of the hardware and software I use.]
 
 [p|Feel free to say hi on [a, href: "https://merveilles.town/@flbr"|mastodon] or via my [a, href: "mailto:benrhammond@gmail.com"|email]]
@@ -36,19 +34,21 @@ title: About
 [p|I'm also on [a, href: "https://webring.xxiivv.com/#icons"|a webring]! All the sites on it are pretty neat, including those of my neighbours:]
 [ul|
 	[li|Alessia Bellisario's [a, href: "https://aless.co/"|anti/pattern]]
-	[li|Martin Schotten.com/'s [a, href: "http://fragmentscenario.com/"|fragmentscenario]]
+	[li|Martin Schotten's [a, href: "http://fragmentscenario.com/"|fragmentscenario]]
 ]
 
+<!--
 [p|This is my [a, href: "https://wobble.town"|wobble], his name is kronk!]
 [a, href: "https://wobble.town/visit/"|[img, style: "margin-top:0em;width: 10%;", src: "https://wobble.town/visit/48/wobble.gif"|]]
+-->
 
 [p|And finally, here are some fun banners which I've started collecting :3]
 
-[span, class: "banner-span"|
-	[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img class="banner-img clear-margin" src="images/banners/css-cert-blue.jpg" alt="Valid CSS!"/>]
-	[a, href: "https://blackgnu.net/on-blockchain.html"|<img class="banner-img clear-margin" src="images/banners/web3-is-a-scam.jpg"/>]
-	<img class="banner-img clear-margin" src="images/banners/trans-flag.jpg"/>
-	[a, href: "https://anybrowser.org/campaign/"|<img class="banner-img clear-margin" title="i like qutebrowser though :3" src="images/banners/any-browser.jpg"/>]
-	<img class="banner-img clear-margin" title="surprisingly easy!" src="images/banners/piracy.jpg"/>
-	<img class="banner-img clear-margin" title="it's pretty neat :)" alt="from nathan wentworth" src="images/banners/love-the-internet.jpg"/>
-]
+[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img style="width:88px;display:inline" src="images/banners/css-cert-blue.jpg" alt="Valid CSS!"/>]
+[a, href: "https://blackgnu.net/on-blockchain.html"|<img style="width:88px;display:inline" src="images/banners/web3-is-a-scam-0.jpg"/>]
+<img style="width:88px;display:inline" src="images/banners/trans-flag.jpg"/>
+[a, href: "https://anybrowser.org/campaign/"|<img style="width:88px;display:inline" title: "i like qutebrowser though :3" src="images/banners/any-browser.jpg"/>]
+<img style="width:88px;display:inline" title: "surprisingly easy!" src: "images/banners/piracy.jpg"/>
+<img style="width:88px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/>
+
+[p|]

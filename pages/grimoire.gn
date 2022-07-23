@@ -6,294 +6,356 @@ title: Grimoire
 
 [p|Inspired by the [a, href: "https://fdisk.space/grimoire/"|grimoire of Fred Bednarski], this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.]
 
-
-[p|To change the extensions of audio files in a directory:]
-[fieldset|
-	[legend|bash]
-	[p|for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done]
-]
-
-[p|More generally, to do something to some files:]
-[fieldset|
-	[legend|bash]
-	[p|for file in $(ls | grep "something"); do echo "match: ${file}"; done]
-]
-
-[p|To download the mp3 audio (or the best audio if that fails) of a youtube video:]
-[fieldset|
-	[legend|bash]
-	[p|youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"]
-]
-
-[p|To download a playlist of music from youtube (more stable for playlists than youtube-dl):]
-[fieldset|
-	[legend|bash]
-	[p|youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"]
-]
-
-[p|To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):]
-[fieldset|
-	[legend|bash]
-	[p|ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver]
-]
-
-[p|To sanitize a file name (the .opus can be any extension):]
-[fieldset|
-	[legend|bash]
-	[p|mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"]
-]
-
-[p|To sanitize everything in a directory, preserving extensions:]
-[fieldset|
-	[legend|Fish]
-	[p|function sanitize
-	    for file in *
-	        set ext (string match -r "\.\w*\$" $file | \
-	            string trim --chars=.)
-	    
-	        set new (echo "{$file}" | \
-	            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
-	            tr -d '[:punct:]' | \
-	            tr '[:upper:]' '[:lower:]' | \
-	            tr ' ' '-' | \
-	            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
-	
-	        set final (string replace "$ext" ".$ext" "$new")
-	        
-	        if [ "$file" != "$final" ]
-	            mv "$file" "$final"
-	        end
-	    end
-	end]
-]
-
-[p|To push file changes over ssh:]
-[fieldset|
-	[legend|bash]
-	[p|rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder]
-]
-
-[p|To dither and shrink an image ([a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63"|courtesy] of [a href="https://merveilles.town/web/accounts/33648"|Thomasorus] with some modification for personal preference):]
-[fieldset|
-	[legend|bash]
-	[p|mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from]
-]
-
-[p|To simply dither of an image:]
-[fieldset|
-	[legend|bash]
-	[p|convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png]
-]
-
-[p|Super simple, but to make a div element take up the whole height of a veiwport]
-[fieldset|
-	[legend|CSS]
-	[p|height: 100vh;]
-]
-
-[p|This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:]
-[fieldset|
-	[legend|bash]
-	[p|alsactl restore]
-]
-
-[p|To play a streaming file]
-[fieldset|
-	[legend|bash]
-	[p|mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u]
-]
-
-[p|Grab some html from the Noita wiki]
-[fieldset|
-	[legend|bash]
-	[p|curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}']
-]
-
-[p|Find all files which match a given regex]
-[fieldset|
-	[legend|bash]
-	[p|grep -rnw 'dir/' -e 'pattern']
-]
-
-[p|Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)]
-[fieldset|
-	[legend|ImageMagick]
-	[p|convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png]
-]
-
-[p|Function to convert a string into a hashed long]
-[fieldset|
-	[legend|C89]
-	[p|
-	long
-	hash(char *str)
-	{
-	    long hash = 5381;
-	    int c;
-	    while ((c = *str++))
-	        hash = ((hash << 5) + hash) + c;
-	    return hash;
-	}
+[details|
+	[summary|To change the extensions of audio files in a directory:]
+	[fieldset|
+		[legend|bash]
+		[p|for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done]
 	]
 ]
 
-[p|Copy an array to a pointer's value]
-[fieldset|
-	[legend|C]
-	[p|
-		int dst[ARRAY_LENGTH];
-		memcpy(dst, src, sizeof(dst));
+[details|
+	[summary|More generally, to do something to some files:]
+	[fieldset|
+		[legend|bash]
+		[p|for file in $(ls | grep "something"); do echo "match: ${file}"; done]
 	]
 ]
 
-[p|Convert an mp4 to an animated gif]
-[fieldset|
-	[legend|ffmpeg]
-	[p|
-		ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif
+
+[details|
+	[summary|To download the mp3 audio (or the best audio if that fails) of a youtube video:]
+	[fieldset|
+		[legend|bash]
+		[p|youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"]
 	]
 ]
 
-[p|Get the audio from an mp4]
-[fieldset|
-	[legend|ffmpeg]
-	[p|
-		ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3
+[details|
+	[summary|To download a playlist of music from youtube (more stable for playlists than youtube-dl):]
+	[fieldset|
+		[legend|bash]
+		[p|youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"]
 	]
 ]
 
-[p|Convert gif to mp4]
-[fieldset|
-	[legend|ffmpeg]
-	[p|
-		ffmpeg -i cats.gif cats-dith.mp4
+[details|
+	[summary|To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):]
+	[fieldset|
+		[legend|bash]
+		[p|ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver]
 	]
 ]
 
-[p|Combine audio and video files]
-[fieldset|
-	[legend|ffmpeg]
-	[p|
-		ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4
+[details|
+	[summary|To sanitize a file name (the .opus can be any extension):]
+	[fieldset|
+		[legend|bash]
+		[p|mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"]
 	]
 ]
 
-[p|Add centered text in white to a video]
-[fieldset|
-	[legend|ffmpeg]
-	[p|
-		ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow\
-		walk:fontcolor=white:fontsize=24:box=1:\
-		boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2"\
-		-codec:a copy crow-walk-text.mp4
+[details|
+	[summary|To sanitize everything in a directory, preserving extensions:]
+	[fieldset|
+		[legend|Fish]
+		[p|function sanitize
+		    for file in *
+		        set ext (string match -r "\.\w*\$" $file | \
+		            string trim --chars=.)
+		    
+		        set new (echo "{$file}" | \
+		            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
+		            tr -d '[:punct:]' | \
+		            tr '[:upper:]' '[:lower:]' | \
+		            tr ' ' '-' | \
+		            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
+		
+		        set final (string replace "$ext" ".$ext" "$new")
+		        
+		        if [ "$file" != "$final" ]
+		            mv "$file" "$final"
+		        end
+		    end
+		end]
 	]
 ]
 
-[p|Convert mkv to mp4 preserving subtitles]
-[fieldset|
-	[legend|ffmpeg]
-	[p|ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4]
-]
-
-[p|Find the file with the most lines in a directory]
-[fieldset|
-	[legend|bash]
-	[p|wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l]
-]
-
-[p|Crop an image [em|and] the virtual canvas (so a "normal crop" basically)]
-[fieldset|
-	[legend|ImageMagick]
-	[p|convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png]
-]
-
-[p|Cut a video file with start and end points]
-[fieldset|
-	[legend|ffmpeg]
-	[p|ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4]
-]
-
-[p|Combine videos from text file]
-[fieldset|
-	[legend|bash/ffmpeg]
-	[p|> cat files.txt]
-	[p|file 'input1.mp4' \n file 'input2.mp4']
-	[p|ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4]
-]
-
-[p|Count all the characters in all files in a directory]
-[fieldset|
-	[legend|bash]
-	[p|find ./* -type f -exec cat {} + | wc -m]
-]
-
-[p|Get disk information (available, used, etc)]
-[fieldset|
-	[legend|bash]
-	[p|df -h]
-]
-
-[p|Prints IP addresses for computer]
-[fieldset|
-	[legend|bash]
-	[p|ip addr show | grep "inet "]
-]
-
-[p|Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)]
-[fieldset|
-	[legend|bash]
-	[p|sudo arp-scan --interface=wlp3s0 --localnet]
-]
-
-[p|Get open ports/ips on local system]
-[fieldset|
-	[legend|bash]
-	[p|nmap -vv -sV localhost -oG - | awk -v OFS=':' '
-	/open/ {
-	  for (i=4;i<=NF;i++) {
-	    split($i,a,"/");
-	    if (a[2]=="open") print $2, a[1]
-	  }
-	}'
+[details|
+	[summary|To push file changes over ssh:]
+	[fieldset|
+		[legend|bash]
+		[p|rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder]
 	]
 ]
 
-[p|Downloads whole website]
-[fieldset|
-	[legend|bash]
-	[p|wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"]
-]
-
-[p|Dither image while still looking nice]
-[fieldset|
-	[legend|ImageMagick]
-	[p|mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *]
-]
-
-[p|Grab window (with name including "video2") and put into output.mp4]
-[fieldset|
-	[legend|ffmpeg]
-	[p|echo "ffmpeg -y -v error -f x11grab -video_size $(wmctrl -lG | awk '$8 ~"video2" {printf("%dx%d -i :0.0+%d,%d", $5, $6, $3, $4)}') output.mp4" | bash]
-]
-
-[p|In theory, grab video in, pass through complex filter (in this case just add text), and out to virtual webcam]
-[fieldset|
-	[legend|ffmpeg]
-	[p|ffmpeg -i /dev/video2 -vf "drawtext=\
-	           text=\
-	             'efelbar':\
-	             fontcolor=white:\
-	             fontsize=64:\
-	             box=1:\
-	             boxcolor=black:\
-	             boxborderw=5:\
-	             x=0:\
-	             y=0" -f v4l2 /dev/video4
+[details|
+	[summary|To dither and shrink an image ([a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63"|courtesy] of [a href="https://merveilles.town/web/accounts/33648"|Thomasorus] with some modification for personal preference):]
+	[fieldset|
+		[legend|bash]
+		[p|mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from]
 	]
 ]
 
-[p|Turn the background of an image transparent]
-[fieldset|
-	[legend|ImageMagick]
-	[p|convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png]
+
+[details|
+	[summary|To simply dither of an image:]
+	[fieldset|
+		[legend|bash]
+		[p|convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png]
+	]
+]
+
+[details|
+	[summary|Super simple, but to make a div element take up the whole height of a veiwport]
+	[fieldset|
+		[legend|CSS]
+		[p|height: 100vh;]
+	]
+]
+
+[details|
+	[summary|This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:]
+	[fieldset|
+		[legend|bash]
+		[p|alsactl restore]
+	]
+]
+
+[details|
+	[summary|To play a streaming file]
+	[fieldset|
+		[legend|bash]
+		[p|mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u]
+	]
+]
+
+[details|
+	[summary|Grab some html from the Noita wiki]
+	[fieldset|
+		[legend|bash]
+		[p|curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}']
+	]
+]
+
+[details|
+	[summary|Find all files which match a given regex]
+	[fieldset|
+		[legend|bash]
+		[p|grep -rnw 'dir/' -e 'pattern']
+	]
+]
+
+[details|
+	[summary|Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)]
+	[fieldset|
+		[legend|ImageMagick]
+		[p|convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png]
+	]
+]
+
+[details|
+	[summary|Function to convert a string into a hashed long]
+	[fieldset|
+		[legend|C89]
+		[p|
+		long
+		hash(char *str)
+		{
+		    long hash = 5381;
+		    int c;
+		    while ((c = *str++))
+		        hash = ((hash << 5) + hash) + c;
+		    return hash;
+		}
+		]
+	]
+]
+
+[details|
+	[summary|Copy an array to a pointer's value]
+	[fieldset|
+		[legend|C]
+		[p|
+			int dst[ARRAY_LENGTH];
+			memcpy(dst, src, sizeof(dst));
+		]
+	]
+]
+
+[details|
+	[summary|Convert an mp4 to an animated gif]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif]
+	]
+]
+
+[details|
+	[summary|Get the audio from an mp4]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3]
+	]
+]
+
+[details|
+	[summary|Convert gif to mp4]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i cats.gif cats-dith.mp4]
+	]
+]
+
+[details|
+	[summary|Combine audio and video files]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4]
+	]
+]
+
+[details|
+	[summary|Add centered text in white to a video]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow walk:fontcolor=white:fontsize=24:box=1:boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy crow-walk-text.mp4]
+	]
+]
+
+[details|
+	[summary|Convert mkv to mp4 preserving subtitles]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4]
+	]
+]
+
+[details|
+	[summary|Find the file with the most lines in a directory]
+	[fieldset|
+		[legend|bash]
+		[p|wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l]
+	]
+]
+
+[details|
+	[summary|Crop an image [em|and] the virtual canvas (so a "normal crop" basically)]
+	[fieldset|
+		[legend|ImageMagick]
+		[p|convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png]
+	]
+]
+
+[details|
+	[summary|Cut a video file with start and end points]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4]
+	]
+]
+
+[details|
+	[summary|Combine videos from text file]
+	[fieldset|
+		[legend|bash/ffmpeg]
+		[p|> cat files.txt]
+		[p|file 'input1.mp4' \n file 'input2.mp4']
+		[p|ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4]
+	]
+]
+
+[details|
+	[summary|Count all the characters in all files in a directory]
+	[fieldset|
+		[legend|bash]
+		[p|find ./* -type f -exec cat {} + | wc -m]
+	]
+]
+
+[details|
+	[summary|Get disk information (available, used, etc)]
+	[fieldset|
+		[legend|bash]
+		[p|df -h]
+	]
+]
+
+[details|
+	[summary|Prints IP addresses for computer]
+	[fieldset|
+		[legend|bash]
+		[p|ip addr show | grep "inet "]
+	]
+]
+
+[details|
+	[summary|Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)]
+	[fieldset|
+		[legend|bash]
+		[p|sudo arp-scan --interface=wlp3s0 --localnet]
+	]
+]
+
+[details|
+	[summary|Get open ports/ips on local system]
+	[fieldset|
+		[legend|bash]
+		[p|nmap -vv -sV localhost -oG - | awk -v OFS=':' '
+		/open/ {
+		  for (i=4;i<=NF;i++) {
+		    split($i,a,"/");
+		    if (a[2]=="open") print $2, a[1]
+		  }
+		}'
+		]
+	]
+]
+
+[details|
+	[summary|Downloads whole website]
+	[fieldset|
+		[legend|bash]
+		[p|wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"]
+	]
+]
+
+[details|
+	[summary|Dither image while still looking nice]
+	[fieldset|
+		[legend|ImageMagick]
+		[p|mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *]
+	]
+]
+
+[details|
+	[summary|Grab window (with name including "video2") and put into output.mp4]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|echo "ffmpeg -y -v error -f x11grab -video_size $(wmctrl -lG | awk '$8 ~"video2" {printf("%dx%d -i :0.0+%d,%d", $5, $6, $3, $4)}') output.mp4" | bash]
+	]
+]
+
+[details|
+	[summary|In theory, grab video in, pass through complex filter (in this case just add text), and out to virtual webcam]
+	[fieldset|
+		[legend|ffmpeg]
+		[p|ffmpeg -i /dev/video2 -vf "drawtext=text='efelbar':fontcolor=white:fontsize=64:box=1:boxcolor=black:boxborderw=5:x=0:y=0" -f v4l2 /dev/video4]
+	]
+]
+
+[details|
+	[summary|Turn the background of an image transparent]
+	[fieldset|
+		[legend|ImageMagick]
+		[p|convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png]
+	]
+]
+
+[details|
+	[summary|Find combined file size of specific filetype (in this case html)]
+	[fieldset|
+		[legend|Bash]
+		[p|du -h ./*.html | awk '{print $1}' | sed -e 's/K//' | paste -sd+ - | bc]
+	]
 ]
