@@ -7,7 +7,12 @@ static: true
 
 [p|Here is a list of the albums I listen to, pulled from my music directory. Suggestions are always welcome!]
 
-{{music}}
+[details|
+	[summary|Albums]
+	{{music}}
+]
+
+[p|I've also got a [a, href: "playlist.html"|playlist page] for a specific album. It's very experimental, so it might break on your browser]
 
 [p|Additionally, here are a various recomendations I've recieved, but maybe haven't gotten around to listening to yet :P]
 [p|(this list could be super out-of-date!)]

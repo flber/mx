@@ -1,0 +1,36 @@
+{
+    "aspell.check": "off",
+    "basename": true,
+    "colorscheme": "simple",
+    "divchars": "│─",
+    "divreverse": false,
+    "ft:c": {
+        "tabsize": 2,
+        "tabstospaces": true
+    },
+    "ft:gn": {
+        "tabsize": 2,
+        "tabstospaces": true
+    },
+    "ft:lua": {
+        "tabsize": 2,
+        "tabstospaces": true
+    },
+    "ft:nim": {
+        "tabsize": 2,
+        "tabstospaces": true
+    },
+    "ft:tal": {
+        "tabsize": 2,
+        "tabstospaces": false
+    },
+    "ruler": false,
+    "savecursor": true,
+    "saveundo": true,
+    "statusline": false,
+    "tabhighlight": true,
+    "tabmovement": true,
+    "tabreverse": false,
+    "tabsize": 2,
+    "wordwrap": true
+}

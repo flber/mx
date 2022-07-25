@@ -5,10 +5,37 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
-			<title>Wishlist</title>
-			<pubDate>Fri, 22 Jul 2022 23:17:11 +0900</pubDate>
+			<title>yle="width:88px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/></title>
+			<pubDate>Mon, 25 Jul 2022 08:26:13 +0900</pubDate>
 			<description>
-				<![CDATA[ <p>I try not to focus too much on the aquisition of <em>things</em>, but there are some which I make exceptions for because they're cool :></p> ]]>
+				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/about.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Fri, 22 Jul 2022 23:30:26 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
+		</item>
+		<item>
+			<title>Music</title>
+			<pubDate>Fri, 22 Jul 2022 23:25:42 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Here is a list of the albums I listen to, pulled from my music directory. Suggestions are always welcome!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/music.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/music.html</guid>
+		</item>
+		<item>
+			<title>Wishlist</title>
+			<pubDate>Fri, 22 Jul 2022 23:20:12 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try not to focus too much on the aquisition of <em>things</em>, but there are a couple which I make exceptions for because they're cool :></p> ]]>
 			</description>
 			<link>https://mineralexistence.com/wishlist.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
@@ -21,15 +48,6 @@
 			</description>
 			<link>https://mineralexistence.com/grimoire.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
-		</item>
-		<item>
-			<title>yle="width:88px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/></title>
-			<pubDate>Tue, 05 Jul 2022 12:21:45 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) living in the bay area. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/about.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
 		</item>
 		<item>
 			<title>ffstream tools</title>
@@ -48,15 +66,6 @@
 			</description>
 			<link>https://mineralexistence.com/home.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
-		</item>
-		<item>
-			<title>Music</title>
-			<pubDate>Wed, 29 Jun 2022 04:53:21 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Here is a list of the albums I listen to, pulled from my music directory. Suggestions are always welcome!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/music.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/music.html</guid>
 		</item>
 		<item>
 			<title>Thoughts</title>
@@ -93,15 +102,6 @@
 			</description>
 			<link>https://mineralexistence.com/games.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/games.html</guid>
-		</item>
-		<item>
-			<title>Now</title>
-			<pubDate>Tue, 21 Jun 2022 00:53:19 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
 		</item>
 		<item>
 			<title>Projects</title>
