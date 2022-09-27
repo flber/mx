@@ -5,10 +5,28 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>WFC Tile Generator</title>
+			<pubDate>Tue, 27 Sep 2022 14:15:19 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><a href="wfc-guide.html">wfc-guide</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>
+		</item>
+		<item>
+			<title>WFC Propagator Constructor</title>
+			<pubDate>Tue, 27 Sep 2022 14:14:48 +0900</pubDate>
+			<description>
+				<![CDATA[ <p> The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
+		</item>
+		<item>
 			<title>yle="width:88px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/></title>
 			<pubDate>Wed, 21 Sep 2022 13:15:22 +0900</pubDate>
 			<description>
-				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements). I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for not following my every command, I enjoy playing <a href="games.html">video games</a>, <a href="hiking.html">hiking</a>, <a href="reading.html">reading</a>, and thinking about designs for watch movements (though I still have yet to build one).</p> ]]>
+				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements).</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/about.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
@@ -239,15 +257,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/uxn_notes.html</guid>
 		</item>
 		<item>
-			<title>~default~</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><a href="wfc-guide.html">wfc-guide</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
-		</item>
-		<item>
 			<title>Plan 9</title>
 			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
 			<description>
@@ -336,15 +345,6 @@
 			</description>
 			<link>https://mineralexistence.com/site.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/site.html</guid>
-		</item>
-		<item>
-			<title>~default~</title>
-			<pubDate>Sun, 29 May 2022 19:52:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><a href="wfc-guide.html">wfc-guide</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>
 		</item>
 		<item>
 			<title>Strawberry Canyon Hike</title>
