@@ -5,22 +5,22 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
-			<title>WFC Tile Generator</title>
-			<pubDate>Tue, 27 Sep 2022 14:15:19 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><a href="wfc-guide.html">wfc-guide</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>
-		</item>
-		<item>
 			<title>WFC Propagator Constructor</title>
-			<pubDate>Tue, 27 Sep 2022 14:14:48 +0900</pubDate>
+			<pubDate>Tue, 27 Sep 2022 14:19:07 +0900</pubDate>
 			<description>
 				<![CDATA[ <p> The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p> ]]>
 			</description>
 			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
+		</item>
+		<item>
+			<title>WFC Tile Generator</title>
+			<pubDate>Tue, 27 Sep 2022 14:18:07 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>The tile generator of wfc is one of the first systems which runs, and its purpose is to break up an input image into usable tiles with additional data about their edges.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wfc_tile_generator.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wfc_tile_generator.html</guid>
 		</item>
 		<item>
 			<title>yle="width:88px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/></title>
