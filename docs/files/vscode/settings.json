@@ -1,0 +1,26 @@
+{
+  // "triggerTaskOnSave.tasks": {
+  //     "lint-racket": [
+  //         "*.rkt",
+  //     ],
+  // },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "editor.detectIndentation": true,
+  "workbench.activityBar.visible": false,
+  "window.menuBarVisibility": "toggle",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    "**/*.html": "html",
+    "**/templates/**/*.html": "django-html",
+  },
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDragAndDrop": false,
+}

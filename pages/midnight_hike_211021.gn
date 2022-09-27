@@ -6,7 +6,7 @@ title: Mignight Hike
 [style|
 	:root{
 		--text: #ff8000;
-		--bg: #000;
+		--back: #000;
 	}
 	h1,h2,h3{font-family:gothicus;font-weight:200;} 
 	a > img { filter:invert(100%); }

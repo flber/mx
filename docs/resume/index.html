@@ -13,36 +13,45 @@
 
 <body>
 
-<header class="header">
-	<h1>Ben Hammond</h1>
-	<h3>benrhammond {at} gmail {dot} com</h3>
-</header>
+<div class="row">
+	<div class="column">
+		<div style="border: 1px solid;padding:1em;">
+			<h1>Ben Hammond</h1>
+			<h3>benrhammond {at} gmail {dot} com</h3>
+		</div>
+		<p>I'm Ben, a college sophomore working on various software projects. You can view my Github profile <a href="https://github.com/flber">here</a>, which shows most of my work over the past five or so years. The <a href="../home.html">rest</a> of this site is a blog and personal wiki which I update with some regularity. You can learn more about the tools I built to write it <a href="https://github.com/flber/Pillar">here</a>, and learn more about me <a href="../about.html">here</a>.</p>
 
-<main>
-	<p>I'm Ben, a college freshman working on various software projects. You can view my Github profile <a href="https://github.com/flber">here</a>, which shows most of my work over the past four years.</p>
+		<h2>Work Experience</h2>
 
-	<p>The <a href="../home.html">rest</a> of this site is a blog and personal wiki where I talk about everything from postmortems of projects to cooking. I wrote my own markup language and site generator in Rust to create the html, the source code of which you can see on my <a href="https://github.com/flber/Pillar">Pillar</a> Github repository. I host the site on a raspberry pi, served with nginx.</p>
-</main>
+		<div 
+		class="listing line" 
+		style="margin-top:1em;">
+			<span><a href="https://rarebase.org"><b>Rarebase</b></a> <i>Engineering Internship</i></span> <span>2 months</span>
+		</div>
+		<p>At Rarebase I built real-time data visualization apps for both internal and external use using Google Cloud Computing services. Over the two months I was there, I built a data processing and visualization pipeline for displaying a summary of our in-house lab data, which was displayed as a webpage running through a Cloud Function. I also implemented internal tooling for rendering cell platemap data using Dash and Cloud Run, which was used by Rarebase's bioinformaticists to streamline their data processing workflow.</p>
+	</div>
 
-<div class="techs">
-	<p>Along with the languages listed, I'm comfortable with bash, batch (begrudgingly), rysnc, git, CI/CD, Github actions, frontend and backend development in general, AWS EC2 deployment, some React and React Native, and nginx. I also have experience with Windows 10, Mac, and linux (Arch, Debian, and Ubuntu).</p>
-</div>
+	<div class="column">
+		<h2>Technical Knowledge</h2>
+		
+		<p>Along with the languages listed, I'm comfortable with bash, batch (begrudgingly), rysnc, git, CI/CD workflows, Google and AWS cloud computing services, Github actions, frontend and backend development in general, Docker, and nginx. I also have experience with Windows 10, Mac, and linux (Arch, Debian, and Ubuntu).</p>
 
-<div class="langs">
-	<ul>
-		<li class="listing">HTML5 <span>3 years</span></li>
-		<li class="listing">Ruby <span>5 years</span></li>
-		<li class="listing">Rust <span>1 year</span></li>
-		<li class="listing">Java <span>3 years</span></li>
-		<li class="listing">JavaScript <span>2 years</span></li>
-		<li class="listing">Lua <span>3 years</span></li>
-		<li class="listing">CSS <span>3 years</span></li>
-		<li class="listing">Python <span>4 years</span></li>
-		<li class="listing">Node.js <span>2 years</span></li>
-		<li class="listing">React Native <span>1 year</span></li>
-		<li class="listing">C++ <span>1 year</span></li>
-		<li class="listing">C <span>2 years</span></li>
-	</ul>
+		<ul class="ul-line" style="list-style:none;padding:0">
+			<li class="listing">HTML5 <span>4 years</span></li>
+			<li class="listing">Ruby <span>5 years</span></li>
+			<li class="listing">Rust <span>3 years</span></li>
+			<li class="listing">Java <span>2 years</span></li>
+			<li class="listing">JavaScript <span>2 years</span></li>
+			<li class="listing">Lua <span>3 years</span></li>
+			<li class="listing">CSS <span>3 years</span></li>
+			<li class="listing">Python <span>4 years</span></li>
+			<li class="listing">Node.js <span>2 years</span></li>
+			<li class="listing">C++ <span>1 year</span></li>
+			<li class="listing">C <span>2 years</span></li>
+		</ul>
+
+		<p>I have experience writing production code, mostly python, for Google Cloud Computing services such as Cloud Functions, Cloud Run, and Cloud Workflows, and I am familiar using Big Query, Dataplex, Cloud Scheduler, and IAM role management.</p>
+	</div>
 </div>
 
 </body>

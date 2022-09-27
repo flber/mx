@@ -1,18 +1,20 @@
 /* @import url('reset.css'); */
 
-*, *::before, *::after {box-sizing: border-box;}
-* {margin: 0;}
-html, body {height: 100%;}
-body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
-img, picture, video, canvas, svg {display: block;max-width: 100%;}
-input, button, textarea, select {font: inherit;}
-p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
-#root, #__next {isolation: isolate;}
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;} 
+img, picture, video, canvas, svg {display: block;max-width: 100%;} 
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
 
 :root {
-	--text:#3A3738;
-	--back:#FBF0F0;
-	--high:#80dec5;
+	/* --text:#3A3738; */
+	--text:#472d30;
+	/* --back:#FBF0F0; */
+	--back:#ffe1a8;
+	/* --high:#80dec5; */
+	--high:#c9cba3;
 }
 
 body {
@@ -20,9 +22,8 @@ body {
 	font-family:Times;
 	max-width:80ch;
 	padding:1em 7%; 
-	margin:0px auto; 
-	margin-top:2ex; 
-	margin-bottom:2ex; 
+	margin: 3rem auto 3rem; 
+	padding: 0 1rem; 
 	line-height:1.6;
 	color:var(--text);
 	background-color:var(--back);
@@ -36,6 +37,7 @@ p {padding-bottom:2ex;}
 header>h1 {display:inline-block;padding-right:.3em;}
 
 mark {background-color:var(--high);}
+hr {color:var(--text)}
 
 pre { 
 	overflow-x:auto; 
@@ -50,7 +52,15 @@ details {margin-bottom:2ex;}
 
 ol,ul {margin-bottom:2ex;}
 
-footer {border-top:1.5px solid;padding:30px 0 0 0;margin-top:30px;clear:both} 
+.half {width: 50%;}
+.third {width: 31%;}
+.left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
+.block {margin-top: 1em;margin-left: 0px;clear: both;}
+.row {display: flex;}
+.column {flex: 50%;}
+
+
+footer {border-top:1.5px solid;padding:30px 0 0 0;margin-top:2ex;clear:both}
 footer>* {display:inline-block;}
 footer img {margin:0 0 -10px 0;width:30px;} 
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}

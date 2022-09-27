@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+file="$1"
+
+while read -r line; do
+	n=$(echo $line | awk '{ print $1 }')
+	s=$(echo $line | awk '{ split($3, t, ":"); print t[1] }')
+	f=$(echo $line | awk '{ split($3, t, ":"); print t[2] }')
+
+	dec=$(echo "${f} / 60.0" | bc -l)
+	ms=${dec:1:3}
+
+	echo "${n} - 00:00:${s}.${ms}"
+done <$file
+
+#hh:mm:ss.ms{3}

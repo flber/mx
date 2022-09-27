@@ -1,0 +1,32 @@
+!meta!
+title: Recipes
+template: default-subdir
+!meta!
+
+[h2|Sodium Carbonate]
+
+[p|Super simple, but useful in specific recipes. Used in ramen noodles to provide that distinct chewiness and resilience. It is slightly alkali, so try not to get it on yourself (if you do just wash it off with water).]
+
+[div, class: "row"|
+	[div, class: "column"|
+		[b|[p|Tools:]]
+		[ul|
+			[li|Pan]
+		]
+	]
+	[div, class: "column"|
+		[b|[p|Ingredients:]]
+		[ul|
+			[li|Some baking soda (sodium bicarbonate)]
+		]
+	]
+]
+
+[p|Procedure:]
+[ol|
+	[li|Pour some baking soda into a pan, and put on medium heat]
+	[li|Push it around every once in a while to make sure all of it heats up]
+	[li|You should notice it getting whiter and finer (you should see what I mean), and there may be some release of steam]
+	[li|Take it off after maybe 5-7 minutes, or until it seems to have stopped changing texture]
+	[li|That's it! You can make a lot at a time, and you will never really use much at once so it should last a while]
+]

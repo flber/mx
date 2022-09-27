@@ -1,0 +1,42 @@
+!meta!
+title: Pasta Carbonara
+template: default-subdir
+!meta!
+
+[h2|Pasta Carbonara]]
+
+[p|A pretty traditional carbonara, so no cream. It's also relatively simple, so you can usually cook it in maybe 15-20 minutes.]
+
+[div, class: "row"|
+	[div, class: "column"|
+		[b|[p|Tools:]]
+		[ul|
+			[li|High-walled pan]
+			[li|Pot]
+			[li|Bowl]
+		]
+	]
+	[div, class: "column"|
+		[b|[p|Ingredients:]]
+		[ul|
+			[li|1lb pasta]
+			[li|5oz bacon, or pancetta, or guanciale (in order of decreasing availability)]
+			[li|2tb extra virgin olive oil]
+			[li|2 eggs]
+			[li|5 egg yolks]
+			[li|1oz pecorino romano, grated]
+			[li|1oz parmigiana reggiano, grated]
+		]
+	]
+]
+
+[p|Procedure:]
+[ol|
+	[li|Boil the pasta however you like, in however much water you feel is reasonable.]
+	[li|As the pasta is boiling, add the olive oil and meat to your pan and cook until brown and crispy.]
+	[li|While everything is cooking, mix your eggs and cheese in a bowl.]
+	[li|Once the pasta is just about al dente, pick it out of the pot and immediately transfer it to your bacon-filled pan, which you then need to take off the heat.]
+	[li|Quickly mix the pasta with the bacon and olive oil in the still warm pan, and add your egg and cheese mixture. ]
+	[li|Now you just need to keep mixing, adding in total maybe a cup of the pasta water to the pasta until the eggs, cheese, and pasta water form a delicious emulsion.]
+	[li|And that's pretty much it! Season with salt and pepper, and ideally serve with some freshly grated parmigiana reggiano.]
+]

@@ -1,0 +1,29 @@
+add_newline = false
+format = '$directory \[$git_branch$git_status\] $character'
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[X](bold red)"
+
+[directory]
+truncation_length = 2
+format = "[$read_only]($read_only_style)[$path]($style)"
+read_only = "!"
+
+[git_branch]
+format = "[$branch]($style)"
+truncation_length = 4
+
+[git_status]
+format = '([ $all_status$ahead_behind]($style))'
+untracked = "?"
+stashed	= "$"
+modified = "!"
+staged = "+"
+renamed = "r"
+deleted = "✘"
+style = "bold red"
+
+[cmd_duration]
+min_time = 2_000
+format = "underwent [$duration](bold yellow)"
