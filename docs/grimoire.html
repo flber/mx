@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:type" content="article"/>
-	<meta property="og:title" content="Some Page :)"/>
+	<meta property="og:title" content="Grimoire"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 </head>
 
@@ -125,7 +125,7 @@
 	<summary>To simply dither of an image:</summary>
 	<fieldset>
 		<legend>bash</legend>
-		<p>convert image.png -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
+		<p>convert image.jpg -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
 	</fieldset>
 </details>
 
@@ -173,7 +173,7 @@
 	<summary>Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)</summary>
 	<fieldset>
 		<legend>ImageMagick</legend>
-		<p>convert selfie.png +level-colors black,"#ff8000" selfie-spoopy.png</p>
+		<p>convert selfie.jpg +level-colors black,"#ff8000" selfie-spoopy.png</p>
 	</fieldset>
 </details>
 
@@ -266,7 +266,7 @@
 	<summary>Crop an image <em>and</em> the virtual canvas (so a "normal crop" basically)</summary>
 	<fieldset>
 		<legend>ImageMagick</legend>
-		<p>convert in.png -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
+		<p>convert in.jpg -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
 	</fieldset>
 </details>
 
@@ -371,7 +371,7 @@
 	<summary>Turn the background of an image transparent</summary>
 	<fieldset>
 		<legend>ImageMagick</legend>
-		<p>convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.png</p>
+		<p>convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.jpg</p>
 	</fieldset>
 </details>
 
@@ -407,7 +407,7 @@
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 110722</em></span>
+		<span style="float: right;"><em>Last updated: 092722</em></span>
 	</footer>
 </body>
 </html>

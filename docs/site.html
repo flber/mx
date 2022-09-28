@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:type" content="article"/>
-	<meta property="og:title" content="Some Page :)"/>
+	<meta property="og:title" content="My Plans for This Site"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 </head>
 
@@ -31,7 +31,7 @@
 
 <h3 class="listing">More optimizations! <span>130422</span></h3>
 <p>After a lot help from the peeps on mastodon, I learned that the primary slowdown for pillar was actually all the python plugins I have! One design decision I made early on in pillar's dev was to offload one-off type parsing to external plugins. This is used to generate my rss feed, the orphans list on my <a href="home.html">home</a> page, and a lot of other little things which I didn't think made sense to put into the pillar codebase. However, something I learned recently is that python takes a lot of time to start up, and because I was running every plugin on every page, that time was really adding up! In fact, some basic testing showed that if I removed all my plugins my site built in just 5 seconds!! As a first step to minimize this impact, I just rewrote the plugins section of pillar to only run the plugins necessary for each page. With that small optimization, average site build time dropped to 8.648 s ±  0.233 s :D</p>
-<img src="images/site-update-130422.png" alt="benchmarks results for the old version of pillar compared to the new version, pillar-dev. the original version builds in 21.165 s ±  0.200 s, and pillar-dev builds in 8.648 s ±  0.233 s."></img>
+<img src="images/site-update-130422.jpg" alt="benchmarks results for the old version of pillar compared to the new version, pillar-dev. the original version builds in 21.165 s ±  0.200 s, and pillar-dev builds in 8.648 s ±  0.233 s."></img>
 
 <h3 class="listing">Long overdue pillar optimizations <span>060322</span></h3>
 <p>Wow I've written some bad code. Turns out the main reason pillar was so slow was because of a <em>truly</em> terrible string insertion function I wrote. It's so bad, actually, that I feel the need to show it off to warn others!</p>
@@ -117,7 +117,7 @@ for i in 0..final_len {
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 300522</em></span>
+		<span style="float: right;"><em>Last updated: 092722</em></span>
 	</footer>
 </body>
 </html>
