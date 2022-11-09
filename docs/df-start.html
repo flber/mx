@@ -5,13 +5,84 @@
 	<meta charset="UTF-8">
 	<title>MX - Introductory Dwarf Fortress Tutorial</title>
 	<link rel="icon" href="crow.ico?" type="image/x-icon">
-	<link rel="stylesheet" href="style.css" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:type" content="article"/>
 	<meta property="og:title" content="Introductory Dwarf Fortress Tutorial"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;} 
+img, picture, video, canvas, svg {display: block;max-width: 100%;} 
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	--text:#472d30;
+	/* --back:#FBF0F0; */
+	--back:#ffe1a8;
+	/* --high:#80dec5; */
+	--high:#c9cba3;
+}
+
+body {
+	font-size:calc(1rem + 0.5vw);
+	font-family:Times;
+	max-width:80ch;
+	padding:1em 7%; 
+	margin: 3rem auto 3rem; 
+	padding: 0 1rem; 
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--back);
+}
+
+main > *+* {margin-top: 2ex;}
+
+/* p {padding-bottom:2ex;} */
+
+*:not(footer)>a {color:var(--back);background-color:var(--text);text-decoration:none;}
+*:not(footer)>a:hover {color:var(--text);background-color:var(--back);}
+
+header>h1 {display:inline-block;padding-right:.3em;}
+header {border-bottom:1.5px solid;padding:0 0 30px 0;clear:both}
+
+mark {background-color:var(--high);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+pre {
+	font-size:calc(0.8rem + 0.5vw);
+	overflow-x:auto; 
+	padding-bottom:2%; 
+	color:var(--back); 
+	background-color:var(--text);  
+} 
+
+dd {margin-left:2em;}
+details {padding-bottom:0ex;}
+
+.half {width: 50%;}
+.third {width: 31%;}
+.left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
+.block {margin-top: 1em;margin-left: 0px;clear: both;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+
+
+footer {border-top:1.5px solid;padding:30px 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
+
+	</style>
 </head>
 
 <body>
@@ -20,7 +91,6 @@
 		<h1><a href="now.html">now</a></h1>
 		<h1><a href="wiki.html">wiki</a></h1>
 		<h1><a href="about.html">about</a></h1>
-		<hr/>
 	</header>
 
 	<main>
@@ -49,13 +119,34 @@
 
 <p>First of all, download the newest version of df for your system from their <a href="http://www.bay12games.com/dwarves/index.html">website</a>, located under the "Download" banner. If you're on windows this will be a .zip file, on unix it'll be a .tar.bz2. Either way, move it to wherever and decompress it!</p>
 
+<details style="padding-left:0.6em;color:var(--back);background-color:var(--text);">
+	<summary>Terminal</summary>
+	<pre>
+> wget http://www.bay12games.com/dwarves/df_47_05_linux.tar.bz2
+> tar -xf df_47_05_linux.tar.bz2</pre>
+</details> 
+
 <p>Now we need to get the dfhack files. Go to the <a href="https://github.com/DFHack/dfhack/releases">github releases page</a>, scroll down until you get to a list of files, and download the one for your machine. Again, for unix peeps this'll be a .tar.bz2 file, for windows it'll be a .zip. This time, move it <em>into</em> your df folder and decompress it there. It'll ask if you want to overwrite certain files, just say yes for all of them; this is dfhack setting itself up.</p>
+
+<details style="padding-left:0.6em;color:var(--back);background-color:var(--text);">
+	<summary>Terminal</summary>
+	<pre>
+> cd df_linux
+> wget https://github.com/DFHack/dfhack/releases/download/0.47.05-r7/dfhack-0.47.05-r7-Linux-64bit-gcc-7.tar.bz2
+> tar -xf dfhack-0.47.05-r7-Linux-64bit-gcc-7.tar.bz2; cd ..</pre>
+</details> 
 
 <p>And now, optional graphics!</p>
 
 <p>As I said before, I'm not going to go into installing graphics packs because they're a bit more complicated and can sometimes be tricky to debug, but you can find a list of them <a href="http://dwarffortresswiki.org/index.php/DF2014:Graphics_set_repository">here</a> if you really want :)</p>
 
 <p>Tilesets, on the other hand, are super easy to understand and install! A list of tilesets can be found <a href="http://dwarffortresswiki.org/index.php/Tileset_repository">here</a>, so pick whichever one you like! I personally like <a href="http://dwarffortresswiki.org/index.php/Tileset_repository#Tocky_square_10x10.jpg">Tocky Square</a>, and the pre-installed <code>curses_square_16x16.png</code>. Once you've found a tileset you like, download it (in page I linked; literally right click, save image; on the pink images on the left side) into your <code>dwarffortress/data/art/</code> folder. Then, go edit the <code>dwarffortress/data/init/init.txt</code> file, and change the options <code>FONT</code>, <code>FULLFONT</code>, <code>GRAPHICS_FONT</code>, and <code>GRAPHICS_FULLFONT</code> to the filename of the image you saved. You can also look through that art folder to see if there are already any tilesets in there that you like!</p>
+
+<details style="padding-left:0.6em;color:var(--back);background-color:var(--text);">
+	<summary>Terminal</summary>
+	<pre>
+> curl "http://dwarffortresswiki.org/images/d/dc/Tocky_square_10x10.png" > data/art/Tocky_square_10x10.png</pre>
+</details> 
 
 <p>If you want to get really fancy with your install, you can also change the default colors to something a little less contrasting. There's a <em>huge</em> list of colors <a href="http://dwarffortresswiki.org/index.php/DF2014:Color_scheme">here</a>, so just find one you like the look of (my personal favorite right now is the <a href="http://dwarffortresswiki.org/index.php/DF2014:Color_scheme#Qud">Qud</a> color scheme!), click on "show", and copy the text that's revealed. Then open up your <code>data/init/colors.txt</code> file, and replace everything in there with those colors you copied.</p>
 
@@ -81,9 +172,7 @@
 
 <p><mark>under construction :)</mark></p>
 
-		<b>Incoming:</b>
-<p><a href="thoughts.html">thoughts</a>
-</p>
+		<p><b>Incoming:</b> <a href="thoughts.html">thoughts</a> </p>
 	</main>
 
 	<footer>
@@ -104,7 +193,7 @@
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 100122</em></span>
+		<span style="float: right;"><em>Last updated: 110622</em></span>
 	</footer>
 </body>
 </html>

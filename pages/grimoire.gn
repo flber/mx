@@ -313,6 +313,20 @@ title: Grimoire
 ]
 
 [details|
+	[summary|Pretty-print devices across network range]
+	[fieldset|
+		[legend|fish]
+		[p|
+for i in (seq $start $end);
+	printf "\n$i\n"
+	echo "-------------------------------------------"
+	sudo arp-scan --interface=wlp3s0 --localnet | grep -v "Unknown" | grep "100\.64\.$i"
+end > hosts.txt
+		]
+	]
+]
+
+[details|
 	[summary|Downloads whole website]
 	[fieldset|
 		[legend|bash]
@@ -359,3 +373,12 @@ title: Grimoire
 		[p|du -h ./*.html | awk '{print $1}' | sed -e 's/K//' | paste -sd+ - | bc]
 	]
 ]
+
+[details|
+	[summary|Set i3 desktop background to color]
+	[fieldset|
+		[legend|Bash]
+		[p|xsetroot -solid "#f9cca4"]
+	]
+]
+

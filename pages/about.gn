@@ -48,11 +48,15 @@ title: About
 
 [p|And finally, here are some fun banners which I've started collecting :3]
 
-[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img style="width:88px;display:inline" src="images/banners/css-cert-blue.jpg" alt="Valid CSS!"/>]
-[a, href: "https://blackgnu.net/on-blockchain.html"|<img style="width:88px;display:inline" src="images/banners/web3-is-a-scam-0.jpg"/>]
-<img style="width:88px;display:inline" src="images/banners/trans-flag.jpg"/>
-[a, href: "https://anybrowser.org/campaign/"|<img style="width:88px;display:inline" title: "i like qutebrowser though :3" src="images/banners/any-browser.jpg"/>]
-<img style="width:88px;display:inline" title: "surprisingly easy!" src: "images/banners/piracy.jpg"/>
-<img style="width:88px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/>
+[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img style="width:88px;height:31px;display:inline" src="images/banners/css-cert-blue.jpg" alt="Valid CSS!"/>]
+
+[a, href: "https://blackgnu.net/on-blockchain.html"|<img style="width:88px;height:31px;display:inline" src="images/banners/web3-is-a-scam-0.jpg"/>]
+<img style="width:88px;height:31px;display:inline" src="images/banners/trans-flag.jpg"/>
+
+[a, href: "https://anybrowser.org/campaign/"|<img style="width:88px;height:31px;display:inline" title: "i like qutebrowser though :3" src="images/banners/any-browser.jpg"/>]
+
+<img style="width:88px;height:31px;display:inline" title: "surprisingly easy!" src= "images/banners/piracy.jpg"/>
+
+<img style="width:88px;height:31px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/>
 
 [p|]

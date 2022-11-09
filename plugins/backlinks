@@ -19,7 +19,7 @@ for index, line in enumerate(sys.stdin):
     if index == 0:
         path_str = line
     if "{{backlinks}}" in line:
-        backlinks = "<b>Incoming:</b>\n<p>"
+        backlinks = "<p><b>Incoming:</b> "
 
         abspath = os.path.abspath(granite_path[1:-1])
         files = glob.glob(abspath + "/*.gn")
@@ -34,8 +34,8 @@ for index, line in enumerate(sys.stdin):
             for link in links:
                 if link[:-5] == path_str[len(granite_path)-2:-4]:
                     backlinks += "<a href=\"" + name + ".html" + \
-                        "\">" + name + "</a>\n"
-        if backlinks == "<b>Backlinks:</b>\n<p>":
+                        "\">" + name + "</a> "
+        if backlinks == "<p><b>Backlinks:</b> ":
             backlinks += "none :P"
         backlinks += "</p>"
 

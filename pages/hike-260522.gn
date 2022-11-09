@@ -3,6 +3,19 @@ title: Santa Cruz Hike 260522
 [img, src: "images/hike-260522/", alt: ""|]
 !meta!
 
+[style|
+	.img-group {
+	  display: flex;
+	  flex-direction: column;
+	}
+	.img-group div {
+	  flex: 1;
+	}
+	.img-group img {
+	  max-width: 50%;
+	}
+]
+
 [h2|Santa Cruz Hike 260522]
 
 [p|Boy this was a long hike! :D]
@@ -32,13 +45,22 @@ title: Santa Cruz Hike 260522
 
 [p|There were also [em|tons] of bricks of various sizes and colors nearby (to the south of the ruins, just south of the retaining wall), and some even had writing on them!]
 
-[img, src: "images/hike-260522/brick-carr.jpg", alt: "a brick with the writing carr on it"|]
-[img, src: "images/hike-260522/brick-channel.jpg", alt: "a brick with a channel on it"|]
-[img, src: "images/hike-260522/brick-com.jpg", alt: "a brick with the writing com on it"|]
-[img, src: "images/hike-260522/brick-fost.jpg", alt: "a brick with the writing fost on it"|]
-[img, src: "images/hike-260522/brick-fused.jpg", alt: "two bricks fused together"|]
-[img, src: "images/hike-260522/brick-owe.jpg", alt: "a brick with the writing owe on it"|]
-[img, src: "images/hike-260522/brick-tg6aio.jpg", alt: "a brick with the writing tg6aio on it?"|]
+[div, class: "img-group"|
+	[div|[img, src: "images/hike-260522/brick-carr.jpg", alt: "a brick with the writing carr on it"|]]
+	[div|[img, src: "images/hike-260522/brick-channel.jpg", alt: "a brick with a channel on it"|]]
+	[div|[img, src: "images/hike-260522/brick-com.jpg", alt: "a brick with the writing com on it"|]]
+	[div|[img, src: "images/hike-260522/brick-fost.jpg", alt: "a brick with the writing fost on it"|]]
+	[div|[img, src: "images/hike-260522/brick-fused.jpg", alt: "two bricks fused together"|]]
+	[div|[img, src: "images/hike-260522/brick-owe.jpg", alt: "a brick with the writing owe on it"|]]
+	[div|[img, src: "images/hike-260522/brick-tg6aio.jpg", alt: "a brick with the writing tg6aio on it?"|]]
+	[div|[img, src: "images/hike-260522/brick-carr.jpg", alt: "a brick with the writing carr on it"|]]
+	[div|[img, src: "images/hike-260522/brick-channel.jpg", alt: "a brick with a channel on it"|]]
+	[div|[img, src: "images/hike-260522/brick-com.jpg", alt: "a brick with the writing com on it"|]]
+	[div|[img, src: "images/hike-260522/brick-fost.jpg", alt: "a brick with the writing fost on it"|]]
+	[div|[img, src: "images/hike-260522/brick-fused.jpg", alt: "two bricks fused together"|]]
+	[div|[img, src: "images/hike-260522/brick-owe.jpg", alt: "a brick with the writing owe on it"|]]
+	[div|[img, src: "images/hike-260522/brick-tg6aio.jpg", alt: "a brick with the writing tg6aio on it?"|]]
+]
 
 [p|The reason we originally went on this hike was partially to check out a large boulder with a tree growing on it, which was very cool looking (and potentially a fun climbing spot?)]
 

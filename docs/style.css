@@ -29,28 +29,29 @@ body {
 	background-color:var(--back);
 }
 
-p {padding-bottom:2ex;} 
+main > *+* {margin-top: 2ex;}
+
+/* p {padding-bottom:2ex;} */
 
 *:not(footer)>a {color:var(--back);background-color:var(--text);text-decoration:none;}
 *:not(footer)>a:hover {color:var(--text);background-color:var(--back);}
 
 header>h1 {display:inline-block;padding-right:.3em;}
+header {border-bottom:1.5px solid;padding:0 0 30px 0;clear:both}
 
 mark {background-color:var(--high);}
-hr {color:var(--text)}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
-pre { 
+pre {
+	font-size:calc(0.8rem + 0.5vw);
 	overflow-x:auto; 
-	padding:2%; 
+	padding-bottom:2%; 
 	color:var(--back); 
-	background-color:var(--text); 
-	margin-bottom:2ex; 
+	background-color:var(--text);  
 } 
 
 dd {margin-left:2em;}
-details {margin-bottom:2ex;}
-
-ol,ul {margin-bottom:2ex;}
+details {padding-bottom:0ex;}
 
 .half {width: 50%;}
 .third {width: 31%;}
@@ -58,9 +59,10 @@ ol,ul {margin-bottom:2ex;}
 .block {margin-top: 1em;margin-left: 0px;clear: both;}
 .row {display: flex;}
 .column {flex: 50%;}
+.listing > span {float: right;}
 
 
-footer {border-top:1.5px solid;padding:30px 0 0 0;margin-top:2ex;clear:both}
+footer {border-top:1.5px solid;padding:30px 0 0 0;clear:both}
 footer>* {display:inline-block;}
 footer img {margin:0 0 -10px 0;width:30px;} 
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
