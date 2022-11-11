@@ -25,11 +25,15 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 
 :root {
 	/* --text:#3A3738; */
-	--text:#472d30;
+	/* --text:#472d30; */
+	--text:#654735;
 	/* --back:#FBF0F0; */
-	--back:#ffe1a8;
+	/* --back:#ffe1a8; */
+	--back:#fbf1c7;
 	/* --high:#80dec5; */
-	--high:#c9cba3;
+	/* --high:#c9cba3; */
+	--high:#45707a;
+	--high-orange:#c35e0a;
 }
 
 body {
@@ -46,13 +50,12 @@ body {
 
 main > *+* {margin-top: 2ex;}
 
-/* p {padding-bottom:2ex;} */
-
-*:not(footer)>a {color:var(--back);background-color:var(--text);text-decoration:none;}
-*:not(footer)>a:hover {color:var(--text);background-color:var(--back);}
+*:not(footer)>a {color:var(--high);}
+*:not(footer)>a:visited {color:var(--high-orange);}
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--back);} */
 
 header>h1 {display:inline-block;padding-right:.3em;}
-header {border-bottom:1.5px solid;padding:0 0 30px 0;clear:both}
+header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
 
 mark {background-color:var(--high);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
@@ -60,13 +63,15 @@ hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)}
 pre {
 	font-size:calc(0.8rem + 0.5vw);
 	overflow-x:auto; 
-	padding-bottom:2%; 
+	padding:2%; 
 	color:var(--back); 
 	background-color:var(--text);  
 } 
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--back);background-color: var(--text);}
 
 .half {width: 50%;}
 .third {width: 31%;}
@@ -76,8 +81,7 @@ details {padding-bottom:0ex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
 
-
-footer {border-top:1.5px solid;padding:30px 0 0 0;clear:both}
+footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
 footer img {margin:0 0 -10px 0;width:30px;} 
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
@@ -175,7 +179,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 110622</em></span>
+		<span style="float: right;"><em>Last updated: 111022</em></span>
 	</footer>
 </body>
 </html>

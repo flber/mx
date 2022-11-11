@@ -5,6 +5,33 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Exploring Computer Literacy</title>
+			<pubDate>Thu, 10 Nov 2022 20:02:23 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>This is an essay I'm working on for school, but I like it enough to publish here :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/exploring-computer-literacy.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/exploring-computer-literacy.html</guid>
+		</item>
+		<item>
+			<title>Writings</title>
+			<pubDate>Thu, 10 Nov 2022 19:39:56 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/writing.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
+		</item>
+		<item>
+			<title>Wiki</title>
+			<pubDate>Tue, 08 Nov 2022 22:24:14 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>This is a loose collection of notes, links, and other resources. See my <a href="grimoire.html">grimoire</a> for snippets which I find useful (if perhaps a bit haunted)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wiki.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wiki.html</guid>
+		</item>
+		<item>
 			<title>Climbing</title>
 			<pubDate>Mon, 07 Nov 2022 19:26:20 +0900</pubDate>
 			<description>
@@ -138,24 +165,6 @@
 			</description>
 			<link>https://mineralexistence.com/reading.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/reading.html</guid>
-		</item>
-		<item>
-			<title>Writings</title>
-			<pubDate>Tue, 27 Sep 2022 14:35:02 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I don't write creatively super often, but when I do I'll put it here.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/writing.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/writing.html</guid>
-		</item>
-		<item>
-			<title>Wiki</title>
-			<pubDate>Tue, 27 Sep 2022 14:35:02 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>This is a loose collection of notes, links, and other resources. See my <a href="grimoire.html">grimoire</a> for snippets which I find useful if perhaps a bit haunted.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wiki.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wiki.html</guid>
 		</item>
 		<item>
 			<title>WFC Tile Generator</title>
