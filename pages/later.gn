@@ -6,4 +6,6 @@ title: For later
 
 [p|Some links to look at later. Started this on a long plane flight when I had some websites downloaded, but wanted to keep track of interesting external links I found while browsing the local copies. I'll probably be adding and removing links from here pretty often, so anything more consistent will be reserved for [a, href: "bookmarks.html"|bookmarks].]
 
-[pre|{{%docs/per-tab.txt}}]
+[pre|
+{{catfile}}"files/per-tab.txt"
+]

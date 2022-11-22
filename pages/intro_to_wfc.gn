@@ -11,7 +11,7 @@ title: Intro to WFC
 
 [p|That essentially just means that the output looks like the input, but because it's procedurally generated it can be arbitrarily large and even generated on the fly. Here's an example of it in action from Maxim's repository:]
 
-[img, src: "images/wfc.gif", alt: "wfc gif"|]
+[img, loading: "lazy", src: "images/wfc.gif", alt: "wfc gif"|]
 
 [p|Pretty cool, right?]
 
@@ -21,7 +21,7 @@ title: Intro to WFC
 
 [p|My goal (over an embarrassingly long span of time) has been to write my own implementation of the algorithm in the Lua language, with LOVE2D to make the graphics easier to handle. While I'm still not quite finished with the algorithm, in these posts I'll be explaining what I've done so far, the problems I've faced and the ways I solved them, and what I'm currently working on as I catch up to myself. All of that will include some actual code I've written (I apologize in advance for my atrocious formatting), and perhaps some diagrams and such depending on how artistic I'm feeling.]
 
-[p|Other Resources]
+[h3|Other Resources]
 
 [p|Here are some good videos, articles, and papers which I've used in my own research:]
 [ul|

@@ -17,8 +17,8 @@
 
 *, *::before, *::after {box-sizing: border-box;} 
 * {margin: 0;} 
-body {line-height: 1.5;-webkit-font-smoothing: antialiased;} 
-img, picture, video, canvas, svg {display: block;max-width: 100%;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
 input, button, textarea, select {font: inherit;} 
 p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
 #root, #__next {isolation: isolate;} 
@@ -27,13 +27,13 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	/* --text:#3A3738; */
 	/* --text:#472d30; */
 	--text:#654735;
-	/* --back:#FBF0F0; */
-	/* --back:#ffe1a8; */
-	--back:#fbf1c7;
-	/* --high:#80dec5; */
-	/* --high:#c9cba3; */
-	--high:#45707a;
-	--high-orange:#c35e0a;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
 }
 
 body {
@@ -45,33 +45,34 @@ body {
 	padding: 0 1rem; 
 	line-height:1.6;
 	color:var(--text);
-	background-color:var(--back);
+	background-color:var(--bg);
 }
 
 main > *+* {margin-top: 2ex;}
 
-*:not(footer)>a {color:var(--high);}
-*:not(footer)>a:visited {color:var(--high-orange);}
-/* *:not(footer)>a:hover {color:var(--text);background-color:var(--back);} */
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
 
 header>h1 {display:inline-block;padding-right:.3em;}
 header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
 
-mark {background-color:var(--high);}
+mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
 	font-size:calc(0.8rem + 0.5vw);
 	overflow-x:auto; 
 	padding:2%; 
-	color:var(--back); 
-	background-color:var(--text);  
-} 
+	color:var(--bg); 
+	background-color:var(--text);
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
-::selection {color: var(--back);background-color: var(--text);}
+::selection {color: var(--bg);background-color: var(--text);}
 
 .half {width: 50%;}
 .third {width: 31%;}
@@ -104,7 +105,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 <p>I quite enjoy reading. Though far from a comprehensive list, here are some books I have read, and am currently reading.</p>
 <p>If you have any recommendations, please let me know!</p>
 
-<b>Future</b>
+<p><b>Future</b></p>
 <ul>
 	<li><b>Do Androids Dream of Electric Sheep?</b>, Philip K. Dick</li>
 	<li><b>The Foundation</b>, Isaac Asimov</li>
@@ -112,16 +113,17 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><b>Gideon the Ninth</b>, Tamsyn Muir</li>
 </ul>
 
-<b>2022</b>
+<p><b>2022</b></p>
 <ul>
 	<li><b>The Ministry for the Future</b>, Kim Stanley Robinson</li>
 	<li><b>Wuthering Heights</b>, Emily Brontë</li>
 	<li><b>The Years of Rice and Salt</b>, Kim Stanley Robinson</li>
 	<li><b>Exhalation</b>, Ted Chiang</li>
 	<li><b>The Apology</b>, Eve Ensler</li>
+	<li><b>Capital Volume I</b>, Karl Marx</li>
 </ul>
 
-<b>2021</b>
+<p><b>2021</b></p>
 <ul>
 	<li><b>Low Tech Magazine, 2007-2012</b>, Kris De Decker</li>
 	<li><b>The Lord of the Rings</b>, J.R.R. Tolkien</li>
@@ -130,7 +132,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><b>The One Straw Revolution</b>, Masanobu Fukuoka</li>
 </ul>
 
-<b>Past</b>
+<p><b>Past</b></p>
 <ul>
 	<li><b>Dune</b>, Frank Herbert</li>
 	<li><b>Red Mars</b>, Kim Stanley Robinson</li>
@@ -199,7 +201,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 111022</em></span>
+		<span style="float: right;"><em>Last updated: 112222</em></span>
 	</footer>
 </body>
 </html>

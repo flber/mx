@@ -382,3 +382,10 @@ end > hosts.txt
 	]
 ]
 
+[details|
+	[summary|Delete files matching a pattern]
+	[fieldset|
+		[legend|Bash]
+		[p|ls | grep -P "^\d{2}\." | xargs -d"\n" rm]
+	]
+]

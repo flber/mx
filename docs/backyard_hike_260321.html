@@ -17,8 +17,8 @@
 
 *, *::before, *::after {box-sizing: border-box;} 
 * {margin: 0;} 
-body {line-height: 1.5;-webkit-font-smoothing: antialiased;} 
-img, picture, video, canvas, svg {display: block;max-width: 100%;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
 input, button, textarea, select {font: inherit;} 
 p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
 #root, #__next {isolation: isolate;} 
@@ -27,13 +27,13 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	/* --text:#3A3738; */
 	/* --text:#472d30; */
 	--text:#654735;
-	/* --back:#FBF0F0; */
-	/* --back:#ffe1a8; */
-	--back:#fbf1c7;
-	/* --high:#80dec5; */
-	/* --high:#c9cba3; */
-	--high:#45707a;
-	--high-orange:#c35e0a;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
 }
 
 body {
@@ -45,33 +45,34 @@ body {
 	padding: 0 1rem; 
 	line-height:1.6;
 	color:var(--text);
-	background-color:var(--back);
+	background-color:var(--bg);
 }
 
 main > *+* {margin-top: 2ex;}
 
-*:not(footer)>a {color:var(--high);}
-*:not(footer)>a:visited {color:var(--high-orange);}
-/* *:not(footer)>a:hover {color:var(--text);background-color:var(--back);} */
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
 
 header>h1 {display:inline-block;padding-right:.3em;}
 header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
 
-mark {background-color:var(--high);}
+mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
 	font-size:calc(0.8rem + 0.5vw);
 	overflow-x:auto; 
 	padding:2%; 
-	color:var(--back); 
-	background-color:var(--text);  
-} 
+	color:var(--bg); 
+	background-color:var(--text);
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
-::selection {color: var(--back);background-color: var(--text);}
+::selection {color: var(--bg);background-color: var(--text);}
 
 .half {width: 50%;}
 .third {width: 31%;}
@@ -103,31 +104,31 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <p>After being stuck inside for a while, I decided to do some off-trail hiking near my house. I found some turkeys, a bone, and lots of nature.</p>
 
-<img src="images/backyard_hike/turkeys.gif" alt="some turkeys hiding in the underbrush"></img>
+<img src="images/backyard_hike/turkeys.jpg" alt="some turkeys hiding in the underbrush"></img>
 <p>Though you can barely see it in this photo, there was in fact a large group of turkeys.  they did eventually wander away from me, but they seemed remarkably calm of me invading their space. I did try to move as quietly as possible.</p>
 
-<img src="images/backyard_hike/bone.gif" alt="a grayish and uncomfortably large bone sitting on some oak leaves"></img>
+<img src="images/backyard_hike/bone.jpg" alt="a grayish and uncomfortably large bone sitting on some oak leaves"></img>
 <p>I found this bone near where I saw those turkeys, and though it is almost certainly a deer bone, it's still a little disconcerting.</p>
 
-<img src="images/backyard_hike/undergrowth.gif" alt="a hill covered in thick underbrush"></img>
+<img src="images/backyard_hike/undergrowth.jpg" alt="a hill covered in thick underbrush"></img>
 <p>This was a view back up the hill I had climbed down. The underbrush shown here is pretty thick, that's for most of the hike I managed to stay on relatively clear deer trails. </p>
 
-<img src="images/backyard_hike/prickleberry.gif" alt="this plant may or may not be a prickleberry"></img>
+<img src="images/backyard_hike/prickleberry.jpg" alt="this plant may or may not be a prickleberry"></img>
 <p>An uninvitingly thorny plant which may be a prickleberry bush. I did not eat any of it to find out. </p>
 
-<img src="images/backyard_hike/mossy_rock.gif" alt="a mossy rock"></img>
+<img src="images/backyard_hike/mossy_rock.jpg" alt="a mossy rock"></img>
 <p>Just a mossy rock. </p>
 
-<img src="images/backyard_hike/stick_pile.gif" alt="a curious pile of sticks"></img>
+<img src="images/backyard_hike/stick_pile.jpg" alt="a curious pile of sticks"></img>
 <p>I'm really not sure what made this pile of sticks, as I was deep into some underbrush, and I doubt anyone else would have gone there to assemble it. It could have been the remnants of a tree, but I didn't actually see any tall trees nearby. This is still a mystery </p>
 
-<img src="images/backyard_hike/nest.gif" alt="possible a bird nest, maybe of some kind of raptor"></img>
+<img src="images/backyard_hike/nest.jpg" alt="possible a bird nest, maybe of some kind of raptor"></img>
 <p>Another pile of sticks, but I found this one on top of the underbrush, so it is likely some form of bird nest. It might be a raptor's nest, but I'm not sure. </p>
 
-<img src="images/backyard_hike/last_stretch.gif" alt="my outstretched hand reaching for an opening in thick underbrush"></img>
+<img src="images/backyard_hike/last_stretch.jpg" alt="my outstretched hand reaching for an opening in thick underbrush"></img>
 <p>The last stretch of underbrush I had to get through was especially dense, and though I was certainly being a bit over dramatic in this photo, I was actually crawling to get through by this point</p>
 
-<img src="images/backyard_hike/hill.gif" alt="a view of the hill I hiked down"></img>
+<img src="images/backyard_hike/hill.jpg" alt="a view of the hill I hiked down"></img>
 <p>A view back on the hill I hiked down. It seemed like a lot longer when I was in it...</p>
  
  
@@ -156,7 +157,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 111022</em></span>
+		<span style="float: right;"><em>Last updated: 112222</em></span>
 	</footer>
 </body>
 </html>

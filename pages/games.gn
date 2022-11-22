@@ -24,7 +24,7 @@ title: Games
 [hr|]
 [img, src: "images/games/badnorth.jpg", alt: "a pastel island coated in the blood of your enemies"|]
 [h3|[a, href: "https://www.badnorth.com/"|Bad North]]
-[p|First of all, Bad North is a beautiful game. You control a collection of soldiers on procedurally generated islands to fend off waves of vikings, moving through an archipelago. I actually found this game through my research into the [a, href: "intro_to_wfc.html"|wave function collapse algorithm], as one of the devs, [a, href: "https://oskarstalberg.tumblr.com/"|Oskar Stålberg], has done a lot of work in the field and actually used an implementation of WFC to generate the islands in Bad North. This game is all around super fun, with a nice learning curve that is fun to start and challenging to finish.]
+[p|First of all, Bad North is a beautiful game. You control a collection of soldiers on procedurally generated islands to fend off waves of vikings, moving through an archipelago. I actually found this game through my research into the [a, href: "wfc-guide.html"|wave function collapse algorithm], as one of the devs, [a, href: "https://oskarstalberg.tumblr.com/"|Oskar Stålberg], has done a lot of work in the field and actually used an implementation of WFC to generate the islands in Bad North. This game is all around super fun, with a nice learning curve that is fun to start and challenging to finish.]
 
 [hr|]
 [img, src: "images/games/minecraft.jpg", alt: "minecraft hills roll off into the distance"|]

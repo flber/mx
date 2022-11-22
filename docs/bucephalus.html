@@ -17,8 +17,8 @@
 
 *, *::before, *::after {box-sizing: border-box;} 
 * {margin: 0;} 
-body {line-height: 1.5;-webkit-font-smoothing: antialiased;} 
-img, picture, video, canvas, svg {display: block;max-width: 100%;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
 input, button, textarea, select {font: inherit;} 
 p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
 #root, #__next {isolation: isolate;} 
@@ -27,13 +27,13 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	/* --text:#3A3738; */
 	/* --text:#472d30; */
 	--text:#654735;
-	/* --back:#FBF0F0; */
-	/* --back:#ffe1a8; */
-	--back:#fbf1c7;
-	/* --high:#80dec5; */
-	/* --high:#c9cba3; */
-	--high:#45707a;
-	--high-orange:#c35e0a;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
 }
 
 body {
@@ -45,33 +45,34 @@ body {
 	padding: 0 1rem; 
 	line-height:1.6;
 	color:var(--text);
-	background-color:var(--back);
+	background-color:var(--bg);
 }
 
 main > *+* {margin-top: 2ex;}
 
-*:not(footer)>a {color:var(--high);}
-*:not(footer)>a:visited {color:var(--high-orange);}
-/* *:not(footer)>a:hover {color:var(--text);background-color:var(--back);} */
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
 
 header>h1 {display:inline-block;padding-right:.3em;}
 header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
 
-mark {background-color:var(--high);}
+mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
 	font-size:calc(0.8rem + 0.5vw);
 	overflow-x:auto; 
 	padding:2%; 
-	color:var(--back); 
-	background-color:var(--text);  
-} 
+	color:var(--bg); 
+	background-color:var(--text);
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
-::selection {color: var(--back);background-color: var(--text);}
+::selection {color: var(--bg);background-color: var(--text);}
 
 .half {width: 50%;}
 .third {width: 31%;}
@@ -103,13 +104,13 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <p>This is my little friend Bucephalus (a random name which I find entertaining), a raspberry pi 4 running <a href="plan9.html">9front</a>. I don't use it for much right now, but I'm excited to learn more about Plan 9!</p>
 
-<img src="images/bucephalus/front.gif" alt="a front view of a tiny computer in a cardboard housing"></img>
+<img src="images/bucephalus/front.jpg" alt="a front view of a tiny computer in a cardboard housing"></img>
 <p>Isn't it cute!</p>
 
-<img src="images/bucephalus/left.gif" alt="a view from the left of a tiny computer in a cardboard housing"></img>
+<img src="images/bucephalus/left.jpg" alt="a view from the left of a tiny computer in a cardboard housing"></img>
 <p>The enclosure was made from the box the <a href="https://www.uctronics.com/uctronics-3-5-inch-hdmi-tft-lcd-display-with-touch-screen-touch-pen-3-heat-sinks-for-raspberry-pi-3-model-b-pi-2-model-b-pi-b.html">screen</a> came in.</p>
 
-<img src="images/bucephalus/right.gif" alt="a view from the right of a tiny computer in a cardboard housing"></img>
+<img src="images/bucephalus/right.jpg" alt="a view from the right of a tiny computer in a cardboard housing"></img>
 <p>It's a little scuffed, but it'll do for now.</p>
  
  
@@ -138,7 +139,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 111022</em></span>
+		<span style="float: right;"><em>Last updated: 112222</em></span>
 	</footer>
 </body>
 </html>

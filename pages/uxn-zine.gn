@@ -1,0 +1,24 @@
+!meta!
+title: Uxn Zine
+!meta!
+
+[h2|Uxn Zine]
+
+[p|[a, href: "https://merveilles.town/@rostiger"|Rostiger] made an awesome comic explaining how [a, href: "https://wiki.xxiivv.com/site/uxn.html"|Uxn] works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the [a, href: "files/uxn-zine/uxn-zine.pdf"|pdf] or [a, href: "files/uxn-zine/uxn-zine.pdf"|epub] directly, or download a [a, href: "files/uxn-zine.tar"|tar] of all of files and resources to compile it yourself.]
+
+[p|It's made with two latex files, the first ([a, href: "files/uxn-zine/source.tex"|source.tex]) of which adds each photo to its own page in a pdf, and the second ([a, href: "files/uxn-zine/zine.tex"|zine.tex]) which references the first to lay out the pages correctly.]
+
+[details|
+	[summary|source.tex]
+	[pre|
+		{{catfile}}"files/uxn-zine/source.tex"
+	]
+]
+
+[details|
+	[summary|zine.tex]
+	[pre|
+		{{catfile}}"files/uxn-zine/zine.tex"
+	]
+]
+

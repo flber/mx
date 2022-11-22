@@ -3,13 +3,13 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>MX - Casio CA53W</title>
+	<title>MX - Uxn Zine</title>
 	<link rel="icon" href="crow.ico?" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:type" content="article"/>
-	<meta property="og:title" content="Casio CA53W"/>
+	<meta property="og:title" content="Uxn Zine"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 
 	<style>
@@ -100,61 +100,88 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 	<main>
 
-<h2>Casio CA53W</h2>
+<h2>Uxn Zine</h2>
+
+<p><a href="https://merveilles.town/@rostiger">Rostiger</a> made an awesome comic explaining how <a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the <a href="files/uxn-zine/uxn-zine.pdf">pdf</a> or <a href="files/uxn-zine/uxn-zine.pdf">epub</a> directly, or download a <a href="files/uxn-zine.tar">tar</a> of all of files and resources to compile it yourself.</p>
+
+<p>It's made with two latex files, the first (<a href="files/uxn-zine/source.tex">source.tex</a>) of which adds each photo to its own page in a pdf, and the second (<a href="files/uxn-zine/zine.tex">zine.tex</a>) which references the first to lay out the pages correctly.</p>
 
 <details>
-	<summary>Context</summary>
-	<p>I love the <a href="https://www.casio.com/products/watches/databank/ca53w-1">Casio CA53W</a>; it's small, cheap, and has all the features I need (24-hour time, stopwatch, alarm, waterproof) as well as some features I just like (it's a calculator!). A while ago I inverted the display so it was white-on-black, and while it looked really cool, it was almost totally illegible except in direct light. I eventually just reverted the change, and recorded the process because I hadn't seen any good explanations of how to do it. To be honest it's not that complicated, but hopefully this super low-res video could help with some specifics of the process. I'll also add a written description of what I'm doing with timestamps, but considering the video is half an hour long, it might take a while :)</p>
+	<summary>source.tex</summary>
+	<pre>
+\documentclass[paperheight=4.25in,paperwidth=2.75in,20pt]{article}
+\usepackage{lmodern}
+\usepackage[margin=0pt]{geometry}
+\usepackage{graphicx}
+
+\parskip1em
+\begin{document}
+  \centering
+  \includegraphics[width=1.0\paperwidth]{images/00_uxn_notes-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/01_binary_encoding-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/02_cpu-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/03_memory-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/04_stack-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/05_runes_labels_macros-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/06_instruction_cycle-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/07_aritmetics-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/08_bit_shifting-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/09_sprite_encoding_1bpp-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/10_sprite_encoding_2bpp-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/11_drawing_sprites-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/12_drawing_sprites2-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/13_input-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/14_comparison-680.png}
+
+  \newpage
+  \thispagestyle{empty}
+  \mbox{}
+  \newpage
+\end{document}
+
+	</pre>
 </details>
 
-<video width="100%" controls>
-	<source src="videos/watch.mp4" type="video/mp4"></source>
-	<mark>Your browser doesn't support the video tag! You can still download the video here though: "https://mineralexistence.com/videos/watch.mp4"</mark>
-</video>
+<details>
+	<summary>zine.tex</summary>
+	<pre>
+\documentclass[letterpaper,landscape]{article}
+\usepackage[margin=0pt,tmargin=7ex]{geometry}
+\usepackage{graphicx}
+\begin{document}
 
-<h3>Overview</h3>
-<p>The CA53W is made up of a couple of core parts (roughly in order of disassembly): the case, case back, battery cover, circuit board, plastic internals, and finally the LCD. Every part must be removed and disassembled to access the LCD, though this step is relatively trivial. Once the LCD is free, the polarizing film is removed, and replaced with a piece of film at 90 degrees to the original to invert the display. This step requires a decent amount of patience and care, as removing the film with a razor is somewhat time consuming, and care must be taken to not break the LCD itself as this part essentially cannot be replaced.</p>
+\includegraphics[page=9,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=8,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=5,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=4,angle=180,width=.24\paperwidth]{source.pdf}\\
 
-<h3>Materials & tools</h3>
-<ul>
-	<li>Small phillips-head screwdriver</li>
-	<li>Exacto knife or similar razor blade</li>
-	<li>Q-tips</li>
-	<li>Acetone</li>
-	<li><a href="http://polarization.com/polarshop/product_info.php?cPath=21&products_id=29">Linearly polarized film</a></li>
-</ul>
+\vspace{7ex}
 
-<h3>Process</h3>
-<dl>
-	<dt>00:00</dt>
-		<dd>Screws holding the case back are removed</dd>
-	<dt>01:10</dt>
-		<dd>Case back is removed</dd>
-	<dt>01:24</dt>
-		<dd>Internals are removed from the case. An exacto knife is used to undo the small clips on the top and bottom which hold the internals in</dd>
-	<dt>02:10</dt>
-		<dd>Small metal clips on the side of the plastic internals are unclipped with the exacto to remove the circuit board</dd>
-	<dt>03:25</dt>
-		<dd>Circuit board is removed from the plastic internals</dd>
-	<dt>03:48</dt>
-		<dd>LCD is carefully removed from the internals by gently pushing on the front, and lifting it up from the back</dd>
-	<dt>04:10</dt>
-		<dd>Small rubber spacer is removed from the LCD (this may be glued on, just peel it off)</dd>
-	<dt>04:20</dt>
-		<dd>Polarizing filter is removed from the LCD by running the exacto around the edges, slowly working inward until the film can be gently removed</dd>
-	<dt>08:00</dt>
-		<dd>New polarizing filter is cut from sheet (at 90 degrees to original filter)</dd>
-	<dt>15:23</dt>
-		<dd>Acetone is used to dissolve and clean glue on LCD</dd>
-	<dt>17:12</dt>
-		<dd>Realize you fucked up the first polarizing filter dimensions, cut a new one (measure twice, cut once!!)</dd>
-	<dt>22:04</dt>
-		<dd>Press the new filter to the LCD after another clean</dd>
-	<dt>23:21</dt>
-		<dd>Reassemble watch, cleaning screen and case with microfiber cleaning cloth to get rid of fingerprints!</dd>
-</dl>
+\includegraphics[page=12,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=13,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=16,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=1,angle=0,width=.24\paperwidth]{source.pdf}\hfill
 
-		<p><b>Incoming:</b> <a href="projects.html">projects</a> <a href="inventory.html">inventory</a> </p>
+\newpage
+
+\includegraphics[page=3,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=6,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=7,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=10,angle=180,width=.24\paperwidth]{source.pdf}\\
+
+\vspace{7ex}
+
+\includegraphics[page=2,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=15,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=14,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=11,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\end{document}
+
+	</pre>
+</details>
+
+
+		<p><b>Incoming:</b> <a href="site.html">site</a> <a href="projects.html">projects</a> </p>
 	</main>
 
 	<footer>

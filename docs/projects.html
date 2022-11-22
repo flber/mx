@@ -17,8 +17,8 @@
 
 *, *::before, *::after {box-sizing: border-box;} 
 * {margin: 0;} 
-body {line-height: 1.5;-webkit-font-smoothing: antialiased;} 
-img, picture, video, canvas, svg {display: block;max-width: 100%;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
 input, button, textarea, select {font: inherit;} 
 p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
 #root, #__next {isolation: isolate;} 
@@ -27,13 +27,13 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	/* --text:#3A3738; */
 	/* --text:#472d30; */
 	--text:#654735;
-	/* --back:#FBF0F0; */
-	/* --back:#ffe1a8; */
-	--back:#fbf1c7;
-	/* --high:#80dec5; */
-	/* --high:#c9cba3; */
-	--high:#45707a;
-	--high-orange:#c35e0a;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
 }
 
 body {
@@ -45,33 +45,34 @@ body {
 	padding: 0 1rem; 
 	line-height:1.6;
 	color:var(--text);
-	background-color:var(--back);
+	background-color:var(--bg);
 }
 
 main > *+* {margin-top: 2ex;}
 
-*:not(footer)>a {color:var(--high);}
-*:not(footer)>a:visited {color:var(--high-orange);}
-/* *:not(footer)>a:hover {color:var(--text);background-color:var(--back);} */
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
 
 header>h1 {display:inline-block;padding-right:.3em;}
 header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
 
-mark {background-color:var(--high);}
+mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
 	font-size:calc(0.8rem + 0.5vw);
 	overflow-x:auto; 
 	padding:2%; 
-	color:var(--back); 
-	background-color:var(--text);  
-} 
+	color:var(--bg); 
+	background-color:var(--text);
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
-::selection {color: var(--back);background-color: var(--text);}
+::selection {color: var(--bg);background-color: var(--text);}
 
 .half {width: 50%;}
 .third {width: 31%;}
@@ -103,13 +104,14 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p>
 
-<p></p>
+<h3 class="listing"><a href="uxn-zine.html">Uxn zine</a> <span>a few months ago?</span></h3>
+<p><a href="">Rostiger</a> made an awesome comic explaining how <a href="">Uxn</a> works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused.</p>
 
 <h3 class="listing"><a href="ffstream.html">ffstream</a> <span>140622 - Now</span></h3>
 <p>Really a loose collection of scripts and miscellaneous files, <code>ffstream</code> is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an <code>extra/</code> directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is <em>actually useful</em>, but short-term goal is to actually have something working :)</p>
 
 <h3 class="listing"><a href="ios-sync.html">iOS Sync</a> <span>120622 - Now</span></h3>
-<p>After way, way too long of sharing images from my phone to my laptop with email, I finally hacked something together which can get a photo to my laptop in a fraction of the time!</p>
+<p>After way, way too long of sharing images from my phone to my laptop with email, I finally hacked something together which can get a photo to my laptop in a fraction of the time! (the downside is it took a blood pact with satan :/)</p>
 
 <h3 class="listing"><a href="casio.html">CA53W</a> <span>? - Now</span></h3>
 <p>I've had a casio CA53W for a loooooong time now. The one I currently have is the fourth I've owned, the first three I either lost or managed to break (I probably could have repaired them, but I was much younger when I first started wearing them). A small customization I made to the one I currently have is inverting the LCD, which you can see me doing (or rather, reversing) in the above link!</p>
@@ -168,7 +170,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 111022</em></span>
+		<span style="float: right;"><em>Last updated: 112222</em></span>
 	</footer>
 </body>
 </html>

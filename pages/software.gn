@@ -7,14 +7,12 @@ title: Software
 
 [h3|Software:]
 [ul|
-	[li|window manager: [a, href: "https://swaywm.org/"|Sway]]
+	[li|window manager: [a, href: "https://i3.org/"|i3]]
 	[li|terminal: [a, href: "https://sw.kovidgoyal.net/kitty/"|Kitty]]
 	[li|web browser: [a, href: "https://qutebrowser.org/"|qutebrowser]]
 	[li|text editor: [a, href: "https://micro-editor.github.io/"|micro]]
 	[li|file explorer: [a, href: "https://ranger.github.io/"|ranger]]
 	[li|music player: [a, href: "https://cmus.github.io/"|cmus]]
-	[li|habit tracker: [a, href: "https://github.com/NerdyPepper/dijo"|dijo]]
-	[li|mastodon client: [a, href: "https://github.com/ihabunek/toot"|toot]]
 	[li|IRC client: [a, href: "https://github.com/osa1/tiny"|tiny]]
 ]
  
@@ -30,9 +28,11 @@ title: Software
 		[li|key-binds: [a, href: "files/micro/micro-bindings.json"|micro-bindings.json]]
 		[li|granite colors: [a, href: "files/micro/micro-granite.yaml"|micro-granite.yaml]]
 	]]
-	[li|Sway[ul|
-		[li|main: [a, href: "files/sway/config"|config]]
-		[li|screen saver: [a, href: "files/sway/config.d/screenlock_powersave"|screenlock_powersave]]
-		[li|swaybar: [a, href: "files/sway/scripts/sway_bar.sh"|sway_bar.sh]]
-	]]
+	[div, style: "display: none;"|
+		[li|Sway[ul|
+			[li|main: [a, href: "files/sway/config"|config]]
+			[li|screen saver: [a, href: "files/sway/config.d/screenlock_powersave"|screenlock_powersave]]
+			[li|swaybar: [a, href: "files/sway/scripts/sway_bar.sh"|sway_bar.sh]]
+		]]
+	]
 ]
