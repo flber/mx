@@ -52,7 +52,7 @@ main > *+* {margin-top: 2ex;}
 
 *:not(footer)>a {color:var(--hl);}
 *:not(footer)>a:visited {color:var(--hl-orange);}
-*:not(footer)>a[~="https"]::before {"➚";}
+*:not(footer)>a[href*=':']::before{content:"↗"}
 
 /* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
 
