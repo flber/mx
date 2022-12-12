@@ -4,7 +4,16 @@ title: Tools
 
 [h2|Tools]
 
-[p|I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for most of these, but don't hesitate to ask me a question if something still doesn't make sense.]
+[p|I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for some of these, but don't hesitate to ask me a question if something still doesn't make sense.]
+
+[h3, id: "listening"|[a, href: "#listening"|listening]]
+[details|
+	[summary|[a, href: "projects/listening"|listening.sh]]
+	[pre|
+		{{catfile}}"projects/listening"
+	]
+]
+[p|This script, which should be run once on startup to work, prints what cmus is currently playing into a text file, allowing me to see what artists, albums, and songs I've been listening to. I originally tried to implement this using cron instead of an infinite loop with sleep statements, but found it was too difficult to debug the environment in which cron runs its jobs to be reliable. This is a bit of a hacky solution, but it works well for now.]
 
 [h3|[a, href: "https://github.com/flber/ffmpeg-stream-tools"|ffmpeg-stream-tools]]
 [p|A collection of tools, these are various scripts and files to streamline more complex usage of ffmpeg when working with live streamed video and audio files. Currently very much in a brittle state as I work to improve the documentation and examples, but the ultimate goal is to have a robust collection of tools which facilitate the complex functions of ffmpeg in a more manageable and understandable way.]

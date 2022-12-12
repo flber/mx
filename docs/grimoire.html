@@ -491,6 +491,31 @@ end > hosts.txt
 	</fieldset>
 </details>
 
+<details>
+	<summary>Restarts v4l2loopback</summary>
+	<fieldset>
+		<legend>Bash</legend>
+		<p>sudo modprobe -r v4l2loopback && sudo modprobe v4l2loopback</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Naively remove consecutive duplicate lines in a file</summary>
+	<fieldset>
+		<legend>Awk</legend>
+		<p>!p[$0]++</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Remove consecutive duplicate lines in a file, preserving empty lines</summary>
+	<fieldset>
+		<legend>Awk</legend>
+		<p>BEGIN{ old = "" } { new = $0 } old == new && old != "" { next } { old = $0; print }</p>
+	</fieldset>
+</details>
+
+
 		<p><b>Incoming:</b> <a href="now.html">now</a> <a href="wiki.html">wiki</a> </p>
 	</main>
 
@@ -512,7 +537,7 @@ end > hosts.txt
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 112222</em></span>
+		<span style="float: right;"><em>Last updated: 113022</em></span>
 	</footer>
 </body>
 </html>

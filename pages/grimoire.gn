@@ -389,3 +389,28 @@ end > hosts.txt
 		[p|ls | grep -P "^\d{2}\." | xargs -d"\n" rm]
 	]
 ]
+
+[details|
+	[summary|Restarts v4l2loopback]
+	[fieldset|
+		[legend|Bash]
+		[p|sudo modprobe -r v4l2loopback && sudo modprobe v4l2loopback]
+	]
+]
+
+[details|
+	[summary|Naively remove consecutive duplicate lines in a file]
+	[fieldset|
+		[legend|Awk]
+		[p|!p[$0]++]
+	]
+]
+
+[details|
+	[summary|Remove consecutive duplicate lines in a file, preserving empty lines]
+	[fieldset|
+		[legend|Awk]
+		[p|BEGIN{ old = "" } { new = $0 } old == new && old != "" { next } { old = $0; print }]
+	]
+]
+

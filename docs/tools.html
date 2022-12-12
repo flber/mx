@@ -105,7 +105,34 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <h2>Tools</h2>
 
-<p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for most of these, but don't hesitate to ask me a question if something still doesn't make sense.</p>
+<p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for some of these, but don't hesitate to ask me a question if something still doesn't make sense.</p>
+
+<h3 id="listening"><a href="#listening">listening</a></h3>
+<details>
+	<summary><a href="projects/listening">listening.sh</a></summary>
+	<pre>
+#!/bin/bash
+
+lockfile="/var/tmp/listening.lock"
+[ -f "$lockfile" ] && (printf 'lockfile already exists\n'; exit 1;)
+while true; do
+	if [ ! -f "$lockfile" ]; then
+		touch "$lockfile"
+		date "+%H:%M:%S"
+		cmus-remote -C "format_print %{artist} %{album} %{title}"
+		(cmus-remote -C "format_print %{artist} %{album} %{title}" | \
+		awk 'NR<3 {printf "%s\t",$i} NR==3 {print}' >> /home/benh/.listening; \
+		awk -i inplace '!p[$0]++' /home/benh/.listening ; rm "$lockfile") &
+		sleep $((1 * 60))
+	else
+		printf '%s\n' "skipping! process is already running"
+		sleep 60
+	fi
+done
+
+	</pre>
+</details>
+<p>This script, which should be run once on startup to work, prints what cmus is currently playing into a text file, allowing me to see what artists, albums, and songs I've been listening to. I originally tried to implement this using cron instead of an infinite loop with sleep statements, but found it was too difficult to debug the environment in which cron runs its jobs to be reliable. This is a bit of a hacky solution, but it works well for now.</p>
 
 <h3><a href="https://github.com/flber/ffmpeg-stream-tools">ffmpeg-stream-tools</a></h3>
 <p>A collection of tools, these are various scripts and files to streamline more complex usage of ffmpeg when working with live streamed video and audio files. Currently very much in a brittle state as I work to improve the documentation and examples, but the ultimate goal is to have a robust collection of tools which facilitate the complex functions of ffmpeg in a more manageable and understandable way.</p>
@@ -217,7 +244,7 @@ micro 0:0:0:19
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 112222</em></span>
+		<span style="float: right;"><em>Last updated: 120822</em></span>
 	</footer>
 </body>
 </html>

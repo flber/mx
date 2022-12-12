@@ -6,7 +6,7 @@ title: Updates
 
 [p|It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!]
 
-[h3, id: "311022", class: "listing"|Plugins [span|221122]]
+[h3, id: "311022", class: "listing"|New Plugin [span|221122]]
 [p|I just wrote a quick script for my [a, href: "uxn-zine.html"|uxn zine page] which replaces its tag with the contents of a file, and it works really well! In future versions I want to keep the flexibility a plugin system provides, but maybe with better support for passing arguments? I'm just having the script do some manual parsing of a string following the tag, which actually works fine. I just feel like it might be nice to have a common interface for passing data to scripts to keep it consistent in the future.]
 
 [h3, id: "311022", class: "listing"|New parser benchmarks [span|311022]]

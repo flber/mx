@@ -5,6 +5,132 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>About</title>
+			<pubDate>Sun, 11 Dec 2022 20:04:43 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements).</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/about.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
+		</item>
+		<item>
+			<title>Wishlist</title>
+			<pubDate>Sat, 10 Dec 2022 17:26:33 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try not to focus too much on the acquisition of <em>things</em>, but there are a couple for which I make exceptions because they're cool :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wishlist.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
+		</item>
+		<item>
+			<title>Tools</title>
+			<pubDate>Mon, 05 Dec 2022 16:29:25 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for some of these, but don't hesitate to ask me a question if something still doesn't make sense.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/tools.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/tools.html</guid>
+		</item>
+		<item>
+			<title>Uxn Zine</title>
+			<pubDate>Mon, 05 Dec 2022 16:16:09 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><a href="https://merveilles.town/@rostiger">Rostiger</a> made an awesome comic explaining how <a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the <a href="files/uxn-zine/uxn-zine.pdf">pdf</a> or <a href="files/uxn-zine/uxn-zine.pdf">epub</a> directly, or download a <a href="files/uxn-zine.tar">tar</a> of all of files and resources to compile it yourself.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/uxn-zine.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/uxn-zine.html</guid>
+		</item>
+		<item>
+			<title>Vegecember</title>
+			<pubDate>Mon, 05 Dec 2022 13:42:40 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>For this December I'm only making vegetarian meals, and I'll keep pictures of one meal from each day here! There's probably going to be a lot of rice and tofu :Þ</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/vegecember.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/vegecember.html</guid>
+		</item>
+		<item>
+			<title>Inventory</title>
+			<pubDate>Sun, 04 Dec 2022 23:09:21 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try to reduce how much stuff I have, but as with anything, it's a process :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/inventory.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Fri, 02 Dec 2022 18:24:00 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
+		</item>
+		<item>
+			<title>Recipes</title>
+			<pubDate>Wed, 30 Nov 2022 16:04:58 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>A collection of recipes I like to make, or want to make. Often from other sources, so I'll try and site my recipes as best as possible. This is an ever-expanding list, so any suggestions for additions are very much welcome.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/recipes.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/recipes.html</guid>
+		</item>
+		<item>
+			<title>Grimoire</title>
+			<pubDate>Wed, 30 Nov 2022 11:57:54 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/grimoire.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
+		</item>
+		<item>
+			<title>Plugin Documentation</title>
+			<pubDate>Mon, 28 Nov 2022 10:00:52 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>This is an experimental page to document the plugins that run to modify small parts of certain pages on this site. The documentation for each plugin is generated by pulling comments from the code, so it only works on scripts which are not compiled.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/plugins-docs.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/plugins-docs.html</guid>
+		</item>
+		<item>
+			<title>Updates</title>
+			<pubDate>Mon, 28 Nov 2022 09:38:20 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/site.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/site.html</guid>
+		</item>
+		<item>
+			<title>Exploring Computer Literacy</title>
+			<pubDate>Sun, 27 Nov 2022 17:44:28 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>This is an essay I'm working on for school, but I like it enough to publish here :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/exploring-computer-literacy.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/exploring-computer-literacy.html</guid>
+		</item>
+		<item>
+			<title>Movies</title>
+			<pubDate>Fri, 25 Nov 2022 14:31:37 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Maybe my top 10 favorite movies? A work in progress :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/movies.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/movies.html</guid>
+		</item>
+		<item>
+			<title>Social Media Op-Ed</title>
+			<pubDate>Wed, 23 Nov 2022 18:53:49 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Modern social media platforms are not tools for communication, but systems of oppression. It is time to dismantle them.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/social-media-op-ed.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/social-media-op-ed.html</guid>
+		</item>
+		<item>
 			<title>Index</title>
 			<pubDate>Tue, 22 Nov 2022 11:57:20 +0900</pubDate>
 			<description>
@@ -39,15 +165,6 @@
 			</description>
 			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
-		</item>
-		<item>
-			<title>Wishlist</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try not to focus too much on the aquisition of <em>things</em>, but there are a couple for which I make exceptions because they're cool :></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wishlist.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
 		</item>
 		<item>
 			<title>Wiki</title>
@@ -104,15 +221,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
 		</item>
 		<item>
-			<title>Tools</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for most of these, but don't hesitate to ask me a question if something still doesn't make sense.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/tools.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/tools.html</guid>
-		</item>
-		<item>
 			<title>Side Quests</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -131,15 +239,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/software.html</guid>
 		</item>
 		<item>
-			<title>Uxn Zine</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><a href="https://merveilles.town/@rostiger">Rostiger</a> made an awesome comic explaining how <a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the <a href="files/uxn-zine/uxn-zine.pdf">pdf</a> or <a href="files/uxn-zine/uxn-zine.pdf">epub</a> directly, or download a <a href="files/uxn-zine.tar">tar</a> of all of files and resources to compile it yourself.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/uxn-zine.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/uxn-zine.html</guid>
-		</item>
-		<item>
 			<title>The Sands of Time</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -147,24 +246,6 @@
 			</description>
 			<link>https://mineralexistence.com/sands-of-time.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/sands-of-time.html</guid>
-		</item>
-		<item>
-			<title>Updates</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/site.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/site.html</guid>
-		</item>
-		<item>
-			<title>Social Media Op-Ed</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Modern social media platforms are not tools for communication, but systems of oppression. It is time to dismantle them.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/social-media-op-ed.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/social-media-op-ed.html</guid>
 		</item>
 		<item>
 			<title>Strawberry Canyon Hike</title>
@@ -212,15 +293,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/plan9.html</guid>
 		</item>
 		<item>
-			<title>Plugin Documentation</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>This is an experimental page to document the plugins that run to modify small parts of certain pages on this site. The documentation for each plugin is generated by pulling comments from the code (so it only works on scripts which are not compiled).</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/plugins-docs.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/plugins-docs.html</guid>
-		</item>
-		<item>
 			<title>Playlists</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -228,15 +300,6 @@
 			</description>
 			<link>https://mineralexistence.com/playlist.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/playlist.html</guid>
-		</item>
-		<item>
-			<title>Recipes</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>A collection of recipes I like to make, or want to make. Often from other sources, so I'll try and site my recipes as best as possible. This is an ever-expanding list, so any suggestions for additions are very much welcome.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/recipes.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/recipes.html</guid>
 		</item>
 		<item>
 			<title>Projects</title>
@@ -257,15 +320,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/overview_to_wfc.html</guid>
 		</item>
 		<item>
-			<title>Now</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
-		</item>
-		<item>
 			<title>Once Upon a Mid-day Sunny</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -282,15 +336,6 @@
 			</description>
 			<link>https://mineralexistence.com/marin_headlands_200221.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/marin_headlands_200221.html</guid>
-		</item>
-		<item>
-			<title>Movies</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Maybe my top 10 favorite movies? A work in progress :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/movies.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/movies.html</guid>
 		</item>
 		<item>
 			<title>Music</title>
@@ -410,15 +455,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/hiking.html</guid>
 		</item>
 		<item>
-			<title>Inventory</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try to reduce how much stuff I have, but as with anything, it's a process :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/inventory.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
-		</item>
-		<item>
 			<title>Ideas</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -482,24 +518,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/files.html</guid>
 		</item>
 		<item>
-			<title>Exploring Computer Literacy</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>This is an essay I'm working on for school, but I like it enough to publish here :></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/exploring-computer-literacy.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/exploring-computer-literacy.html</guid>
-		</item>
-		<item>
-			<title>Grimoire</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/grimoire.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
-		</item>
-		<item>
 			<title>Eating</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -552,15 +570,6 @@
 			</description>
 			<link>https://mineralexistence.com/devtober.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/devtober.html</guid>
-		</item>
-		<item>
-			<title>yle="width:88px;height:31px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/></title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements).</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/about.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
 		</item>
 		<item>
 			<title>Climbing</title>
