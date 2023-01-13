@@ -9,12 +9,12 @@ static: true
 
 [p|Below is a cute little search bar utilizing [a, href: "https://merveilles.town/@cblgh"|Alexander's] search engine, [a, href: "https://lieu.cblgh.org/"|Lieu]!]
 
-<form method="GET" action="https://lieu.cblgh.org" style="padding-bottom: 1.75ex;">
-	<span>
-		<input type="search" minlength="1" required name="q" placeholder="Search">
-		<input type="hidden" value="mineralexistence.com" name="site">
-		<button type="submit" title="Search" aria-label="Search">Search</button>
-	</span>
+<form method="GET" action="https://lieu.cblgh.org/">
+    <!-- replace the value with the domain of your own site -->
+    <input type="hidden" value="mineralexistence.com" name="site">
+    <label for="site-search">Looking for something?</label><br />
+    <input id="site-search" name="q" placeholder="Search">
+    <button type="submit">Search</button>
 </form>
 
 [p|I still don't have an especially insteresting way to organize my pages ( I'm thinking something with graphs for the future :D ), so here's a list of all orphaned pages from this page. Over time this list will change as I find better ways of organizing things, but for now, here it is. Enjoy, and have fun finding the rest of the pages on this site :3]

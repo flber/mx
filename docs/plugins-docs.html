@@ -84,6 +84,16 @@ fieldset {border:1px solid;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
 
 footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
@@ -91,6 +101,12 @@ footer img {margin:0 0 -10px 0;width:30px;}
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
 
 	</style>
+
+	<!-- <script> -->
+		<!-- const root = document.documentElement; -->
+		<!-- var hue = Math.floor(Math.random() * 256); -->
+		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
+	<!-- </script> -->
 </head>
 
 <body>

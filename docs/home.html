@@ -84,6 +84,16 @@ fieldset {border:1px solid;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
 
 footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
@@ -91,6 +101,12 @@ footer img {margin:0 0 -10px 0;width:30px;}
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
 
 	</style>
+
+	<!-- <script> -->
+		<!-- const root = document.documentElement; -->
+		<!-- var hue = Math.floor(Math.random() * 256); -->
+		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
+	<!-- </script> -->
 </head>
 
 <body>
@@ -109,12 +125,12 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <p>Below is a cute little search bar utilizing <a href="https://merveilles.town/@cblgh">Alexander's</a> search engine, <a href="https://lieu.cblgh.org/">Lieu</a>!</p>
 
-<form method="GET" action="https://lieu.cblgh.org" style="padding-bottom: 1.75ex;">
-	<span>
-		<input type="search" minlength="1" required name="q" placeholder="Search">
-		<input type="hidden" value="mineralexistence.com" name="site">
-		<button type="submit" title="Search" aria-label="Search">Search</button>
-	</span>
+<form method="GET" action="https://lieu.cblgh.org/">
+    <!-- replace the value with the domain of your own site -->
+    <input type="hidden" value="mineralexistence.com" name="site">
+    <label for="site-search">Looking for something?</label><br />
+    <input id="site-search" name="q" placeholder="Search">
+    <button type="submit">Search</button>
 </form>
 
 <p>I still don't have an especially insteresting way to organize my pages ( I'm thinking something with graphs for the future :D ), so here's a list of all orphaned pages from this page. Over time this list will change as I find better ways of organizing things, but for now, here it is. Enjoy, and have fun finding the rest of the pages on this site :3</p>
@@ -132,11 +148,11 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <h3>Latest:</h3>
 <ul>
+	<li>130123 - <a href="home.html">Home</a></li>
+	<li>130123 - <a href="bookmarks.html">Bookmarks</a></li>
+	<li>130123 - <a href="now.html">Now</a></li>
 	<li>130123 - <a href="mushrooms.html">Mushrooms</a></li>
 	<li>120123 - <a href="meta-site-gen.html">I Don't Want This to be About SSGs</a></li>
-	<li>181222 - <a href="rss-mpv.html">RSS + MPV</a></li>
-	<li>181222 - <a href="bookmarks.html">Bookmarks</a></li>
-	<li>181222 - <a href="ios-sync.html">iOS Sync</a></li>
 </ul>
 
 

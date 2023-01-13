@@ -5,8 +5,35 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Home</title>
+			<pubDate>Thu, 12 Jan 2023 20:27:03 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/home.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
+		</item>
+		<item>
+			<title>Bookmarks</title>
+			<pubDate>Thu, 12 Jan 2023 20:22:49 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/bookmarks.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
+		</item>
+		<item>
+			<title>Now</title>
+			<pubDate>Thu, 12 Jan 2023 18:28:12 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/now.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
+		</item>
+		<item>
 			<title>Mushrooms</title>
-			<pubDate>Thu, 12 Jan 2023 17:51:20 +0900</pubDate>
+			<pubDate>Thu, 12 Jan 2023 18:10:07 +0900</pubDate>
 			<description>
 				<![CDATA[ <p>I think mushrooms are pretty cool, so here are some fun ones I've found!</p> ]]>
 			</description>
@@ -30,15 +57,6 @@
 			</description>
 			<link>https://mineralexistence.com/rss-mpv.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
-		</item>
-		<item>
-			<title>Bookmarks</title>
-			<pubDate>Sat, 17 Dec 2022 23:44:47 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/bookmarks.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
 		</item>
 		<item>
 			<title>iOS Sync</title>
@@ -111,15 +129,6 @@
 			</description>
 			<link>https://mineralexistence.com/vegecember.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/vegecember.html</guid>
-		</item>
-		<item>
-			<title>Now</title>
-			<pubDate>Fri, 02 Dec 2022 18:24:00 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><b>This week, I'm planning on</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/now.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/now.html</guid>
 		</item>
 		<item>
 			<title>Recipes</title>
@@ -426,15 +435,6 @@
 			</description>
 			<link>https://mineralexistence.com/intro_to_wfc.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/intro_to_wfc.html</guid>
-		</item>
-		<item>
-			<title>Home</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Thank you for visiting my humble virtual abode. This site will serve as a space for me to talk about my <a href="projects.html">projects</a> and <a href="thoughts.html">thoughts</a>, as well as a personal knowledge base in the form of the <a href="wiki.html">wiki</a> page. It is inspired by many sites from the <a href="https://merveilles.town/about">Town of Merveilles</a> and the <a href="https://webring.xxiivv.com/#icons">Webring</a></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/home.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
 		</item>
 		<item>
 			<title>Learning Nim</title>

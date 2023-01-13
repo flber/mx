@@ -84,6 +84,16 @@ fieldset {border:1px solid;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
 
 footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
@@ -106,7 +116,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 <h2>Now</h2>
 
 <p><b>This week, I'm planning on</b>
-finishing up this quarter, getting ready to go to Australia to visit family, and enjoying time with my friends and roommates before we leave for winter break.</p>
+getting back into the routines of school and spending time with friends.</p>
 
 <p><b>More generally, I'm</b></p>
 
@@ -161,7 +171,7 @@ finishing up this quarter, getting ready to go to Australia to visit family, and
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 120222</em></span>
+		<span style="float: right;"><em>Last updated: 011223</em></span>
 	</footer>
 </body>
 </html>
