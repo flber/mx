@@ -5,6 +5,69 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Mushrooms</title>
+			<pubDate>Thu, 12 Jan 2023 17:51:20 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I think mushrooms are pretty cool, so here are some fun ones I've found!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/mushrooms.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/mushrooms.html</guid>
+		</item>
+		<item>
+			<title>I Don't Want This to be About SSGs</title>
+			<pubDate>Wed, 11 Jan 2023 17:16:36 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>but here we are.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/meta-site-gen.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/meta-site-gen.html</guid>
+		</item>
+		<item>
+			<title>RSS + MPV</title>
+			<pubDate>Sat, 17 Dec 2022 23:49:37 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>To get the most important parts out of the way, here's my <a href="https://newsboat.org/">newsboat</a> config, using <a href="https://mpv.io/">mpv</a> and <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/rss-mpv.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
+		</item>
+		<item>
+			<title>Bookmarks</title>
+			<pubDate>Sat, 17 Dec 2022 23:44:47 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/bookmarks.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
+		</item>
+		<item>
+			<title>iOS Sync</title>
+			<pubDate>Sat, 17 Dec 2022 23:27:37 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>After way too long of sharing images from my iphone to my linux laptop with email, I finally hacked something together in shortcuts which can get a photo to my laptop much faster!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/ios-sync.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/ios-sync.html</guid>
+		</item>
+		<item>
+			<title>Projects</title>
+			<pubDate>Sat, 17 Dec 2022 23:22:41 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/projects.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
+		</item>
+		<item>
+			<title>Inventory</title>
+			<pubDate>Sat, 17 Dec 2022 23:19:02 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try to reduce how much stuff I have, but as with anything, it's a process :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/inventory.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
+		</item>
+		<item>
 			<title>About</title>
 			<pubDate>Wed, 14 Dec 2022 13:24:08 +0900</pubDate>
 			<description>
@@ -48,15 +111,6 @@
 			</description>
 			<link>https://mineralexistence.com/vegecember.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/vegecember.html</guid>
-		</item>
-		<item>
-			<title>Inventory</title>
-			<pubDate>Sun, 04 Dec 2022 23:09:21 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try to reduce how much stuff I have, but as with anything, it's a process :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/inventory.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
 		</item>
 		<item>
 			<title>Now</title>
@@ -212,15 +266,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/watching.html</guid>
 		</item>
 		<item>
-			<title>RSS + MPV</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>To get the most important parts out of the way, here's my <a href="https://newsboat.org/">newsboat</a> config, using <a href="https://mpv.io/">mpv</a> and <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/rss-mpv.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
-		</item>
-		<item>
 			<title>Side Quests</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -302,15 +347,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/playlist.html</guid>
 		</item>
 		<item>
-			<title>Projects</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/projects.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
-		</item>
-		<item>
 			<title>Overview of WFC</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -347,15 +383,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/music.html</guid>
 		</item>
 		<item>
-			<title>I Don't Want This to be About SSGs</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>but here we are.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/meta-site-gen.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/meta-site-gen.html</guid>
-		</item>
-		<item>
 			<title>Mignight Hike</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -383,15 +410,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/liminal-spaces.html</guid>
 		</item>
 		<item>
-			<title>Mushrooms</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I think mushrooms are pretty cool, so here are some fun ones I've found!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/mushrooms.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/mushrooms.html</guid>
-		</item>
-		<item>
 			<title>Learning Rust</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -408,15 +426,6 @@
 			</description>
 			<link>https://mineralexistence.com/intro_to_wfc.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/intro_to_wfc.html</guid>
-		</item>
-		<item>
-			<title>iOS Sync</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>After way too long of sharing images from my iphone to my linux laptop with email, I finally hacked something together in shortcuts which can get a photo to my laptop much faster!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/ios-sync.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/ios-sync.html</guid>
 		</item>
 		<item>
 			<title>Home</title>
@@ -579,15 +588,6 @@
 			</description>
 			<link>https://mineralexistence.com/climbing.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/climbing.html</guid>
-		</item>
-		<item>
-			<title>Bookmarks</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/bookmarks.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
 		</item>
 		<item>
 			<title>Drawings</title>

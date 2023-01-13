@@ -115,12 +115,13 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 <p>Long story short the Shortcuts app on ios is totally borked, but we can do this:</p>
 <ol>
 	<li>encode image as base64 string</li>
-	<li>echo string into file over ssh connection with server</li>
+	<li>ssh into server</li>
+	<li>echo string into file</li>
 	<li>decode file as image</li>
 	<li>pull file onto laptop with rsync alias</li>
 </ol>
 
-<p>Unfortunately, this least complicated example is hindered by the fact that if we try and send a full image as base64 text, we get an error as a result of the text being way too long and the process fails. To get around this I initially just resized the image down to a width of 256. This works very well if you want a small image, and with an alias on the laptop end it's probably the fastest way to send an image using the shortcuts app. The 256 version of this shortcut is linked above, because neither of the other two come close to how fast this version is, and I still have a few usecases for it.</p>
+<p>Unfortunately, this least complicated example is hindered by the fact that if we try and send a full image as base64 text, we get an error as a result of the text being way too long and the process fails. To get around this I initially just resized the image down to a width of 256. This works very well if you want a small image, and with an alias (<code>pic="rsync -vazh benh@[$MX_IP]:/home/benh/pic.jpg ./ && feh ./pic.jpg"</code>) on the laptop end it's probably the fastest way to send an image using the shortcuts app. The 256 version of this shortcut is linked above, because neither of the other two come close to how fast this version is, and I still have a few usecases for it.</p>
 
 <p>To solve the problem of syncing much larger images using this method, things get slightly more complicated.</p>
 
@@ -128,7 +129,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <p>The third version, sync512, uses a combination of the two previous strategies. It's hardcoded to crop a 512-width image into 8 horizontal subsections, which means you don't get the (seemingly arbitrary?) slowdown of a loop. The smaller resolution is just a result of it being an absolute pain to write shortcuts, and 8 crops (each of which require 4 commands) was the limit I was willing to make.</p>
 
-<p>If you actually end up using this, let me know! If you have problems, just send me a message and I'll be happy to help :></p>
+<p>If you actually end up using this - first of all, dear god why? - let me know! If you have problems, just send me a message and I'll be happy to help :></p>
 
 		<p><b>Incoming:</b> <a href="projects.html">projects</a> </p>
 	</main>
@@ -151,7 +152,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 112222</em></span>
+		<span style="float: right;"><em>Last updated: 121722</em></span>
 	</footer>
 </body>
 </html>

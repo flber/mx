@@ -14,18 +14,8 @@ title: Inventory
 ]
 
 [div, class: "row"|
-	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/field-notes.jpg", alt: "field notes special edition yosemite memo notebook"|]
-	[p|[b|[a, href: "https://fieldnotesbrand.com/"|Field Notes] U.S. National Parks special edition memo notebook] I've had a Field Notes memo book since I was in preschool; I think they're great! The memo books especially are convinient because they can actually fit into a pocket without too much trouble, so they're easy to bring everywhere.]
-]
-
-[div, class: "row"|
 	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/space-pen.jpg", alt: "black fisher space pen"|]
 	[p|[b|[a, href: "https://fieldnotesbrand.com/products/space-pen"|Fisher space pen]] A very nice pen I was gifted a few years ago. I haven't run out of ink yet, but when I do it's easy to get more!]
-]
-
-[div, class: "row"|
-	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/watch.jpg", alt: "a casio calculator watch on my wrist"|]
-	[p|[b|[a, href: "casio.html"|Casio CA53W-1 calculator watch]] Another item I've had forever, if you're curious about how to change the invert the display you can read my page on the subject :)]
 ]
 
 [div, class: "row"|
@@ -52,4 +42,18 @@ title: Inventory
 	[li|[a, href: "https://www.thelightphone.com/"|Light Phone II]]
 	[li|Nintendo Switch]
 	[li|[a, href: "camera.html"|Kodak No. 2 Folding Autographic Brownie]]
+]
+
+[hr, style: "margin-top:4ex"|]
+
+[h3|Deprecated]
+
+[div, class: "row"|
+	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/field-notes.jpg", alt: "field notes special edition yosemite memo notebook"|]
+	[p|[b|[a, href: "https://fieldnotesbrand.com/"|Field Notes] U.S. National Parks special edition memo notebook] I've had a Field Notes memo book since I was in preschool; I think they're great! The memo books especially are convinient because they can actually fit into a pocket without too much trouble, so they're easy to bring everywhere.]
+]
+
+[div, class: "row"|
+	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/watch.jpg", alt: "a casio calculator watch on my wrist"|]
+	[p|[b|[a, href: "casio.html"|Casio CA53W-1 calculator watch]] Another item I've had forever, if you're curious about how to change the invert the display you can read my page on the subject :)]
 ]

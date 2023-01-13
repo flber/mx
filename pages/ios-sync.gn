@@ -14,12 +14,13 @@ title: iOS Sync
 [p|Long story short the Shortcuts app on ios is totally borked, but we can do this:]
 [ol|
 	[li|encode image as base64 string]
-	[li|echo string into file over ssh connection with server]
+	[li|ssh into server]
+	[li|echo string into file]
 	[li|decode file as image]
 	[li|pull file onto laptop with rsync alias]
 ]
 
-[p|Unfortunately, this least complicated example is hindered by the fact that if we try and send a full image as base64 text, we get an error as a result of the text being way too long and the process fails. To get around this I initially just resized the image down to a width of 256. This works very well if you want a small image, and with an alias on the laptop end it's probably the fastest way to send an image using the shortcuts app. The 256 version of this shortcut is linked above, because neither of the other two come close to how fast this version is, and I still have a few usecases for it.]
+[p|Unfortunately, this least complicated example is hindered by the fact that if we try and send a full image as base64 text, we get an error as a result of the text being way too long and the process fails. To get around this I initially just resized the image down to a width of 256. This works very well if you want a small image, and with an alias ([code|pic="rsync -vazh benh@[$MX_IP]:/home/benh/pic.jpg ./ && feh ./pic.jpg"]) on the laptop end it's probably the fastest way to send an image using the shortcuts app. The 256 version of this shortcut is linked above, because neither of the other two come close to how fast this version is, and I still have a few usecases for it.]
 
 [p|To solve the problem of syncing much larger images using this method, things get slightly more complicated.]
 
@@ -27,4 +28,4 @@ title: iOS Sync
 
 [p|The third version, sync512, uses a combination of the two previous strategies. It's hardcoded to crop a 512-width image into 8 horizontal subsections, which means you don't get the (seemingly arbitrary?) slowdown of a loop. The smaller resolution is just a result of it being an absolute pain to write shortcuts, and 8 crops (each of which require 4 commands) was the limit I was willing to make.]
 
-[p|If you actually end up using this, let me know! If you have problems, just send me a message and I'll be happy to help :>]
+[p|If you actually end up using this - first of all, dear god why? - let me know! If you have problems, just send me a message and I'll be happy to help :>]
