@@ -5,6 +5,24 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>RSS + MPV</title>
+			<pubDate>Wed, 25 Jan 2023 11:58:59 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I use <a href="https://newsboat.org/">newsboat</a> to subscribe to youtube channels through RSS, and can easily watch new videos from them with <a href="https://mpv.io/">mpv</a> using <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>. Configs below.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/rss-mpv.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
+		</item>
+		<item>
+			<title>Bookmarks</title>
+			<pubDate>Mon, 23 Jan 2023 16:55:19 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/bookmarks.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
+		</item>
+		<item>
 			<title>Home</title>
 			<pubDate>Thu, 12 Jan 2023 20:27:03 +0900</pubDate>
 			<description>
@@ -12,15 +30,6 @@
 			</description>
 			<link>https://mineralexistence.com/home.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/home.html</guid>
-		</item>
-		<item>
-			<title>Bookmarks</title>
-			<pubDate>Thu, 12 Jan 2023 20:22:49 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/bookmarks.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
 		</item>
 		<item>
 			<title>Now</title>
@@ -48,15 +57,6 @@
 			</description>
 			<link>https://mineralexistence.com/meta-site-gen.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/meta-site-gen.html</guid>
-		</item>
-		<item>
-			<title>RSS + MPV</title>
-			<pubDate>Sat, 17 Dec 2022 23:49:37 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>To get the most important parts out of the way, here's my <a href="https://newsboat.org/">newsboat</a> config, using <a href="https://mpv.io/">mpv</a> and <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/rss-mpv.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
 		</item>
 		<item>
 			<title>iOS Sync</title>

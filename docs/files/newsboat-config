@@ -1,0 +1,19 @@
+browser "links -g %u"
+max-items 3000
+
+macro v set browser "mpv --really-quiet --no-terminal -- %u &" ; open-in-browser ; set browser "links -g %u"
+
+# colors
+color background         default default
+color listnormal         default default
+color listnormal_unread  color15 default bold
+color listfocus          green   default reverse
+color listfocus_unread   color10 default reverse bold
+color title              cyan    default reverse
+color info               magenta default reverse
+color hint-description   magenta default
+color article            default default
+color end-of-text-marker color8  default
+
+# Highlight URLs with regex
+highlight article "[a-z]+://[^ ]+" green default underline

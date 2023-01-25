@@ -15,32 +15,34 @@ title: Bookmarks
 [h3|Friends & Neighbors]
 [ul|
 	[li|[a, href: "https://mudvoid.com/"|MudVoid]]
-	[li|[a, href: "https://noa.gaiwan.org"|Noa [img style: "display: inline-block; border: 1px solid var(--text)", src: "http://noa.gaiwan.org/button.gif", alt: "the name noa in handwritten letters"|]]]
+	[li|[a, href: "https://noa.gaiwan.org"|Noa [img class: "inline-img", src: "http://noa.gaiwan.org/button.gif", alt: "the name noa in handwritten letters"|]]]
+	[li|[a, href: "https://aless.co/"|anti/pattern]]
+	[li|[a, href: "http://fragmentscenario.com/"|fragmentscenario]]
 ]
 
 [h3|Sustainability]
 [ul|
-	[li|[a, href: "https://wiki.xxiivv.com/site/home.html"|XXIIVV]]
-	[li|[a, href: "http://100r.co/site/home.html"|Hundred Rabbits]]
+	[li|[a, href: "https://wiki.xxiivv.com/site/home.html"|XXIIVV[img class: "inline-img", src: "https://wiki.xxiivv.com/media/services/button.gif", alt: "xxiivv's banner"|]]]
+	[li|[a, href: "http://100r.co/site/home.html"|Hundred Rabbits[img class: "inline-img", src: "http://100r.co/media/interface/logo.svg", alt: "10 by 10 grid of white dots on a black background"|]]]
 ]
 
 [h3|Cooking]
 [ul|
-	[li|[a, href: "https://grimgrains.com/site/home.html"|Grimgrains]]
+	[li|[a, href: "https://grimgrains.com/site/home.html"|Grimgrains[img class: "inline-img", src: "https://grimgrains.com/media/interface/logo.png", alt: "a loaf of bread with eyes over the title grimgrains"|]]]
 	[li|[a, href: "https://www.phaidon.com/store/food-cook/the-nordic-cookbook-9780714868721/"|The Nordic cookbook]]
 ]
 
 [h3|Essays]
 [ul|
 	[li|[a, href: "https://deathtobullshit.com/"|Death to Bullshit]]
-	[li|[a, href: "https://compudanzas.net/uxn_tutorial.html"|Compudanzas' uxn tutorial]]
-	[li|[a, href: "https://blackgnu.net/on-blockchain.html"|On Blockchain and Web3]]
+	[li|[a, href: "https://compudanzas.net/uxn_tutorial.html"|Compudanzas' uxn tutorial[img class: "inline-img", src: "https://compudanzas.net/img/iconocompudanzas_32.png", alt: "a little grey cube in a cloud?"|]]]
 	[li|[a, href: "https://en.wikipedia.org/wiki/Category:One-of-a-kind_computers"|One-of-a-kind computers]]
 	[li|[a, href: "https://blog.pimaker.at/texts/rvc1/"|Linux in a pixel shader]]
 	[li|[a, href: "https://seirdy.one/2021/01/12/password-strength.html"|Physical immunity to brute-force attacks]]
 	[li|[a, href: "https://phoboslab.org/log/2021/11/qoi-fast-lossless-image-compression"|Fast and simple image compression]]
 	[li|[a, href: "https://writings.stephenwolfram.com/2020/04/finally-we-may-have-a-path-to-the-fundamental-theory-of-physics-and-its-beautiful/"|Wolfram theory of physics]]
 	[li|[a, href: "https://phoboslab.org/log/2021/09/q1k3-making-of"|Quake in 13kb of JS]]
+	[li|[a, href: "https://journal.stuffwithstuff.com/"|Bob Nystrom's journal]]
 ]
 
 [h3|Art]
@@ -50,19 +52,29 @@ title: Bookmarks
 	[li|[a, href: "https://xkcd.com/"|xkcd]]
 	[li|[a, href: "https://www.carlburton.io/"|Carl Burton]]
 	[li|[a, href: "https://200-50.com/"|200/50]]
+	[li|[a, href: "https://kokorobot.ca/site/hitobito.html"|kokorobot - everyone]]
+	[li|[a, href: "http://www.rice-boy.com/vattu/"|vattu[img class: "inline-img", src: "http://www.rice-boy.com/vattu/site/index.title.png", alt: "vattu over a yellow field"|]]]
+	[li|[a, href: "https://www.peppercarrot.com/en/webcomics/index.html"|Pepper & Carrot]]
+	[li|[a, href: "https://c6y.github.io/tilix-reference/"|Modular isometric art rules]]
 ]
 
 [h3|Design]
 [ul|
 	[li|[a, href: "https://spacecraft.ssl.umd.edu/akins_laws.html"|Akin's Laws of Spacecraft Design]]
 	[li|[a, href: "https://thomasorus.com/html-tips.html"|HTML Tips]]
+	[li|[a, href: "https://www.destroyallsoftware.com/talks/a-whole-new-world"|Destroy All Software: A Whole New World]]
 ]
 
 [h3|Hardware]
 [ul|
-	[li|[a, href: "https://mntre.com/"|MNT Reform]]
+	[li|[a, href: "https://mntre.com/"|MNT Reform[img class: "inline-img", src: "https://mntre.com/mntre-logo-2015.svg", alt: "the stylized letters mnt"|]]]
 	[li|[a, href: "https://www.jivamaterials.com/"|recycleable pcb]]
 	[li|[a, href: "https://www.midori-japan.co.jp/md/en/products/mdnote/"|Midori MD]]
+	[li|[a, href: "https://winterbloom.com/"|Winterbloom audio[img class: "inline-img", src: "https://winterbloom.com/images/winterbloom-logo.png", alt: "winterbloom in handwritten cursive"|]]]
+	[li|[a, href: "https://heater.link/"|Copper coil alcohol heater build guide]]
+	[li|[a, href: "https://lowerquality.com/desertjournalism/"|desert journalism printer]]
+	[li|[a, href: "https://www.sensorwatch.net/about/"|sensorwatch]]
+	[li|[a, href: "https://www.crowdsupply.com/mnt/pocket-reform"|Pocket Reform]]
 ]
 
 [h3|Personal Sites]
@@ -70,19 +82,20 @@ title: Bookmarks
 	[li|[a, href: "https://www.thomasorus.com/"|Thomasorus]]
 	[li|[a, href: "https://fdisk.space/"|fdisk]]
 	[li|[a, href: "https://azlen.me/"|Azlen]]
-	[li|[a, href: "https://ocean-waves.xyz/"|Ocean Waves]]
+	[li|[a, href: "https://ocean-waves.xyz/"|Ocean Waves[img class: "inline-img", src: "https://ocean-waves.xyz/graphix/buttons/myButtonn.gif", alt: "ocean waves on a beach"|]]]
 	[li|[a, href: "https://pbat.ch/wiki/"|Pbat]]
 	[li|[a, href: "http://aboutmako.makopool.com/"|Mako's site]]
 	[li|[a, href: "https://coolguy.website/"|Coolguy website]]
 	[li|[a, href: "https://regularflolloping.com/"|Regular Flolloping]]
 	[li|[a, href: "https://m15o.ichi.city/"|m15o]]
+	[li|[a, href: "https://toffeee.com"|toffeee[img class: "inline-img", src: "https://toffeee.com/buttons/tof.png", alt: "Toffee the Dev"|]]]
 ]
 
 [h3|Communities]
 [ul|
 	[li|[a, href: "https://cyberdeck.cafe/"|The Cyberdeck Cafe]]
 	[li|[a, href: "https://midnight.pub/"|Midnight Pub]]
-	[li|[a, href: "https://forum.merveilles.town/"|Merveilles Forum]]
+	[li|[a, href: "https://forum.merveilles.town/"|Merveilles Forum[img class: "inline-img", src: "https://forum.merveilles.town/assets/merveilles.png", alt: "the merveilles symbol"|]]]
 ]
 
 [h3|Research]
@@ -92,6 +105,7 @@ title: Bookmarks
 	[li|[a, href: "https://solar.lowtechmagazine.com/"|Low Tech Magazine]]
 	[li|[a, href: "http://osp.kitchen/"|Open Source Publishing]]
 	[li|[a, href: "https://blog.backtotheroots.com/2018/04/27/greenhouses-transformed-iceland/"|Geothermal greenhouses in Iceland]]
+	[li|[a, href: "https://lhs.nu/archive"|P2P resources]]
 ]
 
 [h3|Software]
@@ -102,6 +116,7 @@ title: Bookmarks
 	[li|[a, href: "https://search.marginalia.nu/"|Marginalia search engine]]
 	[li|[a, href: "https://ditherit.com/"|Ditherit]]
 	[li|[a, href: "https://comradery.co/"|Comdradery worker coop]]
+	[li|[a, href: "https://git.sr.ht/~rabbits/uxn"|uxn[img class: "inline-img", src: "https://wiki.xxiivv.com/media/generic/uxn.png", alt: "a small creature"|]]]
 ]
 
 [h3|Games]
@@ -109,4 +124,5 @@ title: Bookmarks
 	[li|[a, href: "https://puprika.itch.io/"|Puprika]]
 	[li|[a, href: "https://speakthesky.itch.io/like-skyscrapers-v2"|Like Skyscrapers Blotting Out The Sun]]
 	[li|[a, href: "https://bay12games.com/dwarves/"|Dwarf Fortress]]
+	[li|[a, href: "http://brokenrul.es/"|Broken Rules studio[img class: "inline-img", src: "http://brokenrul.es/img/logo.svg", alt: "stylized letters BR"|]]]
 ]

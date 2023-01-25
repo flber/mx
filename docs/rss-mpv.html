@@ -84,6 +84,26 @@ fieldset {border:1px solid;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
 
 footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
@@ -91,6 +111,12 @@ footer img {margin:0 0 -10px 0;width:30px;}
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
 
 	</style>
+
+	<!-- <script> -->
+		<!-- const root = document.documentElement; -->
+		<!-- var hue = Math.floor(Math.random() * 256); -->
+		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
+	<!-- </script> -->
 </head>
 
 <body>
@@ -105,37 +131,60 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <h2>My youtube setup</h2>
 
-<p>To get the most important parts out of the way, here's my <a href="https://newsboat.org/">newsboat</a> config, using <a href="https://mpv.io/">mpv</a> and <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>.</p>
+<details>
+	<summary><h3>TL;DR</h3></summary>
+	<p>I use <a href="https://newsboat.org/">newsboat</a> to subscribe to youtube channels through RSS, and can easily watch new videos from them with <a href="https://mpv.io/">mpv</a> using <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a>. Configs below.</p>
 
-<pre>
+	<details>
+		<summary>newsboat config</summary>
+		<pre>
 browser "links -g %u"
 max-items 3000
 
-macro v set browser "mpv --really-quiet --no-terminal --script-opts=ytdl_hook-ytdl_path=yt-dlp -- %u &" ; open-in-browser ; set browser "links -g %u"
-</pre>
+macro v set browser "mpv --really-quiet --no-terminal -- %u &" ; open-in-browser ; set browser "links -g %u"
 
-<h3>The short version</h3>
+# colors
+color background         default default
+color listnormal         default default
+color listnormal_unread  color15 default bold
+color listfocus          green   default reverse
+color listfocus_unread   color10 default reverse bold
+color title              cyan    default reverse
+color info               magenta default reverse
+color hint-description   magenta default
+color article            default default
+color end-of-text-marker color8  default
 
-<p>TL;DR newsboat is nice to check in on and watch new videos from youtube channels I'm actually interested in, as opposed to videos the youtube gods think I'll be most likely to watch.</p>
+# Highlight URLs with regex
+highlight article "[a-z]+://[^ ]+" green default underline
 
-<h3>The long version</h3>
+		</pre>
+	</details>
 
-<p>I've never really used instagram, twitter, facebook, snapchat, or most other social media platforms. I just never really felt like they were important or interesting, and so never got into them. I used reddit for a little while, but then left it as well. The fediverse has definitely filled some of those behavioral patterns (which I don't mind, I think it's a pretty cool place!), but in terms of media consumption, my intake has been consistently dominated by (<em>dum dum dummmmmm!</em>) youtube :/</p>
+	<details>
+		<summary>mpv config</summary>
+		<pre>
+--ytdl-format="bv*[height<=?720][fps<=?30]+ba/best[height<=?720]"
 
-<p>I've tried to stop my usage several times, and tried to reduce it many more through various strategies, but it's always been sorta my main media vice, and one which I've had a difficult time reducing my consumption of.</p>
+		</pre>
+	</details>
+</details>
 
-<p>Over the past several months I've been doing a decent amount of my interaction with the small internet of blogs and webcomics through rss, and it's been great! I've got an rss reader app on my phone, but I hadn't got around to setting one up on my laptop until a couple days ago. I really like terminal user interfaces, so after some <a href="https://merveilles.town/@flbr/108279608942453026">recomendations</a> I decided to use <a href="https://newsboat.org/">newsboat</a>!</p>
+<h3>Why RSS?</h3>
 
-<p>Newsboat is lovely, and has a ton of really fun little features. One which is pretty interesting (and useful, getting back to the discussion about youtube) is the ability to open links in an arbitrary program.</p>
+<p>I never started using any of the common social media platforms (except reddit for a couple years), so I never had to deal with developing bad habits around them. Youtube, however, has long been a common time suck for me - where one interesting video will lead to five uninteresting ones, a rabbit hole pushed by youtube's recommendation algorithm. After various experiments making it harder to access youtube, or outright blocking it, I think I've found a good middle ground.</p>
 
-<p>Now to get newboat reading rss feeds from youtube, you need to get specific urls. Each channel has a unique id, something decently long and alphanumeric (this is not the channel name which often shows up in urls!). To add the channel to your feed reader, format the url like so: <code>https://www.youtube.com/feeds/videos.xml?channel_id=${id}</code>. For example, the url to the rss feed of Tested is <code>https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA</code></p>
+<p>I don't want to completely stop using youtube because there are a few channels whose videos I'm always interested in, so my current solution is based on RSS. With an RSS feed reader (in this case newsboat because of some features I'll go into in a second), I can subscribe to my favorite channels and see when they publish new videos through a text-based user interface which discourages that attention-grabbing youtube's website is so good at.</p>
 
-<p>The last piece of this weird, specific, little puzzle is the program <a href="https://mpv.io/">mpv</a>. It'll play basically anything, has a truly amazing number of options to customize, and, very interestingly, can play videos from a link (including streams!!). To get the best performance with playing youtube links, I'd definitely recommend downloading <a href="https://github.com/yt-dlp/yt-dlp">yt-dlp</a> as opposed to normal <code>youtube-dl</code> as it has more features and much better cacheing performance. For stand-alone usage with youtube, use the command <code>mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp $url</code>.</p>
+<p>To make the process easier - and independent of youtube's frontend - I've set up a macro in my newsboat config file which opens video links in mpv. To make this a little easier on my old laptop, my mpv config file also specifies a maximum resolution at which the video should load, which also helps with playback stability.</p>
 
-<p>Now what the starting config file mostly does is set up a macro for opening youtube links in mpv. It also sets <code>links -g</code> as the browser, because I like it :></p>
-<p>Now you should be able to add some youtube channels to newsboat, see when they post a new video, and watch it (if you think it'll be interesting based on the video description), all without going to youtube!</p>
+<h3>Specifics</h3>
 
-<p>The long reason I've been enjoying this way of interacting with youtube is that it cuts out the middle man of the youtube recomendation algorithms. <em>I</em> know that there are only a few people who make videos I'll always like, but my stupid new-thing-seeking lizard brain really hasn't gotten the message, and youtube knows that! So while I retrain my brain to maybe <em>not</em> latch onto the nearest new thing for entertainment, removing youtube's manipulative algorithms from the equation should help.</p>
+<p>Over the past several months I've been doing a decent amount of my interaction with the small internet of blogs and webcomics through rss, and it's been great! I've got an rss reader app on my phone, but I hadn't got around to setting one up on my laptop until a couple days ago. I really like terminal user interfaces, so after some <a href="https://merveilles.town/@flbr/108279608942453026">recomendations</a> I decided to use <a href="https://newsboat.org/">newsboat</a>.</p>
+
+<p>Now to get newboat reading rss feeds from youtube, you need to get specific urls. Each channel has a unique id, something decently long and alphanumeric (this is not the channel name which often shows up in urls!). To add the channel to your feed reader, format the url like so: <code>https://www.youtube.com/feeds/videos.xml?channel_id=${id}</code>. For example, the url to the rss feed of Zee Bashew is <code>https://www.youtube.com/feeds/videos.xml?channel_id=UCCXR2kCo7Lcw_BKwWxo09kw</code></p>
+
+<p>The reason I've been enjoying this way of interacting with youtube is that it cuts out the middle man of the youtube recomendation algorithms. <em>I</em> know that there are only a few people who make videos I'll always like, but my stupid new-thing-seeking lizard brain really hasn't gotten the message, and youtube knows that! So while I retrain my brain to maybe <em>not</em> latch onto the nearest new thing for entertainment, removing youtube's manipulative algorithms from the equation should help.</p>
 
 		<p><b>Incoming:</b> <a href="thoughts.html">thoughts</a> </p>
 	</main>
@@ -158,7 +207,7 @@ macro v set browser "mpv --really-quiet --no-terminal --script-opts=ytdl_hook-yt
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 011123</em></span>
+		<span style="float: right;"><em>Last updated: 012523</em></span>
 	</footer>
 </body>
 </html>
