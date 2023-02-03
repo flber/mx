@@ -134,7 +134,7 @@ title: Grimoire
 	[summary|Grab some html from the Noita wiki]
 	[fieldset|
 		[legend|bash]
-		[p|curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}']
+		[p|curl "https://noita.wiki.gg/wiki/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}']
 	]
 ]
 
