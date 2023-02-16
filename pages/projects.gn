@@ -6,6 +6,9 @@ title: Projects
 
 [p|I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.]
 
+[h3, class: "listing"|[a, href: "rust-tools.html"|Rust tools] [span|? - Now]]
+[p|A mix of utilities I've made for writing rust code, lots of miscellaneous functions and such!]
+
 [h3, class: "listing"|[a, href: "uxn-zine.html"|Uxn zine] [span|2022]]
 [p|[a, href: ""|Rostiger] made an awesome comic explaining how [a, href: ""|Uxn] works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused.]
 

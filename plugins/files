@@ -19,16 +19,8 @@ for index, line in enumerate(sys.stdin):
             #DOC: just removes base file path
             sanitized = file[13:]
             
-            if sanitized == "bee.txt":
-              pass
-            else:
-              #DOC: adds file name and link to list
-              if ".txt" in sanitized or ".md" in sanitized:
-                html += "\t<li>"
-                html += "{{catfile}}" + "\"" + str(file[7:]) + "\""
-                html += "</li>\n"
-              else:
-                html += "\t<li><a href=\"" + str(file[7:]) + "\">" + sanitized + "</a></li>\n"
+            #DOC: adds file name and link to list
+            html += "\t<li><a href=\"" + str(file[7:]) + "\">" + sanitized + "</a></li>\n"
                 
         html += "</ul>\n"
         line = line.replace("{{files}}", html)

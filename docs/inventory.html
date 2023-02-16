@@ -70,20 +70,41 @@ pre {
 	color:var(--bg); 
 	background-color:var(--text);
 }
-code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;}
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
 ::selection {color: var(--bg);background-color: var(--text);}
 
-.half {width: 50%;}
-.third {width: 31%;}
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
 .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
 .block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
 
 footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
@@ -91,6 +112,12 @@ footer img {margin:0 0 -10px 0;width:30px;}
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
 
 	</style>
+
+	<!-- <script> -->
+		<!-- const root = document.documentElement; -->
+		<!-- var hue = Math.floor(Math.random() * 256); -->
+		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
+	<!-- </script> -->
 </head>
 
 <body>
@@ -110,13 +137,18 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 <h3>Everyday items:</h3>
 
 <div class="row">
-	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/corne.jpg" alt="my lovely corne keyboard v2.1"></img>
-	<p><b><a href="https://github.com/foostan/crkbd">Corne Keyboard (v2.1)</a></b> This was a fun project and I got to practice some soldering skills! I don't use it a huge amount, mostly because I love the keyboard my laptop has and don't run it with a monitor that often.</p>
+	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/f3.jpg" alt="a black nikon F3/T"></img>
+	<p><b><a href="f3.html">Nikon F3/T</a></b> A gift from my father, this is one of the most satisfying pieces of hardware I've ever held. It was made in 1982 and was bought as a spare by professional photographer who never ended up using it. I've shot a total of 73 photos on it so far, all yet to be developed. When I get them developed, I'll put some here :></p>
 </div>
 
 <div class="row">
-	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/space-pen.jpg" alt="black fisher space pen"></img>
-	<p><b><a href="https://fieldnotesbrand.com/products/space-pen">Fisher space pen</a></b> A very nice pen I was gifted a few years ago. I haven't run out of ink yet, but when I do it's easy to get more!</p>
+	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/mdr7506.jpg" alt="pair of Sony MDR7506 headphones"></img>
+	<p><b><a href="https://pro.sony/ue_US/products/headphones/mdr-7506">Sony MDR7506</a></b> These are actually the first headphones I've ever bought! The 7506's are classic headphones for reference work, and they're nearly perfect for me. They fold up nicely and can take some abuse (both good for when I need to shove them into my backpack when I'm packing quickly), sound as good to me as headphones worth thirty times their price, and replacement parts for them are everywhere.</p>
+</div>
+
+<div class="row">
+	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/t7.jpg" alt="Samsung T7 1 terabyte SSD"></img>
+	<p><b><a href="https://www.samsung.com/us/computing/memory-storage/portable-solid-state-drives/portable-ssd-t7-usb-3-2-1tb--gray--mu-pc1t0t-am/">Samsung T7 1TB SSD</a></b> Just a nice little one terabyte external SSD. I've never had any problems with it, and holy shit a terabyte is a lot of storage! This drive has more space than all of my previous computers combined... I've got the entirety of Steven Universe, Game of Thrones, a ton of movies, 70+ gigabytes of music (thanks Devine!), and I still have space left over!</p>
 </div>
 
 <div class="row">
@@ -126,7 +158,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <div class="row">
 	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/midori.jpg" alt="a midori notebook, with a red ribbon pageholder, a small tag on the upper-right that says 2021-, and the midori MD logo imprinted in the middle right of the cover"></img>
-	<p><b><a href="https://www.midori-japan.co.jp/md/en/products/mdnote/#&gid=4&pid=1">Midori MD A6 notebook</a></b> Just a really solid notbook when I want to sit down and write something. It's almost small enough to fit in a pocket, but not quite (that role is still reserved for my Field Notes books anyway)</p>
+	<p><b><a href="https://www.midori-japan.co.jp/md/en/products/mdnote/#&gid=4&pid=1">Midori MD A6 notebook</a></b> Just a really solid notbook when I want to sit down and write something, and it's small enough to fit in the front pocket of my overalls!</p>
 </div>
 
 <hr style="margin-top:4ex"></hr>
@@ -144,20 +176,6 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li>Nintendo Switch</li>
 	<li><a href="camera.html">Kodak No. 2 Folding Autographic Brownie</a></li>
 </ul>
-
-<hr style="margin-top:4ex"></hr>
-
-<h3>Deprecated</h3>
-
-<div class="row">
-	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/field-notes.jpg" alt="field notes special edition yosemite memo notebook"></img>
-	<p><b><a href="https://fieldnotesbrand.com/">Field Notes</a> U.S. National Parks special edition memo notebook</b> I've had a Field Notes memo book since I was in preschool; I think they're great! The memo books especially are convinient because they can actually fit into a pocket without too much trouble, so they're easy to bring everywhere.</p>
-</div>
-
-<div class="row">
-	<img class="third" style="margin-right:1em;" loading="lazy" src="images/inventory/watch.jpg" alt="a casio calculator watch on my wrist"></img>
-	<p><b><a href="casio.html">Casio CA53W-1 calculator watch</a></b> Another item I've had forever, if you're curious about how to change the invert the display you can read my page on the subject :)</p>
-</div>
 
 		<p><b>Incoming:</b> <a href="about.html">about</a> </p>
 	</main>
@@ -180,7 +198,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 121722</em></span>
+		<span style="float: right;"><em>Last updated: 020223</em></span>
 	</footer>
 </body>
 </html>

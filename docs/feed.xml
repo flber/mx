@@ -5,6 +5,150 @@
 		<link>https://mineralexistence.com</link>
 		<language>en</language>
 		<item>
+			<title>Updates</title>
+			<pubDate>Wed, 15 Feb 2023 13:28:58 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/site.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/site.html</guid>
+		</item>
+		<item>
+			<title>Bookmarks</title>
+			<pubDate>Thu, 09 Feb 2023 14:00:36 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/bookmarks.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
+		</item>
+		<item>
+			<title>Grimoire</title>
+			<pubDate>Sat, 04 Feb 2023 00:29:39 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/grimoire.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
+		</item>
+		<item>
+			<title>Rust Tools</title>
+			<pubDate>Fri, 03 Feb 2023 19:23:05 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I've been writing Rust in my spare time since 2020, and I realized that it would be useful to document repeated code I use somewhat frequently in my projects. I should probably move this into a git repo at some point...</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/rust-tools.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/rust-tools.html</guid>
+		</item>
+		<item>
+			<title>Eating</title>
+			<pubDate>Thu, 02 Feb 2023 12:13:53 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>As much as I like to <a href="recipes.html">cook</a>, every once in a while I enjoy eating at a restaurant. As of 051221 I'll start recording some of my favorites, both as recomendations and so I can remember where they are :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/eating.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/eating.html</guid>
+		</item>
+		<item>
+			<title>Uxn Zine</title>
+			<pubDate>Wed, 01 Feb 2023 09:45:16 +0900</pubDate>
+			<description>
+				<![CDATA[ <p><a href="https://merveilles.town/@rostiger">Rostiger</a> made an awesome comic explaining how <a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the <a href="files/uxn-zine/uxn-zine.pdf">pdf</a> or <a href="files/uxn-zine/uxn-zine.pdf">epub</a> directly, or download a <a href="files/uxn-zine.tar">tar</a> of all of files and resources to compile it yourself. Assembly is mostly as describer in <a href="https://en.wikibooks.org/wiki/Zine_Making/Putting_pages_together#An_8-sided_zine_from_1_sheet_with_1_cut">this article</a>, but once folded according to the directions, staple the spine together and cut the tops and bottoms of the few pages still connected. It's a little jank, but it works!</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/uxn-zine.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/uxn-zine.html</guid>
+		</item>
+		<item>
+			<title>Projects</title>
+			<pubDate>Sun, 29 Jan 2023 16:38:56 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/projects.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
+		</item>
+		<item>
+			<title>Intro to WFC</title>
+			<pubDate>Sun, 29 Jan 2023 11:37:25 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>First developed in October 2016 by <a href="https://twitter.com/ExUtumno/">Maxim Gumin</a> (based on an earlier 2009 algorithm called <a href="https://paulmerrell.org/model-synthesis/">Model Synthesis</a> by <a href="https://paulmerrell.org/">Paul Merrell</a>), the <a href="https://github.com/mxgmn/WaveFunctionCollapse">wfc algorithm</a> is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/intro_to_wfc.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/intro_to_wfc.html</guid>
+		</item>
+		<item>
+			<title>WFC Propagator Constructor</title>
+			<pubDate>Sun, 29 Jan 2023 11:35:43 +0900</pubDate>
+			<description>
+				<![CDATA[ <p> The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
+		</item>
+		<item>
+			<title>Overview of WFC Algorithm</title>
+			<pubDate>Sun, 29 Jan 2023 11:31:22 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>My wfc implementation is made of four main systems. Mine are called the tile generator, the propagator constructor, the observer, and the propagator, and though other people may call them different things they make up the basis of how wfc works. They all act on or help to create the main data structure of wfc, the wave. The wave keeps track of which tiles can go in which spaces, and to begin with it starts as a totally "un collapsed" wave, which means that every tile is allowed everywhere. Over the course of the algorithm's running, the four main systems will "collapse" the wave into a definite image.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/overview_to_wfc.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/overview_to_wfc.html</guid>
+		</item>
+		<item>
+			<title>Thoughts</title>
+			<pubDate>Wed, 25 Jan 2023 18:25:22 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/thoughts.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
+		</item>
+		<item>
+			<title>A Theme for 2023</title>
+			<pubDate>Wed, 25 Jan 2023 18:23:36 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>Inspired by <a href="https://forum.merveilles.town/thread/64/approaching-a-new-year-9/">a thread</a> on the merveilles forum.</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/theme-2023.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/theme-2023.html</guid>
+		</item>
+		<item>
+			<title>Inventory</title>
+			<pubDate>Wed, 25 Jan 2023 15:37:06 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try to reduce how much stuff I have, but as with anything, it's a process :)</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/inventory.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
+		</item>
+		<item>
+			<title>Nikon F3/T</title>
+			<pubDate>Wed, 25 Jan 2023 13:46:34 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>It's so pretty...</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/f3.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/f3.html</guid>
+		</item>
+		<item>
+			<title>About</title>
+			<pubDate>Wed, 25 Jan 2023 13:13:33 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements).</p> ]]>
+			</description>
+			<link>https://mineralexistence.com/about.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
+		</item>
+		<item>
+			<title>Wishlist</title>
+			<pubDate>Wed, 25 Jan 2023 13:12:19 +0900</pubDate>
+			<description>
+				<![CDATA[ <p>I try not to focus too much on the acquisition of <em>things</em>, but there are a couple for which I make exceptions because they're cool :></p> ]]>
+			</description>
+			<link>https://mineralexistence.com/wishlist.html</link>
+			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
+		</item>
+		<item>
 			<title>RSS + MPV</title>
 			<pubDate>Wed, 25 Jan 2023 11:58:59 +0900</pubDate>
 			<description>
@@ -12,15 +156,6 @@
 			</description>
 			<link>https://mineralexistence.com/rss-mpv.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/rss-mpv.html</guid>
-		</item>
-		<item>
-			<title>Bookmarks</title>
-			<pubDate>Mon, 23 Jan 2023 16:55:19 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/bookmarks.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/bookmarks.html</guid>
 		</item>
 		<item>
 			<title>Home</title>
@@ -68,42 +203,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/ios-sync.html</guid>
 		</item>
 		<item>
-			<title>Projects</title>
-			<pubDate>Sat, 17 Dec 2022 23:22:41 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/projects.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/projects.html</guid>
-		</item>
-		<item>
-			<title>Inventory</title>
-			<pubDate>Sat, 17 Dec 2022 23:19:02 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try to reduce how much stuff I have, but as with anything, it's a process :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/inventory.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/inventory.html</guid>
-		</item>
-		<item>
-			<title>About</title>
-			<pubDate>Wed, 14 Dec 2022 13:24:08 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements).</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/about.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/about.html</guid>
-		</item>
-		<item>
-			<title>Wishlist</title>
-			<pubDate>Sat, 10 Dec 2022 17:26:33 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>I try not to focus too much on the acquisition of <em>things</em>, but there are a couple for which I make exceptions because they're cool :></p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wishlist.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wishlist.html</guid>
-		</item>
-		<item>
 			<title>Tools</title>
 			<pubDate>Mon, 05 Dec 2022 16:29:25 +0900</pubDate>
 			<description>
@@ -111,15 +210,6 @@
 			</description>
 			<link>https://mineralexistence.com/tools.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/tools.html</guid>
-		</item>
-		<item>
-			<title>Uxn Zine</title>
-			<pubDate>Mon, 05 Dec 2022 16:16:09 +0900</pubDate>
-			<description>
-				<![CDATA[ <p><a href="https://merveilles.town/@rostiger">Rostiger</a> made an awesome comic explaining how <a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the <a href="files/uxn-zine/uxn-zine.pdf">pdf</a> or <a href="files/uxn-zine/uxn-zine.pdf">epub</a> directly, or download a <a href="files/uxn-zine.tar">tar</a> of all of files and resources to compile it yourself.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/uxn-zine.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/uxn-zine.html</guid>
 		</item>
 		<item>
 			<title>Vegecember</title>
@@ -140,15 +230,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/recipes.html</guid>
 		</item>
 		<item>
-			<title>Grimoire</title>
-			<pubDate>Wed, 30 Nov 2022 11:57:54 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/grimoire.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/grimoire.html</guid>
-		</item>
-		<item>
 			<title>Plugin Documentation</title>
 			<pubDate>Mon, 28 Nov 2022 10:00:52 +0900</pubDate>
 			<description>
@@ -156,15 +237,6 @@
 			</description>
 			<link>https://mineralexistence.com/plugins-docs.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/plugins-docs.html</guid>
-		</item>
-		<item>
-			<title>Updates</title>
-			<pubDate>Mon, 28 Nov 2022 09:38:20 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/site.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/site.html</guid>
 		</item>
 		<item>
 			<title>Exploring Computer Literacy</title>
@@ -219,15 +291,6 @@
 			</description>
 			<link>https://mineralexistence.com/uxn_notes.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/uxn_notes.html</guid>
-		</item>
-		<item>
-			<title>WFC Propagator Constructor</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p> The propagator (and the constructor system) is probably the most often misunderstood part of the wfc algorithm. The basic idea is that it's a way to easily access the adjacency data generated in the tile generation stage. The propagator constructor generates four lists of booleans (one list for each side of the tile) for every tile, where each boolean corresponds to whether or not a tile can go in the adjacent location which the list is describing. Now that's a lot of words, so let's see how it looks.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/wfc_propagator_constructor.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/wfc_propagator_constructor.html</guid>
 		</item>
 		<item>
 			<title>Wiki</title>
@@ -311,15 +374,6 @@
 			<guid isPermaLink="true">https://mineralexistence.com/strawberry_canyon_080421.html</guid>
 		</item>
 		<item>
-			<title>Thoughts</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>Every once in a while, I have a thought. Sometimes they're even interesting :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/thoughts.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/thoughts.html</guid>
-		</item>
-		<item>
 			<title>Reading</title>
 			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
 			<description>
@@ -354,15 +408,6 @@
 			</description>
 			<link>https://mineralexistence.com/playlist.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/playlist.html</guid>
-		</item>
-		<item>
-			<title>Overview of WFC</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>My wfc implementation is made of four main systems. Mine are called the tile generator, the propagator constructor, the observer, and the propagator, and though other people may call them different things they make up the basis of how wfc works. They all act on or help to create the main data structure of wfc, the wave. The wave keeps track of which tiles can go in which spaces, and to begin with it starts as a totally "un collapsed" wave, which means that every tile is allowed everywhere. Over the course of the algorithm's running, the four main systems will "collapse" the wave into a definite image.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/overview_to_wfc.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/overview_to_wfc.html</guid>
 		</item>
 		<item>
 			<title>Once Upon a Mid-day Sunny</title>
@@ -426,15 +471,6 @@
 			</description>
 			<link>https://mineralexistence.com/learning_rust.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/learning_rust.html</guid>
-		</item>
-		<item>
-			<title>Intro to WFC</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/intro_to_wfc.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/intro_to_wfc.html</guid>
 		</item>
 		<item>
 			<title>Learning Nim</title>
@@ -525,15 +561,6 @@
 			</description>
 			<link>https://mineralexistence.com/files.html</link>
 			<guid isPermaLink="true">https://mineralexistence.com/files.html</guid>
-		</item>
-		<item>
-			<title>Eating</title>
-			<pubDate>Tue, 22 Nov 2022 11:50:07 +0900</pubDate>
-			<description>
-				<![CDATA[ <p>As much as I like to <a href="recipes.html">cook</a>, every once in a while I enjoy eating at a restaurant. As of 051221 I'll start recording some of my favorites, both as recomendations and so I can remember where they are :)</p> ]]>
-			</description>
-			<link>https://mineralexistence.com/eating.html</link>
-			<guid isPermaLink="true">https://mineralexistence.com/eating.html</guid>
 		</item>
 		<item>
 			<title>ffstream tools</title>

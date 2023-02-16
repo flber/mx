@@ -21,7 +21,7 @@ title: Updates
 
 [h3, id: "060322", class: "listing"|Long overdue pillar optimizations [span|060322]]
 [p|Wow I've written some bad code. Turns out the main reason pillar was so slow was because of a [em|truly] terrible string insertion function I wrote. It's so bad, actually, that I feel the need to show it off to warn others!]
-[pre|
+[pre|[code, class: "lang-rust"|
 let insert_len = len(&ins.to_string());
 let final_len = len(&s) + insert_len;
 let mut r = String::with_capacity(final_len);
@@ -35,7 +35,7 @@ for i in 0..final_len {
     let a_ins = i - insert_len;
     r.push_str(&slice(&s, a_ins..a_ins + 1));
   }
-}
+}]
 ]
 [p|it's... just awful. I think I must have been possesed by a malevolent code demon when I wrote this, or I at least hope I was! Anyway, with that fixed (the [em|sane] solution was 3 lines of code) my whole site builds in 26 seconds. Not great, not terrible, but much better and good enough for now :D]
 

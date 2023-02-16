@@ -12,6 +12,30 @@
 	<meta property="og:title" content="Bookmarks"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js"></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
 	<style>
 /* @import url('reset.css'); */
 
@@ -63,24 +87,25 @@ mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
-	font-size:calc(0.8rem + 0.5vw);
+	font-size:calc(0.5rem + 0.25vw);
 	line-height:2.3ex;
 	overflow-x:auto; 
 	padding:2%; 
 	color:var(--bg); 
-	background-color:var(--text);
+	background-color:var(--text); 
 }
-code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
 ::selection {color: var(--bg);background-color: var(--text);}
 
-.half {width: 50%;}
-.third {width: 31%;}
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
 .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
 .block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
@@ -112,11 +137,6 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 	</style>
 
-	<!-- <script> -->
-		<!-- const root = document.documentElement; -->
-		<!-- var hue = Math.floor(Math.random() * 256); -->
-		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
-	<!-- </script> -->
 </head>
 
 <body>
@@ -151,6 +171,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 <ul>
 	<li><a href="https://wiki.xxiivv.com/site/home.html">XXIIVV<img class="inline-img" src="https://wiki.xxiivv.com/media/services/button.gif" alt="xxiivv's banner"></img></a></li>
 	<li><a href="http://100r.co/site/home.html">Hundred Rabbits<img class="inline-img" src="http://100r.co/media/interface/logo.svg" alt="10 by 10 grid of white dots on a black background"></img></a></li>
+	<li><a href="https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3">Here is the article you can send to people when they say "But the environmental issues with cryptoart will be solved soon, right?"</a></li>
 </ul>
 
 <h3>Cooking</h3>
@@ -170,6 +191,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><a href="https://writings.stephenwolfram.com/2020/04/finally-we-may-have-a-path-to-the-fundamental-theory-of-physics-and-its-beautiful/">Wolfram theory of physics</a></li>
 	<li><a href="https://phoboslab.org/log/2021/09/q1k3-making-of">Quake in 13kb of JS</a></li>
 	<li><a href="https://journal.stuffwithstuff.com/">Bob Nystrom's journal</a></li>
+	<li><a href="https://users.rust-lang.org/t/rust-koans/2408?u=michael-f-bryan">Rust <em>Obstacles</em></a></li>
 </ul>
 
 <h3>Art</h3>
@@ -183,6 +205,12 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><a href="http://www.rice-boy.com/vattu/">vattu<img class="inline-img" src="http://www.rice-boy.com/vattu/site/index.title.png" alt="vattu over a yellow field"></img></a></li>
 	<li><a href="https://www.peppercarrot.com/en/webcomics/index.html">Pepper & Carrot</a></li>
 	<li><a href="https://c6y.github.io/tilix-reference/">Modular isometric art rules</a></li>
+	<li><a href="https://ludwigseibt.com/">Ludwig Seibt</a></li>
+</ul>
+
+<h3>Audio</h3>
+<ul>
+	<li><a href="https://kexp.org/">KEXP Radio<img style="background-color: #000" class="inline-img" src="https://kexp.org/static/assets/img/logo-white.svg" alt="four white bars over the letter K E X P"></img></a></li>
 </ul>
 
 <h3>Design</h3>
@@ -216,6 +244,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><a href="https://regularflolloping.com/">Regular Flolloping</a></li>
 	<li><a href="https://m15o.ichi.city/">m15o</a></li>
 	<li><a href="https://toffeee.com">toffeee<img class="inline-img" src="https://toffeee.com/buttons/tof.png" alt="Toffee the Dev"></img></a></li>
+	<li><a href="https://ulthar.cat/">ulthar.cat<img style="background-color: #000" class="inline-img" src="https://ulthar.cat/favicon.ico" alt="felinae's icon"></img></a></li>
 </ul>
 
 <h3>Communities</h3>
@@ -244,6 +273,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><a href="https://ditherit.com/">Ditherit</a></li>
 	<li><a href="https://comradery.co/">Comdradery worker coop</a></li>
 	<li><a href="https://git.sr.ht/~rabbits/uxn">uxn<img class="inline-img" src="https://wiki.xxiivv.com/media/generic/uxn.png" alt="a small creature"></img></a></li>
+	<li><a href="https://bytes.fyi/real-time-goaccess-reports-with-nginx/">Real time goaccess reports with nginx</a></li>
 </ul>
 
 <h3>Games</h3>
@@ -275,7 +305,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 012323</em></span>
+		<span style="float: right;"><em>Last updated: 020923</em></span>
 	</footer>
 </body>
 </html>

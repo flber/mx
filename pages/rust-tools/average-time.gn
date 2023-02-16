@@ -1,0 +1,27 @@
+!meta!
+title: Rust Tools - Average Time
+template: default-subdir
+!meta!
+
+[h2|Average Time]
+
+[p|Takes a function or closure and a number of times to run the function, and returns the average and standard deviation runtime.]
+
+[pre|
+pub fn average<F>(f: F, iter: u64) -> (u64, u32)
+where
+  F: Fn(),
+{
+  let mut times: Vec<u64> = vec![iter; 0];
+  for _ in 0..iter {
+    let t = time(&f);
+    times.push(t);
+  }
+  let len = times.len() as u64;
+  let average = times.iter().sum::<u64>() / len;
+  let deviation =
+    math::std_deviation(&times.iter().map(|x| *x as i32).collect::<Vec<i32>>()[..])
+      .unwrap();
+  
+  (average, deviation as u32)
+}]

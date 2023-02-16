@@ -12,15 +12,34 @@
 	<meta property="og:title" content="{{title}}"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js"></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
 	<style>
 {{style}}
 	</style>
 
-	<!-- <script> -->
-		<!-- const root = document.documentElement; -->
-		<!-- var hue = Math.floor(Math.random() * 256); -->
-		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
-	<!-- </script> -->
 </head>
 
 <body>

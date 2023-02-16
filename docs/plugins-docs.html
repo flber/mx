@@ -12,6 +12,30 @@
 	<meta property="og:title" content="Plugin Documentation"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
 
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js"></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
 	<style>
 /* @import url('reset.css'); */
 
@@ -63,24 +87,25 @@ mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
-	font-size:calc(0.8rem + 0.5vw);
+	font-size:calc(0.5rem + 0.25vw);
 	line-height:2.3ex;
 	overflow-x:auto; 
 	padding:2%; 
 	color:var(--bg); 
-	background-color:var(--text);
+	background-color:var(--text); 
 }
-code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
 ::selection {color: var(--bg);background-color: var(--text);}
 
-.half {width: 50%;}
-.third {width: 31%;}
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
 .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
 .block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
@@ -112,11 +137,6 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 	</style>
 
-	<!-- <script> -->
-		<!-- const root = document.documentElement; -->
-		<!-- var hue = Math.floor(Math.random() * 256); -->
-		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
-	<!-- </script> -->
 </head>
 
 <body>
@@ -156,7 +176,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 012523</em></span>
+		<span style="float: right;"><em>Last updated: 021523</em></span>
 	</footer>
 </body>
 </html>

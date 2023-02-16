@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>MX - A Theme for 2023</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="A Theme for 2023"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+}
+
+body {
+	font-size:calc(1rem + 0.5vw);
+	font-family:Times;
+	max-width:80ch;
+	padding:1em 7%; 
+	margin: 3rem auto 3rem; 
+	padding: 0 1rem; 
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+main > *+* {margin-top: 2ex;}
+
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
+
+header>h1 {display:inline-block;padding-right:.3em;}
+header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+pre {
+	font-size:calc(0.8rem + 0.5vw);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text);
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;}
+
+dd {margin-left:2em;}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
+.left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
+.block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+
+footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
+
+	</style>
+
+	<!-- <script> -->
+		<!-- const root = document.documentElement; -->
+		<!-- var hue = Math.floor(Math.random() * 256); -->
+		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
+	<!-- </script> -->
+</head>
+
+<body>
+	<header>
+		<h1><a href="home.html">Home</a></h1> 
+		<h1><a href="now.html">now</a></h1>
+		<h1><a href="wiki.html">wiki</a></h1>
+		<h1><a href="about.html">about</a></h1>
+	</header>
+
+	<main>
+
+<h2>A Theme for 2023</h2>
+
+<p>Inspired by <a href="https://forum.merveilles.town/thread/64/approaching-a-new-year-9/">a thread</a> on the merveilles forum.</p>
+
+<p>Calendar years are always slightly weird to think about for me as a student in the US. The first half of 2022 was the end of my first year in university, which wasn't the best. Summer gave me time for some reflection on various mental health things, and I did a two month software engineering internship. I turned 20, which is more weird in hindsight than it felt at the time (I'm older than so many characters in popular media!), and started year 2. The last part of 2022 was when I started implementing some of the things which I had thought about over the summer; I found a great therapist, started HRT, and began to feel comfortable enough to settle down a bit.</p>
+
+<p>Over winter break my dad, my brother, and I went to Australia to visit family, staying there for almost three weeks. It was a good time to disconnect from everything external and focus on how I was feeling, a skill I'm just learning to develop. I thought a lot about what I want to do in life, and how things like school and a career fit into that. I think this year my theme is <b>setting a heading</b>. A lot of reflection over the past few months has given me a working picture of where I am, and my current goal is to find where I want to go from here. Some of it involves school (I'm thinking of doing a sustainability minor as well as my CS major), some involves career stuff (p2p + network-of-trust research is a fascinating field I might want to go into), and a lot is just general "how do I start building the world I want to live in"-type thinking.</p>
+
+<p>One of the most important parts of this I figured out pretty recently: I want to focus on bringing creative positivity into my life more consistently. I think I have a lot of background existential anxiety around the disconnect between the future I want the world to have, and the one it seems to be heading toward. A frequent coping mechanism of mine was to collect information in statistics and facts and articles and all kinds of pieces which said the same thing: the world rarely agrees with my hopes for the future. I've realized that this only invited that negativity further into my life without any sort of balance - it's important to understand what's happening in the world, but not to an extent which harms my mental health. Instead I want to focus on creating small fragments of a more positive future, both as a part of whatever I end up doing as a job and in my daily life. I want to create more art, not necessarily just in the traditional forms but also in weird little projects which no one else might ever notice - sculptures in caves, livecoding music projected against redwoods, stickers hidden at bus stops.</p>
+
+<p>I'm going to work on asking more often: "does this thing", whether a tool or place or behaviour, "help envision the world I want, and make me happy".</p>
+
+		<p><b>Incoming:</b> <a href="thoughts.html">thoughts</a> </p>
+	</main>
+
+	<footer>
+		<a href="mailto:benrhammond@gmail.com" target="_blank">
+			<img loading="lazy" width="30" height="30" src="images/mail.svg" alt="Mailto" />
+		</a>
+		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+			<img loading="lazy" width="30" height="30" src="images/merveilles.svg" alt="Merveilles" />
+		</a>
+		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+			<img loading="lazy" width="30" height="30" class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
+		</a>
+		<a href="https://wiki.xxiivv.com/site/ethics.html">
+			<img loading="lazy" width="30" height="30" src="images/dreipfeile-icon.svg" alt="Ethics" />
+		</a>
+		<a href="feed.xml">
+			<img loading="lazy" width="30" height="30" src="images/rss.svg" alt="RSS Feed" />
+		</a>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+			src="images/icon.gif" />
+		<span style="float: right;"><em>Last updated: 020223</em></span>
+	</footer>
+</body>
+</html>

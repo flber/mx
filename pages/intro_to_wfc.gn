@@ -4,10 +4,12 @@ title: Intro to WFC
 
 [h2|An Introduction to the Wave Function Collapse Algorithm]
 
-[p|You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.]
+[p|First developed in October 2016 by [a, href: "https://twitter.com/ExUtumno/"|Maxim Gumin] (based on an earlier 2009 algorithm called [a, href: "https://paulmerrell.org/model-synthesis/"|Model Synthesis] by [a, href: "https://paulmerrell.org/"|Paul Merrell]), the [a, href: "https://github.com/mxgmn/WaveFunctionCollapse"|wfc algorithm] is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:]
 
-[p|First developed in October 2016 by [a, href: "https://twitter.com/ExUtumno/"|Maxim Gumin], the [a, href: "https://github.com/mxgmn/WaveFunctionCollapse"|wfc algorithm] is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:]
-[blockquote|[p|Each NxN pattern of pixels in the output should occur at least once in the input. Distribution of NxN patterns in the input should be similar to the distribution of NxN patterns over a sufficiently large number of outputs. In other words, probability to meet a particular pattern in the output should be close to the density of such patterns in the input.]]
+[fieldset|
+	[legend|Maxim Gumin]
+	[p|Each NxN pattern of pixels in the output should occur at least once in the input. Distribution of NxN patterns in the input should be similar to the distribution of NxN patterns over a sufficiently large number of outputs. In other words, probability to meet a particular pattern in the output should be close to the density of such patterns in the input.]
+]
 
 [p|That essentially just means that the output looks like the input, but because it's procedurally generated it can be arbitrarily large and even generated on the fly. Here's an example of it in action from Maxim's repository:]
 
@@ -29,7 +31,7 @@ title: Intro to WFC
 	[li|[a, href: "https://twitter.com/ExUtumno/"|Maxim Gumin's] [a, href: "https://github.com/mxgmn/WaveFunctionCollapse"|repository]
 	[li|[a, href: "https://twitter.com/OskSta"|Oskar Stålberg's] [a, href: "https://www.youtube.com/watch?v=0bcZb-SsnrA"|talk] at EPC2018 on how wfc works]
 	[li|[a, href: "https://twitter.com/unormal"|Brian Bucklew's] [a, href: "https://www.youtube.com/watch?v=fnFj3dOKcIQ&t=1s"|very interesting talk] on using wfc in dungeon generation in [a, href: "http://www.cavesofqud.com/"|Caves of Qud] during the 2019 Roguelike Celebration, which I actually got to see in person!]
-	[li|[a, href: "https://twitter.com/RobJHeaton"|Robert Heaton's] great article called [a, href: "https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/"|'The Wavefunction Collapse Algorithm explained very clearly']
+	[li|[a, href: "https://twitter.com/RobJHeaton"|Robert Heaton's] great article called [a, href: "https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/"|'The Wavefunction Collapse Algorithm explained very clearly']]
 ]
  
  

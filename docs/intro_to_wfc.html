@@ -70,20 +70,41 @@ pre {
 	color:var(--bg); 
 	background-color:var(--text);
 }
-code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;}
 
 dd {margin-left:2em;}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
 ::selection {color: var(--bg);background-color: var(--text);}
 
-.half {width: 50%;}
-.third {width: 31%;}
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
 .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
 .block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
+.wrapper {
+	list-style-type: none;
+	padding-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 2fr));
+  gap: 1em;
+  grid-auto-flow: dense;
+}
+.wrapper li.landscape {grid-column-end: span 2;}
+
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
 
 footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
 footer>* {display:inline-block;}
@@ -91,6 +112,12 @@ footer img {margin:0 0 -10px 0;width:30px;}
 footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-rotate(289deg)brightness(88%)contrast(79%);}
 
 	</style>
+
+	<!-- <script> -->
+		<!-- const root = document.documentElement; -->
+		<!-- var hue = Math.floor(Math.random() * 256); -->
+		<!-- root.style.setProperty("--bg", "hsl(" + hue + ", 50%, 80%)"); -->
+	<!-- </script> -->
 </head>
 
 <body>
@@ -105,10 +132,12 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 
 <h2>An Introduction to the Wave Function Collapse Algorithm</h2>
 
-<p>You may or may not already be familiar with the wave function collapse algorithm (wfc from now on), but if you're not, here's a brief overview.</p>
+<p>First developed in October 2016 by <a href="https://twitter.com/ExUtumno/">Maxim Gumin</a> (based on an earlier 2009 algorithm called <a href="https://paulmerrell.org/model-synthesis/">Model Synthesis</a> by <a href="https://paulmerrell.org/">Paul Merrell</a>), the <a href="https://github.com/mxgmn/WaveFunctionCollapse">wfc algorithm</a> is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:</p>
 
-<p>First developed in October 2016 by <a href="https://twitter.com/ExUtumno/">Maxim Gumin</a>, the <a href="https://github.com/mxgmn/WaveFunctionCollapse">wfc algorithm</a> is a method of generating novel textures from a given input texture. The main reason this algorithm is interesting is that the output is locally similar to the input, as defined in the repository:</p>
-<blockquote><p>Each NxN pattern of pixels in the output should occur at least once in the input. Distribution of NxN patterns in the input should be similar to the distribution of NxN patterns over a sufficiently large number of outputs. In other words, probability to meet a particular pattern in the output should be close to the density of such patterns in the input.</p></blockquote>
+<fieldset>
+	<legend>Maxim Gumin</legend>
+	<p>Each NxN pattern of pixels in the output should occur at least once in the input. Distribution of NxN patterns in the input should be similar to the distribution of NxN patterns over a sufficiently large number of outputs. In other words, probability to meet a particular pattern in the output should be close to the density of such patterns in the input.</p>
+</fieldset>
 
 <p>That essentially just means that the output looks like the input, but because it's procedurally generated it can be arbitrarily large and even generated on the fly. Here's an example of it in action from Maxim's repository:</p>
 
@@ -130,7 +159,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 	<li><a href="https://twitter.com/ExUtumno/">Maxim Gumin's</a> <a href="https://github.com/mxgmn/WaveFunctionCollapse">repository</a>
 	<li><a href="https://twitter.com/OskSta">Oskar Stålberg's</a> <a href="https://www.youtube.com/watch?v=0bcZb-SsnrA">talk</a> at EPC2018 on how wfc works</li>
 	<li><a href="https://twitter.com/unormal">Brian Bucklew's</a> <a href="https://www.youtube.com/watch?v=fnFj3dOKcIQ&t=1s">very interesting talk</a> on using wfc in dungeon generation in <a href="http://www.cavesofqud.com/">Caves of Qud</a> during the 2019 Roguelike Celebration, which I actually got to see in person!</li>
-	<li><a href="https://twitter.com/RobJHeaton">Robert Heaton's</a> great article called <a href="https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/">'The Wavefunction Collapse Algorithm explained very clearly'</a>
+	<li><a href="https://twitter.com/RobJHeaton">Robert Heaton's</a> great article called <a href="https://robertheaton.com/2018/12/17/wavefunction-collapse-algorithm/">'The Wavefunction Collapse Algorithm explained very clearly'</a></li>
 </li>
  
  
@@ -159,7 +188,7 @@ footer img:not([title*='banner']) {filter:invert(16%)sepia(6%)saturate(445%)hue-
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 112222</em></span>
+		<span style="float: right;"><em>Last updated: 020223</em></span>
 	</footer>
 </body>
 </html>

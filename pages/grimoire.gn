@@ -414,3 +414,4 @@ end > hosts.txt
 	]
 ]
 
+[p|? parallel -j 12 ffmpeg -i {1} {1.}.{2} ::: **/*.flac ::: mp3]

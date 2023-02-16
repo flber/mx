@@ -9,13 +9,18 @@ title: Inventory
 [h3|Everyday items:]
 
 [div, class: "row"|
-	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/corne.jpg", alt: "my lovely corne keyboard v2.1"|]
-	[p|[b|[a, href: "https://github.com/foostan/crkbd"|Corne Keyboard (v2.1)]] This was a fun project and I got to practice some soldering skills! I don't use it a huge amount, mostly because I love the keyboard my laptop has and don't run it with a monitor that often.]
+	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/f3.jpg", alt: "a black nikon F3/T"|]
+	[p|[b|[a, href: "f3.html"|Nikon F3/T]] A gift from my father, this is one of the most satisfying pieces of hardware I've ever held. It was made in 1982 and was bought as a spare by professional photographer who never ended up using it. I've shot a total of 73 photos on it so far, all yet to be developed. When I get them developed, I'll put some here :>]
 ]
 
 [div, class: "row"|
-	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/space-pen.jpg", alt: "black fisher space pen"|]
-	[p|[b|[a, href: "https://fieldnotesbrand.com/products/space-pen"|Fisher space pen]] A very nice pen I was gifted a few years ago. I haven't run out of ink yet, but when I do it's easy to get more!]
+	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/mdr7506.jpg", alt: "pair of Sony MDR7506 headphones"|]
+	[p|[b|[a, href: "https://pro.sony/ue_US/products/headphones/mdr-7506"|Sony MDR7506]] These are actually the first headphones I've ever bought! The 7506's are classic headphones for reference work, and they're nearly perfect for me. They fold up nicely and can take some abuse (both good for when I need to shove them into my backpack when I'm packing quickly), sound as good to me as headphones worth thirty times their price, and replacement parts for them are everywhere.]
+]
+
+[div, class: "row"|
+	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/t7.jpg", alt: "Samsung T7 1 terabyte SSD"|]
+	[p|[b|[a, href: "https://www.samsung.com/us/computing/memory-storage/portable-solid-state-drives/portable-ssd-t7-usb-3-2-1tb--gray--mu-pc1t0t-am/"|Samsung T7 1TB SSD]] Just a nice little one terabyte external SSD. I've never had any problems with it, and holy shit a terabyte is a lot of storage! This drive has more space than all of my previous computers combined... I've got the entirety of Steven Universe, Game of Thrones, a ton of movies, 70+ gigabytes of music (thanks Devine!), and I still have space left over!]
 ]
 
 [div, class: "row"|
@@ -25,7 +30,7 @@ title: Inventory
 
 [div, class: "row"|
 	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/midori.jpg", alt: "a midori notebook, with a red ribbon pageholder, a small tag on the upper-right that says 2021-, and the midori MD logo imprinted in the middle right of the cover"|]
-	[p|[b|[a, href: "https://www.midori-japan.co.jp/md/en/products/mdnote/#&gid=4&pid=1"|Midori MD A6 notebook]] Just a really solid notbook when I want to sit down and write something. It's almost small enough to fit in a pocket, but not quite (that role is still reserved for my Field Notes books anyway)]
+	[p|[b|[a, href: "https://www.midori-japan.co.jp/md/en/products/mdnote/#&gid=4&pid=1"|Midori MD A6 notebook]] Just a really solid notbook when I want to sit down and write something, and it's small enough to fit in the front pocket of my overalls!]
 ]
 
 [hr, style: "margin-top:4ex"|]
@@ -42,18 +47,4 @@ title: Inventory
 	[li|[a, href: "https://www.thelightphone.com/"|Light Phone II]]
 	[li|Nintendo Switch]
 	[li|[a, href: "camera.html"|Kodak No. 2 Folding Autographic Brownie]]
-]
-
-[hr, style: "margin-top:4ex"|]
-
-[h3|Deprecated]
-
-[div, class: "row"|
-	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/field-notes.jpg", alt: "field notes special edition yosemite memo notebook"|]
-	[p|[b|[a, href: "https://fieldnotesbrand.com/"|Field Notes] U.S. National Parks special edition memo notebook] I've had a Field Notes memo book since I was in preschool; I think they're great! The memo books especially are convinient because they can actually fit into a pocket without too much trouble, so they're easy to bring everywhere.]
-]
-
-[div, class: "row"|
-	[img, class: "third", style: "margin-right:1em;", loading: "lazy", src: "images/inventory/watch.jpg", alt: "a casio calculator watch on my wrist"|]
-	[p|[b|[a, href: "casio.html"|Casio CA53W-1 calculator watch]] Another item I've had forever, if you're curious about how to change the invert the display you can read my page on the subject :)]
 ]
