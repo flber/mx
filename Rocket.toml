@@ -1,6 +1,7 @@
-	[default]
-	address = "0.0.0.0"
-	port = 80
-	
-	[debug]
-	port = 8000
+[default]
+address = "0.0.0.0"
+port = 80
+template_dir = "handlebar"
+
+[debug]
+port = 8000
