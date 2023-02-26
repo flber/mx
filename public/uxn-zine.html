@@ -165,14 +165,74 @@ footer img {margin:0 0 -10px 0;width:30px;}
 <details>
 	<summary>source.tex</summary>
 	<pre>
-couldn't find file: docs/files/uxn-zine/source.tex, failed with error "No such file or directory (os error 2)"
+\documentclass[paperheight=4.25in,paperwidth=2.75in,20pt]{article}
+\usepackage{lmodern}
+\usepackage[margin=0pt]{geometry}
+\usepackage{graphicx}
+
+\parskip1em
+\begin{document}
+  \centering
+  \includegraphics[width=1.0\paperwidth]{images/00_uxn_notes-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/01_binary_encoding-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/02_cpu-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/03_memory-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/04_stack-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/05_runes_labels_macros-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/06_instruction_cycle-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/07_aritmetics-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/08_bit_shifting-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/09_sprite_encoding_1bpp-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/10_sprite_encoding_2bpp-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/11_drawing_sprites-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/12_drawing_sprites2-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/13_input-680.png}
+  \includegraphics[width=1.0\paperwidth]{images/14_comparison-680.png}
+
+  \newpage
+  \thispagestyle{empty}
+  \mbox{}
+  \newpage
+\end{document}
+
 	</pre>
 </details>
 
 <details>
 	<summary>zine.tex</summary>
 	<pre>
-couldn't find file: docs/files/uxn-zine/zine.tex, failed with error "No such file or directory (os error 2)"
+\documentclass[letterpaper,landscape]{article}
+\usepackage[margin=0pt,tmargin=7ex]{geometry}
+\usepackage{graphicx}
+\begin{document}
+
+\includegraphics[page=9,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=8,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=5,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=4,angle=180,width=.24\paperwidth]{source.pdf}\\
+
+\vspace{7ex}
+
+\includegraphics[page=12,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=13,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=16,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=1,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+
+\newpage
+
+\includegraphics[page=3,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=6,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=7,angle=180,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=10,angle=180,width=.24\paperwidth]{source.pdf}\\
+
+\vspace{7ex}
+
+\includegraphics[page=2,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=15,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=14,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\includegraphics[page=11,angle=0,width=.24\paperwidth]{source.pdf}\hfill
+\end{document}
+
 	</pre>
 </details>
 

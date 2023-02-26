@@ -164,7 +164,25 @@ footer img {margin:0 0 -10px 0;width:30px;}
 <details>
 	<summary><a href="projects/listening">listening.sh</a></summary>
 	<pre>
-couldn't find file: docs/projects/listening, failed with error "No such file or directory (os error 2)"
+#!/bin/bash
+
+lockfile="/var/tmp/listening.lock"
+[ -f "$lockfile" ] && (printf 'lockfile already exists\n'; exit 1;)
+while true; do
+	if [ ! -f "$lockfile" ]; then
+		touch "$lockfile"
+		date "+%H:%M:%S"
+		cmus-remote -C "format_print %{artist} %{album} %{title}"
+		(cmus-remote -C "format_print %{artist} %{album} %{title}" | \
+		awk 'NR<3 {printf "%s\t",$i} NR==3 {print}' >> /home/benh/.listening; \
+		awk -i inplace '!p[$0]++' /home/benh/.listening ; rm "$lockfile") &
+		sleep $((1 * 60))
+	else
+		printf '%s\n' "skipping! process is already running"
+		sleep 60
+	fi
+done
+
 	</pre>
 </details>
 <p>This script, which should be run once on startup to work, prints what cmus is currently playing into a text file, allowing me to see what artists, albums, and songs I've been listening to. I originally tried to implement this using cron instead of an infinite loop with sleep statements, but found it was too difficult to debug the environment in which cron runs its jobs to be reliable. This is a bit of a hacky solution, but it works well for now.</p>
