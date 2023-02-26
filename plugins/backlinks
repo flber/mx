@@ -25,7 +25,7 @@ for index, line in enumerate(sys.stdin):
         files = glob.glob(abspath + "/*.gn")
 
         for file in files:
-            name = file[29:-3]
+            name = file[50:-3]
             page = Path(file).read_text()
             links = re.findall(r'\[a, href: "([^"]+)"\|', page)
             links = list(

@@ -1,0 +1,123 @@
+{
+  "nodes":
+    [
+      {"name": "Akai",
+       "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Nick",
+       "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Robin",
+       "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Lánei",
+       "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Skye",
+       "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Ben",
+       "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Asher",
+		   "attrs": {"r": 20, "fill": "#df6000"}},
+      {"name": "Alex",
+	     "attrs": {"r": 20, "fill": "#df6000"}}
+    ],
+  "links":
+    [
+    	{
+    		"source": 0,
+    		"target": 2,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 0,
+    		"target": 3,
+    		"value": 4,
+    		"dashed": true,
+    		"linkMeaning": "it happened"
+    	},
+    	{
+    		"source": 0,
+    		"target": 4,
+    		"value": 3,
+    		"linkMeaning": "it... could happen"
+    	},
+    	{
+    		"source": 0,
+    		"target": 6,
+    		"value": 3,
+    		"linkMeaning": "it... could happen"
+    	},
+    	{
+    		"source": 2,
+    		"target": 3,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 2,
+    		"target": 4,
+    		"value": 1,
+    		"linkMeaning": "we talk in the shower"
+    	},
+    	{
+    		"source": 2,
+    		"target": 6,
+    		"value": 4,
+    		"dashed": true,
+    		"linkMeaning": "it happened"
+    	},
+    	{
+    		"source": 2,
+    		"target": 7,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 3,
+    		"target": 4,
+    		"value": 3,
+    		"linkMeaning": "it... could happen"
+    	},
+    	{
+    		"source": 3,
+    		"target": 7,
+    		"value": 4,
+    		"dashed": true,
+    		"linkMeaning": "it happened"
+    	},
+    	{
+    		"source": 4,
+    		"target": 7,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 5,
+    		"target": 0,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 5,
+    		"target": 2,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 5,
+    		"target": 6,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 5,
+    		"target": 7,
+    		"value": 4,
+    		"linkMeaning": "theoretical"
+    	},
+    	{
+    		"source": 6,
+    		"target": 7,
+    		"value": 1,
+    		"linkMeaning": "you looked like you were about to MAKE OUT"
+    	}
+    ]
+}

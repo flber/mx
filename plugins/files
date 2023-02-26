@@ -14,7 +14,8 @@ def files_within(directory_path, pattern="*"):
 for index, line in enumerate(sys.stdin):
     if "{{files}}" in line:
         html = "<ul>\n"
-        for file in files_within("./docs/files"):
+        # replace hardecoded path
+        for file in files_within("./public/files"):
             # sanitized = re.search(r"([^\/.]+[.]{0,1}\w*)$", file).group()
             #DOC: just removes base file path
             sanitized = file[13:]

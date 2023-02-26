@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Files</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Files"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js"></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+}
+
+body {
+	font-size:calc(1rem + 0.5vw);
+	font-family:Times;
+	max-width:80ch;
+	padding:1em 7%; 
+	margin: 3rem auto 3rem; 
+	padding: 0 1rem; 
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+main > *+* {margin-top: 2ex;}
+
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
+
+header>h1 {display:inline-block;padding-right:.3em;}
+header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+pre {
+	font-size:calc(0.5rem + 0.25vw);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
+
+button {
+	border-radius: 30px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:2em;}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
+.left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
+.block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+
+footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<h1><a href="home.html">Home</a></h1> 
+		<h1><a href="now.html">now</a></h1>
+		<h1><a href="wiki.html">wiki</a></h1>
+		<h1><a href="about.html">about</a></h1>
+	</header>
+
+	<main>
+
+<h2>Files</h2>
+
+<p>This is a page to give a full list of files and directories saved on this website.</p>
+
+<ul>
+	<li><a href="c/files/bee.txt">s/bee.txt</a></li>
+	<li><a href="c/files/uxn-zine.pdf">s/uxn-zine.pdf</a></li>
+	<li><a href="c/files/uxn-zine.tar">s/uxn-zine.tar</a></li>
+	<li><a href="c/files/minecraft.service">s/minecraft.service</a></li>
+	<li><a href="c/files/thul.html">s/thul.html</a></li>
+	<li><a href="c/files/starship.toml">s/starship.toml</a></li>
+	<li><a href="c/files/kexp.mp3.m3u">s/kexp.mp3.m3u</a></li>
+	<li><a href="c/files/get-some-more.txt">s/get-some-more.txt</a></li>
+	<li><a href="c/files/monitorswitch.txt">s/monitorswitch.txt</a></li>
+	<li><a href="c/files/mtrack.rs">s/mtrack.rs</a></li>
+	<li><a href="c/files/newsboat-config">s/newsboat-config</a></li>
+	<li><a href="c/files/thul.md">s/thul.md</a></li>
+	<li><a href="c/files/mx.zip">s/mx.zip</a></li>
+	<li><a href="c/files/cat-sync">s/cat-sync</a></li>
+	<li><a href="c/files/mpv.conf">s/mpv.conf</a></li>
+	<li><a href="c/files/per-tab.txt">s/per-tab.txt</a></li>
+	<li><a href="c/files/sway/config">s/sway/config</a></li>
+	<li><a href="c/files/sway/config.d/screenlock_powersave">s/sway/config.d/screenlock_powersave</a></li>
+	<li><a href="c/files/sway/scripts/sway_bar.sh">s/sway/scripts/sway_bar.sh</a></li>
+	<li><a href="c/files/ecs/components.c">s/ecs/components.c</a></li>
+	<li><a href="c/files/ecs/main.c">s/ecs/main.c</a></li>
+	<li><a href="c/files/ecs/manager.h">s/ecs/manager.h</a></li>
+	<li><a href="c/files/ecs/manager.c">s/ecs/manager.c</a></li>
+	<li><a href="c/files/ecs/ecs.c">s/ecs/ecs.c</a></li>
+	<li><a href="c/files/minecraft-mods/indium-1.0.5+mc1.19.jar">s/minecraft-mods/indium-1.0.5+mc1.19.jar</a></li>
+	<li><a href="c/files/minecraft-mods/fabric-api-0.56.0+1.19.jar">s/minecraft-mods/fabric-api-0.56.0+1.19.jar</a></li>
+	<li><a href="c/files/minecraft-mods/fpsdisplay-1.5.0+1.19.jar">s/minecraft-mods/fpsdisplay-1.5.0+1.19.jar</a></li>
+	<li><a href="c/files/minecraft-mods/tweakeroo-fabric-1.19-0.13.3.jar">s/minecraft-mods/tweakeroo-fabric-1.19-0.13.3.jar</a></li>
+	<li><a href="c/files/minecraft-mods/malilib-fabric-1.19-0.12.1.jar">s/minecraft-mods/malilib-fabric-1.19-0.12.1.jar</a></li>
+	<li><a href="c/files/minecraft-mods/modmenu-4.0.0.jar">s/minecraft-mods/modmenu-4.0.0.jar</a></li>
+	<li><a href="c/files/minecraft-mods/fabric-installer-0.11.0.jar">s/minecraft-mods/fabric-installer-0.11.0.jar</a></li>
+	<li><a href="c/files/minecraft-mods/sodium-fabric-mc1.19-0.4.2build.16.jar">s/minecraft-mods/sodium-fabric-mc1.19-0.4.2build.16.jar</a></li>
+	<li><a href="c/files/ranger/rifle.conf">s/ranger/rifle.conf</a></li>
+	<li><a href="c/files/ranger/rc.conf">s/ranger/rc.conf</a></li>
+	<li><a href="c/files/ranger/scope.sh">s/ranger/scope.sh</a></li>
+	<li><a href="c/files/vscode/settings.json">s/vscode/settings.json</a></li>
+	<li><a href="c/files/vscode/keybindings.json">s/vscode/keybindings.json</a></li>
+	<li><a href="c/files/kitty/kitty.conf.user">s/kitty/kitty.conf.user</a></li>
+	<li><a href="c/files/kitty/kitty-snazzy.conf">s/kitty/kitty-snazzy.conf</a></li>
+	<li><a href="c/files/kitty/current-theme.conf">s/kitty/current-theme.conf</a></li>
+	<li><a href="c/files/kitty/colors.conf">s/kitty/colors.conf</a></li>
+	<li><a href="c/files/kitty/kitty.conf">s/kitty/kitty.conf</a></li>
+	<li><a href="c/files/kitty/kitty_defualt.conf">s/kitty/kitty_defualt.conf</a></li>
+	<li><a href="c/files/kitty/snazzy.conf">s/kitty/snazzy.conf</a></li>
+	<li><a href="c/files/kitty/unicode-input-favorites.conf">s/kitty/unicode-input-favorites.conf</a></li>
+	<li><a href="c/files/kitty/kitty-unicode.conf">s/kitty/kitty-unicode.conf</a></li>
+	<li><a href="c/files/kitty/kitty.conf.bak">s/kitty/kitty.conf.bak</a></li>
+	<li><a href="c/files/uxn-zine/source.fls">s/uxn-zine/source.fls</a></li>
+	<li><a href="c/files/uxn-zine/uxn-zine.pdf">s/uxn-zine/uxn-zine.pdf</a></li>
+	<li><a href="c/files/uxn-zine/uxn-zine.epub">s/uxn-zine/uxn-zine.epub</a></li>
+	<li><a href="c/files/uxn-zine/source.pdf">s/uxn-zine/source.pdf</a></li>
+	<li><a href="c/files/uxn-zine/zine.log">s/uxn-zine/zine.log</a></li>
+	<li><a href="c/files/uxn-zine/__latexindent_temp.tex">s/uxn-zine/__latexindent_temp.tex</a></li>
+	<li><a href="c/files/uxn-zine/source.synctex">s/uxn-zine/source.synctex</a></li>
+	<li><a href="c/files/uxn-zine/zine.synctex">s/uxn-zine/zine.synctex</a></li>
+	<li><a href="c/files/uxn-zine/zine.pdf">s/uxn-zine/zine.pdf</a></li>
+	<li><a href="c/files/uxn-zine/zine.fdb_latexmk">s/uxn-zine/zine.fdb_latexmk</a></li>
+	<li><a href="c/files/uxn-zine/zine.aux">s/uxn-zine/zine.aux</a></li>
+	<li><a href="c/files/uxn-zine/source.log">s/uxn-zine/source.log</a></li>
+	<li><a href="c/files/uxn-zine/zine.fls">s/uxn-zine/zine.fls</a></li>
+	<li><a href="c/files/uxn-zine/zine.tex">s/uxn-zine/zine.tex</a></li>
+	<li><a href="c/files/uxn-zine/source.tex">s/uxn-zine/source.tex</a></li>
+	<li><a href="c/files/uxn-zine/source.fdb_latexmk">s/uxn-zine/source.fdb_latexmk</a></li>
+	<li><a href="c/files/uxn-zine/source.aux">s/uxn-zine/source.aux</a></li>
+	<li><a href="c/files/uxn-zine/images/00_uxn_notes-680.png">s/uxn-zine/images/00_uxn_notes-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/08_bit_shifting-680.png">s/uxn-zine/images/08_bit_shifting-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/04_stack-680.png">s/uxn-zine/images/04_stack-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/11_drawing_sprites-680.png">s/uxn-zine/images/11_drawing_sprites-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/05_runes_labels_macros-680.png">s/uxn-zine/images/05_runes_labels_macros-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/12_drawing_sprites2-680.png">s/uxn-zine/images/12_drawing_sprites2-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/01_binary_encoding-680.png">s/uxn-zine/images/01_binary_encoding-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/13_input-680.png">s/uxn-zine/images/13_input-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/14_comparison-680.png">s/uxn-zine/images/14_comparison-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/02_cpu-680.png">s/uxn-zine/images/02_cpu-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/06_instruction_cycle-680.png">s/uxn-zine/images/06_instruction_cycle-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/09_sprite_encoding_1bpp-680.png">s/uxn-zine/images/09_sprite_encoding_1bpp-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/07_aritmetics-680.png">s/uxn-zine/images/07_aritmetics-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/03_memory-680.png">s/uxn-zine/images/03_memory-680.png</a></li>
+	<li><a href="c/files/uxn-zine/images/10_sprite_encoding_2bpp-680.png">s/uxn-zine/images/10_sprite_encoding_2bpp-680.png</a></li>
+</ul>
+
+
+		<p><b>Incoming:</b> <a href=".html"></a> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<a href="mailto:benrhammond@gmail.com" target="_blank">
+			<img loading="lazy" width="30" height="30" src="images/mail.svg" alt="Mailto" />
+		</a>
+		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+			<img loading="lazy" width="30" height="30" src="images/merveilles.svg" alt="Merveilles" />
+		</a>
+		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+			<img loading="lazy" width="30" height="30" class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
+		</a>
+		<a href="https://wiki.xxiivv.com/site/ethics.html">
+			<img loading="lazy" width="30" height="30" src="images/dreipfeile-icon.svg" alt="Ethics" />
+		</a>
+		<a href="feed.xml">
+			<img loading="lazy" width="30" height="30" src="images/rss.svg" alt="RSS Feed" />
+		</a>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+			src="images/icon.gif" />
+		<span style="float: right;"><em>Last updated: 022623</em></span>
+	</footer>
+</body>
+</html>

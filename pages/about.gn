@@ -10,6 +10,35 @@ title: About
 
 [p|If you want to contact me about commercial work, please first take a look at my [a, href: "resume/index.html"|resume]. Email is generally the best method of communication for me, and you can find my email address linked in the footer.]
 
+[p|If you like, you can [button onclick="usercount()"|say hi] to me directly! Please don't spam it though, it's not smart enough to know better. So far, [code id="count"|0?] people have said hi :>]
+[script|
+	function usercount() {
+		var req = new XMLHttpRequest();
+		req.open("POST", "/api/count");
+		req.send();
+		get_usercount()
+	}
+
+	window.onload = function() {
+		get_usercount()
+	}
+
+	function get_usercount() {
+		fetch("/api/count", {
+			method: "GET",
+			headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+			}}).then(async (res) => {
+			const raw = await res.text();
+			const parsed = raw ? JSON.parse(raw) : { success: res.ok };
+
+			var num = document.getElementById("count");
+			num.innerHTML = parsed['user_count'];
+		})	
+	}
+]
+
 [span|
 	[img, loading: "lazy", style: "width:50%; display: inline-block;", src: "images/crow.jpg", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
 	[img, loading: "lazy", style: "width:48%; display: inline-block;", src: "images/profile-bw-square.jpg", alt: "a digital art profile picture made by a friend: androgynous person with dark hair smiling with their eyes closed"|]

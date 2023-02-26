@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+	background-color: #000;
+}
+
+.link line {
+  stroke: rgba(255, 128, 0, 0.75);
+}
+
+.link .meaning {
+  fill: #fff;
+}
+
+.node text {
+  pointer-events: none;
+  font: 16px sans-serif;
+  color: #ff8000;
+}
+
+.hidden {
+  display: none;
+}
+
+</style>
+<body>
+<p class="hidden">https://polycul.es/56b3685</p>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var text_color = "#fff";
+
+var width = window.innerWidth,
+    height = window.innerHeight
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var force = d3.layout.force()
+    .gravity(0.05)
+    .linkDistance(100) 
+    .charge(-100)
+    .linkStrength(0.1) 
+    .size([width, height]);
+
+d3.json("graph.json", function(error, json) {
+  force
+      .nodes(json.nodes)
+      .links(json.links)
+      .distance(function(d) { return Math.log(d.value * 3) * 150; })
+      .start();
+
+  var link = svg.selectAll(".link")
+      .data(json.links)
+    .enter().append("g")
+      .attr("class", "link");
+
+  link.append('text')
+    .attr('class', 'sourceMeaning meaning hidden')
+    .text(function(d) { return d.sourceMeaning });
+  link.append('text')
+    .attr('class', 'targetMeaning meaning hidden')
+    .text(function(d) { return d.targetMeaning });
+  link.append('text')
+    .attr('class', 'linkMeaning meaning hidden')
+    .text(function(d) { return d.linkMeaning || ''; });
+  link.append('line')
+      .attr("stroke-width", function(d) {
+          return 20 / d.value;
+      })
+      .attr("stroke-dasharray", function(d) {
+          if (d.dashed) {
+              return "5,5";
+          }
+      })
+      .on('mouseover', function(d) {
+        d3.select(this.parentNode).selectAll('.meaning')
+          .classed('hidden', false);
+      })
+      .on('mouseout', function(d) {
+        d3.select(this.parentNode).selectAll('.meaning')
+          .classed('hidden', true);
+      });
+
+  var node = svg.selectAll(".node")
+      .data(json.nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .call(force.drag);
+
+  node.append("circle")
+    .each(function(d) {
+      var attrs = d.attrs ? d.attrs : {
+        x: -10,
+        y: -10,
+        r: 10,
+        fill: '#888'
+      };
+      d3.select(this).attr(attrs);
+    });
+
+  node.append("text")
+      .attr("dx", function(d) { return d.attrs ? d.attrs.r + 2 : 12; })
+      .attr("dy", ".35em")
+      .attr("fill", text_color)
+      .text(function(d) { return d.name });
+
+  force.on("tick", function() {
+      link.select('line')
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+      link.select('.sourceMeaning')
+        .attr('dx', function(d) { return d.source.x + 24})
+        .attr('dy', function(d) { return d.source.y + 24});
+      link.select('.targetMeaning')
+        .attr('dx', function(d) { return d.target.x + 24})
+        .attr('dy', function(d) { return d.target.y + 24});
+      link.select('.linkMeaning')
+        .attr('dx', function(d) { 
+            return (d.source.x + ((d.target.x - d.source.x) / 2));
+        })
+        .attr('dy', function(d) { 
+            return (d.source.y + ((d.target.y - d.source.y) / 2));
+        });
+
+    node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  });
+});
+
+</script>

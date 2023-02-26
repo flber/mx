@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>My First Look at Plan 9</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="My First Look at Plan 9"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js"></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+}
+
+body {
+	font-size:calc(1rem + 0.5vw);
+	font-family:Times;
+	max-width:80ch;
+	padding:1em 7%; 
+	margin: 3rem auto 3rem; 
+	padding: 0 1rem; 
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+main > *+* {margin-top: 2ex;}
+
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+/* *:not(footer)>a:hover {color:var(--text);background-color:var(--bg);} */
+
+header>h1 {display:inline-block;padding-right:.3em;}
+header {border-bottom:1.5px solid;padding:0 0 1em 0;margin: 0 0 1em 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+pre {
+	font-size:calc(0.5rem + 0.25vw);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
+
+button {
+	border-radius: 30px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:2em;}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+.half {width: 50%; height: auto;}
+.third {width: 31%; height: auto;}
+.left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
+.block {margin-top: 1em;margin-left: 0px;clear: both;}
+.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+
+footer {border-top:1.5px solid;padding:1em 0 0 0;margin:1em 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<h1><a href="home.html">Home</a></h1> 
+		<h1><a href="now.html">now</a></h1>
+		<h1><a href="wiki.html">wiki</a></h1>
+		<h1><a href="about.html">about</a></h1>
+	</header>
+
+	<main>
+
+<h2>My First Look at Plan 9</h2>
+
+<p>I first encountered Plan 9 on Devine Lu Linvega's site and was immediately interested in its minimalist design and "more unix than unix" philosophy. If you've never heard of it before, Plan 9 is a research operating system developed by Bell Labs in 1992, and takes the unix principle of everything as a file to the extreme. It has a lot of other interesting features and quirks, and if you're interested in learning more about them I would highly recommend the the Plan 9 <a href="https://9p.io/plan9/about.html">about page</a> or the <a href="https://9p.io/sys/doc/">several papers</a> written about the operating system.</p>
+
+<p>However, for all of the documentation I had a hard time actually getting Plan 9 (or, more accurately, 9front, a more maintained fork of Plan 9) to run on my pi 4. Though a few of the issues were certainly due to my own inexperience, I think there were a few which others might also face while trying to get it working on their own pi 4.</p>
+
+<p>To start, the image file for the pi 4 can be found <a href="http://9front.org/releases/">here</a> (the pi3.img.gz file).</p>
+
+<p>Confusingly though (because the 9front website says otherwise), the image file cannot simply be moved to a FAT32 formated micro sd card, it has to be flashed to the drive, using something like <a href="https://www.balena.io/etcher">balenaetcher</a>.</p>
+
+<p>Additionally, by default the pi does not boot in something called "hdmi safe mode", which allows for maximum compatibility with hdmi output. This means that though the pi may be booting properly (as indicated by the green status led quickly blinking once the pi is first started and then turning off), the screen will not display any output. To fix this I needed to set a parameter called `hdmi_safe` in the `config.txt` file to `1`. That puts the pi into safe mode, which fixed the issue for me. </p>
+
+<p>Also, something stupid I accidentally did which caught me up for a minute was trying to get hdmi output from the second micro hdmi port on the pi, which by default is disabled.</p>
+
+<p>Once the pi boots, you should be greeted with a "bootargs" screen, which you can get through just by selecting the defaults (by pressing enter).</p>
+
+<p>And with that done, your pi 4 should be good to go!</p>
+ 
+ 
+ 
+ 
+ 
+
+		<p><b>Incoming:</b> <a href=".html"></a> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<a href="mailto:benrhammond@gmail.com" target="_blank">
+			<img loading="lazy" width="30" height="30" src="images/mail.svg" alt="Mailto" />
+		</a>
+		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+			<img loading="lazy" width="30" height="30" src="images/merveilles.svg" alt="Merveilles" />
+		</a>
+		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+			<img loading="lazy" width="30" height="30" class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
+		</a>
+		<a href="https://wiki.xxiivv.com/site/ethics.html">
+			<img loading="lazy" width="30" height="30" src="images/dreipfeile-icon.svg" alt="Ethics" />
+		</a>
+		<a href="feed.xml">
+			<img loading="lazy" width="30" height="30" src="images/rss.svg" alt="RSS Feed" />
+		</a>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+			src="images/icon.gif" />
+		<span style="float: right;"><em>Last updated: 022623</em></span>
+	</footer>
+</body>
+</html>
