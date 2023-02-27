@@ -42,6 +42,10 @@
 				font-size: 16px;
 			}
 			input[type=submit]:hover {color: white;background: black;}
+
+			pre { overflow:auto;color:white;background:black;padding:10px;font-size:80%;margin-bottom:1em }
+			fieldset { padding: 0em 1em 0.5em;border: 1px solid black;border-radius: 16px; }
+ 			fieldset > *+* {margin: 1ex 0ex;}
 		</style>
 
 	</head>
@@ -49,14 +53,16 @@
 		<h1>/dev - user{{ user_id }}</h1>
 
 		<main>
-			<h3>Hellos</h3>
-			<p>user count: {{ user_count }}</p>
-			<p>user ips:</p>
-			<ul>
-				{{ #each user_ips }}
-					<li>{{ this }}</li>
-				{{ /each }}
-			</ul>
+			<fieldset>
+				<legend>User hellos</legend>
+				<p>user count: {{ user_count }}</p>
+				<p>user ips:</p>
+				<pre>
+{{ #each user_ips }}
+{{ this }}
+{{ /each }}
+				</pre>
+			</fieldset>
 						
 			<form action="/dev/logout" method="post" accept-charset="utf-8">
 				<input type="submit" name="logout" id="logout" value="logout" />
