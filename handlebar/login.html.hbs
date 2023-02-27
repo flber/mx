@@ -9,7 +9,7 @@
 
 		<style>
 			.center {
-				height: 100vh;
+				height: calc(100vh - 2em);
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -30,6 +30,8 @@
 				font-size: 16px;
 			}
 			input[type=submit]:hover {color: white;background: black;}
+
+			mark {color:white;background:black;padding:0px 4px}
 		</style>
 		
 	</head>
@@ -40,7 +42,7 @@
 			<p>Please login to continue.</p>
 
 			{{#if message}}
-				<p>{{#if kind}}{{kind}}: {{/if}}{{ message }}</p>
+				<p><mark> {{#if kind}}{{kind}}: {{/if}}{{ message }} </mark></p>
 			{{/if}}
 
 			<form action="/dev/login" method="post" accept-charset="utf-8">
