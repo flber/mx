@@ -48,9 +48,37 @@
 			}
 			input[type=submit]:hover {color: white;background: black;}
 
-			pre { white-space:normal;overflow:auto;color:white;background:black;padding:10px;font-size:80%;margin-bottom:1em }
+			pre {
+				border-radius: 8px;
+				white-space:normal;
+				overflow:auto;
+				color:white;
+				background:black;
+				padding:10px;
+				font-size:80%;
+				margin:0px;
+			}
+			
 			fieldset { padding: 0em 1em 0.5em;border: 1px solid black;border-radius: 16px; }
  			fieldset > *+* {margin: 1ex 0ex;}
+
+ 			.grid {
+ 				display: grid;
+ 				grid-template-columns: 5fr 1fr;
+ 				gap: 1em;
+ 			}
+
+ 			button {
+ 				border-radius: 8px;
+ 				border: 1px solid black;
+ 				background: none;
+ 				padding: 0px 10px;
+ 				font-family: mono;
+ 				color: black;
+ 				font-size: 20px;
+ 			}
+ 			button:hover {color: white;background: black;}
+ 			
 		</style>
 
 	</head>
@@ -62,12 +90,44 @@
 				<legend>User hellos</legend>
 				<p>user count: {{ user_count }}</p>
 				<p>user ips:</p>
-				<pre>
-{{ #each user_ips }}
-{{ this }}
-{{ /each }}
-				</pre>
+				<div id="ips"></div>
 			</fieldset>
+
+			<script>
+				function get_ips() {
+					fetch("/api/count/ips", {
+						method: "GET",
+						headers: {
+						'Accept': 'application/json',
+						'Content-Type': 'application/json',
+						}}).then(async (res) => {
+						const raw = await res.text();
+						const json = raw ? JSON.parse(raw) : { success: res.ok };
+						
+						var ips_div = document.getElementById('ips');
+						ips_div.innerHTML = "";
+						
+						for (i in json.ips) {
+							ips_div.innerHTML += `
+<div class="grid" style="margin-bottom:0.5em">
+<pre>${i}: ${json.ips[i]}</pre>
+<button style="height:100%" onclick="remove(${i})">rm</button>
+</div>`
+						}
+					})
+				}
+				
+				window.onload = function() {
+					get_ips();
+				}
+			
+				function remove(index) {					
+					var req = new XMLHttpRequest();
+					req.open("POST", `api/count/remove/${index}`);
+					req.send();
+					get_ips();
+				}
+			</script>
 						
 			<form action="/dev/logout" method="post" accept-charset="utf-8">
 				<input type="submit" name="logout" id="logout" value="logout" />

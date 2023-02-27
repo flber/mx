@@ -3,11 +3,10 @@ extern crate rocket;
 use rocket::fs::FileServer;
 use rocket_dyn_templates::Template;
 
-mod dev;
 pub mod api;
+mod dev;
 
 use api::count::{self, UserCount};
-
 
 #[launch]
 fn rocket() -> _ {
@@ -17,5 +16,8 @@ fn rocket() -> _ {
 		.attach(Template::fairing())
 		.mount("/dev", dev::routes())
 		.mount("/", FileServer::from("public/"))
-		.mount("/api", routes![count::count, count::inc_count])
+		.mount(
+			"/api",
+			routes![count::count, count::inc_count, count::remove_ip, count::ips],
+		)
 }

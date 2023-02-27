@@ -7,8 +7,8 @@ use rocket::State;
 
 use rocket_dyn_templates::{context, Template};
 
-use std::env;
 use crate::api::count::UserCount;
+use std::env;
 
 #[derive(FromForm)]
 struct Login<'r> {
@@ -17,7 +17,7 @@ struct Login<'r> {
 }
 
 #[derive(Debug)]
-struct User(usize);
+pub struct User(usize);
 
 #[rocket::async_trait]
 impl<'r> FromRequest<'r> for User {
