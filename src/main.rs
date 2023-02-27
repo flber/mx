@@ -4,34 +4,47 @@ use rocket::fs::FileServer;
 use rocket::response::content::RawJson;
 use rocket::State;
 use rocket_dyn_templates::Template;
-use std::net::SocketAddr;
+use std::net::{self, SocketAddr};
 
-// use std::sync::Mutex;
+use std::sync::Mutex;
 use std::sync::atomic::{AtomicUsize, Ordering};
 
 mod dev;
 
-struct UserCount(AtomicUsize);
+struct UserCount {
+	count: AtomicUsize,
+	ips: Mutex<Vec<net::IpAddr>>,
+}
 // struct UserIPs(Vec<Mutex<IpAddr>>);
 
 #[get("/count")]
 fn count(user_count: &State<UserCount>) -> RawJson<String> {
 	RawJson(format!(
 		"{{\"user_count\": {}}}",
-		user_count.0.load(Ordering::Relaxed)
+		user_count.count.load(Ordering::Relaxed)
 	))
 }
 
 #[post("/count")]
 fn inc_count(user_count: &State<UserCount>, sock: SocketAddr) {
-	user_count.0.fetch_add(1, Ordering::SeqCst);
-	println!("Remote Address: {:?}", sock.ip());
+	match user_count.ips.lock() {
+		Ok(mut v) => {
+			if v.contains(&sock.ip()) {
+				println!("{} already said hi", &sock.ip());
+			} else {
+				user_count.count.fetch_add(1, Ordering::SeqCst);
+				v.push(sock.ip());
+				println!("new hello from {:?}", sock.ip());
+			}
+		},
+		Err(e) => println!("error getting ips: {}", e),
+	}
 }
 
 #[launch]
 fn rocket() -> _ {
 	rocket::build()
-		.manage(UserCount(AtomicUsize::new(0)))
+		.manage(UserCount{count: AtomicUsize::new(0), ips: Mutex::new(vec![])})
 		// .manage(UserIPs(vec![]))
 		.attach(Template::fairing())
 		.mount("/dev", dev::routes())
