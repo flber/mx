@@ -5,3 +5,6 @@ template_dir = "handlebar"
 
 [debug]
 port = 8000
+
+[release]
+secret_key = "/6ILdnJhe4SL9XKdwVGVw8iIAKaOi92nE6lj7Hm5ObU="
