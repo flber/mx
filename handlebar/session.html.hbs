@@ -17,18 +17,21 @@
 				padding: 0 1rem; 
 				line-height:1.6;
 			}
-			main > *+* {margin-top: 2ex;}
+			main > *+* {margin-top: 3rem;}
 
-			@media screen and ( max-width: 960px ){
-				body {
-					margin: 1rem 1rem 3rem;
-				}
-			}
-						
 			.border {
 				padding: 0px 2em 2em;
 				border: 1px solid black;
 				border-radius: 16px;
+			}
+
+			@media screen and ( max-width: 680px ){
+				body {
+					margin: 1rem 1rem 3rem;
+					padding: 1rem 1rem 1rem;
+				}
+
+				.border { padding: 1rem 5% 1rem; }
 			}
 
 			input[type=submit] {
@@ -43,7 +46,7 @@
 			}
 			input[type=submit]:hover {color: white;background: black;}
 
-			pre { overflow:auto;color:white;background:black;padding:10px;font-size:80%;margin-bottom:1em }
+			pre { white-space:normal;overflow:auto;color:white;background:black;padding:10px;font-size:80%;margin-bottom:1em }
 			fieldset { padding: 0em 1em 0.5em;border: 1px solid black;border-radius: 16px; }
  			fieldset > *+* {margin: 1ex 0ex;}
 		</style>
