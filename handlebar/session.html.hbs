@@ -49,8 +49,15 @@
 		<h1>/dev - user{{ user_id }}</h1>
 
 		<main>
-			<p>Logged in with user ID {{ user_id }}.</p>
-			
+			<h3>Hellos</h3>
+			<p>user count: {{ user_count }}</p>
+			<p>user ips:</p>
+			<ul>
+				{{ #each user_ips }}
+					<li>{{ this }}</li>
+				{{ /each }}
+			</ul>
+						
 			<form action="/dev/logout" method="post" accept-charset="utf-8">
 				<input type="submit" name="logout" id="logout" value="logout" />
 			</form>

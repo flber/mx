@@ -3,10 +3,12 @@ use rocket::http::{Cookie, CookieJar};
 use rocket::outcome::IntoOutcome;
 use rocket::request::{self, FlashMessage, FromRequest, Request};
 use rocket::response::{Flash, Redirect};
+use rocket::State;
 
 use rocket_dyn_templates::{context, Template};
 
 use std::env;
+use crate::api::count::UserCount;
 
 #[derive(FromForm)]
 struct Login<'r> {
@@ -39,11 +41,16 @@ macro_rules! session_uri {
 pub use session_uri as uri;
 
 #[get("/")]
-fn index(user: User) -> Template {
+fn index(user: User, user_count: &State<UserCount>) -> Template {
 	Template::render(
 		"session",
 		context! {
 			user_id: user.0,
+			user_count: user_count.count(),
+			user_ips: match user_count.ips() {
+				Some(ips) => ips,
+				None => vec![],
+			},
 		},
 	)
 }
@@ -62,30 +69,30 @@ fn login(_user: User) -> Redirect {
 fn login_page(flash: Option<FlashMessage<'_>>) -> Template {
 	Template::render("login", &flash)
 }
-
 #[post("/login", data = "<login>")]
 fn post_login(jar: &CookieJar<'_>, login: Form<Login<'_>>) -> Result<Redirect, Flash<Redirect>> {
-	// /*
-	match (env::var("USER"), env::var("PASSWORD")) {
-		(Ok(user), Ok(pw)) => {
-			if login.username == user && login.password == pw {
-				jar.add_private(Cookie::new("user_id", 1.to_string()));
-				Ok(Redirect::to(uri!(index)))
-			} else {
-				Err(Flash::error(
-					Redirect::to(uri!(login_page)),
-					"Invalid username/password.",
-				))
+	if cfg!(debug_assertions) {
+		jar.add_private(Cookie::new("user_id", 1.to_string()));
+		Ok(Redirect::to(uri!(index)))
+	} else {
+		match (env::var("USER"), env::var("PASSWORD")) {
+			(Ok(user), Ok(pw)) => {
+				if login.username == user && login.password == pw {
+					jar.add_private(Cookie::new("user_id", 1.to_string()));
+					Ok(Redirect::to(uri!(index)))
+				} else {
+					Err(Flash::error(
+						Redirect::to(uri!(login_page)),
+						"Invalid username/password.",
+					))
+				}
 			}
+			_ => Err(Flash::error(
+				Redirect::to(uri!(login_page)),
+				"Failed to load environment variables.",
+			)),
 		}
-		_ => Err(Flash::error(
-			Redirect::to(uri!(login_page)),
-			"Failed to load environment variables.",
-		)),
 	}
-	// */
-	// jar.add_private(Cookie::new("user_id", 1.to_string()));
-	// Ok(Redirect::to(uri!(index)))
 }
 
 #[post("/logout")]
