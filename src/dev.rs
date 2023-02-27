@@ -65,7 +65,7 @@ fn login_page(flash: Option<FlashMessage<'_>>) -> Template {
 
 #[post("/login", data = "<login>")]
 fn post_login(jar: &CookieJar<'_>, login: Form<Login<'_>>) -> Result<Redirect, Flash<Redirect>> {
-	/*
+	// /*
 	match (env::var("USER"), env::var("PASSWORD")) {
 		(Ok(user), Ok(pw)) => {
 			if login.username == user && login.password == pw {
@@ -83,9 +83,9 @@ fn post_login(jar: &CookieJar<'_>, login: Form<Login<'_>>) -> Result<Redirect, F
 			"Failed to load environment variables.",
 		)),
 	}
-	*/
-	jar.add_private(Cookie::new("user_id", 1.to_string()));
-	Ok(Redirect::to(uri!(index)))
+	// */
+	// jar.add_private(Cookie::new("user_id", 1.to_string()));
+	// Ok(Redirect::to(uri!(index)))
 }
 
 #[post("/logout")]
