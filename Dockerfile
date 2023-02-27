@@ -7,11 +7,12 @@ RUN apt-get update
 
 COPY ["Cargo.toml", "Cargo.lock",  "./"]
 # Make empty fake project
-RUN mkdir src && echo "fn main() {}" > src/main.rs
+RUN mkdir src && mkdir handlebar && echo "fn main() {}" > src/main.rs
 RUN --mount=type=cache,target=/usr/local/cargo/registry cargo build --release
 
 # Clobber fake project with real project
 COPY src src
+COPY handlebar handlebar
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
   set -e && \
   touch src/main.rs && \
@@ -29,6 +30,7 @@ RUN apt-get update
 COPY --from=builder /usr/local/cargo/bin/cmsrs /usr/local/bin/cmsrs
 
 ADD public public
+ADD handlebar handlebar
 ADD Rocket.toml .
 
 CMD ["cmsrs"]
