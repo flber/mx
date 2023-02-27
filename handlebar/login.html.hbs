@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width" />
-      <title>Rocket: Sessions</title>
-   </head>
-   <body>
-      <h1>Rocket Session: Please Login</h1>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../crow.ico?" type="image/x-icon">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dev login</title>
 
-     <p>Please login to continue.</p>
+		<style>
+			.center {
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.border {
+				padding: 2em;
+				border: 1px solid black;
+				border-radius: 16px;
+			}
+			input[type=submit] {
+				border-radius: 8px;
+				border: 1px solid black;
+				background: none;
+				padding: 0px 10px;
+				font-weight: bold;
+				font-family: sans;
+				color: black;
+				font-size: 16px;
+			}
+			input[type=submit]:hover {color: white;background: black;}
+		</style>
+		
+	</head>
+	<body class="center">
+		<div class="border">
+			<h1>/dev</h1>
 
-      {{#if message}}
-         <p>{{#if kind}}{{kind}}: {{/if}}{{ message }}</p>
-      {{/if}}
+			<p>Please login to continue.</p>
 
-      <form action="/dev/login" method="post" accept-charset="utf-8">
-         <label for="username">username</label>
-         <input type="text" name="username" id="username" value="" />
-         <label for="password">password</label>
-         <input type="password" name="password" id="password" value="" />
-         <p><input type="submit" value="login"></p>
-      </form>
+			{{#if message}}
+				<p>{{#if kind}}{{kind}}: {{/if}}{{ message }}</p>
+			{{/if}}
 
-      <a href="/">Home</a>
-   </body>
+			<form action="/dev/login" method="post" accept-charset="utf-8">
+				<p>
+					<label for="username">username</label>
+					<input type="text" name="username" id="username" value="" />
+				</p>
+				<p>
+					<label for="password">password</label>
+					<input type="password" name="password" id="password" value="" />
+				</p>
+				<p><input type="submit" value="login"></p>
+			</form>
+		</div>
+	</body>
 </html>

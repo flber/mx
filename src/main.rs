@@ -8,7 +8,6 @@ use std::net::SocketAddr;
 
 // use std::sync::Mutex;
 use std::sync::atomic::{AtomicUsize, Ordering};
-use std::env;
 
 mod dev;
 

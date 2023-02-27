@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width" />
-      <title>Rocket: Session Example</title>
-   </head>
-   <body>
-      <h1>Rocket Session Example</h1>
-      <p>Logged in with user ID {{ user_id }}.</p>
-      <form action="/dev/logout" method="post" accept-charset="utf-8">
-         <input type="submit" name="logout" id="logout" value="logout" />
-      </form>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../crow.ico?" type="image/x-icon">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Dev</title>
 
-      <a href="/">Home</a>
-   </body>
+		<style>
+			body {
+				font-size:calc(1rem + 0.5vw);
+				font-family:Times;
+				max-width:60ch;
+				padding:1em 7%; 
+				margin: 1rem auto 3rem; 
+				padding: 0 1rem; 
+				line-height:1.6;
+			}
+			main > *+* {margin-top: 2ex;}
+
+			@media screen and ( max-width: 960px ){
+				body {
+					margin: 1rem 1rem 3rem;
+				}
+			}
+						
+			.border {
+				padding: 0px 2em 2em;
+				border: 1px solid black;
+				border-radius: 16px;
+			}
+
+			input[type=submit] {
+				border-radius: 8px;
+				border: 1px solid black;
+				background: none;
+				padding: 0px 10px;
+				font-weight: bold;
+				font-family: sans;
+				color: black;
+				font-size: 16px;
+			}
+			input[type=submit]:hover {color: white;background: black;}
+		</style>
+
+	</head>
+	<body class="border">
+		<h1>/dev - user{{ user_id }}</h1>
+
+		<main>
+			<p>Logged in with user ID {{ user_id }}.</p>
+			
+			<form action="/dev/logout" method="post" accept-charset="utf-8">
+				<input type="submit" name="logout" id="logout" value="logout" />
+			</form>
+		</main>
+	</body>
 </html>
