@@ -59,19 +59,30 @@ pub fn ips(_user: User, user_count: &State<UserCount>) -> Json<IPList> {
 	}
 }
 
-pub struct Headers(String);
+pub struct PublicIp(Option<String>);
 #[rocket::async_trait]
-impl<'r> FromRequest<'r> for Headers {
+impl<'r> FromRequest<'r> for PublicIp {
 	type Error = Infallible;
 
 	async fn from_request(request: &'r Request<'_>) -> Outcome<Self, Self::Error> {
-		Outcome::Success(Headers(format!("{:#?}", request.headers())))
+		let do_connecting = request.headers().get_one("do-connecting-ip");
+		match do_connecting {
+			Some(ip) => Outcome::Success(PublicIp(Some(ip.to_string()))),
+			None => Outcome::Success(PublicIp(None)),
+		}
 	}
 }
 
 #[post("/count")]
-pub fn inc_count(user_count: &State<UserCount>, ip: IpAddr, head: Headers) {
-	println!("{} increased count with headers:\n{}", ip, head.0);
+pub fn inc_count(user_count: &State<UserCount>, ip: IpAddr, pub_ip: PublicIp) {
+	let ip = match pub_ip.0 {
+		Some(public) => match public.parse() {
+			Ok(parsed) => parsed,
+			Err(_) => ip,
+		},
+		None => ip,
+	};
+	
 	match user_count.ips.lock() {
 		Ok(mut v) => {
 			if v.ips.contains(&ip) {
