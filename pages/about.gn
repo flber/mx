@@ -8,15 +8,27 @@ title: About
 
 [p|I've worked on a few [a, href: "projects.html"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for disagreeing with what I want them to do, I enjoy [a, href: "hiking.html"|hiking], playing [a, href: "games.html"|video games], and [a, href: "reading.html"|reading].]
 
-[p|If you want to contact me about commercial work, please first take a look at my [a, href: "resume/index.html"|resume]. Email is generally the best method of communication for me, and you can find my email address linked in the footer.]
+[p|If you like, you can [button, id: "hello_button", onclick: "usercount()"|say hi] to me directly! So far, [code id: "count"|0?] people have said hi :&gt;]
+[details|
+	[summary|How does it work?]
+	[p|Using my Fancy New Framework™ (26 lines of vanilla js), when you press the button it sends a request to an api endpoint on the [a, href: "https://rocket.rs"|rocket] server hosting this site. That fetch is sent back a simple JSON object containing the total number of visitors so far, and that number is put into the code tag!]
+	[p|On the backend, the request headers are unpacked to get the visitor's ip address, which, if new, is added to a list of "known" addresses, and the total count is incremented by one and returned. If the ip address in the request [i|is] a known address, the count is not increased but is still returned.]
+]
 
-[p|If you like, you can [button onclick="usercount()"|say hi] to me directly! So far, [code id="count"|0?] people have said hi :>]
 [script|
 	function usercount() {
-		var req = new XMLHttpRequest();
-		req.open("POST", "/api/count");
-		req.send();
+		fetch("/api/count", {
+			method: "POST"}).then(async (res) => {
+				const raw = await res.text();
+				console.log(raw);
+			})
 		get_usercount()
+
+		var button = document.getElementById("hello_button");
+		var b = document.createElement("del");
+		var new_text = document.createTextNode("say hi");
+		b.appendChild(new_text);
+		button.replaceWith(b);
 	}
 
 	window.onload = function() {
@@ -35,14 +47,16 @@ title: About
 
 			var num = document.getElementById("count");
 			num.innerHTML = parsed['user_count'];
-		})	
+		})
 	}
 ]
 
-[span|
-	[img, loading: "lazy", style: "width:50%; display: inline-block;", src: "images/crow.jpg", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
-	[img, loading: "lazy", style: "width:48%; display: inline-block;", src: "images/profile-bw-square.jpg", alt: "a digital art profile picture made by a friend: androgynous person with dark hair smiling with their eyes closed"|]
+[div, class: "box"|
+	[img, loading: "lazy", src: "images/crow.jpg", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
+	[img, loading: "lazy", src: "images/profile-bw-square.jpg", alt: "a digital art profile picture made by a friend: androgynous person with dark hair smiling with their eyes closed"|]
 ]
+
+[p|If you want to contact me about commercial work, please first take a look at my [a, href: "resume/index.html"|resume]. Email is generally the best method of communication for me, and you can find my email address linked in the footer.]
 
 [p|You can find the source code for this site in any of these places:]
 [ul|
