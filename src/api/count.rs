@@ -1,14 +1,16 @@
 use rocket::response::content::RawJson;
 use rocket::serde::{Serialize, json::Json};
 use rocket::State;
-use std::net::{self, SocketAddr};
+use rocket::request::{FromRequest, Request, Outcome};
+
+use std::net::{self, IpAddr};
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Mutex;
+use std::convert::Infallible;
 
 use crate::dev::User;
 
-#[derive(Serialize)]
-#[derive(Default)]
+#[derive(Serialize, Default)]
 #[serde(crate = "rocket::serde")]
 pub struct IPList {
 	ips: Vec<net::IpAddr>,
@@ -52,34 +54,37 @@ pub fn count(user_count: &State<UserCount>) -> RawJson<String> {
 #[get("/count/ips")]
 pub fn ips(_user: User, user_count: &State<UserCount>) -> Json<IPList> {
 	match user_count.ips.lock() {
-		Ok(v) => {
-			Json(IPList {
-				ips: v.ips.clone()
-			})
-		}
-		_ => {
-			Json(IPList {
-				ips: vec![]
-			})
-		}
+		Ok(v) => Json(IPList { ips: v.ips.clone() }),
+		_ => Json(IPList { ips: vec![] }),
+	}
+}
+
+pub struct Headers(String);
+#[rocket::async_trait]
+impl<'r> FromRequest<'r> for Headers {
+	type Error = Infallible;
+
+	async fn from_request(request: &'r Request<'_>) -> Outcome<Self, Self::Error> {
+		Outcome::Success(Headers(format!("{:#?}", request.headers())))
 	}
 }
 
 #[post("/count")]
-pub fn inc_count(user_count: &State<UserCount>, sock: SocketAddr) {
+pub fn inc_count(user_count: &State<UserCount>, ip: IpAddr, head: Headers) {
+	println!("{} increased count with headers:\n{}", ip, head.0);
 	match user_count.ips.lock() {
 		Ok(mut v) => {
-			if v.ips.contains(&sock.ip()) {
-				println!("{} already said hi", &sock.ip());
+			if v.ips.contains(&ip) {
+				println!("{} already said hi", ip);
 				// can add ips more than once in debug
 				if cfg!(debug_assertions) {
 					user_count.count.fetch_add(1, Ordering::SeqCst);
-					v.ips.push(sock.ip());
+					v.ips.push(ip);
 				}
 			} else {
 				user_count.count.fetch_add(1, Ordering::SeqCst);
-				v.ips.push(sock.ip());
-				println!("new hello from {:?}", sock.ip());
+				v.ips.push(ip);
+				println!("new hello from {:?}", ip);
 			}
 		}
 		Err(e) => println!("error getting ips: {}", e),
