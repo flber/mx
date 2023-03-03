@@ -41,11 +41,10 @@ macro_rules! session_uri {
 pub use session_uri as uri;
 
 #[get("/")]
-fn index(user: User, user_count: &State<UserCount>) -> Template {
+fn index(_user: User, user_count: &State<UserCount>) -> Template {
 	Template::render(
 		"session",
 		context! {
-			user_id: user.0,
 			user_count: user_count.count(),
 			user_ips: match user_count.ips() {
 				Some(ips) => ips,
