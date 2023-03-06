@@ -24,6 +24,11 @@ fn not_found(req: &request::Request) -> RawHtml<&'static str> {
 	RawHtml(r#"<h1>404 page not found</h1>"#)
 }
 
+#[post("/<_..>", rank = 2)]
+fn skillissue() -> RawHtml<&'static str> {
+	RawHtml(r#"<img src="images/skill-issue.gif">"#)
+}
+
 
 #[launch]
 fn rocket() -> _ {
@@ -34,6 +39,7 @@ fn rocket() -> _ {
 		.attach(Template::fairing())
 		.mount("/dev", dev::routes())
 		.mount("/", FileServer::from("public/"))
+		.mount("/", routes![skillissue])
 		.mount(
 			"/api",
 			routes![count::count, count::inc_count, count::remove_ip, count::ips],
