@@ -1,19 +1,19 @@
+use rocket::request::{FromRequest, Outcome, Request};
 use rocket::response::content::RawJson;
-use rocket::serde::{Serialize, json::Json};
+use rocket::serde::{json::Json, Serialize};
 use rocket::State;
-use rocket::request::{FromRequest, Request, Outcome};
 
+use std::convert::Infallible;
 use std::net::{self, IpAddr};
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Mutex;
-use std::convert::Infallible;
 
 use crate::dev::User;
 
 #[derive(Serialize, Default)]
 #[serde(crate = "rocket::serde")]
 pub struct IPList {
-	ips: Vec<net::IpAddr>,
+	pub ips: Vec<net::IpAddr>,
 }
 
 pub struct UserCount {
@@ -59,7 +59,7 @@ pub fn ips(_user: User, user_count: &State<UserCount>) -> Json<IPList> {
 	}
 }
 
-pub struct PublicIp(Option<String>);
+pub struct PublicIp(pub Option<IpAddr>);
 #[rocket::async_trait]
 impl<'r> FromRequest<'r> for PublicIp {
 	type Error = Infallible;
@@ -67,7 +67,10 @@ impl<'r> FromRequest<'r> for PublicIp {
 	async fn from_request(request: &'r Request<'_>) -> Outcome<Self, Self::Error> {
 		let do_connecting = request.headers().get_one("do-connecting-ip");
 		match do_connecting {
-			Some(ip) => Outcome::Success(PublicIp(Some(ip.to_string()))),
+			Some(ip) => match ip.parse::<IpAddr>(){
+				Ok(parsed) => Outcome::Success(PublicIp(Some(parsed))),
+				Err(_) => Outcome::Success(PublicIp(None)),
+			}
 			None => Outcome::Success(PublicIp(None)),
 		}
 	}
@@ -76,13 +79,10 @@ impl<'r> FromRequest<'r> for PublicIp {
 #[post("/count")]
 pub fn inc_count(user_count: &State<UserCount>, ip: IpAddr, pub_ip: PublicIp) {
 	let ip = match pub_ip.0 {
-		Some(public) => match public.parse() {
-			Ok(parsed) => parsed,
-			Err(_) => ip,
-		},
+		Some(public) => public,
 		None => ip,
 	};
-	
+
 	match user_count.ips.lock() {
 		Ok(mut v) => {
 			if v.ips.contains(&ip) {
@@ -110,4 +110,8 @@ pub fn remove_ip(_user: User, user_count: &State<UserCount>, index: usize) {
 		}
 		Err(e) => println!("error getting ips: {}", e),
 	}
+}
+
+pub fn routes() -> Vec<rocket::Route> {
+	routes![count, inc_count, remove_ip, ips]
 }

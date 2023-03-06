@@ -2,8 +2,8 @@
 extern crate rocket;
 use rocket::fs::FileServer;
 use rocket::request;
-use rocket_dyn_templates::Template;
 use rocket::response::content::RawHtml;
+use rocket_dyn_templates::Template;
 
 pub mod api;
 mod dev;
@@ -24,14 +24,6 @@ fn not_found(req: &request::Request) -> RawHtml<&'static str> {
 	RawHtml(r#"<h1>404 page not found</h1>"#)
 }
 
-#[post("/<_..>", rank = 2)]
-fn skillissue() -> RawHtml<&'static str> {
-	println!("SKILL ISSUE DETECTED");
-	RawHtml(r#"<img src="images/skill-issue.gif">
-skill issue."#)
-}
-
-
 #[launch]
 fn rocket() -> _ {
 	rocket::build()
@@ -39,11 +31,7 @@ fn rocket() -> _ {
 		// .manage(UserIPs(vec![]))
 		.register("/", catchers![not_authorized, not_found])
 		.attach(Template::fairing())
-		.mount("/dev", dev::routes())
 		.mount("/", FileServer::from("public/"))
-		.mount("/", routes![skillissue])
-		.mount(
-			"/api",
-			routes![count::count, count::inc_count, count::remove_ip, count::ips],
-		)
+		.mount("/dev", dev::routes())
+		.mount("/api", count::routes())
 }

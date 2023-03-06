@@ -4,10 +4,12 @@ use rocket::outcome::IntoOutcome;
 use rocket::request::{self, FlashMessage, FromRequest, Request};
 use rocket::response::{Flash, Redirect};
 use rocket::State;
+use rocket::response::content::RawHtml;
 
 use rocket_dyn_templates::{context, Template};
 
-use crate::api::count::UserCount;
+use crate::api::count::{UserCount, PublicIp};
+
 use std::env;
 
 #[derive(FromForm)]
@@ -100,6 +102,20 @@ fn logout(jar: &CookieJar<'_>) -> Flash<Redirect> {
 	Flash::success(Redirect::to(uri!(login_page)), "Successfully logged out.")
 }
 
+#[post("/<_..>", rank = 2)]
+fn skillissue(ip: PublicIp) -> RawHtml<&'static str> {
+	let ip = match ip.0 {
+		Some(public) => format!("{}", public),
+		None => String::from(""),
+	};
+	println!("SKILL ISSUE DETECTED: {}", ip);
+
+	RawHtml(
+r#"<img src="images/skill-issue.gif">
+skill issue."#,
+	)
+}
+
 pub fn routes() -> Vec<rocket::Route> {
-	routes![index, no_auth_index, login, login_page, post_login, logout]
+	routes![index, no_auth_index, login, login_page, post_login, logout, skillissue]
 }
