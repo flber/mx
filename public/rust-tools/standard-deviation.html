@@ -53,6 +53,7 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	/* --bg:#FBF0F0; */
 	/* --bg:#ffe1a8; */
 	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
 	/* --hl:#80dec5; */
 	/* --hl:#c9cba3; */
 	--hl:#45707a;
@@ -72,7 +73,12 @@ body {
 
 /* * {border: 1px solid black;} */
 
-.content > *+* {margin-top: 2ex;}
+main > *+* {margin-top: 2ex;}
+main {
+	background-color:var(--bg-hl);
+	border-radius: 32px;
+	padding: 1em;
+}
 
 *:not(footer)>a {color:var(--hl);}
 *:not(footer)>a:visited {color:var(--hl-orange);}
@@ -80,16 +86,6 @@ body {
 
 header>h1 {display:inline-block;padding-right:.3em;}
 header {margin: 0 0 1em 0;clear:both;}
-
-.content { position: relative; padding: 2em;}
-.content-bg {
-	position: absolute;
-	top:0;
-	left:0;
-	width: 100%;
-	height: 100%;
-	z-index:-1;
-}
 
 mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
@@ -207,7 +203,7 @@ pub fn std_deviation(data: &[i32]) -> Option<f32> {
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="../images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 030323</em></span>
+		<span style="float: right;"><em>Last updated: 030523</em></span>
 	</footer>
 </body>
 </html>

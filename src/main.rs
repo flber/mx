@@ -12,7 +12,16 @@ use api::count::{self, UserCount};
 
 #[catch(401)]
 fn not_authorized(_req: &request::Request) -> RawHtml<&'static str> {
-    RawHtml(r#"<h1>haha lol no</h1>"#)
+	RawHtml(r#"<h1>haha lol no</h1>"#)
+}
+
+#[catch(404)]
+fn not_found(req: &request::Request) -> RawHtml<&'static str> {
+	let do_connecting = req.headers().get_one("do-connecting-ip");
+	if let Some(ip) = do_connecting {
+		println!("404 ip: {}", ip);
+	}
+	RawHtml(r#"<h1>404 page not found</h1>"#)
 }
 
 
@@ -21,7 +30,7 @@ fn rocket() -> _ {
 	rocket::build()
 		.manage(UserCount::default())
 		// .manage(UserIPs(vec![]))
-		.register("/", catchers![not_authorized])
+		.register("/", catchers![not_authorized, not_found])
 		.attach(Template::fairing())
 		.mount("/dev", dev::routes())
 		.mount("/", FileServer::from("public/"))
