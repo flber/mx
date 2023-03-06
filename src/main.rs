@@ -27,7 +27,8 @@ fn not_found(req: &request::Request) -> RawHtml<&'static str> {
 #[post("/<_..>", rank = 2)]
 fn skillissue() -> RawHtml<&'static str> {
 	println!("SKILL ISSUE DETECTED");
-	RawHtml(r#"skill issue."#)
+	RawHtml(r#"<img src="images/skill-issue.gif">
+skill issue."#)
 }
 
 
