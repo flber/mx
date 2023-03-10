@@ -5,36 +5,8 @@ title: Now
 [h2|Now]
 
 [p|[b|This week, I'm planning on]
-getting back into the routines of school and spending time with friends.]
+doing some stuff :)]
 
 [p|[b|More generally, I'm]]
 
-[div, class: "row"|
-	[div, style: "flex: 1"|[fieldset|
-		[legend|playing]
-		[ul|
-			[li|learning [a, href: "norwegian.html"|Norwegian]]
-			[li|playing [a, href: "games.html"|lots of games]]
-			[li|listening to [a, href: "music.html"|various albums]]
-			[li|[a, href: "drawings.html"|drawing]]
-			[li|going on the occasional [a, href: "hiking.html"|hike]]
-			[li|[a, href: "reading.html"|reading]]
-			[li|occasionally going to [a, href: "eating.html"|restaurants]]
-			[li|watching a couple of [a, href: "watching.html"|shows]]
-		]
-	]]
-	[div, style: "width: 2ex"|]
-	[div, style: "flex: 1"|[fieldset|
-		[legend|experimenting]
-		[ul|
-			[li|cultivating [a, href: "site.html"|this site]]
-			[li|very, very occasionally [a, href: "writing.html"|writing]]
-			[li|[a, href: "learning_rust.html"|learning rust]]
-			[li|creating my [a, href: "grimoire.html"|grimoire]]
-			[li|writing various [a, href: "tools.html"|tools]]
-			[li|learning [a, href: "uxn_notes.html"|uxn]]
-			[li|[a, href: "recipes.html"|cooking]]
-			[li|streaming using some [a, href: "ffstream.html"|custom tooling]]
-		]
-	]]
-]
+
