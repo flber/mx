@@ -29,6 +29,7 @@ a {
 	color: var(--bg);
 	background-color: var(--text);
 	text-decoration: none;
+	padding: 0ch 1ch;
 }
 
 a:hover {
