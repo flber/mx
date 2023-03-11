@@ -3,7 +3,7 @@ FROM rust:1.67 as builder
 
 WORKDIR /opt/cmsrs
 
-RUN apt-get update && apt-get install libsqlite3-dev
+RUN apt-get update && apt-get install -y libsqlite3-dev
 
 COPY ["Cargo.toml", "Cargo.lock",  "./"]
 # Make empty fake project
@@ -25,7 +25,7 @@ WORKDIR /opt/cmsrs
 
 ENV TZ="America/Los_Angeles"
 
-RUN apt-get update && apt-get install libsqlite3-dev
+RUN apt-get update && apt-get install -y libsqlite3-dev
 
 COPY --from=builder /usr/local/cargo/bin/cmsrs /usr/local/bin/cmsrs
 
