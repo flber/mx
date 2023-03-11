@@ -106,7 +106,9 @@ pub fn inc_count(user_count: &State<UserCount>, ip: IpAddr, pub_ip: PublicIp) {
 pub fn remove_ip(_user: User, user_count: &State<UserCount>, index: usize) {
 	match user_count.ips.lock() {
 		Ok(mut v) => {
-			v.ips.remove(index);
+			if index < v.ips.len() {
+				v.ips.remove(index);
+			}
 		}
 		Err(e) => println!("error getting ips: {}", e),
 	}
