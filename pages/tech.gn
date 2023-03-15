@@ -1,0 +1,17 @@
+!meta!
+title: Technology
+!meta!
+
+[h2|This place is built with technology]
+
+[p|As it stands, maybe a bit [i|too] much technology]
+
+[ul|
+	[li|[b|Rust] - language for my ssg and server]
+	[li|[b|Python] - language for ssg plugins]
+	[li|[b|Rocket] - web framework running everything]
+	[li|[b|Handlebars] - templating format for dynamic responses]
+	[li|[b|Docker] - packages project for Digital Ocean]
+	[li|[b|Github] - git repo for project]
+	[li|[b|Digital Ocean] - manages CI/CD from github]
+]

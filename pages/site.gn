@@ -6,6 +6,11 @@ title: Updates
 
 [p|It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!]
 
+[h3, id: "150323", class: "listing"|[i|Lots] of changes [span|150323]]
+[p|The benefit of having this page is that I can look back and see what I was working on, when. Of course, this is sometimes frustrating, as now when I looked back to [a, href: "#051022"|October 2022] and saw I was talking about wanting to do something which I [i|still haven't done!]]
+[p|Ugh... anyway.]
+[p|I've made a [i|ton] of changes recently, the biggest of which is moving mx off of my raspberry pi and onto Digital Ocean. This may have been a mistake, as I'm having a lot of trouble with random connection issues. I added a page which generally describes my [a, href: "tech.html"|tech stack], which I think I'll mostly use as a tool to analyze what I actually need and what I should think about simplifying.]
+
 [h3, id: "311022", class: "listing"|New Plugin [span|221122]]
 [p|I just wrote a quick script for my [a, href: "uxn-zine.html"|uxn zine page] which replaces its tag with the contents of a file, and it works really well! In future versions I want to keep the flexibility a plugin system provides, but maybe with better support for passing arguments? I'm just having the script do some manual parsing of a string following the tag, which actually works fine. I just feel like it might be nice to have a common interface for passing data to scripts to keep it consistent in the future.]
 
