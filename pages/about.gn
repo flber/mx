@@ -29,6 +29,8 @@ title: About
 		var new_text = document.createTextNode("say hi");
 		b.appendChild(new_text);
 		button.replaceWith(b);
+
+		get_usercount()
 	}
 
 	window.onload = function() {
