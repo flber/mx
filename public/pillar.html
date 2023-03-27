@@ -63,7 +63,7 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 
 body {
 	font-size:calc(1rem + 0.5vw);
-	font-family:Times;
+	font-family:sans-serif;
 	max-width:72ch;
 	margin: 3rem auto 3rem; 
 	padding: 0 1rem; 
@@ -81,11 +81,16 @@ main {
 	padding: 1em;
 }
 
-*:not(footer)>a {color:var(--hl);}
-*:not(footer)>a:visited {color:var(--hl-orange);}
-*:not(footer)>a[href*=':']::before{content:"↗"}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
 
-header>h1 {display:inline-block;padding-right:.3em;}
+/* header>h1 {display:inline-block;padding-right:.3em;} */
 header {margin: 0 0 1em 0;clear:both;}
 
 mark {background-color:var(--hl);color:var(--bg);}
@@ -99,10 +104,10 @@ pre {
 	color:var(--bg); 
 	background-color:var(--text); 
 }
-code {color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
+code {font-family: monospace; color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
 
 button {
-	border-radius: 30px;
+	border-radius: 8px;
 	border: 1px solid var(--text);
 	background: none;
 	padding: 0px 10px;
@@ -118,10 +123,15 @@ details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
 ::selection {color: var(--bg);background-color: var(--text);}
 
-.half {width: 50%; height: auto;}
+footer {margin:1em 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
 .third {width: 31%; height: auto;}
-.left {margin-top: 0em;float: left;margin-right: 2em;clear: both;}
-.block {margin-top: 1em;margin-left: 0px;clear: both;}
 .container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
 .row {display: flex;}
 .column {flex: 50%;}
@@ -133,6 +143,24 @@ fieldset {border:1px solid;}
 	grid-auto-flow: dense;
 }
 
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
 .inline-img {
 	height: 33px;
 	display: inline-block;
@@ -142,10 +170,9 @@ fieldset {border:1px solid;}
 	top: 0.25ex;
 }
 
-
-footer {margin:1em 0 0 0;clear:both}
-footer>* {display:inline-block;}
-footer img {margin:0 0 -10px 0;width:30px;} 
+*:not(footer)>a {color:var(--hl);}
+*:not(footer)>a:visited {color:var(--hl-orange);}
+*:not(footer)>a[href*=':']::before{content:"↗"}
 
 	</style>
 
@@ -153,10 +180,14 @@ footer img {margin:0 0 -10px 0;width:30px;}
 
 <body>
 	<header>
-		<h1><a href="home.html">Home</a></h1> 
-		<h1><a href="now.html">now</a></h1>
-		<h1><a href="wiki.html">wiki</a></h1>
-		<h1><a href="about.html">about</a></h1>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
 	</header>
 
 	<main>
@@ -243,7 +274,7 @@ for e in fs::read_dir(&config.granite_path)? {
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 030523</em></span>
+		<span style="float: right;"><em>Last updated: 032623</em></span>
 	</footer>
 </body>
 </html>
