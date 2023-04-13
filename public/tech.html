@@ -59,10 +59,16 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	/* --hl:#c9cba3; */
 	--hl:#45707a;
 	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  --step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+  --step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+  --step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
 }
 
 body {
-	font-size:calc(1rem + 0.5vw);
+	font-size:var(--step-0);
 	font-family:sans-serif;
 	max-width:72ch;
 	margin: 3rem auto 3rem; 
@@ -90,6 +96,10 @@ h6 {
   font-family: serif;
 }
 
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
 /* header>h1 {display:inline-block;padding-right:.3em;} */
 header {margin: 0 0 1em 0;clear:both;}
 
@@ -97,14 +107,21 @@ mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
 pre {
-	font-size:calc(0.5rem + 0.25vw);
+	font-size:calc(var(--step-0) + 0.25rem);
 	line-height:2.3ex;
 	overflow-x:auto; 
 	padding:2%; 
 	color:var(--bg); 
 	background-color:var(--text); 
 }
-code {font-family: monospace; color:var(--bg);background-color:var(--text);font-size:calc(0.8rem + 0.5vw);padding-left: 0.2em;padding-right: 0.2em;} 
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.25rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
 
 button {
 	border-radius: 8px;
@@ -227,7 +244,7 @@ ul[role=list] {
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 032623</em></span>
+		<span style="float: right;"><em>Last updated: 041323</em></span>
 	</footer>
 </body>
 </html>
