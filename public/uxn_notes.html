@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Uxn Notes</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Uxn Notes"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Uxn Notes</h2>
+
+<p><a href="https://wiki.xxiivv.com/site/uxn.html">Uxn</a> is an 8-bit virtual stack machine, created by <a href="https://wiki.xxiivv.com/site/devine_lu_linvega.html">Devine</a>, and programmed in a unique flavor of assembly.</p>
+
+<p>I have a <a href="files/uxn-zine.pdf">small zine design</a> of Rostiger's <a href="https://nchrs.xyz/site/uxn_notes.html">adorable uxn notes</a>, which you can learn how to fold <a href="https://en.wikibooks.org/wiki/Zine_Making/Putting_pages_together#An_8-sided_zine_from_1_sheet_with_1_cut">here</a>. It turned out alright, and I'll probably be making some small improvements to it soon!</p>
+
+<p>You can now download the zine as a latex project! It's a neat template which you can use in any other 16-page zine you want, and what's nice is all you'd need to change are the images referenced the <a href="files/uxn-zine/source.tex">source.tex</a> file. You can download the compressed project file <a href="files/uxn-zine.tar.gz">here</a>, or go to the <a href="files.html">files</a> page and download the tex and image files individually :3</p>
+
+<details>
+	<summary>Opcodes</summary>
+	<table border="1"> <tbody>
+		<tr> <th colspan="5"><strong>Stack</strong></th> </tr>
+		<tr> <td>0x00</td>	<td>BRK</td>	<td>break</td>		<td></td>		<td></td>		</tr>
+		<tr> <td>0x01</td>	<td>LIT</td>	<td>literal</td>	<td>++</td>		<td></td>		</tr>
+		<tr> <td>0x02</td>	<td>---</td>	<td></td>			<td></td>		<td></td>		</tr>
+		<tr> <td>0x03</td>	<td>POP</td>	<td>pop</td>		<td>a</td>		<td></td>		</tr>
+		<tr> <td>0x04</td>	<td>DUP</td>	<td>duplicate</td>	<td>a</td>		<td>a a</td>	</tr>
+		<tr> <td>0x05</td>	<td>SWP</td>	<td>swap</td>		<td>a b</td>	<td>b a</td>	</tr>
+		<tr> <td>0x06</td>	<td>OVR</td>	<td>over</td>		<td>a b</td>	<td>a b a</td>	</tr>
+		<tr> <td>0x07</td>	<td>ROT</td>	<td>rotate</td>		<td>a b c</td>	<td>b c a</td>	</tr>
+	</tbody></table>
+	
+	<table border="1"> <tbody>
+		<tr> <th colspan="5"><strong>Logic</strong></th> </tr>
+		<tr> <td>0x08</td>	<td>EQU</td>	<td>equal</td>				<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x09</td>	<td>NEQ</td>	<td>not equal</td>			<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x0a</td>	<td>GTH</td>	<td>greater than</td>		<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x0b</td>	<td>LTH</td>	<td>less than</td>			<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x0c</td>	<td>JMP</td>	<td>jump</td>				<td>{a}</td>	<td></td>	</tr>
+		<tr> <td>0x0d</td>	<td>JCN</td>	<td>jump conditional</td>	<td>a {b}</td>	<td></td>	</tr>
+		<tr> <td>0x0e</td>	<td>JSR</td>	<td>jump stash</td>			<td>{a}</td>	<td>rs</td>	</tr>
+		<tr> <td>0x0f</td>	<td>STH</td>	<td>stash</td>				<td>a</td>		<td>rs</td>	</tr>
+	</tbody></table>
+
+	<table border="1"> <tbody>
+		<tr> <th colspan="5"><strong>Memory</strong></th> </tr>
+		<tr> <td>0x10</td>	<td>LDZ</td>	<td>load zero page</td>		<td>a</td>		<td>{b}</td>	</tr>
+		<tr> <td>0x11</td>	<td>STZ</td>	<td>store zero page</td>	<td>a b</td>	<td></td>		</tr>
+		<tr> <td>0x12</td>	<td>LDR</td>	<td>load relative</td>		<td>a</td>		<td>{b}</td>	</tr>
+		<tr> <td>0x13</td>	<td>STR</td>	<td>store relative</td>		<td>{b} a</td>	<td></td>		</tr>
+		<tr> <td>0x14</td>	<td>LDA</td>	<td>load absolute</td>		<td>a*</td>		<td>{b}</td>	</tr>
+		<tr> <td>0x15</td>	<td>STA</td>	<td>store absolute</td>		<td>{b} a*</td>	<td></td>		</tr>
+		<tr> <td>0x16</td>	<td>DEI</td>	<td>device in</td>			<td>a</td>		<td>{b}</td>	</tr>
+		<tr> <td>0x17</td>	<td>DEO</td>	<td>device out</td>			<td>{b} a</td>	<td>rs</td>		</tr>
+	</tbody></table>
+
+	<table border="1"> <tbody>
+		<tr> <th colspan="5"><strong>Arithmetic</strong></th> </tr>
+		<tr> <td>0x18</td>	<td>ADD</td>	<td>add</td>			<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x19</td>	<td>SUB</td>	<td>subtract</td>		<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x1a</td>	<td>MUL</td>	<td>multiply</td>		<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x1b</td>	<td>DIV</td>	<td>divide</td>			<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x1c</td>	<td>AND</td>	<td>and</td>			<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x1d</td>	<td>ORA</td>	<td>or</td>				<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x1e</td>	<td>EOR</td>	<td>exclusive or</td>	<td>a b</td>	<td>c</td>	</tr>
+		<tr> <td>0x1f</td>	<td>SFT</td>	<td>shift</td>			<td>a b</td>	<td>c</td>	</tr>
+	</tbody></table>
+</details>
+
+<details>
+	<summary>Modes</summary>
+	<p><strong>Keep mode:</strong> lets operators work without consuming items from the stack. Results are simply pushed to the top.</p>
+	<p><strong>Short mode:</strong> allows operators to operate on 2-byte data, pushing and popping extra byte from the stack. With jump opcodes, short mode jumps to absolute memory addresses.</p>
+	<p><strong>Return mode:</strong> sets opcodes to operate on the return stack. Certain opcodes, such as STH, already operate on the stack, so applying the return mode to those opcodes let them operate on the working stack.</p>
+</details>
+
+<details>
+	<summary>Runes</summary>
+	<table border="1"> <tbody>
+		<tr> <td>%</td>			<td>macro-define</td>				</tr>
+		<tr> <td>|</td>			<td>pad absolute</td>				</tr>
+		<tr> <td>$</td>			<td>pad relative</td>				</tr>
+		<tr> <td>@</td>			<td>label-define</td>				</tr>
+		<tr> <td>&</td>			<td>sublabel-define</td>			</tr>
+		<tr> <td>/</td>			<td>sublabel spacer</td>			</tr>
+		<tr> <td>#</td>			<td>literal hex</td>				</tr>
+		<tr> <td>.</td>			<td>literal addr (zero page)</td>	</tr>
+		<tr> <td>,</td>			<td>literal addr (relative)</td>	</tr>
+		<tr> <td>;</td>			<td>literal addr (absolute)</td>	</tr>
+		<tr> <td>:</td>			<td>raw addr</td>					</tr>
+		<tr> <td>'</td>			<td>raw char</td>					</tr>
+		<tr> <td>{quote}</td>	<td>raw word</td>					</tr>
+	</tbody></table>
+</details>
+
+<div class="break"></div>
+
+<h3>Hello world, part 2!</h3>
+
+<pre>
+( dev/console )
+
+|10 @Console [ &pad $8 &char ]
+
+( init )
+
+|0100 ( -> )
+	
+	;hello-word 
+
+	&loop
+		( send ) LDAk .Console/char DEO
+		( incr ) #0001 ADD2
+		( loop ) LDAk ,&loop JCN
+	POP2
+	
+BRK
+
+@hello-word "Hello 20 "World!
+</pre>
+
+<p>This is the new version of hello world (as of commit ea0584a2), which is significantly more concise, and uses some of the new opcodes. If you want an example which is a bit longer, I'd recommend checking out the first breakdown.</p>
+
+<p>The couple of lines are the same as they were before, so I won't go over them again.</p>
+
+<p>To start, everything happens in one space, and isn't broken up between functions. The general overview of how the program works is the same as the older version; the newer version is just a bit more concise.</p>
+
+<p>Once again, let's go through this line by line, starting at line 9.</p>
+
+<pre>
+;hello-world
+└──────────┘
+      A
+</pre>
+
+<p>This one's pretty simple (though it may look weird if you're not quite familiar with uxn's concepts yet). The semicolon tells the cpu to use absolute addresses, and in this case the address it's referring to is the `@hello-world` label. That absolute address is added to the stack, and the program continues to line 11.</p>
+
+<pre>
+&loop 
+└───┘ 
+  A
+</pre>
+
+<p>This one is also super short; part A just creates a sublabel called `loop` for later use.</p>
+
+<pre>
+( send ) LDAk .Console/char DEO
+└──────┘ └──┘ └───────────────┘
+   A      B           C
+</pre>
+
+<p>Part A is just a comment, but part B is where we see a new opcode! `LDA` takes an absolute address and adds the value at that address to the stack. Here it's used with the keep mode, so it doesn't consume that address (which points to the start of our `"hello 20 "world`) text. With the character at that address now on the top of the stack, part C takes that value and prints it to the console.</p>
+
+<pre>
+( incr ) #0001 ADD2
+└──────┘ └────────┘
+   A         B
+</pre>
+
+<p>Part B, as the comment says, just increments our address, which is now at the top of the stack. The address on the stack now points to the next character of the text.</p>
+
+<pre>
+( loop ) LDAk ,&loop JCN
+└──────┘ └──┘ └────────┘
+   A      B       C
+</pre>
+
+<p>Part B is the same thing as used before, it gets the value at the address, keeps the address on the stack, and adds the value to the top of the stack. This value is then used by part C, which passes two arguments, (that value, and the relative address of the `loop` sublabel which was defined earlier) to the `JCN` opcode. `JCN` takes a boolean value and an address, and if the boolean is true (not a zero), it jumps to that address. Here, it looks at that value, which is normally a character, and repeats. However, if the address has been incremented past where we have characters, the value will be #00 (I think, but the point is it's a zero), and the loop stops.</p>
+
+<p>The final opcode, `POP2`, removes the top two-byte item on the stack, which is our address. With everything done and "hello world" printed to the console, we break.</p>
+
+<h3>Breakdown of Hello world</h3>
+
+<pre>
+( dev/console )
+
+%RTN { JMP2r }
+
+( devices )
+
+|10 @Console    [ &pad $8 &char $1 ]
+
+( init )
+
+|0100 ( -> )
+	
+	;hello-world ;print JSR2
+	
+BRK
+
+@print ( addr -- )
+	
+	&loop
+		( send ) DUP2 GET .Console/char DEO
+		( incr ) #0001 ADD2
+		( loop ) DUP2 GET #00 NEQ ,&loop JNZ
+	POP2
+
+RTN
+
+@hello-world [ "Hello 20 "World! ]
+</pre>
+
+<p>In uxn, everything is a stack of data. This often means that commands seem backward, as data is added to that stack before operations can use it.</p>
+
+<p>The second line (`%RTN { JMP2r }`) simply declares a macro labeled "RTN" which returns the two bytes at the top of the stack.</p>
+
+<p>The next line is very interesting, and definitely confused me for a while!</p>
+
+<pre>
+|10 @Console    [ &pad $8 &char $1 ]
+└──────────┘      └─────┘ └──────┘
+      A              B       C
+</pre>
+
+<p>Part A starts the line by making sense. It defines a label: "Console", which is an address to the console device (at 0110). </p>
+<p>Part B is where things start to get a bit confusing, and where Devine's [devices](https://wiki.xxiivv.com/site/uxnemu.html) table is very helpful. The first part, `&pad`, defines a sublabel (of `Console`), which is assigned by the `$8` part to an address one byte further than the `Console` address. If you look at the previously mentioned table, you'll see that this puts us right up to the output section of the console's memory space. This sublabel is never actually called.</p>
+<p>Part C then uses the same method as part B to assign the sublabel `char` to one bit past the `pad` label, which is the start of the "char" section of the console device!</p>
+
+<p>The main part of the program starts with the line "|0100 ( -> )", which moves us into the "system" device's memory space.</p>
+
+<pre>
+;hello-world ;print JSR2
+└──────────┘ └────┘ └──┘
+      A        B     C
+</pre>
+
+<p>Part A gets the address of the `hello-world` label and adds to the top of the stack. Part B then gets the address of the `print` label and pushes that to the stack, moving the first label down (really down four bytes, because each label is two bytes). The `JSR` opcode jumps the program to an address popped from the top of the stack, and the `2` modifier tells it to use two byte addresses. Because the top address is to `print`, we now move there.</p>
+
+<p>The main part of the `print` section is in the `( send )` line, where the program outputs to the terminal.</p>
+
+<pre>
+( send ) DUP2 GET .Console/char DEO
+└──────┘ └──┘ └─┘ └───────────┘ └─┘
+   A      B    C        D        E
+</pre>
+
+<p>Part A is just a comment.</p>
+<p>Part B duplicates the top two bytes of the stack, which here is the address to the `print` section. </p>
+<p>Part C consumes and adds the top item to the stack, which is that address to `print`</p>
+<p>Part D adds the device address for the console's char byte to the stack.</p>
+<p>Part E consumes both the device address and the address of the `print` label, which is essentially the first byte of the `"hello 20 "world` string. </p>
+
+<p>The next two lines make a bit more sense, but can be a bit unintuitive if you aren't used to working with memory address (like I am).</p>
+
+<pre>
+( incr ) #0001 ADD2
+</pre>
+
+<p>This is relatively straight-forward, it adds one byte to the item at the top of the stack, which is... the `print` address! Thus, the program now has an address on the top of the stack which points to the second byte in the `"hello 20 "world` string.</p>
+
+<p>While a bit scary, I promise this next line isn't too complicated!</p>
+
+<pre>
+( loop ) DUP2 GET #00 NEQ ,&loop JNZ
+         └──────┘ └─────┘ └────────┘
+            A        B         C
+</pre>
+
+<p>At part A we duplicate and `GET` the two bytes at the top of the stack (remember, that's now the address to the next byte of our string), and the value at that address is compared to `#00`, the ascii null char, at part B. The `NEQ` opcode, as the name suggests, checks if its inputs are not equal. If they aren't equal, it returns a 1, and if they are equal it returns a 0.</p>
+<p>Part C starts by adding the literal relative address of the `&loop` sublabel to the stack, and then the conditional jump operator, `JNZ`, uses the previous boolean added by part B to decide if it should jump to that address.</p>
+<p>In this way, the loop repeats, printing each byte, until it hits a null byte, at which point it stops and returns.</p>
+
+<p>And there we have it: Hello world!</p>
+ 
+ 
+ 
+ 
+ 
+
+		<p><b>Incoming:</b> <a href=".html"></a> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

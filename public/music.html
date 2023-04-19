@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Music</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Music"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Music</h2>
+
+<p>Here is a list of the albums I listen to, pulled from my music directory. Suggestions are always welcome!</p>
+
+<details>
+	<summary>Albums</summary>
+	<ul>
+	<li>Jackrabbit</li>
+	<li>Ready to Die</li>
+	<li>Doom</li>
+	<li>Remember That You Will Die</li>
+	<li>Parrhesia</li>
+	<li>Space 1.8</li>
+	<li>ILWAG - 2016</li>
+	<li>Playful Spirits</li>
+	<li>(2014) The Joy of Motion</li>
+	<li>(2009) Animals as Leaders</li>
+	<li>Красота и Уродство</li>
+	<li>Technicolor</li>
+	<li>Cool Patrol</li>
+	<li>Beneath the Skin</li>
+	<li>Soft Music to Do Nothing To</li>
+	<li>(2011) Weightless</li>
+	<li>Chronologic</li>
+	<li>Dreamland</li>
+	<li>Echolocations River</li>
+	<li>good kid, m.A.A.d. city</li>
+	<li>Steven Universe</li>
+	<li>Worlds</li>
+	<li>Stellar Regions</li>
+	<li>New Levels New Devils</li>
+	<li>Lateralus</li>
+	<li>HUH!</li>
+	<li>Free Love</li>
+	<li>The Best of Deathmole</li>
+	<li>Safety Third Season 1</li>
+	<li>Voyeur</li>
+	<li>Toxicity</li>
+	<li>Through A Dark Wood</li>
+	<li>Are You Serious</li>
+	<li>Mm.. Food</li>
+	<li>Stay Gold</li>
+	<li>Madvillainy</li>
+	<li>Panic</li>
+	<li>YOASOBI</li>
+	<li>My Head is an Animal</li>
+	<li>O My Heart</li>
+	<li>she wait patiently</li>
+	<li>Sehnsucht</li>
+	<li>How To Be A Human Being</li>
+	<li>What Now</li>
+	<li>.radio</li>
+	<li>Beta</li>
+	<li>Your Parents Are Only Marginally Disappointed In Your Musical Taste</li>
+	<li>The Much Much How How and I</li>
+	<li>0</li>
+	<li>Renaissance</li>
+	<li>let's go</li>
+	<li>N I T O</li>
+	<li>Blasterpiece</li>
+	<li>Evil Empire</li>
+	<li>Mr. Morale & The Big Steppers</li>
+	<li>The Moss and Solar</li>
+	<li>Metallica</li>
+	<li>ILWAG - 2015</li>
+	<li>For Emma, Forever Ago</li>
+	<li>Kind of Blue</li>
+	<li>1981 Extended Play</li>
+	<li>Giant Steps</li>
+	<li>To Pimp A Butterfly</li>
+	<li>Ivan and Alyosha</li>
+	<li>Once in a Long, Long While</li>
+	<li>The Sunset Tree</li>
+	<li>Fear Inoculum</li>
+	<li>RAZZMATAZZ</li>
+	<li>DAMN</li>
+	<li>Muse</li>
+	<li>The Battle Of Los Angeles</li>
+	<li>xsodect</li>
+	<li>My Finest Work Yet</li>
+	<li>夢の砂漠</li>
+	<li>Belong</li>
+	<li>Guardians Of The Zone</li>
+	<li>The Predator</li>
+	<li>In the Aeroplane Over the Sea</li>
+	<li>Bob Dylan Greatest Hits</li>
+	<li>DEATH MAGIC</li>
+	<li>Eureka</li>
+	<li>gay story</li>
+	<li>Mutter</li>
+	<li>Wolf</li>
+	<li>All the Times We Had</li>
+	<li>Ride the Lighting</li>
+	<li>Old World Romance</li>
+	<li>Concert by the Sea</li>
+	<li>The Prophecy</li>
+	<li>VOL. 4 - SLAVES OF FEAR</li>
+	<li>The Device</li>
+	<li>JoCat</li>
+	<li>Man On the Moon III</li>
+	<li>Attitude City</li>
+	<li>Life After Death</li>
+	<li>Pantanjali</li>
+	<li>Obzen</li>
+	<li>Jinx</li>
+	<li>Paul's Boutique</li>
+	<li>Nothing</li>
+	<li>Sylvan Esso</li>
+	<li>Catch Thirtythree</li>
+	<li>healing</li>
+	<li>robotface</li>
+	<li>Saintmotelevision</li>
+	<li>flowers ep</li>
+	<li>Dwarf Fortress</li>
+	<li>Portrait-EP</li>
+</ul>
+</details>
+
+<p>I've also got a <a href="playlist.html">playlist page</a> for a specific album. It's very experimental, so it might break on your browser</p>
+
+<p>Additionally, here are a various recomendations I've recieved, but maybe haven't gotten around to listening to yet :P</p>
+<p>(this list could be super out-of-date!)</p>
+<ul>
+	<li>*<a href="https://www.youtube.com/watch?v=BLcM3fq6Quk">«War» by IDLES</a></li>
+	<li>*<a href="https://www.youtube.com/watch?v=-zOHIXQe0J0">OXXXYMIRON — Красота и Уродство</a></li>
+	<li>Abigor - Time Is The Sulphur In The Veins Of The Saint</li>
+	<li><a href="https://www.weeklybeats.com/music/?s=tag:week+1+2022">Weeklybeats</a></li>
+	<li>*<a href="https://lorn.bandcamp.com/album/yesterdays-pain-cut-the-anchor">YESTERDAY'S PAIN / CUT THE ANCHOR</a></li>
+	<li><a href="https://www.youtube.com/watch?v=UujT61-3urA">Urbs & Cutex’ Breaks of Dawn</a></li>
+	<li><a href="https://www.youtube.com/watch?v=Qqi_EZ0DgrA">space 1.8 by Nala Sinephro</a></li>
+	<li><a href="https://senyoroca.bandcamp.com/album/atomosfera">senyor oca’s atomosfera</a></li>
+	<li>Nils Frahm :: Tripping</li>
+	<li><a href="https://cleopatrick.bandcamp.com/album/bummer">BUMMER by CLEOPATRICK</a></li>
+	<li><a href="https://soundcloud.com/dina-elwedidi/elkoun">الكون</a></li>
+	<li><a href="https://www.youtube.com/watch?v=PfJfBY5SJB8">LSDXOXO - INERTIA</a></li>
+	<li><a href="https://violetcold.bandcamp.com/album/empire-of-love">Empire Of Love by Violet Cold</a></li>
+	<li><a href="https://www.youtube.com/watch?v=ztnFUEFwxmQ">O’Death - Lowtide</a></li>
+	<li><a href="https://zulimusic.bandcamp.com/album/all-caps-uiq0012">ZULI - All Caps</a></li>
+	<li>*<a href="https://www.youtube.com/watch?v=wKiynsibijk">aYia - Ruins</a></li>
+	<li>*<a href="https://soundcloud.com/club_sirens/sets/fallen">SIRENS</a></li>
+	<li><a href="https://www.youtube.com/watch?v=ZIaWqIwbhc8">Sow Some Lonesome Corner So Many Flowers Bloom - Silver Mt Zion</a></li>
+	<li><a href="https://www.youtube.com/watch?v=4LBPUTxEY84">Moaning - Uneasy Laughter</a></li>
+	<li>*<a href="https://youwillloveeachother.bandcamp.com/track/slaves-of-fear">HEALTH — SLAVES OF FEAR</a></li>
+	<li>*<a href="https://tanoshii-magro-dance-p.bandcamp.com/album/sankaku">子供向けクソゲー（SANKAKU）</a></li>
+	<li><a href="https://www.youtube.com/watch?v=H8BuReehldo">Monophonics - "Like Yesterday"</a></li>
+	<li>*<a href="https://youwillloveeachother.bandcamp.com/album/death-magic">HEALTH —DEATH MAGIC</a></li>
+	<li>*<a href="https://sierpienrecords.bandcamp.com/album/aromat-orchidey">Aromat Orchidey</a></li>
+</ul>
+
+		<p><b>Incoming:</b> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

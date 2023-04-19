@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>My First Look at Plan 9</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="My First Look at Plan 9"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>My First Look at Plan 9</h2>
+
+<p>I first encountered Plan 9 on Devine Lu Linvega's site and was immediately interested in its minimalist design and "more unix than unix" philosophy. If you've never heard of it before, Plan 9 is a research operating system developed by Bell Labs in 1992, and takes the unix principle of everything as a file to the extreme. It has a lot of other interesting features and quirks, and if you're interested in learning more about them I would highly recommend the the Plan 9 <a href="https://9p.io/plan9/about.html">about page</a> or the <a href="https://9p.io/sys/doc/">several papers</a> written about the operating system.</p>
+
+<p>However, for all of the documentation I had a hard time actually getting Plan 9 (or, more accurately, 9front, a more maintained fork of Plan 9) to run on my pi 4. Though a few of the issues were certainly due to my own inexperience, I think there were a few which others might also face while trying to get it working on their own pi 4.</p>
+
+<p>To start, the image file for the pi 4 can be found <a href="http://9front.org/releases/">here</a> (the pi3.img.gz file).</p>
+
+<p>Confusingly though (because the 9front website says otherwise), the image file cannot simply be moved to a FAT32 formated micro sd card, it has to be flashed to the drive, using something like <a href="https://www.balena.io/etcher">balenaetcher</a>.</p>
+
+<p>Additionally, by default the pi does not boot in something called "hdmi safe mode", which allows for maximum compatibility with hdmi output. This means that though the pi may be booting properly (as indicated by the green status led quickly blinking once the pi is first started and then turning off), the screen will not display any output. To fix this I needed to set a parameter called `hdmi_safe` in the `config.txt` file to `1`. That puts the pi into safe mode, which fixed the issue for me. </p>
+
+<p>Also, something stupid I accidentally did which caught me up for a minute was trying to get hdmi output from the second micro hdmi port on the pi, which by default is disabled.</p>
+
+<p>Once the pi boots, you should be greeted with a "bootargs" screen, which you can get through just by selecting the defaults (by pressing enter).</p>
+
+<p>And with that done, your pi 4 should be good to go!</p>
+ 
+ 
+ 
+ 
+ 
+
+		<p><b>Incoming:</b> <a href=".html"></a> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

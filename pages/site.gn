@@ -6,7 +6,12 @@ title: Updates
 
 [p|It remains to be seen how this actually turns out, but my idea is that this will be a sort of news board on what I'm currently working on with this site specifically. I suppose we'll just see how it goes!]
 
-[h3, id: "311022", class: "listing"|Plugins [span|221122]]
+[h3, id: "150323", class: "listing"|[i|Lots] of changes [span|150323]]
+[p|The benefit of having this page is that I can look back and see what I was working on, when. Of course, this is sometimes frustrating, as now when I looked back to [a, href: "#051022"|October 2022] and saw I was talking about wanting to do something which I [i|still haven't done!]]
+[p|Ugh... anyway.]
+[p|I've made a [i|ton] of changes recently, the biggest of which is moving mx off of my raspberry pi and onto Digital Ocean. This may have been a mistake, as I'm having a lot of trouble with random connection issues. I added a page which generally describes my [a, href: "tech.html"|tech stack], which I think I'll mostly use as a tool to analyze what I actually need and what I should think about simplifying.]
+
+[h3, id: "311022", class: "listing"|New Plugin [span|221122]]
 [p|I just wrote a quick script for my [a, href: "uxn-zine.html"|uxn zine page] which replaces its tag with the contents of a file, and it works really well! In future versions I want to keep the flexibility a plugin system provides, but maybe with better support for passing arguments? I'm just having the script do some manual parsing of a string following the tag, which actually works fine. I just feel like it might be nice to have a common interface for passing data to scripts to keep it consistent in the future.]
 
 [h3, id: "311022", class: "listing"|New parser benchmarks [span|311022]]
@@ -21,7 +26,7 @@ title: Updates
 
 [h3, id: "060322", class: "listing"|Long overdue pillar optimizations [span|060322]]
 [p|Wow I've written some bad code. Turns out the main reason pillar was so slow was because of a [em|truly] terrible string insertion function I wrote. It's so bad, actually, that I feel the need to show it off to warn others!]
-[pre|
+[pre|[code, class: "lang-rust"|
 let insert_len = len(&ins.to_string());
 let final_len = len(&s) + insert_len;
 let mut r = String::with_capacity(final_len);
@@ -35,7 +40,7 @@ for i in 0..final_len {
     let a_ins = i - insert_len;
     r.push_str(&slice(&s, a_ins..a_ins + 1));
   }
-}
+}]
 ]
 [p|it's... just awful. I think I must have been possesed by a malevolent code demon when I wrote this, or I at least hope I was! Anyway, with that fixed (the [em|sane] solution was 3 lines of code) my whole site builds in 26 seconds. Not great, not terrible, but much better and good enough for now :D]
 

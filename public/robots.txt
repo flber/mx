@@ -1,0 +1,4 @@
+# User-agent: *
+# Disallow: /
+
+# sorry robots, I want to see how many actual people visit my site :/

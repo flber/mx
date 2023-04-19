@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Bookmarks</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Bookmarks"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Bookmarks</h2>
+
+<p>There are lots of fun and interesting websites out there, so here's my start at listing some of my favorites!</p>
+
+
+<fieldset>
+	<legend><a href="https://memex.marginalia.nu/log/19-website-discoverability-crisis.gmi">marginalia</a></legend>
+	<p>A proposal, dear reader: Create a list of bookmarks linking to websites you find interesting, and publish it for the world to see. It's a bit strange, almost nobody seems to be doing this. Looking through a sample of personal websites, very few of them has links to other personal websites. A hyperlink isn't a marriage proposal. It is enough to find some redeeming quality in a website to link to it. It costs nothing, and helps bring traffic to pages that you yourself think deserve it</p>
+</fieldset>
+
+<h3>Friends & Neighbors</h3>
+<ul>
+	<li><a href="https://mudvoid.com/">MudVoid</a></li>
+	<li><a href="https://noa.gaiwan.org">Noa <img class="inline-img" src="http://noa.gaiwan.org/button.gif" alt="the name noa in handwritten letters"></img></a></li>
+	<li><a href="https://aless.co/">anti/pattern</a></li>
+	<li><a href="http://fragmentscenario.com/">fragmentscenario</a></li>
+</ul>
+
+<h3>Sustainability</h3>
+<ul>
+	<li><a href="https://wiki.xxiivv.com/site/home.html">XXIIVV<img class="inline-img" src="https://wiki.xxiivv.com/media/services/button.gif" alt="xxiivv's banner"></img></a></li>
+	<li><a href="http://100r.co/site/home.html">Hundred Rabbits<img class="inline-img" src="http://100r.co/media/interface/logo.svg" alt="10 by 10 grid of white dots on a black background"></img></a></li>
+	<li><a href="https://everestpipkin.medium.com/but-the-environmental-issues-with-cryptoart-1128ef72e6a3">Here is the article you can send to people when they say "But the environmental issues with cryptoart will be solved soon, right?"</a></li>
+</ul>
+
+<h3>Cooking</h3>
+<ul>
+	<li><a href="https://grimgrains.com/site/home.html">Grimgrains<img class="inline-img" src="https://grimgrains.com/media/interface/logo.png" alt="a loaf of bread with eyes over the title grimgrains"></img></a></li>
+	<li><a href="https://www.phaidon.com/store/food-cook/the-nordic-cookbook-9780714868721/">The Nordic cookbook</a></li>
+</ul>
+
+<h3>Essays</h3>
+<ul>
+	<li><a href="https://deathtobullshit.com/">Death to Bullshit</a></li>
+	<li><a href="https://compudanzas.net/uxn_tutorial.html">Compudanzas' uxn tutorial<img class="inline-img" src="https://compudanzas.net/img/iconocompudanzas_32.png" alt="a little grey cube in a cloud?"></img></a></li>
+	<li><a href="https://en.wikipedia.org/wiki/Category:One-of-a-kind_computers">One-of-a-kind computers</a></li>
+	<li><a href="https://blog.pimaker.at/texts/rvc1/">Linux in a pixel shader</a></li>
+	<li><a href="https://seirdy.one/2021/01/12/password-strength.html">Physical immunity to brute-force attacks</a></li>
+	<li><a href="https://phoboslab.org/log/2021/11/qoi-fast-lossless-image-compression">Fast and simple image compression</a></li>
+	<li><a href="https://writings.stephenwolfram.com/2020/04/finally-we-may-have-a-path-to-the-fundamental-theory-of-physics-and-its-beautiful/">Wolfram theory of physics</a></li>
+	<li><a href="https://phoboslab.org/log/2021/09/q1k3-making-of">Quake in 13kb of JS</a></li>
+	<li><a href="https://journal.stuffwithstuff.com/">Bob Nystrom's journal</a></li>
+	<li><a href="https://users.rust-lang.org/t/rust-koans/2408?u=michael-f-bryan">Rust <em>Obstacles</em></a></li>
+	<li><a href="https://internetgirlfriend.club/">Internet Girlfriend Club</a></li>
+</ul>
+
+<h3>Art</h3>
+<ul>
+	<li><a href="https://ritualdust.com/">Ritualdust</a></li>
+	<li><a href="https://questionablecontent.net/">Questionable Content</a></li>
+	<li><a href="https://xkcd.com/">xkcd</a></li>
+	<li><a href="https://www.carlburton.io/">Carl Burton</a></li>
+	<li><a href="https://200-50.com/">200/50</a></li>
+	<li><a href="https://kokorobot.ca/site/hitobito.html">kokorobot - everyone</a></li>
+	<li><a href="http://www.rice-boy.com/vattu/">vattu<img class="inline-img" src="http://www.rice-boy.com/vattu/site/index.title.png" alt="vattu over a yellow field"></img></a></li>
+	<li><a href="https://www.peppercarrot.com/en/webcomics/index.html">Pepper & Carrot</a></li>
+	<li><a href="https://c6y.github.io/tilix-reference/">Modular isometric art rules</a></li>
+	<li><a href="https://ludwigseibt.com/">Ludwig Seibt</a></li>
+</ul>
+
+<h3>Audio</h3>
+<ul>
+	<li><a href="https://kexp.org/">KEXP Radio<img style="background-color: #000" class="inline-img" src="https://kexp.org/static/assets/img/logo-white.svg" alt="four white bars over the letter K E X P"></img></a></li>
+</ul>
+
+<h3>Design</h3>
+<ul>
+	<li><a href="https://spacecraft.ssl.umd.edu/akins_laws.html">Akin's Laws of Spacecraft Design</a></li>
+	<li><a href="https://thomasorus.com/html-tips.html">HTML Tips</a></li>
+	<li><a href="https://www.destroyallsoftware.com/talks/a-whole-new-world">Destroy All Software: A Whole New World</a></li>
+	<li><a href="https://lodef.technomancy.us/">LoDef</a></li>
+</ul>
+
+<h3>Hardware</h3>
+<ul>
+	<li><a href="https://mntre.com/">MNT Reform<img class="inline-img" src="https://mntre.com/mntre-logo-2015.svg" alt="the stylized letters mnt"></img></a></li>
+	<li><a href="https://www.jivamaterials.com/">recycleable pcb</a></li>
+	<li><a href="https://www.midori-japan.co.jp/md/en/products/mdnote/">Midori MD</a></li>
+	<li><a href="https://winterbloom.com/">Winterbloom audio<img class="inline-img" src="https://winterbloom.com/images/winterbloom-logo.png" alt="winterbloom in handwritten cursive"></img></a></li>
+	<li><a href="https://heater.link/">Copper coil alcohol heater build guide</a></li>
+	<li><a href="https://lowerquality.com/desertjournalism/">desert journalism printer</a></li>
+	<li><a href="https://www.sensorwatch.net/about/">sensorwatch</a></li>
+	<li><a href="https://www.crowdsupply.com/mnt/pocket-reform">Pocket Reform</a></li>
+</ul>
+
+<h3>Personal Sites</h3>
+<ul>
+	<li><a href="https://www.thomasorus.com/">Thomasorus</a></li>
+	<li><a href="https://fdisk.space/">fdisk</a></li>
+	<li><a href="https://azlen.me/">Azlen</a></li>
+	<li><a href="https://ocean-waves.xyz/">Ocean Waves<img class="inline-img" src="https://ocean-waves.xyz/graphix/buttons/myButtonn.gif" alt="ocean waves on a beach"></img></a></li>
+	<li><a href="https://pbat.ch/wiki/">Pbat</a></li>
+	<li><a href="http://aboutmako.makopool.com/">Mako's site</a></li>
+	<li><a href="https://coolguy.website/">Coolguy website</a></li>
+	<li><a href="https://regularflolloping.com/">Regular Flolloping</a></li>
+	<li><a href="https://m15o.ichi.city/">m15o</a></li>
+	<li><a href="https://toffeee.com">toffeee<img class="inline-img" src="https://toffeee.com/buttons/tof.png" alt="Toffee the Dev"></img></a></li>
+	<li><a href="https://ulthar.cat/">ulthar.cat<img style="background-color: #000" class="inline-img" src="https://ulthar.cat/favicon.ico" alt="felinae's icon"></img></a></li>
+	<li><a href="https://aegi.neocities.org/">aegi's cafe<img style="background-color: #000" class="inline-img" src="https://aegi.neocities.org/images/aegi_button.gif" alt="aegi's icon, a fish with legs"></img></a></li>
+</ul>
+
+<h3>Communities</h3>
+<ul>
+	<li><a href="https://cyberdeck.cafe/">The Cyberdeck Cafe</a></li>
+	<li><a href="https://midnight.pub/">Midnight Pub</a></li>
+	<li><a href="https://forum.merveilles.town/">Merveilles Forum<img class="inline-img" src="https://forum.merveilles.town/assets/merveilles.png" alt="the merveilles symbol"></img></a></li>
+</ul>
+
+<h3>Research</h3>
+<ul>
+	<li><a href="https://sciencenorway.no/ulv/wolf-packs-dont-actually-have-alpha-males-and-alpha-females-the-idea-is-based-on-a-misunderstanding/1850514">article on wolves</a></li>
+	<li><a href="https://energypedia.info/wiki/Main_Page">energypedia</a></li>
+	<li><a href="https://solar.lowtechmagazine.com/">Low Tech Magazine</a></li>
+	<li><a href="http://osp.kitchen/">Open Source Publishing</a></li>
+	<li><a href="https://blog.backtotheroots.com/2018/04/27/greenhouses-transformed-iceland/">Geothermal greenhouses in Iceland</a></li>
+	<li><a href="https://lhs.nu/archive">P2P resources</a></li>
+</ul>
+
+<h3>Software</h3>
+<ul>
+	<li><a href="https://www.nushell.sh/book/">Nu Shell</a></li>
+	<li><a href="https://www.calligraphr.com/en/">Calligraphr</a></li>
+	<li><a href="https://www.redaction.us/">Redaction font</a></li>
+	<li><a href="https://search.marginalia.nu/">Marginalia search engine</a></li>
+	<li><a href="https://ditherit.com/">Ditherit</a></li>
+	<li><a href="https://comradery.co/">Comdradery worker coop</a></li>
+	<li><a href="https://git.sr.ht/~rabbits/uxn">uxn<img class="inline-img" src="https://wiki.xxiivv.com/media/generic/uxn.png" alt="a small creature"></img></a></li>
+	<li><a href="https://bytes.fyi/real-time-goaccess-reports-with-nginx/">Real time goaccess reports with nginx</a></li>
+</ul>
+
+<h3>Games</h3>
+<ul>
+	<li><a href="https://puprika.itch.io/">Puprika</a></li>
+	<li><a href="https://speakthesky.itch.io/like-skyscrapers-v2">Like Skyscrapers Blotting Out The Sun</a></li>
+	<li><a href="https://bay12games.com/dwarves/">Dwarf Fortress</a></li>
+	<li><a href="http://brokenrul.es/">Broken Rules studio<img class="inline-img" src="http://brokenrul.es/img/logo.svg" alt="stylized letters BR"></img></a></li>
+</ul>
+
+		<p><b>Incoming:</b> <a href=".html"></a> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

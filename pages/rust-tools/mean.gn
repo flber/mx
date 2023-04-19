@@ -1,0 +1,30 @@
+!meta!
+title: Rust Tools - Mean
+template: default-subdir
+!meta!
+
+[h2|Mean]
+
+[p|Calulates the mean of a slice of [code|i32] values.]
+
+[div, class: "container"|
+	[dl|
+		[dt|[b|Args:]]
+		[dd|[code|xs]: A [code|Vec<&str>]. Zipped together with [code|ys], [code|xs]; [code|xs] goes first.]
+		[dd|[code|ys]: A [code|Vec<&str>]. [code|ys] is zipped second.]
+		
+		[dt|[b|Returns:]]
+		[dd|An owned string made by zipping [code|xs] and [code|ys].]
+	]
+]
+
+[pre|[code, class: "lang-rust"|
+pub fn mean(data: &[i32]) -> Option<f32> {
+  let sum = data.iter().sum::<i32>() as f32;
+  let count = data.len();
+
+  match count {
+    positive if positive > 0 => Some(sum / count as f32),
+    _ => None,
+  }
+}]]

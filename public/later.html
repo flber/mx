@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>For later</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="For later"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>For later</h2>
+
+<p>Some links to look at later. Started this on a long plane flight when I had some websites downloaded, but wanted to keep track of interesting external links I found while browsing the local copies. I'll probably be adding and removing links from here pretty often, so anything more consistent will be reserved for <a href="bookmarks.html">bookmarks</a>.</p>
+
+<pre>
+
+      1      2      3      4      5      6      7      8      9      10     11     12     13     14     15     16     17     18
+
+   ┌──────┐                                                                                                               ┌──────┐
+   │1     │                                                                                                               │2     │
+1  │H     │                                                                                                               │He    │
+   │1.008 │                                                                                                               │4.003 │
+   ├──────┼──────┐                                                                     ┌──────┬──────┬──────┬──────┬──────┼──────┤
+   │3     │4     │                                                                     │5     │6     │7     │8     │9     │10    │
+2  │Li    │Be    │                                                                     │B     │C     │N     │O     │F     │Ne    │
+   │6.940 │9.012 │                                                                     │10.81 │12.01 │14.01 │16.00 │19.00 │20.18 │
+   ├──────┼──────┤                                                                     ├──────┼──────┼──────┼──────┼──────┼──────┤
+   │11    │12    │                                                                     │13    │14    │15    │16    │17    │18    │
+3  │Na    │Mg    │                                                                     │Al    │Si    │P     │S     │Cl    │Ar    │
+   │22.99 │24.31 │                                                                     │26.98 │28.09 │30.97 │32.06 │35.45 │39.95 │
+   ├──────┼──────┼──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+   │19    │20    │21    │22    │23    │24    │25    │26    │27    │28    │29    │30    │31    │32    │33    │34    │35    │36    │
+4  │K     │Ca    │Sc    │Ti    │V     │Cr    │Mn    │Fe    │Co    │Ni    │Cu    │Zn    │Ga    │Ge    │As    │Se    │Br    │Kr    │
+   │39.10 │40.08 │44.96 │47.87 │50.94 │52.00 │54.94 │55.85 │58.93 │58.69 │63.55 │65.38 │69.72 │72.63 │74.92 │78.97 │79.90 │83.80 │
+   ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+   │37    │38    │39    │40    │41    │42    │43    │44    │45    │46    │47    │48    │49    │50    │51    │52    │53    │54    │
+5  │Rb    │Sr    │Y     │Zr    │Nb    │Mo    │Tc    │Ru    │Rh    │Pd    │Ag    │Cd    │In    │Sn    │Sb    │Te    │I     │Xe    │
+   │85.47 │87.62 │88.91 │91.22 │92.91 │95.95 │(98)  │101.07│102.91│106.42│107.87│112.41│114.82│118.71│121.76│127.60│126.90│131.29│
+   ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+   │55    │56    │      │72    │73    │74    │75    │76    │77    │78    │79    │80    │81    │82    │83    │84    │85    │86    │
+6  │Cs    │Ba    │LAN   │Hf    │Ta    │W     │Re    │Os    │Ir    │Pt    │Au    │Hg    │Tl    │Pb    │Bi    │Po    │At    │Rn    │
+   │132.91│137.33│      │178.49│180.95│183.84│186.21│190.23│192.22│195.08│196.97│200.59│205.38│207.2 │208.98│(209) │(210) │(222) │
+   ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+   │87    │88    │      │104   │105   │106   │107   │108   │109   │110   │111   │112   │113   │114   │115   │116   │117   │118   │
+7  │Fr    │Ra    │ACT   │Rf    │Db    │Sb    │Bh    │Hs    │Mt    │Ds    │Rg    │Cn    │Nh    │Fl    │Mc    │Lv    │Ts    │Og    │
+   │(223) │(226) │      │(267) │(268) │(269) │(270) │(277) │(278) │(281) │(282) │(285) │(286) │(289) │(290) │(293) │(294) │(294) │
+   └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘
+
+
+                 ┌──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┐
+                 │57    │58    │59    │60    │61    │62    │63    │64    │65    │66    │67    │68    │69    │70    │71    │
+              6  │La    │Ce    │Pr    │Nd    │Pm    │Sm    │Eu    │Gd    │Tb    │Dy    │Ho    │Er    │Tm    │Yb    │Lu    │
+                 │138.91│140.12│140.91│144.24│(145) │150.36│151.96│157.25│158.93│162.50│164.93│167.26│168.93│173.05│174.97│
+                 ├──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┼──────┤
+                 │89    │90    │91    │92    │93    │94    │95    │96    │97    │98    │99    │100   │101   │102   │103   │
+              7  │Ac    │Th    │Pa    │U     │Np    │Pu    │Am    │Cm    │Bk    │Cf    │Es    │Fm    │Md    │No    │Lw    │
+                 │(227) │232.04│231.04│238.03│(237) │(244) │(243) │(247) │(247) │(251) │(252) │(257) │(258) │(259) │(266) │
+                 └──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┴──────┘
+
+</pre>
+
+		<p><b>Incoming:</b> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

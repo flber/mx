@@ -4,7 +4,7 @@ title: Uxn Zine
 
 [h2|Uxn Zine]
 
-[p|[a, href: "https://merveilles.town/@rostiger"|Rostiger] made an awesome comic explaining how [a, href: "https://wiki.xxiivv.com/site/uxn.html"|Uxn] works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the [a, href: "files/uxn-zine/uxn-zine.pdf"|pdf] or [a, href: "files/uxn-zine/uxn-zine.pdf"|epub] directly, or download a [a, href: "files/uxn-zine.tar"|tar] of all of files and resources to compile it yourself.]
+[p|[a, href: "https://merveilles.town/@rostiger"|Rostiger] made an awesome comic explaining how [a, href: "https://wiki.xxiivv.com/site/uxn.html"|Uxn] works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused. You can download the [a, href: "files/uxn-zine/uxn-zine.pdf"|pdf] or [a, href: "files/uxn-zine/uxn-zine.pdf"|epub] directly, or download a [a, href: "files/uxn-zine.tar"|tar] of all of files and resources to compile it yourself. Assembly is mostly as describer in [a, href: "https://en.wikibooks.org/wiki/Zine_Making/Putting_pages_together#An_8-sided_zine_from_1_sheet_with_1_cut"|this article], but once folded according to the directions, staple the spine together and cut the tops and bottoms of the few pages still connected. It's a little jank, but it works!]
 
 [p|It's made with two latex files, the first ([a, href: "files/uxn-zine/source.tex"|source.tex]) of which adds each photo to its own page in a pdf, and the second ([a, href: "files/uxn-zine/zine.tex"|zine.tex]) which references the first to lay out the pages correctly.]
 

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Social Media Op-Ed</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Social Media Op-Ed"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Social Media Op-Ed</h2>
+
+<p>Modern social media platforms are not tools for communication, but systems of oppression. It is time to dismantle them.</p>
+
+<p>My personal definition of a tool - and one which I think is quite close to the colloquial understanding - is something which serves to aid in a specific task. Tools, not being their own actors, are neither good nor bad. A hammer can drive nails or pull them out; a wood saw can make straight cuts through wood; a clamp holds objects together. These mechanical tools are obvious examples, but how can software be a tool?</p>
+
+<p>Many programs fall under the definition of "tool". TextEdit, the default text editor on Apple computers, is very clearly a tool. Its purpose is to edit text files, and it does this well. IRC, or Internet Relay Chat, is a simple protocol which allows people to talk over a network in groups, and is also a tool.</p>
+
+<p>But are Twitter, Instagram, or Snapchat tools? A common explantion for why social media platforms are useful is that they are tools for communication, but under any kind of examination we see that this is not the case. Social media platforms have no one task which they aid. They do facilitate communication between users, but they also collect user data, distribute advertising, and try and keep users on their platform.</p>
+
+<p>With so many agents and influences, these platforms are not tools but systems.</p>
+
+<p>Unlike tools, systems <i>can</i> be positive or negative. The goal of a system is ingrained in its design - democracy is positive, but the private prison system is negative. Modern, corporate run social media platforms are systems for generating social noise, designed to make money exploiting our need for connection. Dismantling these systems takes nothing more than leaving them. The alternatives are already there, tools which facilitate community building and communication without the influence of capitalism.</p>
+
+<p>One alternative is the fediverse, a network somewhat similar to Twitter in functionality but drastically different in its community. Justin Pot has a very informative WIRED article, <a href="https://12ft.io/proxy?q=https%3A%2F%2Fwww.wired.com%2Fstory%2Fhow-to-get-started-use-mastodon%2F">How to Get Started on Mastodon</a>, which does a good job of explaining the specifics of how the system works, but the basic idea is that the platforms which interface with this network aren't made by companies but by communities. Anyone can run their own server, or simply join an existing one.</p>
+
+<p>Though the fediverse is still a system - being made of many tools and agents - it is one carefully designed to help construct communities. Moderation is a key feature of the network, with the ability to block people and servers, filter specific keywords from your timeline, and post potentially triggering content behind viewer opt-in censors. With these tools individuals can moderate their experience with the network and create boundaries comfortable to them individually. Another important part of the fediverse's design is the concept of servers, or "instances", which separate users into smaller communities within the network. Instances generally have specific interests and principles; there are instances for artists, scholars, queer communities, programming and technology enthusiasts, gardening, language, and many more. The fediverse is made up of thousands of these instances, and they are all run and maintained by different groups of people or even individuals. This allows people to choose an instances that suits their interests, while still being to interact with people on other instances.</p>
+
+<p>The separation into instances also allows moderation to happen on a small enough level to where it's a community effort, not the role of a corporation or algorithm not directly responsible to its users. Many, if not almost all, instances have community guidelines decided upon by the users of that instance, directly involving people in the meta-conversation necessary to maintain community spaces.</p>
+
+<p>I don't think the fediverse is perfect, but it demonstrates that many of the <a href="https://doi.org/10.1080/10584609.2020.1785067">problems of corporate social media platforms</a> can be mitigated with the idea that community is more important than profit, and by ingraining that into the design of our social networks. The recent shitstorm at Twitter has shown us that platforms run by companies will never be ours; that they will always be a way to make money first, and a way for people to have meaningful conversations second.</p>
+
+		<p><b>Incoming:</b> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

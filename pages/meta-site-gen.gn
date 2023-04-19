@@ -10,9 +10,6 @@ title: I Don't Want This to be About SSGs
 
 [p|When I first made this site, I built it with about 7 lines of bash and a makefile. It worked fine. Over time I changed that to an 800+ line long Rust program, and tried to avoid talking about it.]
 
-[div class: "break"|]
-
-[mark|I can't find this image!! AGH!!]
-[img, src: "images/website-graph-comic.jpg", alt: "a chart showing correlation between websites with lots of pages and those written by hand, conversly showing that fancy SSGs lead to few pages, mostly talking about said SSG"|]
+[img, src: "https://rakhim.org/images/honestly-undefined/blogging.jpg", alt: "a chart showing correlation between websites with lots of pages and those written by hand, conversly showing that fancy SSGs lead to few pages, mostly talking about said SSG"|]
 
 [p|While I really enjoyed the experience of writing an SSG, I'm not sure I really want or need it anymore. That's not to say I'll be writing all my HTML by hand, but I might be tending back toward the slightly-jank-but-it-works side of things. Maybe a bit of C, some bash, ImageMagick, whatever! That way I'll be able to keep tweaking my build process forever, but still be able to actually produce something amidst refactoring chaos.]

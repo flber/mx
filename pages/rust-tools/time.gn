@@ -1,0 +1,20 @@
+!meta!
+title: Rust Tools - Time
+template: default-subdir
+!meta!
+
+[h2|Time]
+
+[p|Takes a function or closure and times how long it takes to run in nanoseconds.]
+
+[pre|
+fn time<F>(f: F) -> u64
+where
+  F: Fn(),
+{
+  let start = Instant::now();
+  f();
+  let nano: u64 = start.elapsed().as_nanos() as u64;
+
+  nano
+}]

@@ -30,7 +30,7 @@ fn main() {
 			}
 			path = slice(&path, 1..len(&path) - 1);
 			// WARNING this shouldn't be hardcoded!
-			path = vec!["docs/", &path].concat();
+			path = vec!["public/", &path].concat();
 
 			match fs::read_to_string(&path) {
 				Ok(file) => println!("{}", file),

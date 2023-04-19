@@ -14,7 +14,7 @@ fn main() {
 	for l in &lines {
 		if l.contains("{{style}}") {
 			// eventually pull the style path from config?
-			match fs::read_to_string("docs/style.css") {
+			match fs::read_to_string("public/style.css") {
 				Ok(css) => println!("{}", replace(&l, "{{style}}", &css)),
 				Err(_) => (),
 			}

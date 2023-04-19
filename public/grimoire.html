@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Grimoire</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Grimoire"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Grimoire</h2>
+
+<p>Inspired by the <a href="https://fdisk.space/grimoire/">grimoire of Fred Bednarski</a>, this is my place to put assorted snippets of code (which may or may not be cursed, so use at your own risk). Have fun, poke around, but remember that this information may be totally borked.</p>
+
+<details>
+	<summary>To change the extensions of audio files in a directory:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>for file in *.m4a; do ffmpeg -i "${file}" "${file/%m4a/ogg}" && rm $file; done</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>More generally, to do something to some files:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>for file in $(ls | grep "something"); do echo "match: ${file}"; done</p>
+	</fieldset>
+</details>
+
+
+<details>
+	<summary>To download the mp3 audio (or the best audio if that fails) of a youtube video:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>youtube-dl --add-metadata -i -x -f mp3/bestaudio "video_link"</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To download a playlist of music from youtube (more stable for playlists than youtube-dl):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>youtube-dlc -o '%(playlist_index)s - %(title)s.%(ext)s' -x -f mp3/bestaudio "[playlist url]"</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To forward your port 8388 to a server's port 8384 (can be used to get the web interface for syncthing remotely):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>ssh -L 127.0.0.1:8388:127.0.0.1:8384 username@yourserver</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To sanitize a file name (the .opus can be any extension):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>mv "$file" "$(echo "${file%.opus}" | iconv -cf UTF-8 -t ASCII//TRANSLIT | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr ' ' '-' | sed "s/-\+/-/g;s/\(^-\|-\$\)//g").opus"</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To sanitize everything in a directory, preserving extensions:</summary>
+	<fieldset>
+		<legend>Fish</legend>
+		<p>function sanitize
+		    for file in *
+		        set ext (string match -r "\.\w*\$" $file | \
+		            string trim --chars=.)
+		    
+		        set new (echo "{$file}" | \
+		            iconv -cf UTF-8 -t ASCII//TRANSLIT | \
+		            tr -d '[:punct:]' | \
+		            tr '[:upper:]' '[:lower:]' | \
+		            tr ' ' '-' | \
+		            sed "s/-\+/-/g;s/\(^-\|-\$\)//g");
+		
+		        set final (string replace "$ext" ".$ext" "$new")
+		        
+		        if [ "$file" != "$final" ]
+		            mv "$file" "$final"
+		        end
+		    end
+		end</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To push file changes over ssh:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>rsync -azP --delete ~/Folder/ user@123.456.8.910:/home/name/Folder</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To dither and shrink an image (<a href="https://gist.github.com/Thomasorus/bc9942679ecddb9f9038ac40bc3fbc63">courtesy</a> of <a href="https://merveilles.town/web/accounts/33648">Thomasorus</a> with some modification for personal preference):</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>mogrify -format gif -filter Triangle -define filter:support=2 -thumbnail $size -monochrome -unsharp 0.25x0.08+8.3+0.045 -dither FloydSteinberg -colors 2 -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace gray -normalize $from</p>
+	</fieldset>
+</details>
+
+
+<details>
+	<summary>To simply dither of an image:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>convert image.jpg -colorspace gray -ordered-dither o8x8 image_dithered.png</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Super simple, but to make a div element take up the whole height of a veiwport</summary>
+	<fieldset>
+		<legend>CSS</legend>
+		<p>height: 100vh;</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>This is something pretty specific (and simple), but this is how I fixed my audio continuously muting in Manjaro i3:</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>alsactl restore</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>To play a streaming file</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>mplayer -prefer-ipv4 -playlist kexp128.mp3.m3u</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Grab some html from the Noita wiki</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>curl "https://noita.gamepedia.com/Oil_(Spell)" | awk '/table class="spell"/ {for(i=1; i<=69; i++) {getline; print}}'</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Find all files which match a given regex</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>grep -rnw 'dir/' -e 'pattern'</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Sorta change the colors of an image? With black and white, it'll change the white to something else (in this case orange)</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>convert selfie.jpg +level-colors black,"#ff8000" selfie-spoopy.png</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Function to convert a string into a hashed long</summary>
+	<fieldset>
+		<legend>C89</legend>
+		<p>
+		long
+		hash(char *str)
+		{
+		    long hash = 5381;
+		    int c;
+		    while ((c = *str++))
+		        hash = ((hash << 5) + hash) + c;
+		    return hash;
+		}
+		</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Copy an array to a pointer's value</summary>
+	<fieldset>
+		<legend>C</legend>
+		<p>
+			int dst[ARRAY_LENGTH];
+			memcpy(dst, src, sizeof(dst));
+		</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Convert an mp4 to an animated gif</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i crow-walk.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 crow-walk.gif</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Get the audio from an mp4</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i cats.mp4 -q:a 0 -map a audio.mp3</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Convert gif to mp4</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i cats.gif cats-dith.mp4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Combine audio and video files</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i cats-dith.mp4 -i audio.mp3 -c:v copy -c:a aac output.mp4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Add centered text in white to a video</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i crow-walk.mp4 -vf "drawtext=text='crow walk:fontcolor=white:fontsize=24:box=1:boxcolor=black@0.0:boxborderw=5:x=(w-text_w)/2:y=(h-text_h)/2" -codec:a copy crow-walk-text.mp4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Convert mkv to mp4 preserving subtitles</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i input.mkv -c copy -c:s mov_text output.mp4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Find the file with the most lines in a directory</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>wc -l pages/* 2>/dev/null | grep -v ' total$' | sort -n -k1 | tail -1l</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Crop an image <em>and</em> the virtual canvas (so a "normal crop" basically)</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>convert in.jpg -crop {width}x{height}+{x-offset}+{y-offset} +repage out.png</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Cut a video file with start and end points</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i input.mp4 -ss 00:00:43 -to 01:15:26 -c copy output.mp4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Combine videos from text file</summary>
+	<fieldset>
+		<legend>bash/ffmpeg</legend>
+		<p>> cat files.txt</p>
+		<p>file 'input1.mp4' \n file 'input2.mp4'</p>
+		<p>ffmpeg -f concat -safe 0 -i files.txt -c copy output.mp4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Count all the characters in all files in a directory</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>find ./* -type f -exec cat {} + | wc -m</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Get disk information (available, used, etc)</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>df -h</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Prints IP addresses for computer</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>ip addr show | grep "inet "</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Gets all ip addresses on local network. Requires `arp-scan`, and replace `wlp3s0` with your network device (as shown by running `ifconfig`)</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>sudo arp-scan --interface=wlp3s0 --localnet</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Get open ports/ips on local system</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>nmap -vv -sV localhost -oG - | awk -v OFS=':' '
+		/open/ {
+		  for (i=4;i<=NF;i++) {
+		    split($i,a,"/");
+		    if (a[2]=="open") print $2, a[1]
+		  }
+		}'
+		</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Pretty-print devices across network range</summary>
+	<fieldset>
+		<legend>fish</legend>
+		<p>
+for i in (seq $start $end);
+	printf "\n$i\n"
+	echo "-------------------------------------------"
+	sudo arp-scan --interface=wlp3s0 --localnet | grep -v "Unknown" | grep "100\.64\.$i"
+end > hosts.txt
+		</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Downloads whole website</summary>
+	<fieldset>
+		<legend>bash</legend>
+		<p>wget -m -k -K -E -l 7 -t 6 -w 5 -e robots=off "https://website.com"</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Dither image while still looking nice</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>mogrify -path dithered/ -resize 12% -colors 16 -dither FloydSteinberg -modulate 100,200 *</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Grab window (with name including "video2") and put into output.mp4</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>echo "ffmpeg -y -v error -f x11grab -video_size $(wmctrl -lG | awk '$8 ~"video2" {printf("%dx%d -i :0.0+%d,%d", $5, $6, $3, $4)}') output.mp4" | bash</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>In theory, grab video in, pass through complex filter (in this case just add text), and out to virtual webcam</summary>
+	<fieldset>
+		<legend>ffmpeg</legend>
+		<p>ffmpeg -i /dev/video2 -vf "drawtext=text='efelbar':fontcolor=white:fontsize=64:box=1:boxcolor=black:boxborderw=5:x=0:y=0" -f v4l2 /dev/video4</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Turn the background of an image transparent</summary>
+	<fieldset>
+		<legend>ImageMagick</legend>
+		<p>convert tower.jpg -alpha off -fuzz 10% -fill none -draw "alpha 0,0 floodfill" ( +clone -alpha extract -blur 0x2 -level 50x100% \) -alpha off -compose copy_opacity -composite tower.jpg</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Find combined file size of specific filetype (in this case html)</summary>
+	<fieldset>
+		<legend>Bash</legend>
+		<p>du -h ./*.html | awk '{print $1}' | sed -e 's/K//' | paste -sd+ - | bc</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Set i3 desktop background to color</summary>
+	<fieldset>
+		<legend>Bash</legend>
+		<p>xsetroot -solid "#f9cca4"</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Delete files matching a pattern</summary>
+	<fieldset>
+		<legend>Bash</legend>
+		<p>ls | grep -P "^\d{2}\." | xargs -d"\n" rm</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Restarts v4l2loopback</summary>
+	<fieldset>
+		<legend>Bash</legend>
+		<p>sudo modprobe -r v4l2loopback && sudo modprobe v4l2loopback</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Naively remove consecutive duplicate lines in a file</summary>
+	<fieldset>
+		<legend>Awk</legend>
+		<p>!p[$0]++</p>
+	</fieldset>
+</details>
+
+<details>
+	<summary>Remove consecutive duplicate lines in a file, preserving empty lines</summary>
+	<fieldset>
+		<legend>Awk</legend>
+		<p>BEGIN{ old = "" } { new = $0 } old == new && old != "" { next } { old = $0; print }</p>
+	</fieldset>
+</details>
+
+<p>? parallel -j 12 ffmpeg -i {1} {1.}.{2} ::: **/*.flac ::: mp3</p>
+
+		<p><b>Incoming:</b> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

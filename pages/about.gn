@@ -2,27 +2,65 @@
 title: About
 !meta!
 
-[h2|Hi]
+[h2|Nice to meet you!]
 
 [p|I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make [a, href: "recipes.html"|food], occasionally [a, href: "drawings.html"|draw], and tell computers to do things for me (though we often have disagreements).]
 
-[p|I've worked on a few [a, href: "projects.html"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for not following my every command, I enjoy playing [a, href: "games.html"|video games], [a, href: "hiking.html"|hiking], and [a, href: "reading.html"|reading].]
+[p|I've worked on a few [a, href: "projects.html"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for disagreeing with what I want them to do, I enjoy [a, href: "hiking.html"|hiking], playing [a, href: "games.html"|video games], and [a, href: "reading.html"|reading].]
+
+<!--
+[p|If you like, you can [button, id: "hello_button", onclick: "usercount()"|say hi] to me directly! So far, [code id: "count"|0?] people have said hi :&gt;]
+[details|
+	[summary|How does it work?]
+	[p|Using my Fancy New Framework™ (26 lines of vanilla js), when you press the button it sends a request to an api endpoint on the [a, href: "https://rocket.rs"|rocket] server hosting this site. That fetch is sent back a simple JSON object containing the total number of visitors so far, and that number is put into the code tag! Then after you've pressed it, the button is changed to "<del>say hi</del>" to indicate that you can't press it again. For the moment you can reload the page and that change will revert, though the server still will only [i|register] one press per ip.]
+	[p|On the backend, the request headers are unpacked to get the visitor's ip address, which, if new, is added to a list of "known" addresses, and the total count is incremented by one and returned. If the ip address in the request [i|is] a known address, the count is not increased but is still returned.]
+]
+-->
+
+[script|
+	function usercount() {
+		fetch("/api/count", {
+			method: "POST"}).then(async (res) => {
+				const raw = await res.text();
+				console.log(raw);
+			})
+		get_usercount()
+
+		var button = document.getElementById("hello_button");
+		var b = document.createElement("del");
+		var new_text = document.createTextNode("say hi");
+		b.appendChild(new_text);
+		button.replaceWith(b);
+
+		get_usercount()
+	}
+
+	window.onload = function() {
+		get_usercount()
+	}
+
+	function get_usercount() {
+		fetch("/api/count", {
+			method: "GET",
+			headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+			}}).then(async (res) => {
+			const raw = await res.text();
+			const parsed = raw ? JSON.parse(raw) : { success: res.ok };
+
+			var num = document.getElementById("count");
+			num.innerHTML = parsed['user_count'];
+		})
+	}
+]
+
+[div, class: "box"|
+	[img, loading: "lazy", src: "images/crow.jpg", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
+	[img, loading: "lazy", src: "images/profile-bw-square.jpg", alt: "a digital art profile picture made by a friend: androgynous person with dark hair smiling with their eyes closed"|]
+]
 
 [p|If you want to contact me about commercial work, please first take a look at my [a, href: "resume/index.html"|resume]. Email is generally the best method of communication for me, and you can find my email address linked in the footer.]
-
-[span|
-	[img, loading: "lazy", style: "width:50%; display: inline-block;", src: "images/crow.jpg", alt: "myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"|]
-	[img, loading: "lazy", style: "width:48%; display: inline-block;", src: "images/cute-profile-dith.jpg", alt: "a profile picture done in picrew.me: very androgynous person with dark hair and red streaks, wearing black overalls and a black choker, and with silver earings and a nose ring; on a pink background"|]
-]
-
-[p|Because I'm not super experienced in any one field, I often find myself anxious those more knowledgeable. That's mostly because I don't want to waste their time, but  I probably end up wasting more time by adding prefaces to my questions, such as:]
-[ul|
-	[li|Sorry to bother you, but...]
-	[li|This may be a simple question, but...]
-	[li|Pardon my lack of knowledge in this, but...]
-	[li|I probably just missed the answer to this in the docs somewhere, but...]
-]
-[p|and others. I'll try to just cut to the chase from now on, but if you need some context as to why I'm asking about something you think is simple, please feel free to mentally add one of the above prefaces to the start of my question!]
 
 [p|You can find the source code for this site in any of these places:]
 [ul|
@@ -31,7 +69,7 @@ title: About
 	[li|[a, href: "https://git.sr.ht/~flber/mineral-existence"|srht]]
 ]
 
-[p|You can check out the [a, href: "inventory.html"|inventory] page for a list of the hardware and software I use.]
+[p|You can also check out the [a, href: "inventory.html"|inventory] page for a list of the hardware and software I use.]
 
 [p|Feel free to say hi on [a, href: "https://merveilles.town/@flbr"|mastodon] or via my [a, href: "mailto:benrhammond@gmail.com"|email]]
 
@@ -45,18 +83,3 @@ title: About
 [p|This is my [a, href: "https://wobble.town"|wobble], his name is kronk!]
 [a, href: "https://wobble.town/visit/"|[img, style: "margin-top:0em;width: 10%;", src: "https://wobble.town/visit/48/wobble.gif"|]]
 -->
-
-[p|And finally, here are some fun banners which I've started collecting :3]
-
-[a, href: "https://jigsaw.w3.org/css-validator/check/referer"|<img style="width:88px;height:31px;display:inline" src="images/banners/css-cert-blue.jpg" alt="Valid CSS!"/>]
-
-[a, href: "https://blackgnu.net/on-blockchain.html"|<img style="width:88px;height:31px;display:inline" src="images/banners/web3-is-a-scam-0.jpg"/>]
-<img style="width:88px;height:31px;display:inline" src="images/banners/trans-flag.jpg"/>
-
-[a, href: "https://anybrowser.org/campaign/"|<img style="width:88px;height:31px;display:inline" title: "i like qutebrowser though :3" src="images/banners/any-browser.jpg"/>]
-
-<img style="width:88px;height:31px;display:inline" title: "surprisingly easy!" src= "images/banners/piracy.jpg"/>
-
-<img style="width:88px;height:31px;display:inline" title: "it's pretty neat :)" alt: "from nathan wentworth" src="images/banners/love-the-internet.jpg"/>
-
-[p|]

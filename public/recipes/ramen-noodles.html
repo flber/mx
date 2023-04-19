@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>MX - Mineral Existence</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Mineral Existence"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="../assets/prism.js"></script>
+	
+	<!-- <script> -->
+		<!-- var link = document.createElement("link"); -->
+		<!-- link.rel="stylesheet"; -->
+		<!-- link.href="../assets/prism.css"; -->
+		<!-- link.type="text/css"; -->
+		<!-- document.getElementsByTagName("head")[0].appendChild(link); -->
+	<!-- </script> -->
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<h1><a href="../home.html">Home</a></h1> 
+		<h1><a href="../now.html">now</a></h1>
+		<h1><a href="../wiki.html">wiki</a></h1>
+		<h1><a href="../about.html">about</a></h1>
+	</header>
+
+	<main>
+
+<strong>Ramen Noodles</strong>
+
+<p>The recipe is adapted from <a href="https://www.youtube.com/watch?v=fnrW4oan_Mo&t=342s">Alex's video</a> in his series on making homemade ramen. Makes 1-2 servings depending on how hungry you are.</p>
+
+<div class="row">
+	<div class="column">
+		<b><p>Tools:</p></b>
+		<ul>
+			<li>Bowl</li>
+			<li>Scale</li>
+			<li>Pasta roller / your feet + more work</li>
+		</ul>
+	</div>
+	<div class="column">
+		<b><p>Ingredients:</p></b>
+		<ul>
+			<li>250g flour (bread flour is preferable)</li>
+			<li>110g water</li>
+			<li>3g salt</li>
+			<li>2g sodium carbonate</li>
+		</ul>
+	</div>
+</div>
+
+<p>Procedure:</p>
+
+<ol>
+	<li>Measure out 250g of flour into a bowl</li>
+	<li>Measure 3g salt and 2g sodium carbonate into a glass</li>
+	<li>Add 100g of water to the glass, and stir to dissolve</li>
+	<li>Pour the salt + sodium carbonate solution into the bowl of flour</li>
+	<li>Begin to combine water and flour<ol>
+		<li>Don't worry if it doesn't seem like it's coming together, just keep compressing it together and eventually a (very) dry dough should form</li>
+	</ol></li>
+	<li>Once the dough has more or less come together, flatten it as much as possible and begin to feed it through the pasta roller<ol>
+		<li>If you don't have a pasta machine, you're in for a fun time. You totally can do this without one, it'll just take more time and work and look a little less pretty. You'll need to put the dough in a plastic bag, then put it on the floor and start to knead it flat with your feet, standing up to put your full weight on the dough. Once it's flatter (maybe a centimeter or two thick), take it out, fold it in half, and do it again. Continue this process until the dough is relatively smooth. There's basically no way you're going to be able to roll it out at this point, so you should probably let it relax under a damp towel for maybe an hour. Once it's a bit more relaxed you should be able to roll, press, or stretch it out unit it's your desired thickness. Once it's to your desired thickness, dust it in corn starch (or something similar) and fold it over on itself lengthwise until you have a stack of folded dough. Then, with a sharp knife, cut the dough in thin strips, pausing occasionally to make sure all of the noodles are well dusted and not sticking together.</li>
+	</ol></li>
+	<li>Start on the thickest setting, roll it through, fold it in half, and continue until the dough passes looks relatively smooth. </li>
+	<li>Once your dough is smooth, lower the size and pass the dough through without folding. Continue rolling out the dough and lowering the size until you've reached your desired thickness (standard ramen is maybe 3-5 mm thick, but do whatever you want)</li>
+	<li>If your pasta roller has a cutting attachment use that to cut the dough into noodles about as wide as they are thick</li>
+	<li>If you don't have a pasta cutter, you can use the technique outline in the alternate for step 6. Dust the dough in corn starch so it won't stick, then fold it over on itself several times lengthwise. Cut the dough with a sharp knife to produce long noodles, periodically making sure they're not sticking together</li>
+	<li>To cook the noodles, raise some water (enough to comfortably cover the noodles) to a boil and lower in your noodles. Let them cook for about a minute (I always sort of eyeball the duration, eating a noodle to check if they're done)</li>
+	<li>I generally then either put the noodles into ice water to stop the cooking if I won't be using the noodles for a few minutes, or drop them straight into a bowl if I'm just making some quick ramen.</li>
+	<li>If you want to store the uncooked noodles for later, just cover them in a damp towel and put them into the fridge, where they'll last for a couple of days.</li>
+</ol>
+
+		<p><b>Incoming:</b> </p>
+	</main>
+
+	<footer>
+		<a href="mailto:benrhammond@gmail.com" target="_blank">
+			<img loading="lazy" width="30" height="30" src="../images/mail.svg" alt="Mailto" />
+		</a>
+		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
+			<img loading="lazy" width="30" height="30" src="../images/merveilles.svg" alt="Merveilles" />
+		</a>
+		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
+			<img loading="lazy" width="30" height="30" class="webring" src="../images/webring-icon-black.svg" alt="the merveilles webring" />
+		</a>
+		<a href="https://wiki.xxiivv.com/site/ethics.html">
+			<img loading="lazy" width="30" height="30" src="../images/dreipfeile-icon.svg" alt="Ethics" />
+		</a>
+		<a href="feed.xml">
+			<img loading="lazy" width="30" height="30" src="../images/rss.svg" alt="RSS Feed" />
+		</a>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
+			src="../images/icon.gif" />
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

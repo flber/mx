@@ -4,34 +4,37 @@ title: RSS + MPV
 
 [h2|My youtube setup]
 
-[p|To get the most important parts out of the way, here's my [a, href: "https://newsboat.org/"|newsboat] config, using [a, href: "https://mpv.io/"|mpv] and [a, href: "https://github.com/yt-dlp/yt-dlp"|yt-dlp].]
+[details|
+	[summary|[h3|TL;DR]]
+	[p|I use [a, href: "https://newsboat.org/"|newsboat] to subscribe to youtube channels through RSS, and can easily watch new videos from them with [a, href: "https://mpv.io/"|mpv] using [a, href: "https://github.com/yt-dlp/yt-dlp"|yt-dlp]. Configs below.]
 
-[pre|
-browser "links -g %u"
-max-items 3000
+	[details|
+		[summary|newsboat config]
+		[pre|
+			{{catfile}}"files/newsboat-config"
+		]
+	]
 
-macro v set browser "mpv --really-quiet --no-terminal --script-opts=ytdl_hook-ytdl_path=yt-dlp -- %u &" ; open-in-browser ; set browser "links -g %u"
+	[details|
+		[summary|mpv config]
+		[pre|
+			{{catfile}}"files/mpv.conf"
+		]
+	]
 ]
 
-[h3|The short version]
+[h3|Why RSS?]
 
-[p|TL;DR newsboat is nice to check in on and watch new videos from youtube channels I'm actually interested in, as opposed to videos the youtube gods think I'll be most likely to watch.]
+[p|I never started using any of the common social media platforms (except reddit for a couple years), so I never had to deal with developing bad habits around them. Youtube, however, has long been a common time suck for me - where one interesting video will lead to five uninteresting ones, a rabbit hole pushed by youtube's recommendation algorithm. After various experiments making it harder to access youtube, or outright blocking it, I think I've found a good middle ground.]
 
-[h3|The long version]
+[p|I don't want to completely stop using youtube because there are a few channels whose videos I'm always interested in, so my current solution is based on RSS. With an RSS feed reader (in this case newsboat because of some features I'll go into in a second), I can subscribe to my favorite channels and see when they publish new videos through a text-based user interface which discourages that attention-grabbing youtube's website is so good at.]
 
-[p|I've never really used instagram, twitter, facebook, snapchat, or most other social media platforms. I just never really felt like they were important or interesting, and so never got into them. I used reddit for a little while, but then left it as well. The fediverse has definitely filled some of those behavioral patterns (which I don't mind, I think it's a pretty cool place :3 ), but in terms of media consumption, my intake has been consistently dominated by ([em|dum dum dummmmmm!]) youtube :/]
+[p|To make the process easier - and independent of youtube's frontend - I've set up a macro in my newsboat config file which opens video links in mpv. To make this a little easier on my old laptop, my mpv config file also specifies a maximum resolution at which the video should load, which also helps with playback stability.]
 
-[p|I've tried to stop my usage several times, and tried to reduce it many more through various strategies, but it's always been sorta my main media vice, and one which I've had a difficult time reducing my consumption of.]
+[h3|Specifics]
 
-[p|Over the past several months I've been doing a decent amount of my interaction with the small internet of blogs and webcomics through rss, and it's been great! I've got an rss reader app on my phone, but I hadn't got around to setting one up on my laptop until a couple days ago. I really like terminal user interfaces, so after some [a, href: "https://merveilles.town/@flbr/108279608942453026"|recomendations] I decided to use [a, href: "https://newsboat.org/"|newsboat]!]
+[p|Over the past several months I've been doing a decent amount of my interaction with the small internet of blogs and webcomics through rss, and it's been great! I've got an rss reader app on my phone, but I hadn't got around to setting one up on my laptop until a couple days ago. I really like terminal user interfaces, so after some [a, href: "https://merveilles.town/@flbr/108279608942453026"|recomendations] I decided to use [a, href: "https://newsboat.org/"|newsboat].]
 
-[p|Newsboat is lovely, and has a ton of really fun little features. One which is pretty interesting (and useful, getting back to the discussion about youtube) is the ability to open links in an arbitrary program.]
+[p|Now to get newboat reading rss feeds from youtube, you need to get specific urls. Each channel has a unique id, something decently long and alphanumeric (this is not the channel name which often shows up in urls!). To add the channel to your feed reader, format the url like so: [code|https://www.youtube.com/feeds/videos.xml?channel_id=${id}]. For example, the url to the rss feed of Zee Bashew is [code|https://www.youtube.com/feeds/videos.xml?channel_id=UCCXR2kCo7Lcw_BKwWxo09kw]]
 
-[p|Now to get newboat reading rss feeds from youtube, you need to get specific urls. Each channel has a unique id, something decently long and alphanumeric (this is not the channel name which often shows up in urls!). To add the channel to your feed reader, format the url like so: [code|https://www.youtube.com/feeds/videos.xml?channel_id=${id}]. For example, the url to the rss feed of Tested is [code|https://www.youtube.com/feeds/videos.xml?channel_id=UCiDJtJKMICpb9B1qf7qjEOA]]
-
-[p|The last piece of this weird, specific, little puzzle is the program [a, href: "https://mpv.io/"|mpv]. It'll play basically anything, has a truly amazing number of options to customize, and, very interestingly, can play videos from a link (including streams!!). To get the best performance with playing youtube links, I'd definitely recomend downloading [a, href: "https://github.com/yt-dlp/yt-dlp"|yt-dlp] as opposed to normal [code|youtube-dl] as it has more features and much better cacheing performance. For stand-alone usage with youtube, use the command [code|mpv --script-opts=ytdl_hook-ytdl_path=yt-dlp $url].]
-
-[p|Now what the starting config file mostly does is set up a macro for opening youtube links in mpv. It also sets [code|links -g] as the browser, because I like it :>]
-[p|Now you should be able to add some youtube channels to newsboat, see when they post a new video, and watch it (if you think it'll be interesting based on the video description), all without going to youtube!]
-
-[p|The long reason I've been enjoying this way of interacting with youtube is that it cuts out the middle man of the youtube recomendation algorithms. [em|I] know that there are only a few people who make videos I'll always like, but my stupid new-thing-seeking lizard brain really hasn't gotten the message, and youtube knows that! So while I retrain my brain to maybe [em|not] latch onto the nearest new thing for entertainment, removing youtube's manipulative algorithms from the equation should help.]
+[p|The reason I've been enjoying this way of interacting with youtube is that it cuts out the middle man of the youtube recomendation algorithms. [em|I] know that there are only a few people who make videos I'll always like, but my stupid new-thing-seeking lizard brain really hasn't gotten the message, and youtube knows that! So while I retrain my brain to maybe [em|not] latch onto the nearest new thing for entertainment, removing youtube's manipulative algorithms from the equation should help.]

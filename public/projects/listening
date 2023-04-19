@@ -1,0 +1,18 @@
+#!/bin/bash
+
+lockfile="/var/tmp/listening.lock"
+[ -f "$lockfile" ] && (printf 'lockfile already exists\n'; exit 1;)
+while true; do
+	if [ ! -f "$lockfile" ]; then
+		touch "$lockfile"
+		date "+%H:%M:%S"
+		cmus-remote -C "format_print %{artist} %{album} %{title}"
+		(cmus-remote -C "format_print %{artist} %{album} %{title}" | \
+		awk 'NR<3 {printf "%s\t",$i} NR==3 {print}' >> /home/benh/.listening; \
+		awk -i inplace '!p[$0]++' /home/benh/.listening ; rm "$lockfile") &
+		sleep $((1 * 60))
+	else
+		printf '%s\n' "skipping! process is already running"
+		sleep 60
+	fi
+done

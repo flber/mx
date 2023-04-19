@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tools</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Tools"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Tools</h2>
+
+<p>I just (as of 020821) had a realization! I don't just have to host html and images on this site, I can do whatever I want! With that crazy (obvious) idea, here are some projects I am or have been working on. Some are finished, some are not, but at least they should all be easy to access from here. I should have "--help" menus for some of these, but don't hesitate to ask me a question if something still doesn't make sense.</p>
+
+<h3 id="listening"><a href="#listening">listening</a></h3>
+<details>
+	<summary><a href="projects/listening">listening.sh</a></summary>
+	<pre>
+#!/bin/bash
+
+lockfile="/var/tmp/listening.lock"
+[ -f "$lockfile" ] && (printf 'lockfile already exists\n'; exit 1;)
+while true; do
+	if [ ! -f "$lockfile" ]; then
+		touch "$lockfile"
+		date "+%H:%M:%S"
+		cmus-remote -C "format_print %{artist} %{album} %{title}"
+		(cmus-remote -C "format_print %{artist} %{album} %{title}" | \
+		awk 'NR<3 {printf "%s\t",$i} NR==3 {print}' >> /home/benh/.listening; \
+		awk -i inplace '!p[$0]++' /home/benh/.listening ; rm "$lockfile") &
+		sleep $((1 * 60))
+	else
+		printf '%s\n' "skipping! process is already running"
+		sleep 60
+	fi
+done
+
+	</pre>
+</details>
+<p>This script, which should be run once on startup to work, prints what cmus is currently playing into a text file, allowing me to see what artists, albums, and songs I've been listening to. I originally tried to implement this using cron instead of an infinite loop with sleep statements, but found it was too difficult to debug the environment in which cron runs its jobs to be reliable. This is a bit of a hacky solution, but it works well for now.</p>
+
+<h3><a href="https://github.com/flber/ffmpeg-stream-tools">ffmpeg-stream-tools</a></h3>
+<p>A collection of tools, these are various scripts and files to streamline more complex usage of ffmpeg when working with live streamed video and audio files. Currently very much in a brittle state as I work to improve the documentation and examples, but the ultimate goal is to have a robust collection of tools which facilitate the complex functions of ffmpeg in a more manageable and understandable way.</p>
+
+<h3><a href="projects/ptable">ptable</a></h3>
+<p>This was a simple utility I wrote a while ago for chem class. It can print out a periodic table (which I wrote by hand!), give you atomic data from an atomic symbol, and average atomic mass from one (or more) elements in the form of `{coefficient}{atomic symbol} {coefficient}{atomic symbol} ...`.</p>
+<p>Example:</p>
+<pre>
+> ptable -m H 7C 4H N S 3O
+mass of H: 1.008
+coefficient of H: 1
+total mass of H: 1.008
+...
+            ┌─────────┐
+total mass: │ 183.180 │
+            └─────────┘
+</pre>
+
+<h3><a href="projects/uxnrun">uxnrun</a></h3>
+<p>The build process for <a href="uxn_notes.html">uxn</a> really isn't that complicated, but to streamline things a bit for myself I wrote this script! It requires you to have a .uxn folder in your home directory, with a bin directory in that with `uxnasm` and `uxnemu`. It takes the relative path of a .tal file in the .uxn directory, assembles it into a rom in the bin directory, and runs the rom with varvara.</p>
+<p>Example:</p>
+<pre>
+> uxnrun left.tal
+building and running left
+</pre>
+
+<h3><a href="files/mtrack.rs">mtrack</a></h3>
+<mark><strong>Not an executable; needs compiling</strong></mark>
+<p>I wrote this a while ago to track changes in mood, because I wanted some more data on my mental health (I think it was also one of the first programs I wrote in Rust?). It requires an "mtrack" directory in your .config folder, with a log.txt file (though I think it should also create those things when you first run it). you can then use it by running `mtrack xxx message`, where `xxx` is a string up to three characters to designate a change in mood. I, for example, use "+" to mark positive changes, and "-" to mark negative changes, with fewer characters being a smaller change. The `message` portion is an optional note about the reason for the change, which I would recommend putting in quotes to sanitize it. I haven't written any parsing programs for the log file yet, but it's on my todo list!</p>
+<p>Example:</p>
+<pre>
+> mtrack ++ "working on website"
+logged
+</pre>
+
+<h3><a href="projects/syncpi">syncpi</a></h3>
+<p>A really bare-bones bash script, but one I use all the time, syncpi syncs my laptop with my pi. I have an ip/ dir in my home folder which is a git repo of a gist I have which is just a text file with the ip address of my pi. This may seem a bit over-complicated (and it probably is), but it was a quick way to get around the fact that my pi doesn't have a static ip. Every five minutes or so my pi checks its ip and pushes it to the gist. To sync my laptop to my pi, this script pulls that repo to make sure its up to date, then uses rsync to sync the folders I want. Those are currently my mtrack config folder, my Documents folder, my backgrounds, and my .config folder.</p>
+<p>Example:</p>
+<pre>
+> syncpi
+Already up to date
+sending incremental file list
+...
+</pre>
+
+<h3><a href="projects/sumtime">sumtime</a></h3>
+<p>A (no-longer-so) small bash script to figure out how much time I spent on a project. It takes a newline-separated list of times (and an optional largest unit) and gives a total. That list of times is just given through stdin, so you can run it and manually type in the list of times, or do something like pass the contents of a file containing your data.</p>
+<p>Example:</p>
+<pre>
+> cat times.txt
+12:00
+12:30:15
+00:30
+> cat times.txt | sumtime h
+Time (d:h:m:s)
+1:1:0:15
+</pre>
+
+<h3><a href="projects/proctime">proctime</a></h3>
+<p>proctime takes a program to run, and when the program closes returns the time (in min:sec format) that it was run for.</p> 
+<p>Example:</p>
+<pre>
+> proctime brogue-ce-git
+1:37
+</pre>
+
+<h3><a href="projects/prpnd">prpnd</a></h3>
+<p>Super simple, prepends a given string to a file.</p> 
+<p>Example:</p>
+<pre>
+> cat test.txt
+this is a test
+such test, much wow
+> prpnd "This goes at the top" test.txt
+> cat test.txt
+This goes at the top
+this is a test
+such test, much wow
+</pre>
+
+<h3><a href="projects/proctrack">proctrack</a></h3>
+<p>Uses prpnd, proctime, and sumtime to track how much time programs have been run for. Most useful to alias programs you're interested in tracking like so: `alias brogue='proctrack brogue'`</p> 
+<p>Example:</p>
+<pre>
+> proctrack brogue
+> cat ~/.proctimes
+brogue-ce-git 0:0:1:49
+micro 0:0:0:19
+</pre>
+
+		<p><b>Incoming:</b> <a href=".html"></a> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>

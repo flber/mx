@@ -1,0 +1,13 @@
+!meta!
+title: Rust Tools
+!meta!
+
+[h2|Rust Tools]
+
+[p|I've been writing Rust in my spare time since 2020, and I realized that it would be useful to document repeated code I use somewhat frequently in my projects. I should probably move this into a git repo at some point...]
+
+[p|[a, href: "rust-tools/fast-zip.html"|Fast Zip]]
+[p|[a, href: "rust-tools/mean.html"|Mean]]
+[p|[a, href: "rust-tools/standard-deviation.html"|Standard Deviation]]
+[p|[a, href: "rust-tools/time.html"|Time]]
+[p|[a, href: "rust-tools/average-time.html"|Average Time]]

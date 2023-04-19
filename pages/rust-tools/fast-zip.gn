@@ -1,0 +1,40 @@
+!meta!
+title: Rust Tools - Fast Zip
+template: default-subdir
+!meta!
+
+[h2|Fast Zip]
+
+[p|Efficiently zips two [code|Vec<&str>]'s together and returns an owned [code|String]. If the vec's don't match in length, the remainder of the longer list is added to the end.]
+
+[div, class: "container"|
+	[dl|
+		[dt|[b|Args:]]
+		[dd|[code|xs]: A [code|Vec<&str>]. Zipped together with [code|ys], [code|xs]; [code|xs] goes first.]
+		[dd|[code|ys]: A [code|Vec<&str>]. [code|ys] is zipped second.]
+		
+		[dt|[b|Returns:]]
+		[dd|An owned string made by zipping [code|xs] and [code|ys].]
+	]
+]
+
+[pre|[code, class: "lang-rust"|
+pub fn fast_zip(xs: Vec<&str>, ys: Vec<&str>) -> String {
+  let mut extra = "";
+  if xs.len() != ys.len() {
+    if xs.len() > ys.len() {
+      extra = xs[xs.len() - 1];
+    } else {
+      extra = ys[ys.len() - 1];
+    }
+  }
+
+  let mut zipped = xs
+    .iter()
+    .zip(ys.iter())
+    .map(|(a, b)| vec![*a, *b].concat())
+    .collect::<Vec<String>>();
+  zipped.push(String::from(extra));
+
+  zipped.join("")
+}]]

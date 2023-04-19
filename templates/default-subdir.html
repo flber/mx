@@ -4,14 +4,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>MX - {{title}}</title>
-	<link rel="icon" href="favicon.ico?" type="image/x-icon">
-	<link rel="stylesheet" href="../style.css" />
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta property="og:type" content="article"/>
 	<meta property="og:title" content="{{title}}"/>
 	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="../assets/prism.js"></script>
+	
+	<!-- <script> -->
+		<!-- var link = document.createElement("link"); -->
+		<!-- link.rel="stylesheet"; -->
+		<!-- link.href="../assets/prism.css"; -->
+		<!-- link.type="text/css"; -->
+		<!-- document.getElementsByTagName("head")[0].appendChild(link); -->
+	<!-- </script> -->
+
+	<style>
+{{style}}
+	</style>
+
 </head>
 
 <body>
@@ -29,19 +56,19 @@
 
 	<footer>
 		<a href="mailto:benrhammond@gmail.com" target="_blank">
-			<img loading="lazy" src="../images/mail.svg" alt="Mailto" />
+			<img loading="lazy" width="30" height="30" src="../images/mail.svg" alt="Mailto" />
 		</a>
 		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
-			<img loading="lazy" src="../images/merveilles.svg" alt="Merveilles" />
+			<img loading="lazy" width="30" height="30" src="../images/merveilles.svg" alt="Merveilles" />
 		</a>
 		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
-			<img loading="lazy" class="webring" src="../images/webring-icon-black.svg" alt="the merveilles webring" />
+			<img loading="lazy" width="30" height="30" class="webring" src="../images/webring-icon-black.svg" alt="the merveilles webring" />
 		</a>
 		<a href="https://wiki.xxiivv.com/site/ethics.html">
-			<img loading="lazy" src="../images/dreipfeile-icon.svg" alt="Ethics" />
+			<img loading="lazy" width="30" height="30" src="../images/dreipfeile-icon.svg" alt="Ethics" />
 		</a>
 		<a href="feed.xml">
-			<img loading="lazy" src="../images/rss.svg" alt="RSS Feed" />
+			<img loading="lazy" width="30" height="30" src="../images/rss.svg" alt="RSS Feed" />
 		</a>
 		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
 			src="../images/icon.gif" />

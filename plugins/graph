@@ -46,7 +46,7 @@ for index, line in enumerate(sys.stdin):
             page = Path(file).read_text()
             links = re.findall(r'\[a, href: "([^"]+)"\|', page)
             links = list(
-                filter(lambda x: '/' not in x and ':' not in x, links))
+                filter(lambda x: '#' not in x and ':' not in x, links))
             link_names = [link[:-5] for link in links]
             for link_name in link_names:
                 G.addEdge(name, link_name)

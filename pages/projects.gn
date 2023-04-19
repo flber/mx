@@ -6,14 +6,17 @@ title: Projects
 
 [p|I like to work on lots of projects, some I finish, some I don't, but all I enjoy. I've realized that tracking them, even to a very limited extent, might be nice just to remind myself that I have, in fact, spent my time doing things I enjoy.]
 
-[h3, class: "listing"|[a, href: "uxn-zine.html"|Uxn zine] [span|a few months ago?]]
+[h3, class: "listing"|[a, href: "rust-tools.html"|Rust tools] [span|? - Now]]
+[p|A mix of utilities I've made for writing rust code, lots of miscellaneous functions and such!]
+
+[h3, class: "listing"|[a, href: "uxn-zine.html"|Uxn zine] [span|2022]]
 [p|[a, href: ""|Rostiger] made an awesome comic explaining how [a, href: ""|Uxn] works, so I compiled the drawings into a pdf designed to be printed and made into a zine. It turned out pretty well, and the template is simple enough to be reused.]
 
 [h3, class: "listing"|[a, href: "ffstream.html"|ffstream] [span|140622 - Now]]
 [p|Really a loose collection of scripts and miscellaneous files, [code|ffstream] is my setup for streaming (to twitch.tv in my case) using ffmpeg! At the moment the main section is stuff which "just works" (lol not really) and an [code|extra/] directory for experimental ffmpeg ramblings. The long-term goal is to turn it into a compiled, cross-platform application which is [em|actually useful], but short-term goal is to actually have something working :)]
 
 [h3, class: "listing"|[a, href: "ios-sync.html"|iOS Sync] [span|120622 - Now]]
-[p|After way, way too long of sharing images from my phone to my laptop with email, I finally hacked something together which can get a photo to my laptop in a fraction of the time! (the downside is it took a blood pact with satan :/)]
+[p|After sharing images from my phone to my laptop with email for a while, I finally hacked something together which can get a photo to my laptop in a fraction of the time! (the downside is it took a blood pact with satan :/)]
 
 [h3, class: "listing"|[a, href: "casio.html"|CA53W] [span|? - Now]]
 [p|I've had a casio CA53W for a loooooong time now. The one I currently have is the fourth I've owned, the first three I either lost or managed to break (I probably could have repaired them, but I was much younger when I first started wearing them). A small customization I made to the one I currently have is inverting the LCD, which you can see me doing (or rather, reversing) in the above link!]

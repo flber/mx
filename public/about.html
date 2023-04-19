@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Nice to meet you!</title>
+	<link rel="icon" href="crow.ico?" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:type" content="article"/>
+	<meta property="og:title" content="Nice to meet you!"/>
+	<link rel="feed" type="application/rss+xml" title="Mineral Existence RSS Feed" href="https://mineralexistence.com/feed.xml">
+
+	<!-- the below sections enables syntax highlighting when js is enabled, and reverts to the default when it isn't -->
+	<noscript>
+		<style>
+			pre {
+				font-size:calc(0.5rem + 0.25vw);
+				line-height:2.3ex;
+				overflow-x:auto; 
+				padding:2%; 
+				color:var(--bg);
+				background-color:var(--text); 
+			}
+		</style>
+	</noscript>
+	<script src="./assets/prism.js" defer></script>
+
+	
+	<script>
+		var link = document.createElement("link");
+		link.rel="stylesheet";
+		link.href="./assets/prism.css";
+		link.type="text/css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+
+	<style>
+/* @import url('reset.css'); */
+
+*, *::before, *::after {box-sizing: border-box;} 
+* {margin: 0;} 
+body {line-height: 1.5;-webkit-font-smoothing: antialiased;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;} 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;} 
+#root, #__next {isolation: isolate;} 
+
+:root {
+	/* --text:#3A3738; */
+	/* --text:#472d30; */
+	--text:#654735;
+	/* --bg:#FBF0F0; */
+	/* --bg:#ffe1a8; */
+	--bg:#fbf1c7; 
+	--bg-hl:#fcd297;
+	/* --hl:#80dec5; */
+	/* --hl:#c9cba3; */
+	--hl:#45707a;
+	--hl-orange:#c35e0a;
+
+	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
+}
+
+body {
+	font-size:var(--step-0);
+	font-family:sans-serif;
+	max-width:72ch;
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
+	line-height:1.6;
+	color:var(--text);
+	background-color:var(--bg);
+}
+
+/* * {border: 1px solid black;} */
+
+main > *+* {margin-top: var(--space-s);}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: serif;
+}
+
+h1 { font-size: var(--step-3); }
+h2 { font-size: var(--step-2); }
+h3 { font-size: var(--step-1); }
+
+/* header>h1 {display:inline-block;padding-right:.3em;} */
+header {margin: 0 0 var(--space-l) 0;clear:both;}
+
+mark {background-color:var(--hl);color:var(--bg);}
+hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
+
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
+pre {
+	font-size:calc(var(--step-0) + 0.15rem);
+	line-height:2.3ex;
+	overflow-x:auto; 
+	padding:2%; 
+	color:var(--bg); 
+	background-color:var(--text); 
+}
+code {
+	font-family: monospace;
+	color:var(--bg);
+	background-color:var(--text);
+	font-size:calc(var(--step-0) + 0.15rem);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+} 
+
+button {
+	border-radius: 8px;
+	border: 1px solid var(--text);
+	background: none;
+	padding: 0px 10px;
+	font-weight: bold;
+	font-family: sans;
+	color: var(--text);
+	font-size: 20px;
+}
+button:hover {color: var(--bg);background: var(--text);}
+
+dd {margin-left:var(--space-s);}
+details {padding-bottom:0ex;}
+fieldset {border:1px solid;}
+::selection {color: var(--bg);background-color: var(--text);}
+
+footer {margin:var(--space-l) 0 0 0;clear:both}
+footer>* {display:inline-block;}
+footer img {margin:0 0 -10px 0;width:30px;} 
+
+
+/* .half {width: 50%; height: auto;} */
+/* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
+/* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
+.third {width: 31%; height: auto;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
+.row {display: flex;}
+.column {flex: 50%;}
+.listing > span {float: right;}
+.box {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+	gap: 0.5em;
+	grid-auto-flow: dense;
+}
+
+ul[role=list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-main ul {
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px 20px;
+  display: flex
+}
+
+.nav--main a {
+  text-decoration: none
+}
+
+.inline-img {
+	height: 33px;
+	display: inline-block;
+	border: 1px solid var(--text);
+	position: relative;
+	left: 0.25em;
+	top: 0.25ex;
+}
+
+*:not(footer)>a[href*=':']::before{content:"↗"}
+
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav class="nav-main" role="navigation">
+			<ul role="list">
+				<li><h1><a href="home.html">Home</a></h1> </li>
+				<li><h1><a href="now.html">now</a></h1></li>
+				<li><h1><a href="wiki.html">wiki</a></h1></li>
+				<li><h1><a href="about.html">about</a></h1></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+
+<h2>Nice to meet you!</h2>
+
+<p>I'm Ben, a person (who prefers they/them pronouns) from the bay area, though I go to school in Santa Cruz. I like to make <a href="recipes.html">food</a>, occasionally <a href="drawings.html">draw</a>, and tell computers to do things for me (though we often have disagreements).</p>
+
+<p>I've worked on a few <a href="projects.html">projects</a>, including a <a href="https://flber.itch.io/">game or two</a>. When I'm not getting frustrated with computers for disagreeing with what I want them to do, I enjoy <a href="hiking.html">hiking</a>, playing <a href="games.html">video games</a>, and <a href="reading.html">reading</a>.</p>
+
+<!--
+<p>If you like, you can <button id="hello_button" onclick="usercount()">say hi</button> to me directly! So far, <code id="count">0?</code> people have said hi :&gt;</p>
+<details>
+	<summary>How does it work?</summary>
+	<p>Using my Fancy New Framework™ (26 lines of vanilla js), when you press the button it sends a request to an api endpoint on the <a href="https://rocket.rs">rocket</a> server hosting this site. That fetch is sent back a simple JSON object containing the total number of visitors so far, and that number is put into the code tag! Then after you've pressed it, the button is changed to "<del>say hi</del>" to indicate that you can't press it again. For the moment you can reload the page and that change will revert, though the server still will only <i>register</i> one press per ip.</p>
+	<p>On the backend, the request headers are unpacked to get the visitor's ip address, which, if new, is added to a list of "known" addresses, and the total count is incremented by one and returned. If the ip address in the request <i>is</i> a known address, the count is not increased but is still returned.</p>
+</details>
+-->
+
+<script>
+	function usercount() {
+		fetch("/api/count", {
+			method: "POST"}).then(async (res) => {
+				const raw = await res.text();
+				console.log(raw);
+			})
+		get_usercount()
+
+		var button = document.getElementById("hello_button");
+		var b = document.createElement("del");
+		var new_text = document.createTextNode("say hi");
+		b.appendChild(new_text);
+		button.replaceWith(b);
+
+		get_usercount()
+	}
+
+	window.onload = function() {
+		get_usercount()
+	}
+
+	function get_usercount() {
+		fetch("/api/count", {
+			method: "GET",
+			headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+			}}).then(async (res) => {
+			const raw = await res.text();
+			const parsed = raw ? JSON.parse(raw) : { success: res.ok };
+
+			var num = document.getElementById("count");
+			num.innerHTML = parsed['user_count'];
+		})
+	}
+</script>
+
+<div class="box">
+	<img loading="lazy" src="images/crow.jpg" alt="myself drawn as a crow by one of my friends. I'm wearing overalls with small tools in them"></img>
+	<img loading="lazy" src="images/profile-bw-square.jpg" alt="a digital art profile picture made by a friend: androgynous person with dark hair smiling with their eyes closed"></img>
+</div>
+
+<p>If you want to contact me about commercial work, please first take a look at my <a href="resume/index.html">resume</a>. Email is generally the best method of communication for me, and you can find my email address linked in the footer.</p>
+
+<p>You can find the source code for this site in any of these places:</p>
+<ul>
+	<li><a href="https://codeberg.org/flbr/mx">codeberg</a></li>
+	<li><a href="https://github.com/flber/Mineral-Existence">github</a></li>
+	<li><a href="https://git.sr.ht/~flber/mineral-existence">srht</a></li>
+</ul>
+
+<p>You can also check out the <a href="inventory.html">inventory</a> page for a list of the hardware and software I use.</p>
+
+<p>Feel free to say hi on <a href="https://merveilles.town/@flbr">mastodon</a> or via my <a href="mailto:benrhammond@gmail.com">email</a></p>
+
+<p>I'm also on <a href="https://webring.xxiivv.com/#icons">a webring</a>! All the sites on it are pretty neat, including those of my neighbours:</p>
+<ul>
+	<li>Alessia Bellisario's <a href="https://aless.co/">anti/pattern</a></li>
+	<li>Martin Schotten's <a href="http://fragmentscenario.com/">fragmentscenario</a></li>
+</ul>
+
+<!--
+<p>This is my <a href="https://wobble.town">wobble</a>, his name is kronk!</p>
+<a href="https://wobble.town/visit/"><img style="margin-top:0em;width: 10%;" src="https://wobble.town/visit/48/wobble.gif"></img></a>
+-->
+
+		<p><b>Incoming:</b> </p>
+	</main>
+
+	<footer>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
+	</footer>
+</body>
+</html>
