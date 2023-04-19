@@ -61,18 +61,30 @@ p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 	--hl-orange:#c35e0a;
 
 	/* https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.333,3,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
-  --step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
-  --step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
-  --step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+	--step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+	--step-1: clamp(1.35rem, calc(1.24rem + 0.55vw), 1.67rem);
+	--step-2: clamp(1.62rem, calc(1.41rem + 1.05vw), 2.22rem);
+	--step-3: clamp(1.94rem, calc(1.59rem + 1.77vw), 2.96rem);
+
+	/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,32,1.25,5,2,&s=,1.5|2,s-l&g=s,l,xl,12 */
+	--space-s: clamp(1.13rem, calc(0.82rem + 1.52vw), 2.00rem);
+	--space-m: clamp(1.69rem, calc(1.23rem + 2.28vw), 3.00rem);
+	--space-l: clamp(2.25rem, calc(1.64rem + 3.04vw), 4.00rem);
+
+	/* One-up pairs */
+	--space-s-m: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+	--space-m-l: clamp(1.69rem, calc(0.88rem + 4.02vw), 4.00rem);
+
+	/* Custom pairs */
+	--space-s-l: clamp(1.13rem, calc(0.13rem + 5.00vw), 4.00rem);
 }
 
 body {
 	font-size:var(--step-0);
 	font-family:sans-serif;
 	max-width:72ch;
-	margin: 3rem auto 3rem; 
-	padding: 0 1rem; 
+	margin: var(--space-m-l);
+	/* padding: 0 1rem;  */
 	line-height:1.6;
 	color:var(--text);
 	background-color:var(--bg);
@@ -80,12 +92,7 @@ body {
 
 /* * {border: 1px solid black;} */
 
-main > *+* {margin-top: 2ex;}
-main {
-	background-color:var(--bg-hl);
-	border-radius: 32px;
-	padding: 1em;
-}
+main > *+* {margin-top: var(--space-s);}
 
 h1,
 h2,
@@ -101,13 +108,16 @@ h2 { font-size: var(--step-2); }
 h3 { font-size: var(--step-1); }
 
 /* header>h1 {display:inline-block;padding-right:.3em;} */
-header {margin: 0 0 1em 0;clear:both;}
+header {margin: 0 0 var(--space-l) 0;clear:both;}
 
 mark {background-color:var(--hl);color:var(--bg);}
 hr {height:1px;border-width:0;color:var(--text);background-color:var(--text)} 
 
+a {color:var(--hl);}
+a:visited {color:var(--hl-orange);}
+
 pre {
-	font-size:calc(var(--step-0) + 0.25rem);
+	font-size:calc(var(--step-0) + 0.15rem);
 	line-height:2.3ex;
 	overflow-x:auto; 
 	padding:2%; 
@@ -118,7 +128,7 @@ code {
 	font-family: monospace;
 	color:var(--bg);
 	background-color:var(--text);
-	font-size:calc(var(--step-0) + 0.25rem);
+	font-size:calc(var(--step-0) + 0.15rem);
 	padding-left: 0.2em;
 	padding-right: 0.2em;
 } 
@@ -135,12 +145,12 @@ button {
 }
 button:hover {color: var(--bg);background: var(--text);}
 
-dd {margin-left:2em;}
+dd {margin-left:var(--space-s);}
 details {padding-bottom:0ex;}
 fieldset {border:1px solid;}
 ::selection {color: var(--bg);background-color: var(--text);}
 
-footer {margin:1em 0 0 0;clear:both}
+footer {margin:var(--space-l) 0 0 0;clear:both}
 footer>* {display:inline-block;}
 footer img {margin:0 0 -10px 0;width:30px;} 
 
@@ -149,7 +159,7 @@ footer img {margin:0 0 -10px 0;width:30px;}
 /* .left {margin-top: 0em;float: left;margin-right: 2em;clear: both;} */
 /* .block {margin-top: 1em;margin-left: 0px;clear: both;} */
 .third {width: 31%; height: auto;}
-.container {padding: 2ex; border: solid 1px var(--text);border-radius: 5px;}
+.container {padding: var(--space-s); border: solid 1px var(--text);border-radius: 5px;}
 .row {display: flex;}
 .column {flex: 50%;}
 .listing > span {float: right;}
@@ -187,8 +197,6 @@ ul[role=list] {
 	top: 0.25ex;
 }
 
-*:not(footer)>a {color:var(--hl);}
-*:not(footer)>a:visited {color:var(--hl-orange);}
 *:not(footer)>a[href*=':']::before{content:"↗"}
 
 	</style>
@@ -267,24 +275,11 @@ ul[role=list] {
 	</main>
 
 	<footer>
-		<a href="mailto:benrhammond@gmail.com" target="_blank">
-			<img loading="lazy" width="30" height="30" src="images/mail.svg" alt="Mailto" />
-		</a>
-		<a rel="me" href="https://merveilles.town/@flbr" target="_blank">
-			<img loading="lazy" width="30" height="30" src="images/merveilles.svg" alt="Merveilles" />
-		</a>
-		<a href='https://webring.xxiivv.com/#icons' target='_blank'>
-			<img loading="lazy" width="30" height="30" class="webring" src="images/webring-icon-black.svg" alt="the merveilles webring" />
-		</a>
-		<a href="https://wiki.xxiivv.com/site/ethics.html">
-			<img loading="lazy" width="30" height="30" src="images/dreipfeile-icon.svg" alt="Ethics" />
-		</a>
-		<a href="feed.xml">
-			<img loading="lazy" width="30" height="30" src="images/rss.svg" alt="RSS Feed" />
-		</a>
-		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner"
-			src="images/icon.gif" />
-		<span style="float: right;"><em>Last updated: 041323</em></span>
+		<img loading="lazy" style="width:88px;height:31px;margin-left:0.5ex;" title="my homemade site banner!" alt="site banner" src="images/icon.gif"/>
+		<a href="mailto:benrhammond@gmail.com">email</a>
+		<a href="https://merveilles.town/@flbr">fedi</a>
+		<a href="https://webring.xxiivv.com/#icons">webring</a>
+		<span style="float: right;"><em>Last updated: 041923</em></span>
 	</footer>
 </body>
 </html>

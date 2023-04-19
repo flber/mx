@@ -8,12 +8,14 @@ title: About
 
 [p|I've worked on a few [a, href: "projects.html"|projects], including a [a, href: "https://flber.itch.io/"|game or two]. When I'm not getting frustrated with computers for disagreeing with what I want them to do, I enjoy [a, href: "hiking.html"|hiking], playing [a, href: "games.html"|video games], and [a, href: "reading.html"|reading].]
 
+<!--
 [p|If you like, you can [button, id: "hello_button", onclick: "usercount()"|say hi] to me directly! So far, [code id: "count"|0?] people have said hi :&gt;]
 [details|
 	[summary|How does it work?]
 	[p|Using my Fancy New Framework™ (26 lines of vanilla js), when you press the button it sends a request to an api endpoint on the [a, href: "https://rocket.rs"|rocket] server hosting this site. That fetch is sent back a simple JSON object containing the total number of visitors so far, and that number is put into the code tag! Then after you've pressed it, the button is changed to "<del>say hi</del>" to indicate that you can't press it again. For the moment you can reload the page and that change will revert, though the server still will only [i|register] one press per ip.]
 	[p|On the backend, the request headers are unpacked to get the visitor's ip address, which, if new, is added to a list of "known" addresses, and the total count is incremented by one and returned. If the ip address in the request [i|is] a known address, the count is not increased but is still returned.]
 ]
+-->
 
 [script|
 	function usercount() {
